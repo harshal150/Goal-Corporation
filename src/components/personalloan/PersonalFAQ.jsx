@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const faqList = [
 	{
-		isActive: true,
+		isActive: false,
 		question: "What is a personal loan?",
 		answer:
 			"A personal loan is an unsecured loan that can be used for various personal expenses, such as medical bills, home renovation, education, travel, or any other financial needs.",
@@ -45,6 +45,13 @@ const faqList = [
 		answer:
 			"Yes, most banks and financial institutions offer the option to apply for a personal loan online. The process is usually simple, requiring you to submit the necessary documents digitally.",
 	},
+	{
+		isActive: false,
+		question: "How quickly can I get a personal loan approved and disbursed?",
+		answer:
+		  "The approval and disbursement time for a personal loan can vary by lender, but many lenders offer quick approval processes, especially if you apply online. If all documents are in order, approval can take as little as 24 to 48 hours, and disbursement may happen within 1 to 3 working days.",
+	  },
+	  
 ];
 
 const FaqItem = ({ faq }) => {
@@ -58,7 +65,7 @@ const FaqItem = ({ faq }) => {
 		<div
 			className={`${
 				isOpen && "active"
-			} shadow dark:shadow-none bg-white dark:bg-[#1E2735] rounded-lg mt-6`}
+			} shadow dark:shadow-none bg-white  rounded-lg mt-6`}
 		>
 			<a
 				href="#!"

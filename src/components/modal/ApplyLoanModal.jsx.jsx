@@ -10,7 +10,10 @@ import {
   FaEnvelope,
   FaCreditCard,
   FaCalendarAlt,
+
 } from "react-icons/fa";
+import { TbMoneybag } from "react-icons/tb";
+
 import contact from "../../assets/contact.avif";
 
 // Validation schema using Yup
@@ -65,7 +68,20 @@ const indianStates = [
   "West Bengal",
 ];
 
-const ApplyLoanModal = ({ isOpen, onClose }) => {
+const loan_interest = {
+  "Personal Loan": 12,
+  "Home Loan": 8,
+  "Loans Against Property": 9,
+  "Working Capital Loan": 10,
+  "Business Loan": 11,
+  "Debt Restructuring": 13,
+};
+
+const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
+  console.log(loanType);
+
+  const interestRate=loan_interest[loanType] || "NA"
+
   return (
     <div className="w-full max-w-4xl mx-auto mt-10 mb-10 ">
       <div className="relative text-center">
@@ -103,7 +119,9 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
         <h3 className="text-2xl font-bold mb-6 text-center animate-fadeInUp">
           Submit Your Details &{" "}
           <span className="text-red-500 animate-wiggle">
-            We&apos;ll Contact You Shortly
+          {loanType && loanType !== ""
+              ? `Get ${loanType} starting from ${interestRate}% interest rate`
+              : "We'll Contact You Shortly"}
           </span>
         </h3>
       </div>
@@ -116,6 +134,7 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
               fullName: "",
               email: "",
               mobileNumber: "",
+              loans:loanType ||"",
               state: "",
               city: "",
               pincode: "",
@@ -186,7 +205,7 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                   </div>
                 </div>
 
-                {/* Mobile Number and State */}
+                {/* Mobile Number and Loans */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
@@ -213,6 +232,42 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
 
                   <div className="relative mt-3">
                     <label
+                      htmlFor="loans"
+                      className="block text-gray-700 font-medium"
+                    >
+                      Loans
+                    </label>
+                    {/* <FaPhone className="absolute left-2 top-10 text-blue-700" /> */}
+                    <TbMoneybag className="absolute left-2 top-10 text-blue-700" />
+                    
+                    <Field
+                      name="loans"
+                      as="select"
+                      id="loans"
+                      className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
+                      onBlur={handleBlur}
+                    >
+                      <option value="">Select Loans</option>
+                      <option value="Home Loan">Home Loan</option>
+                      <option value="Loans Against Property">
+                        Loans Against Property
+                      </option>
+                      <option value="Working Capital Loan">
+                        Working Capital Loan
+                      </option>
+                      <option value="Business Loan">Business Loan</option>
+                      <option value="Personal Loan">Personal Loan</option>
+                      <option value="Debt Restructuring">
+                        Debt Restructuring
+                      </option>
+                    </Field>
+                  </div>
+                </div>
+
+                {/* State and City */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative mt-3">
+                    <label
                       htmlFor="state"
                       className="block text-gray-700 font-medium"
                     >
@@ -234,10 +289,7 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                       ))}
                     </Field>
                   </div>
-                </div>
 
-                {/* City and Pincode */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
                       htmlFor="city"
@@ -255,7 +307,10 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                       onBlur={handleBlur}
                     />
                   </div>
+                </div>
 
+                {/* Pincode and Gender */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
                       htmlFor="pincode"
@@ -278,10 +333,7 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                       className="text-red-500 text-sm mt-1"
                     />
                   </div>
-                </div>
 
-                {/* Gender and PAN Card */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
                       htmlFor="gender"
@@ -303,7 +355,10 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                       <option value="other">Other</option>
                     </Field>
                   </div>
+                </div>
 
+                {/* PAN Card and Date of Birth */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
                       htmlFor="panCard"
@@ -326,10 +381,7 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                       className="text-red-500 text-sm mt-1"
                     />
                   </div>
-                </div>
 
-                {/* Date of Birth and Residence Type */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
                       htmlFor="dob"
@@ -352,7 +404,10 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                       className="text-red-500 text-sm mt-1"
                     />
                   </div>
+                </div>
 
+                {/* Residence Type and Terms */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="relative mt-3">
                     <label
                       htmlFor="residenceType"
@@ -383,8 +438,8 @@ const ApplyLoanModal = ({ isOpen, onClose }) => {
                     className="form-checkbox mt-2"
                   />
                   <span>
-                    I have read and agree to Goal Corporation Disclaimer and Privacy
-                    Policy terms & conditions
+                    I have read and agree to Goal Corporation Disclaimer and
+                    Privacy Policy terms & conditions
                   </span>
                 </div>
 

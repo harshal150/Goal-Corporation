@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ApplyForLoan = () => {
 
-  const HandleClick = () => {
-    window.open(
-      'https://dexpertsystems.com/requestVista?query=Pv4/9aqzdpFVJ2ewt/6AWTmJDLwMN5Fvs/CBjh/a4I3vX1tMG%2BmFZ7BGIKIKPcP8',
-      '_blank'
-    );
-  };
+  // const HandleClick = () => {
+  //   window.open(
+  //     'https://dexpertsystems.com/requestVista?query=Pv4/9aqzdpFVJ2ewt/6AWTmJDLwMN5Fvs/CBjh/a4I3vX1tMG%2BmFZ7BGIKIKPcP8',
+  //     '_blank'
+  //   );
+  // };
 
   return (
     <section className="ezy__cta2 relative overflow-hidden py-8 md:py-10 bg-gradient-to-r from-sky-500 to-blue-900">
@@ -37,13 +38,14 @@ const ApplyForLoan = () => {
 
           {/* Button Section */}
           <div className="col-span-12 md:col-span-6 flex justify-center md:justify-end mt-8 md:mt-0">
-            <button
-              type="submit"
-              onClick={HandleClick}
+            <Link 
+            to={'/applyforloan'}
+              // type="submit"
+              // onClick={HandleClick}
               className="bg-red-500 hover:scale-105 text-white font-bold py-2 px-7 rounded-xl shadow-lg transition-all duration-300 ease-in-out transform"
             >
               Apply for Loan
-            </button>
+            </Link>
           </div>
         </div>
       </div>

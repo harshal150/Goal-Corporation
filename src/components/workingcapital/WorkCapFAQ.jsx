@@ -5,7 +5,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const faqList = [
 	{
-		isActive: true,
+		isActive: false,
 		question: "What is a working capital loan?",
 		answer:
 			"A working capital loan is a loan taken to finance a company's everyday operations. This loan is not used to buy long-term assets or investments but instead to cover short-term operational needs such as payroll, rent, and inventory.",
@@ -46,6 +46,13 @@ const faqList = [
 		answer:
 			"No, a working capital loan is typically intended to cover operational expenses and not for refinancing other loans. However, certain lenders may allow you to use funds to consolidate short-term debt.",
 	},
+	{
+		isActive: false,
+		question: "Can I apply for a working capital loan if my business is new?",
+		answer:
+		  "Yes, some lenders offer working capital loans to new businesses, but the eligibility criteria may be stricter. Lenders will typically assess the business plan, projected cash flow, industry type, and the credit profile of the business owner. It’s important to explore options that cater specifically to startups or small businesses when seeking a working capital loan.",
+	  },
+	  
 ];
 
 const FaqItem = ({ faq }) => {
@@ -57,7 +64,7 @@ const FaqItem = ({ faq }) => {
 
 	return (
 		<div
-			className={`${isOpen && "active"} shadow dark:shadow-none bg-white dark:bg-[#1E2735] rounded-lg mt-6`}
+			className={`${isOpen && "active"} shadow dark:shadow-none bg-white  rounded-lg mt-6`}
 		>
 			<a
 				href="#!"

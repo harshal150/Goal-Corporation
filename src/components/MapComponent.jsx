@@ -57,8 +57,8 @@ const MapComponent = () => {
               <img
                 src="assets/map.jpg"
                 alt="India Map"
-                className="w-full h-auto opacity-35"
-                style={{ filter: "contrast(200%)" }}
+                className="w-full h-auto opacity-70"
+                style={{ filter: "contrast(100%)" }}
               />
               {/* Pin Locations */}
               {cities.map((city, index) => (

@@ -96,7 +96,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="home-page-container" style={{ overflowX: 'hidden' }}>
+    <div className="home-page-container" style={{ overflowX: '' }}>
       <Navbar />
       <Header />
 
@@ -108,7 +108,7 @@ export const Home = () => {
         <About />
         <Timeline />
         <MapComponent />
-        <Message />
+        {/* <Message /> */}
         <Testimonial/>
       </div>
 

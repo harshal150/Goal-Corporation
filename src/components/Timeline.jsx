@@ -90,8 +90,8 @@ const Timeline = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-white via-[#f5f8fc] to-[#E0EAF5] p-2">
-        <h1 className="font-bold text-[32px] md:text-[40px] text-center mt-10 uppercase text-blue-700">
+      <div className="bg-gradient-to-r from-white via-[#f5f8fc] to-[#E0EAF5] p-2 mt-10">
+        <h1 className="font-bold text-[32px] md:text-[40px] text-center mt-10  uppercase text-blue-700">
           We Have The Best Team And The Best Process
         </h1>
         <div className="relative flex justify-center items-start mt-8 md:mt-14">

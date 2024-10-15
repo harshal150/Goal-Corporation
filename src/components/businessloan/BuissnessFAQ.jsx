@@ -5,7 +5,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const faqList = [
 	{
-		isActive: true,
+		isActive: false,
 		question: "What is a business loan?",
 		answer:
 			"A business loan is a loan specifically intended for business purposes. It can be used to cover operational costs, expand the business, purchase new equipment, or manage cash flow.",
@@ -46,6 +46,13 @@ const faqList = [
 		answer:
 			"Yes, many lenders offer the option to apply for a business loan online. The process usually involves filling out an application form and submitting the required documents digitally.",
 	},
+	{
+		isActive: false,
+		question: "Can I get a business loan if my business is new or a startup?",
+		answer:
+		  "Yes, some lenders offer business loans to startups or new businesses. However, the eligibility criteria for such loans may be stricter. Lenders typically assess factors such as your business plan, projected revenue, industry potential, and your personal credit score. It may also help to explore government schemes or startup-specific loans designed to support new businesses.",
+	  }
+	  
 ];
 
 const FaqItem = ({ faq }) => {
@@ -57,7 +64,7 @@ const FaqItem = ({ faq }) => {
 
 	return (
 		<div
-			className={`${isOpen && "active"} shadow dark:shadow-none bg-white dark:bg-[#1E2735] rounded-lg mt-6`}
+			className={`${isOpen && "active"} shadow dark:shadow-none bg-white  rounded-lg mt-6`}
 		>
 			<a
 				href="#!"

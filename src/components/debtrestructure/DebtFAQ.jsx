@@ -5,7 +5,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const faqList = [
 	{
-		isActive: true,
+		isActive: false,
 		question: "What is debt restructuring?",
 		answer:
 			"Debt restructuring is a process that allows businesses or individuals facing financial difficulties to reorganize their debts. It involves modifying the terms of existing loans to make repayments more manageable, such as extending repayment periods or lowering interest rates.",
@@ -46,6 +46,13 @@ const faqList = [
 		answer:
 			"Debt restructuring involves modifying the terms of existing loans to make repayment more manageable. Debt consolidation, on the other hand, involves combining multiple loans into a single loan with a new interest rate and repayment term.",
 	},
+	{
+		isActive: false,
+		question: "Can I apply for debt restructuring if my loan is already in default?",
+		answer:
+		  "Yes, many lenders offer debt restructuring even if your loan is in default. The goal of restructuring is to help you manage your debt more effectively and avoid further financial distress. However, approval depends on the lender’s policies and your financial situation. It is important to communicate with your lender as early as possible to explore restructuring options before the situation worsens.",
+	  }
+	  
 ];
 
 const FaqItem = ({ faq }) => {
@@ -57,7 +64,7 @@ const FaqItem = ({ faq }) => {
 
 	return (
 		<div
-			className={`${isOpen && "active"} shadow dark:shadow-none bg-white dark:bg-[#1E2735] rounded-lg mt-6`}
+			className={`${isOpen && "active"}  bg-white  rounded-lg mt-6`}
 		>
 			<a
 				href="#!"

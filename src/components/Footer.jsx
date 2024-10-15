@@ -198,11 +198,10 @@ const Footer = () => {
               <h5 className="font-bold mb-3 text-[20px]">Corporate Address</h5>
               <span className="text-gray-800 font-semibold hover:text-[#007BFF] transition-colors duration-300">
                 Goal Corporation Pvt Ltd <br />
-                No 250/15, Ground Floor,<br />
-                6th Cross, 9th Main,<br />
-                2nd Block, Jayanagar,<br />
-                Bangalore - 560011, Karnataka, India <br />
-                Phone: +91 9606 96 5186 <br />
+                NO 34,2ND FLOOR, opp. Cosmopolitan club, <br />Jaya Nagar 1st Block,
+                Jayanagar 3rd Block, <br /> Jayanagar, Bengaluru, Karnataka 560011 <br />
+                Phone: +91 8026575657
+                <br />
                 E-Mail: info@goalcorporation.com
               </span>
             </div>

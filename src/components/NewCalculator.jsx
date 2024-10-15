@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const LoLoanCalculator = () => {
   const [loanAmount, setLoanAmount] = useState(500000);
   const [interestRate, setInterestRate] = useState(10);
   const [loanTenure, setLoanTenure] = useState(12); // Default to 12 months (1 year)
-  const [tenureUnit, setTenureUnit] = useState('Yr'); // Default unit: Year
+  const [tenureUnit, setTenureUnit] = useState("Yr"); // Default unit: Year
 
   const minLoanAmount = 50000; // 50k
   const maxLoanAmount = 50000000; // 5 Crore
@@ -21,7 +21,7 @@ const LoLoanCalculator = () => {
 
   const handleUnitToggle = (unit) => {
     setTenureUnit(unit);
-    if (unit === 'Yr') {
+    if (unit === "Yr") {
       setLoanTenure(Math.round(loanTenure / 12)); // Convert months to years
     } else {
       setLoanTenure(loanTenure * 12); // Convert years to months
@@ -30,34 +30,103 @@ const LoLoanCalculator = () => {
 
   const calculateEMI = () => {
     let monthlyRate = interestRate / 12 / 100;
-    let numOfMonths = tenureUnit === 'Yr' ? loanTenure * 12 : loanTenure;
-    let EMI = loanAmount * monthlyRate * ((1 + monthlyRate) ** numOfMonths) / (((1 + monthlyRate) ** numOfMonths) - 1);
+    let numOfMonths = tenureUnit === "Yr" ? loanTenure * 12 : loanTenure;
+    let EMI =
+      (loanAmount * monthlyRate * (1 + monthlyRate) ** numOfMonths) /
+      ((1 + monthlyRate) ** numOfMonths - 1);
     return Math.round(EMI);
   };
 
   const totalInterestPayable = calculateEMI() * loanTenure * 12 - loanAmount;
   const totalPayment = loanAmount + totalInterestPayable;
+  
 
   return (
     <div className="max-w-full mt-4">
-      <div className="max-w-7xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3]">
-        <h2 className="text-5xl font-bold text-center mb-12 text-blue-600">
+      <div className="max-w-7xl mx-auto p-4 sm:p-6 bg-gray-50 rounded-lg shadow-lg bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3]">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 text-blue-600">
           EMI <span className="text-[#4ade80]">Calculator</span>
         </h2>
-  
+
         {/* Main content grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 2xl:gap-60">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left side: Personal Loan sliders and inputs */}
-          <div className="bg-white p-6 rounded-md shadow-md lg:w-[50vw]">
+          <div className="bg-white p-4 sm:p-6 rounded-md shadow-md">
+            <style>{`
+                        /* Custom styles for the range slider */
+input[type="range"].range-red {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #d3d3d3; /* Default gray background */
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+input[type="range"].range-red::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #d3d3d3; /* Default gray background */
+  border-radius: 5px;
+}
+
+input[type="range"].range-red::-moz-range-track {
+  height: 8px;
+  background: #d3d3d3; /* Default gray background */
+  border-radius: 5px;
+}
+
+input[type="range"].range-red::-ms-track {
+  height: 8px;
+  background: #d3d3d3; /* Default gray background */
+  border-radius: 5px;
+  border: none;
+  color: transparent;
+}
+
+input[type="range"].range-red::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4ade80;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"].range-red::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"].range-red::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4ade80;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+            `}</style>
             {/* Loan Amount Input and Slider */}
             <div className="mb-6">
-              <label className="block text-lg font-semibold mb-2">Personal Loan Amount (₹)</label>
+              <label className="block text-base sm:text-lg font-semibold mb-2">
+                Personal Loan Amount (₹)
+              </label>
               <input
                 type="number"
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
-                className="w-1/3 border border-gray-300 p-2 rounded-md mb-3"
+                className="w-2/3 sm:w-1/3 border border-gray-300 p-2 rounded-md mb-3"
                 min={minLoanAmount}
                 max={maxLoanAmount}
               />
@@ -67,7 +136,8 @@ const LoLoanCalculator = () => {
                 max={maxLoanAmount}
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
-                className="w-full"
+                className="w-full range-red"
+                
               />
               <div className="flex justify-between mt-2 text-gray-500">
                 <span>₹ 50,000</span>
@@ -75,16 +145,18 @@ const LoLoanCalculator = () => {
                 <span>₹ 5 Cr</span>
               </div>
             </div>
-  
+
             {/* Interest Rate Input and Slider */}
             <div className="mb-6">
-              <label className="block text-lg font-semibold mb-2">Interest Rate (%)</label>
+              <label className="block text-base sm:text-lg font-semibold mb-2">
+                Interest Rate (%)
+              </label>
               <input
                 type="number"
                 value={interestRate}
                 step="0.1"
                 onChange={(e) => setInterestRate(Number(e.target.value))}
-                className="w-1/3 border border-gray-300 p-2 rounded-md mb-3"
+                className="w-2/3 sm:w-1/3 border border-gray-300 p-2 rounded-md mb-3"
                 min={minInterestRate}
                 max={maxInterestRate}
               />
@@ -95,7 +167,7 @@ const LoLoanCalculator = () => {
                 step="0.1"
                 value={interestRate}
                 onChange={(e) => setInterestRate(Number(e.target.value))}
-                className="w-full"
+                className="w-full range-red"
               />
               <div className="flex justify-between mt-2 text-gray-500">
                 <span>{minInterestRate}%</span>
@@ -103,82 +175,115 @@ const LoLoanCalculator = () => {
                 <span>{maxInterestRate}%</span>
               </div>
             </div>
-  
+
             {/* Loan Tenure Input and Slider with Yr/Mo Option */}
             <div className="mb-6">
-              <label className="block text-lg font-semibold mb-2">Loan Tenure</label>
+              <label className="block text-base sm:text-lg font-semibold mb-2">
+                Loan Tenure
+              </label>
               <div className="flex items-center mb-4">
                 <input
                   type="number"
                   value={loanTenure}
                   onChange={(e) => handleTenureChange(Number(e.target.value))}
-                  className="w-1/3 border border-gray-300 p-2 rounded-md"
-                  min={tenureUnit === 'Yr' ? minTenureYears : minTenureMonths}
-                  max={tenureUnit === 'Yr' ? maxTenureYears : maxTenureMonths}
+                  className="w-2/3 sm:w-1/3 border border-gray-300 p-2 rounded-md"
+                  min={tenureUnit === "Yr" ? minTenureYears : minTenureMonths}
+                  max={tenureUnit === "Yr" ? maxTenureYears : maxTenureMonths}
                 />
                 <div className="ml-2 flex items-center">
                   <button
-                    className={`px-4 py-2 rounded-l-md border border-gray-300 ${tenureUnit === 'Yr' ? 'bg-gray-300' : ''}`}
-                    onClick={() => handleUnitToggle('Yr')}
+                    className={`px-4 py-2 rounded-l-md border border-gray-300 ${
+                      tenureUnit === "Yr" ? "bg-gray-300" : ""
+                    }`}
+                    onClick={() => handleUnitToggle("Yr")}
                   >
                     Years
                   </button>
                   <button
-                    className={`px-4 py-2 rounded-r-md border border-gray-300 ${tenureUnit === 'Mo' ? 'bg-gray-300' : ''}`}
-                    onClick={() => handleUnitToggle('Mo')}
+                    className={`px-4 py-2 rounded-r-md border border-gray-300 ${
+                      tenureUnit === "Mo" ? "bg-gray-300" : ""
+                    }`}
+                    onClick={() => handleUnitToggle("Mo")}
                   >
                     Months
                   </button>
                 </div>
               </div>
-  
+
               <input
                 type="range"
-                min={tenureUnit === 'Yr' ? minTenureYears : minTenureMonths}
-                max={tenureUnit === 'Yr' ? maxTenureYears : maxTenureMonths}
+                min={tenureUnit === "Yr" ? minTenureYears : minTenureMonths}
+                max={tenureUnit === "Yr" ? maxTenureYears : maxTenureMonths}
                 value={loanTenure}
                 onChange={(e) => handleTenureChange(Number(e.target.value))}
-                className="w-full"
+                className="w-full range-red"
               />
-  
+
               <div className="flex justify-between mt-2 text-gray-500">
-                <span>{tenureUnit === 'Yr' ? `${minTenureYears} Yr` : `${minTenureMonths} Months`}</span>
                 <span>
-                  {loanTenure} {tenureUnit === 'Yr' ? 'Years' : 'Months'}
+                  {tenureUnit === "Yr"
+                    ? `${minTenureYears} Yr`
+                    : `${minTenureMonths} Months`}
                 </span>
-                <span>{tenureUnit === 'Yr' ? `${maxTenureYears} Yr` : `${maxTenureMonths} Months`}</span>
+                <span>
+                  {loanTenure} {tenureUnit === "Yr" ? "Years" : "Months"}
+                </span>
+                <span>
+                  {tenureUnit === "Yr"
+                    ? `${maxTenureYears} Yr`
+                    : `${maxTenureMonths} Months`}
+                </span>
               </div>
             </div>
           </div>
-  
+
           {/* Right side: Loan EMI details and Breakdown */}
           <div className="flex flex-col space-y-6">
             {/* Loan EMI and Payment details card */}
-            <div className="bg-white p-8 rounded-xl shadow-lg lg:w-[40vw]">
+            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
               <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-gray-600">Loan EMI</h3>
-                <p className="text-4xl font-bold text-sky-500">₹ {calculateEMI().toLocaleString()}</p>
+                <h3 className="text-lg font-semibold text-gray-600">
+                  Loan EMI
+                </h3>
+                <p className="text-4xl font-bold text-sky-500">
+                  ₹ {calculateEMI().toLocaleString()}
+                </p>
               </div>
-  
+
               <div className="border-t border-gray-300 my-4"></div>
-  
+
               <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-gray-600">Total Interest Payable</h3>
-                <p className="text-2xl font-bold text-sky-500">₹ {totalInterestPayable.toLocaleString()}</p>
+                <h3 className="text-lg font-semibold text-gray-600">
+                  Total Interest Payable
+                </h3>
+                <p className="text-2xl font-bold text-sky-500">
+                  ₹ {totalInterestPayable.toLocaleString()}
+                </p>
               </div>
-  
+
               <div className="border-t border-gray-300 my-4"></div>
-  
+
               <div className="text-center">
-                <h3 className="text-lg font-semibold text-gray-600">Total Payment (Principal + Interest)</h3>
-                <p className="text-2xl font-bold text-sky-500">₹ {totalPayment.toLocaleString()}</p>
+                <h3 className="text-lg font-semibold text-gray-600">
+                  Total Payment (Principal + Interest)
+                </h3>
+                <p className="text-2xl font-bold text-sky-500">
+                  ₹ {totalPayment.toLocaleString()}
+                </p>
               </div>
             </div>
-  
+
             {/* Break-up of Total Payment */}
-            <div className="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center lg:w-[40vw]" style={{ background: "linear-gradient(135deg, #E0F7FA, #BBDEFB)" }}>
-              <h3 className="text-lg font-semibold text-gray-600 mb-4">Break-up of Total Payment</h3>
-              <div className="relative w-56 h-56  ">
+            <div
+              className="bg-white p-6 sm:p-8 rounded-xl shadow-lg flex flex-col items-center"
+              style={{
+                background: "linear-gradient(135deg, #E0F7FA, #BBDEFB)",
+              }}
+            >
+              <h3 className="text-lg font-semibold text-gray-600 mb-4">
+                Break-up of Total Payment
+              </h3>
+              <div className="relative w-40 sm:w-56 h-40 sm:h-56">
                 {/* Circular Donut Chart */}
                 <svg className="w-full h-full" viewBox="0 0 36 36">
                   <circle
@@ -189,7 +294,9 @@ const LoLoanCalculator = () => {
                     r="16"
                     cx="18"
                     cy="18"
-                    strokeDasharray={`${(loanAmount / totalPayment) * 100}, 100`}
+                    strokeDasharray={`${
+                      (loanAmount / totalPayment) * 100
+                    }, 100`}
                     strokeLinecap="round"
                   />
                   <circle
@@ -200,17 +307,21 @@ const LoLoanCalculator = () => {
                     r="16"
                     cx="18"
                     cy="18"
-                    strokeDasharray={`${(totalInterestPayable / totalPayment) * 100}, 100`}
+                    strokeDasharray={`${
+                      (totalInterestPayable / totalPayment) * 100
+                    }, 100`}
                     strokeDashoffset={`-${(loanAmount / totalPayment) * 100}`}
                     strokeLinecap="round"
                   />
                 </svg>
                 {/* Center Text */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-xl font-bold text-gray-800">87.9%</p>
+                  <p className="text-xl font-bold text-gray-800">
+                    {((loanAmount / totalPayment) * 100).toFixed(1)}%
+                  </p>
                 </div>
               </div>
-  
+
               {/* Legend for Principal and Interest */}
               <div className="mt-4 flex justify-center space-x-4 text-lg">
                 <div className="flex items-center">
@@ -228,7 +339,6 @@ const LoLoanCalculator = () => {
       </div>
     </div>
   );
-  
 };
 
 export default LoLoanCalculator;

@@ -139,11 +139,11 @@ const AboutContact = () => {
               </div>
               <div className="text-center">
                 <p className="font-bold">Head Office</p>
-                <p>
-                  Goal Corporation Pvt Ltd No 250/15, Ground Floor,6th Cross,
-                  9th Main,2nd Block,
-                </p>
-                <p>Jayanagar, Bangalore - 560011, Karnataka, India</p>
+              
+                NO 34,2ND FLOOR, opp. Cosmopolitan club, <br />Jaya Nagar 1st Block,
+                Jayanagar 3rd Block, <br /> Jayanagar, Bengaluru, Karnataka 560011 <br />
+               
+             
               </div>
 
               <div className="text-center">
@@ -161,7 +161,8 @@ const AboutContact = () => {
                   href="tel:+91 9606 96 5186"
                   className="text-blue-500 hover:text-blue-700 font-bold"
                 >
-                  +91 9606 96 5186
+                  +91 8026 57 5657
+                  
                 </a>
               </div>
             </div>

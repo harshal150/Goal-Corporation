@@ -3,7 +3,9 @@ import React from 'react';
 import debtRestructure from '../../assets/Header/3.qyqrOvtrund6entmdquwS0INcEUsiWkStMEVCTFEsgGKIi2SkigLIVlSmA75I0JTbcsORTjksB02f0gOy6Qt2UJLNkOkCEoghB6CAASQTQK76N7dmd7Znpme7q6urs6qys';
 
 import debt from '../../assets/loansNew/debtnew1.jpg'
+import { Link } from 'react-router-dom';
 const DebtRestructureHeroSection = () => {
+  const loanType="Debt Restructuring";
   const HandleClick = () => {
     window.open('https://dexpertsystems.com/requestVista?query=Pv4/9aqzdpFVJ2ewt/6AWTmJDLwMN5Fvs/CBjh/a4I3vX1tMG%2BmFZ7BGIKIKPcP8', '_blank');
   };
@@ -23,12 +25,13 @@ const DebtRestructureHeroSection = () => {
           Obligations and Avoiding Default
 
 </h1>
-<p className="mt-6 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  uppercase font-semibold">
+<p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  uppercase font-semibold">
 A Comprehensive Strategy for Financial Stability, Debt Relief, and Long-Term Sustainability.
 </p>
-<button onClick={HandleClick} className="mt-6 bg-[#4ade80] px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition">
+<Link   to='/applyforloan'
+        state= { {loanType }} className="mt-6 bg-[#4ade80] px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition">
   Apply Now
-</button>
+</Link>
 </div>
 
 

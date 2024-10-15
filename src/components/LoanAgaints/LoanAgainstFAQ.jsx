@@ -5,7 +5,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const faqList = [
 	{
-		isActive: true,
+		isActive: false,
 		question: "What is a loan against property?",
 		answer:
 			"A loan against property (LAP) is a secured loan that is provided by financial institutions where borrowers can pledge their residential, commercial, or industrial property as collateral to avail funds.",
@@ -46,6 +46,13 @@ const faqList = [
 		answer:
 			"Eligibility criteria include the property’s ownership, the borrower’s income, age, and credit score. The property should be free from legal disputes and have clear ownership documents.",
 	},
+	{
+		isActive: false,
+		question: "Can I increase the loan amount on my existing loan against property?",
+		answer:
+		  "Yes, if the value of your property has appreciated or if you've repaid a significant portion of your loan, many lenders offer the option to top-up your existing loan against property. This allows you to access additional funds at a relatively lower interest rate compared to unsecured loans. Contact your lender to explore the top-up options available based on your current property value and repayment history."
+	  },
+	  
 ];
 
 const FaqItem = ({ faq }) => {
@@ -57,7 +64,7 @@ const FaqItem = ({ faq }) => {
 
 	return (
 		<div
-			className={`${isOpen && "active"} shadow dark:shadow-none bg-white dark:bg-[#1E2735] rounded-lg mt-6`}
+			className={`${isOpen && "active"}  bg-white rounded-lg mt-6`}
 		>
 			<a
 				href="#!"
