@@ -37,15 +37,9 @@ const faqList = [
   },
   {
     isActive: false,
-    question: "What happens if I fail to repay my home loan on time?",
+    question: "What happens if I fail to repay home loan on time?",
     answer:
       "If you fail to repay your home loan, the lender has the right to auction or sell the property to recover the loan amount. This is because a home loan is a secured loan, and the property serves as collateral.",
-  },
-  {
-    isActive: false,
-    question: "Can I transfer my existing home loan to another lender?",
-    answer:
-      "Yes, you can transfer your existing home loan to another lender through a process called home loan balance transfer. This is usually done to take advantage of lower interest rates offered by other lenders.",
   },
   {
     isActive: false,
@@ -53,6 +47,13 @@ const faqList = [
     answer:
       "Yes, most lenders allow prepayments towards your home loan. Prepaying can help reduce the outstanding principal and, in turn, lower the total interest paid over the loan tenure. However, some lenders may charge a prepayment penalty, so it's advisable to check the terms of your loan agreement.",
   },
+  {
+    isActive: false,
+    question: "Can I transfer my existing home loan to another lender?",
+    answer:
+      "Yes, you can transfer your existing home loan to another lender through a process called home loan balance transfer. This is usually done to take advantage of lower interest rates offered by other lenders.",
+  },
+
 ];
 
 const FaqItem = ({ faq }) => {
@@ -63,17 +64,17 @@ const FaqItem = ({ faq }) => {
   };
 
   return (
-    <div className={`${isOpen && "active"}  bg-white  rounded-lg mt-6 `}>
+    <div className={`${isOpen && "active"} bg-white rounded-lg mt-4 md:mt-6 shadow-md`}>
       <a
         href="#!"
         className="btn p-4 lg:p-6 w-full text-start flex justify-between items-center cursor-pointer"
         onClick={toggleFaq}
       >
-        <span>{faq.question}</span>
+        <span className="text-sm md:text-base lg:text-lg">{faq.question}</span>
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </a>
       <div className={`${isOpen ? "block" : "hidden"} p-4 lg:p-6 pt-0`}>
-        <p className="opacity-50">{faq.answer}</p>
+        <p className="opacity-70 text-sm md:text-base">{faq.answer}</p>
       </div>
     </div>
   );
@@ -85,27 +86,27 @@ FaqItem.propTypes = {
 
 const HomeFAQ = () => {
   return (
-    <section className="ezy__faq1 light py-14 md:py-24  dark:bg-[#0b1727] text-zinc-900 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] text-gray-800 ">
-      <div className="container px-16 md:px-8 lg:px-28">
+    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24 dark:bg-[#0b1727] text-zinc-900 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] text-gray-800">
+      <div className="container px-4 sm:px-6 md:px-8 lg:px-28 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
-            <h2 className="text-4xl  text-center font-bold text-blue-600 uppercase mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 uppercase mb-4 md:mb-8">
               Frequently Asked Questions about Home Loans
             </h2>
-            <p className="">
+            <p className="text-sm md:text-base lg:text-lg">
               Get answers to common questions about home loans and understand
               how home loans can help you own your dream home with ease.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-0 md:gap-6">
-          <div className="col-span-12 md:col-span-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div>
             {faqList.slice(0, Math.floor(faqList.length / 2)).map((faq, i) => (
               <FaqItem faq={faq} key={i} />
             ))}
           </div>
-          <div className="col-span-12 md:col-span-6">
+          <div>
             {faqList
               .slice(Math.floor(faqList.length / 2), faqList.length)
               .map((faq, i) => (

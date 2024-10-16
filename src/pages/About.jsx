@@ -10,6 +10,7 @@ import AboutInfo from '../components/about/AboutInfo'
 import GroupCompany from '../components/about/GroupCompany'
 import RewardsRecog from '../components/about/RewardsRecog'
 import EmployeesSpeak from '../components/about/EmployeesSpeak'
+import GoalInfo from '../components/about/GoalInfo'
 
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
     <div>
         <Navbar />
         <AboutInfo/>
+        <GoalInfo/>
         <AboutMainSection/>
         {/* <LoanInfo/> */}
         <DirectorMsg/>

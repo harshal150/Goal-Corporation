@@ -44,21 +44,22 @@ const MapComponent = () => {
           {/* Map Section */}
           <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-end">
             {/* Background Logo */}
-            <div className="absolute inset-0 flex justify-center items-center z-0">
-              <img
-                src="assets/final-logo.png" // Path to your logo image
-                alt="Background Logo"
-                className="ml-20 h-auto opacity-90" // Adjust size and opacity
-              />
-            </div>
+            <div className="absolute inset-0 justify-center items-center z-0 hidden md:flex">
+  <img
+    src="assets/final-logo.png" // Path to your logo image
+    alt="Background Logo"
+    className="ml-20 h-auto opacity-90" // Adjust size and opacity
+  />
+</div>
+
 
             {/* India Map */}
             <div className="relative w-[80%] h-auto object-cover z-10">
               <img
                 src="assets/map.jpg"
                 alt="India Map"
-                className="w-full h-auto opacity-70"
-                style={{ filter: "contrast(100%)" }}
+                className="w-full h-auto opacity-35"
+                style={{ filter: "contrast(200%)" }}
               />
               {/* Pin Locations */}
               {cities.map((city, index) => (

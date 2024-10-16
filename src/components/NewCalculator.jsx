@@ -52,71 +52,7 @@ const LoLoanCalculator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left side: Personal Loan sliders and inputs */}
           <div className="bg-white p-4 sm:p-6 rounded-md shadow-md">
-            <style>{`
-                        /* Custom styles for the range slider */
-input[type="range"].range-red {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 8px;
-  background: #d3d3d3; /* Default gray background */
-  border-radius: 5px;
-  outline: none;
-  transition: background 0.3s ease;
-}
 
-input[type="range"].range-red::-webkit-slider-runnable-track {
-  height: 8px;
-  background: #d3d3d3; /* Default gray background */
-  border-radius: 5px;
-}
-
-input[type="range"].range-red::-moz-range-track {
-  height: 8px;
-  background: #d3d3d3; /* Default gray background */
-  border-radius: 5px;
-}
-
-input[type="range"].range-red::-ms-track {
-  height: 8px;
-  background: #d3d3d3; /* Default gray background */
-  border-radius: 5px;
-  border: none;
-  color: transparent;
-}
-
-input[type="range"].range-red::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #4ade80;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="range"].range-red::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: red;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="range"].range-red::-ms-thumb {
-  width: 20px;
-  height: 20px;
-  background: #4ade80;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-
-
-
-
-
-            `}</style>
             {/* Loan Amount Input and Slider */}
             <div className="mb-6">
               <label className="block text-base sm:text-lg font-semibold mb-2">

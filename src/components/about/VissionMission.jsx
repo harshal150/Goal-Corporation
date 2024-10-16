@@ -1,14 +1,15 @@
 import React from "react";
-import mission from '../../assets/svg/home-loan.png';
-import vission from '../../assets/svg/home-loan.png';
+import vission from '../../assets/mission.avif';
+import mission from '../../assets/vission.avif';
 
 const VisionMission = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 via-purple-50 to-blue-50 py-16">
       {/* Vision & Mission Header */}
       <div className="text-center mb-12 md:mb-16">
-        <h1 className="text-3xl md:text-5xl font-bold text-center text-indigo-800 mb-6 md:mb-10">
-          VISION & MISSION
+  
+        <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-6 md:mb-10">
+        VISION & MISSION
         </h1>
       </div>
 

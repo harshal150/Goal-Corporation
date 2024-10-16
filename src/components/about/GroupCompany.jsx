@@ -109,6 +109,10 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import kukkeshwara from '../../assets/group Companies/kukkeshwara.jpg'
+import hubstair from '../../assets/group Companies/hubstair.jpg'
+import goalMain from '../../assets/Goal logo orange.png'
+import promoter from '../../assets/group Companies/motors.jpg'
 
 const GroupCompany = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -140,9 +144,12 @@ const GroupCompany = () => {
 
   return (
     <div className="mt-12 mb-20 max-w-7xl mx-auto text-center p-6 ">
-      <h1 className="text-5xl font-bold text-center text-indigo-800 uppercase mb-16">
+      {/* <h1 className="text-5xl font-bold text-center text-indigo-800 uppercase mb-16">
         Group Companies
-      </h1>
+      </h1> */}
+      <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-16">
+      Group Companies
+        </h1>
 
       <div
         // ref={elementRef}
@@ -152,19 +159,19 @@ const GroupCompany = () => {
           {
             name: "Goal Corporation Pvt Ltd",
             description: "This flagship company of Goal group is engaged purely in Financial Consulting, bridging between the customers and bankers for their lending needs and financial restructuring. The different products offered are Home Loans, Mortgage Loans, Balance Transfer, Personal Loan, Construction Loan and so on.  The company handles most difficult cases in terms of disbursal and handholding the customers.",
-            img: "https://swiperjs.com/images/projects/framework7.svg",
+            img: goalMain,
             alt: "Framework7",
           },
           {
-            name: "Goal Corporation",
-            description: "This partnership firm is engaged in trading of Bio Medical equipment.  Our main focus area being Institutional Customers such as Medical and Nursing colleges, Hospitals, Medical and Science Laboratories, etc.  The product line is Monocular Microscope, Pental Heal Microscope, Rotary Shaker and Rinocular Microscope.  Apart from just supplying these equipment, we also undertake servicing of these precise apparatuses.",
-            img: "https://swiperjs.com/images/projects/framework7.svg",
+            name: "Goal promoters Pvt Ltd",
+            description: "Goal Promoters is confident of providing services like Real Estate, Finacial Services. We Provide Man Power Solutions for small, medium and large organizations that help them to achieve their goals. Goal Promotersis a Real Estate Advisory firm in Bangalore offering investment and consultancy services. We offer our services in the real estate market, to investment trusts, family offices and to individual investors across the world.",
+            img: promoter,
             alt: "Framework7",
           },
           {
             name: "Kukkeshwara Education Trust",
             description: "Aa a philanthropic initiative we have Goal International Public School at a remote place called Manki, Honnavar, in North Canara district, providing a quality education to the rural folks. Having more than 1000 student base, this ICSE syllabi school is being appreciated for its exemplary standards in that area ",
-            img: "https://swiperjs.com/images/projects/atropos.svg",
+            img: kukkeshwara,
             alt: "Atropos",
           },
           {
@@ -182,7 +189,7 @@ const GroupCompany = () => {
           {
             name: "Hubstairs-Coworking Space",
             description: "The Hubstairs is a new initiative by Goal group in the co-working space, operating for the last four years.",
-            img: "https://swiperjs.com/images/projects/atropos.svg",
+            img: hubstair,
             alt: "Atropos",
           },
         
@@ -195,7 +202,7 @@ const GroupCompany = () => {
             rel="noreferrer"
           >
             <img
-              className="w-18 h-18 sm:w-32 sm:h-32 mb-4"
+              className="w-32 h-16 sm:w-36 sm:h-28 mb-4"
               src={company.img}
               alt={company.alt}
             />

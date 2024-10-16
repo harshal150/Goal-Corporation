@@ -40,7 +40,7 @@ Explore our wide range of Personal Loan Options designed to fit your unique requ
 
 
 
-      <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+      <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 mb-8 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
         <img src={personal} alt="Business Loan" className="max-w-full h-auto object-contain  mix-blend-multiply rounded-2xl" />
       </div>
     </div>

@@ -34,7 +34,7 @@ Secure Quick and Convenient Business Loans to cover fixed asset expenses and ach
 </div>
 
       {/* Image Section */}
-      <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+      <div className="w-full sm:order-2 order-1 mt-6 mb-8 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
         <img src={business} alt="Business Loan" className="max-w-full h-auto mb-32 object-contain rounded-2xl  mix-blend-multiply" />
       </div>
     </div>

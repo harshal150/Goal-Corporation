@@ -33,11 +33,11 @@ const jobInfo = [
 
 const equipment = [
   { value: "Home Loan", href: "/homeloan" },
-  { value: "Loan Against Property", href: "/loanagaints" },
-  { value: "Working Capital Loan", href: "/workingcapital" },
+  { value: "Loan Against Property", href: "/loanagainstproperty" },
+  { value: "Working Capital Loan", href: "/workingcapitalloan" },
   { value: "Business Loan", href: "/businessloan" },
   { value: "Personal Loan", href: "personalloan" },
-  { value: "Debt Restructuring", href: "/debtrestructure" },
+  { value: "Debt Restructuring", href: "/debtrestructuring" },
 ];
 
 const language = [

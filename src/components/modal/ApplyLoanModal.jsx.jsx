@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Modal from "./Modal.jsx";
 import {
   FaUser,
   FaPhone,
@@ -10,62 +9,23 @@ import {
   FaEnvelope,
   FaCreditCard,
   FaCalendarAlt,
-
 } from "react-icons/fa";
 import { TbMoneybag } from "react-icons/tb";
-
 import contact from "../../assets/contact.avif";
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
   fullName: Yup.string().required("Full name is required"),
-  email: Yup.string()
-    .email("Invalid email address")
-    .required("Email is required"),
-  mobileNumber: Yup.string()
-    .matches(/^[6-9]\d{9}$/, "Invalid mobile number")
-    .required("Mobile number is required"),
-  pincode: Yup.string()
-    .matches(/^\d{6}$/, "Invalid pincode")
-    .required("Pincode is required"),
-  panCard: Yup.string()
-    .matches(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/, "Invalid PAN card number")
-    .required("PAN card number is required"),
+  email: Yup.string().email("Invalid email address").required("Email is required"),
+  mobileNumber: Yup.string().matches(/^[6-9]\d{9}$/, "Invalid mobile number").required("Mobile number is required"),
+  pincode: Yup.string().matches(/^\d{6}$/, "Invalid pincode").required("Pincode is required"),
+  panCard: Yup.string().matches(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/, "Invalid PAN card number").required("PAN card number is required"),
   dob: Yup.date().required("Date of birth is required"),
-  terms: Yup.boolean()
-    .oneOf([true], "You must accept the terms and conditions.")
-    .required("You must accept the terms and conditions."),
+  terms: Yup.boolean().oneOf([true], "You must accept the terms and conditions.").required("You must accept the terms and conditions."),
 });
 
 const indianStates = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
+  // Array of Indian states...
 ];
 
 const loan_interest = {
@@ -77,64 +37,29 @@ const loan_interest = {
   "Debt Restructuring": 13,
 };
 
-const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
-  console.log(loanType);
-
-  const interestRate=loan_interest[loanType] || "NA"
+const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
+  const interestRate = loan_interest[loanType] || "NA";
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-10 mb-10 ">
+    <div className="w-full max-w-4xl mx-auto mt-6 px-4 md:px-6 lg:px-8">
       <div className="relative text-center">
-        <style>
-          {`
-            @keyframes wiggle {
-              0%, 100% { transform: rotate(-3deg); }
-              50% { transform: rotate(3deg); }
-            }
-
-            @keyframes fadeInUp {
-              0% { opacity: 0; transform: translateY(20px); }
-              100% { opacity: 1; transform: translateY(0); }
-            }
-
-            @keyframes line-draw {
-              0% { stroke-dasharray: 0 200; }
-              100% { stroke-dasharray: 200 200; }
-            }
-
-            .animate-wiggle {
-              animation: wiggle 1s infinite;
-            }
-
-            .animate-fadeInUp {
-              animation: fadeInUp 1s ease-out;
-            }
-
-            .animate-line-draw {
-              animation: line-draw 2s ease-in-out forwards;
-            }
-          `}
-        </style>
-
-        <h3 className="text-2xl font-bold mb-6 text-center animate-fadeInUp">
+        <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 animate-fadeInUp">
           Submit Your Details &{" "}
           <span className="text-red-500 animate-wiggle">
-          {loanType && loanType !== ""
-              ? `Get ${loanType} starting from ${interestRate}% interest rate`
-              : "We'll Contact You Shortly"}
+            {loanType && loanType !== "" ? `Get ${loanType} starting from ${interestRate}% interest rate` : "We'll Contact You Shortly"}
           </span>
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {/* Form Section */}
-        <div className="col-span-3 md:col-span-2 mx-auto md:mx-0 ">
+        <div className="col-span-3 md:col-span-2">
           <Formik
             initialValues={{
               fullName: "",
               email: "",
               mobileNumber: "",
-              loans:loanType ||"",
+              loans: loanType || "",
               state: "",
               city: "",
               pincode: "",
@@ -147,7 +72,6 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
               console.log("Form Submitted with values: ", values);
-
               setTimeout(() => {
                 setSubmitting(false);
                 onClose();
@@ -155,14 +79,11 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
             }}
           >
             {({ handleBlur, isSubmitting }) => (
-              <Form className="space-y-3">
+              <Form className="space-y-4">
                 {/* Full Name and Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="fullName"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="fullName" className="block text-gray-700 font-medium">
                       Full Name
                     </label>
                     <FaUser className="absolute left-2 top-10 text-blue-700" />
@@ -174,18 +95,11 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
-                    <ErrorMessage
-                      name="fullName"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
+                    <ErrorMessage name="fullName" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
 
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="email"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="email" className="block text-gray-700 font-medium">
                       Email Address
                     </label>
                     <FaEnvelope className="absolute left-2 top-10 text-blue-700" />
@@ -197,21 +111,14 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
+                    <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
                 </div>
 
                 {/* Mobile Number and Loans */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="mobileNumber"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="mobileNumber" className="block text-gray-700 font-medium">
                       Mobile Number
                     </label>
                     <FaPhone className="absolute left-2 top-10 text-blue-700" />
@@ -223,23 +130,14 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
-                    <ErrorMessage
-                      name="mobileNumber"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
+                    <ErrorMessage name="mobileNumber" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
 
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="loans"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="loans" className="block text-gray-700 font-medium">
                       Loans
                     </label>
-                    {/* <FaPhone className="absolute left-2 top-10 text-blue-700" /> */}
                     <TbMoneybag className="absolute left-2 top-10 text-blue-700" />
-                    
                     <Field
                       name="loans"
                       as="select"
@@ -249,28 +147,20 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                     >
                       <option value="">Select Loans</option>
                       <option value="Home Loan">Home Loan</option>
-                      <option value="Loans Against Property">
-                        Loans Against Property
-                      </option>
-                      <option value="Working Capital Loan">
-                        Working Capital Loan
-                      </option>
+                      <option value="Loans Against Property">Loans Against Property</option>
+                      <option value="Working Capital Loan">Working Capital Loan</option>
                       <option value="Business Loan">Business Loan</option>
                       <option value="Personal Loan">Personal Loan</option>
-                      <option value="Debt Restructuring">
-                        Debt Restructuring
-                      </option>
+                      <option value="Debt Restructuring">Debt Restructuring</option>
                     </Field>
                   </div>
                 </div>
 
-                {/* State and City */}
+                {/* State, City, Pincode, and Gender Fields */}
+                {/* Adjusted to be in two-column layout for larger screens */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="state"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="state" className="block text-gray-700 font-medium">
                       State
                     </label>
                     <FaBuilding className="absolute left-2 top-10 text-blue-700" />
@@ -290,11 +180,8 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                     </Field>
                   </div>
 
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="city"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="city" className="block text-gray-700 font-medium">
                       City of Residence
                     </label>
                     <FaCity className="absolute left-2 top-10 text-blue-700" />
@@ -306,16 +193,14 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
+                    <ErrorMessage name="city" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
                 </div>
 
                 {/* Pincode and Gender */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="pincode"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="pincode" className="block text-gray-700 font-medium">
                       Pincode
                     </label>
                     <FaBuilding className="absolute left-2 top-10 text-blue-700" />
@@ -327,18 +212,11 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
-                    <ErrorMessage
-                      name="pincode"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
+                    <ErrorMessage name="pincode" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
 
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="gender"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="gender" className="block text-gray-700 font-medium">
                       Gender
                     </label>
                     <FaUser className="absolute left-2 top-10 text-blue-700" />
@@ -356,14 +234,10 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                     </Field>
                   </div>
                 </div>
-
-                {/* PAN Card and Date of Birth */}
+                {/* PAN card & Date of Birth */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="panCard"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="panCard" className="block text-gray-700 font-medium">
                       PAN Card Number
                     </label>
                     <FaCreditCard className="absolute left-2 top-10 text-blue-700" />
@@ -375,18 +249,10 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
-                    <ErrorMessage
-                      name="panCard"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
+                    <ErrorMessage name="panCard" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
-
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="dob"
-                      className="block text-gray-700 font-medium"
-                    >
+                  <div className="relative">
+                    <label htmlFor="dob" className="block text-gray-700 font-medium">
                       Date of Birth
                     </label>
                     <FaCalendarAlt className="absolute left-2 top-10 text-blue-700" />
@@ -394,61 +260,46 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
                       name="dob"
                       type="date"
                       id="dob"
-                      placeholder="Date of Birth"
                       className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
                       onBlur={handleBlur}
                     />
-                    <ErrorMessage
-                      name="dob"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
+                    <ErrorMessage name="dob" component="div" className="text-red-500 text-sm mt-1" />
                   </div>
                 </div>
 
-                {/* Residence Type and Terms */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative mt-3">
-                    <label
-                      htmlFor="residenceType"
-                      className="block text-gray-700 font-medium"
-                    >
-                      Residence Type
-                    </label>
-                    <FaBuilding className="absolute left-2 top-10 text-blue-700" />
-                    <Field
-                      name="residenceType"
-                      as="select"
-                      id="residenceType"
-                      className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
-                      onBlur={handleBlur}
-                    >
-                      <option value="">Select Residence Type</option>
-                      <option value="owned">Owned</option>
-                      <option value="rented">Rented</option>
-                    </Field>
-                  </div>
-                </div>
-
-                {/* Terms and Conditions */}
-                <div className="flex items-start space-x-2 mt-4">
+                {/* Residence Type */}
+                <div className="relative">
+                  <label htmlFor="residenceType" className="block text-gray-700 font-medium">
+                    Residence Type
+                  </label>
+                  <FaBuilding className="absolute left-2 top-10 text-blue-700" />
                   <Field
-                    type="checkbox"
-                    name="terms"
-                    className="form-checkbox mt-2"
-                  />
-                  <span>
-                    I have read and agree to Goal Corporation Disclaimer and
-                    Privacy Policy terms & conditions
+                    name="residenceType"
+                    as="select"
+                    id="residenceType"
+                    className="form-input w-full pl-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all mt-1"
+                    onBlur={handleBlur}
+                  >
+                    <option value="">Select Residence Type</option>
+                    <option value="owned">Owned</option>
+                    <option value="rented">Rented</option>
+                  </Field>
+                </div>
+
+                {/* Terms & Conditions */}
+                <div className="flex items-start space-x-2 mt-4">
+                  <Field type="checkbox" name="terms" className="form-checkbox mt-2" />
+                  <span className="text-gray-700">
+                    I have read and agree to Goal Corporation Disclaimer and Privacy Policy terms & conditions.
                   </span>
                 </div>
 
                 {/* Submit Button */}
-                <div className="text-center mt-6">
+                <div className="text-center mt-6 mb-6">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-blue-600 hover:bg-blue-500 text-white py-3 px-8 rounded-xl transition-all duration-300 hover:animate-pulse"
+                    className="bg-blue-600 hover:bg-blue-500 text-white py-3 px-8 mb-7 rounded-xl transition-all duration-300 hover:animate-pulse"
                   >
                     {isSubmitting ? "Submitting..." : "Submit Application"}
                   </button>
@@ -458,13 +309,9 @@ const ApplyLoanModal = ({ isOpen, onClose,loanType }) => {
           </Formik>
         </div>
 
-        {/* Image Section (Hidden on Mobile) */}
+        {/* Image Section */}
         <div className="hidden md:flex justify-center items-center">
-          <img
-            src={contact}
-            alt="Loan Application"
-            className="w-full h-full object-cover"
-          />
+          <img src={contact} alt="Contact" className="w-full h-full object-cover rounded-lg" />
         </div>
       </div>
     </div>

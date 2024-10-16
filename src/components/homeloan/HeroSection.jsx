@@ -17,7 +17,7 @@ const loanType="Home Loan";
 
 
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-500">
-        Make Your Homeownership
+        Make Your Home Ownership
           Dreams Come True with Our{' '} <br></br><span className="text-red-500">Home Loan Solution!</span> <br />
    
         </h1>
@@ -40,7 +40,7 @@ const loanType="Home Loan";
 
 
       {/* Image Section */}
-      <div className="w-full sm:order-2 order-1  mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center bg-gradient-to-b from-blue-50 to-blue-100">
+      <div className="w-full sm:order-2 order-1  mt-6 mb-8 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center bg-gradient-to-b from-blue-50 to-blue-100">
         <img src={personal} alt="Loan Against Property" className="max-w-full rounded-3xl h-auto object-contain  mix-blend-multiply" />
       </div>
     </div>

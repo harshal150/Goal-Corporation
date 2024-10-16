@@ -165,12 +165,13 @@ const Header = () => {
 
             {/* Image Section */}
             <div className="w-full sm:order-2 z-50 order-1 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:mb-10 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="max-w-full h-auto object-contain rounded-2xl mix-blend-multiply"
-              />
-            </div>
+  <img
+    src={slide.image}
+    alt={slide.title}
+    className="max-w-full h-auto object-contain rounded-2xl mix-blend-multiply mb-32 sm:mb-10"
+  />
+</div>
+
           </div>
         ))}
       </div>

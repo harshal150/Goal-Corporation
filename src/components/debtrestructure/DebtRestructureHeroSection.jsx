@@ -36,7 +36,7 @@ A Comprehensive Strategy for Financial Stability, Debt Relief, and Long-Term Sus
 
 
       {/* Image Section */}
-      <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+      <div className="w-full sm:order-2 order-1 mt-6 mb-4 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
         <img src={debt} alt="Debt Restructuring" className="max-w-full h-[100%] object-contain  mix-blend-multiply rounded-2xl" />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import member1 from '../../assets/DirectorImage.jpg';
+import reddysir from '../../assets/keyMembers/reddy.jpg'
 
 const teamMembers = [
   {
@@ -12,7 +13,7 @@ const teamMembers = [
     designation: "Director",
   },
   {
-    img: member1,
+    img: reddysir,
     name: "CA Sriram Reddy",
     designation: "Director",
   },
@@ -24,7 +25,7 @@ const TeamMemberItem = ({ member }) => (
       <img
         src={member.img}
         alt={member.name}
-        className="w-full h-72 object-cover rounded-t-2xl transition-opacity duration-300 hover:opacity-90"
+        className="w-full h-72 object-contain rounded-t-2xl transition-opacity duration-300 hover:opacity-90"
       />
       <div className="p-4">
         <h5 className="text-2xl mb-2 font-bold text-gray-900">{member.name}</h5>
@@ -40,9 +41,10 @@ const Ourteam = () => {
       <div className="container px-4 mx-auto">
         <div className="flex justify-center text-center">
           <div className="sm:max-w-5xl">
-            <h1 className="text-5xl font-bold text-center text-indigo-800 mb-6">
-              KEY MEMBERS
-            </h1>
+          
+            <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-6">
+            KEY MEMBERS
+        </h1>
             <p className="font-semibold text-base text-gray-600 opacity-80 mb-12">
               Meet the talented individuals who power our vision and drive our mission forward. Each member brings unique expertise and passion to our team, united by a shared dedication to excellence and innovation.
             </p>

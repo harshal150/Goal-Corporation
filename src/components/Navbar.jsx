@@ -112,7 +112,7 @@ export const Navbar = () => {
                 </Link>
                 <Link
                   to="/debtrestructuring"
-                  className="block px-4 py-3 text-sm font-semibold hover:bg-blue-600 hover:text-white transition duration-200 rounded-lg mx-1.5 mt-1"
+                  className="block px-4 py-3 mb-2 text-sm font-semibold hover:bg-blue-600 hover:text-white transition duration-200 rounded-lg mx-1.5 mt-1"
                 >
                   Debt Restructuring
                 </Link>

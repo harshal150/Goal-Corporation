@@ -30,9 +30,10 @@ const AboutInfo = () => {
           }`}
         >
           <div className="text">
-            <h1 className="text-5xl font-bold text-left text-indigo-800 mb-10">
-              About <span className="text-indigo-600">Goal Corporation</span>
-            </h1>
+         
+            <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-10">
+            About <span className="text-indigo-600">Goal Corporation</span>
+        </h1>
             <p className="text-gray-600 text-md leading-relaxed">
               Our core focus is into Financial Consulting, Real Estate, Bio Medical, Construction & Infrastructure Development and we are also into an ICSE syllabi International Public School. We believe in delivering Quality Service and achieve customer’s utmost satisfaction. The real strength of Goal Corporation is its young and professional team, competent management and hardcore exposure in the field.
             </p>
@@ -44,22 +45,7 @@ const AboutInfo = () => {
             <p className="text-gray-600 text-md leading-relaxed">
               With 30+ branches and location partners, we serve the needs of people from every strata of society, be it a personal loan of 10 lakh rupees or the debt restructuring of Rs. 100 Crore+.
             </p>
-            <br />
-            <p className="text-gray-600 text-md leading-relaxed">
-              <strong>GOAL for us is :</strong>
-              <br />
-              <br />
-              <strong>G </strong>- Gratitude for our customers, stakeholders and team members.
-              <br />
-              <strong>O </strong>- Opportunity for us to serve our customers, thereby achieve growth for ourselves.
-              <br />
-              <strong>A </strong>- Analytics: As a Fintech company we use analytic tools to help our customers to get loans with just a single click.
-              <br />
-              <strong>L </strong>- Lending: We intend to be the most preferred, transparent, honest, and most loved financial service provider.
-              <br />
-              Trust us, <strong className="text-black">we are Committed To Deliver!!!</strong>
-            </p>
-            <br />
+        
           </div>
         </div>
       </div>

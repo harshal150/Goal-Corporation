@@ -40,7 +40,7 @@ Explore our wide range of Working Capital loans Options designed to fit your uni
 
 
       {/* Image Section */}
-      <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+      <div className="w-full sm:order-2 order-1 mb-8 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
         <img src={workingCapital} alt="Working Capital Loan" className="max-w-full rounded-2xl  mix-blend-multiply h-auto object-contain" />
       </div>
     </div>

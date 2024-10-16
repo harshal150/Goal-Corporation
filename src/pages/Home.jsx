@@ -88,7 +88,7 @@ export const Home = () => {
   const startChat = () => {
     const loanTypes = selectedLoans.join(', ');
     const message = `Name: ${name}, Email: ${email}, Mobile: ${mobile}, Loans: ${loanTypes}`;
-    const whatsappUrl = `https://wa.me/+917410591595?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/+918088335006?text=${encodeURIComponent(
       message
     )}`;
 
@@ -123,7 +123,7 @@ export const Home = () => {
       </div>
 
       {showForm && (
-  <div className="fixed bottom-24 right-2 z-50 bg-gradient-to-r from-[#4e45d1] to-[#a355de] p-6 border-black rounded-2xl shadow-3xl shadow-black w-80 h-[69%]  ">
+  <div className="fixed bottom-24 right-2 z-50 bg-blue-400 p-6 border-black rounded-2xl shadow-3xl shadow-black w-80 h-[69%]  ">
     <button
       className="absolute top-2 right-2 h-10 w-10 "
       onClick={() => setShowForm(false)}  // Event to close the modal

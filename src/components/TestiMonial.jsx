@@ -14,6 +14,9 @@ import t3 from "../assets/client_testimonial/test3.png"
 import t4 from "../assets/client_testimonial/test4.png"
 import t5 from "../assets/client_testimonial/test5.png"
 
+
+
+
 const testimonialList = [
   {
     name: "Prashant Bawkar, Mumbai",
@@ -89,6 +92,7 @@ const Testimonial = () => {
   <h1 className="font-bold text-[32px] md:text-[40px] text-center mt-10 mb-5 uppercase text-blue-700">
     What Our Client Says
   </h1>
+
   <div className="container px-4 mx-auto">
     <div className="grid grid-cols-12 gap-y-8 gap-x-6">
       {/* Image Section */}

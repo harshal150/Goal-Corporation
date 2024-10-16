@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "animate.css"; // Import Animate.css
-import partner from '../../assets/becomepartner.jpg'
+import partner from '../../assets/becomepartner.jpg';
 
 const indianStates = [
   "Andhra Pradesh",
@@ -90,23 +90,23 @@ const BecomeAPartner = () => {
   return (
     <section
       ref={sectionRef}
-      className={`container mx-auto p-8 my-10 ${
+      className={`container mx-auto p-4 md:p-8 my-10 ${
         isVisible ? "animate__animated animate__bounceIn" : ""
       }`}
     >
-      <h1 className="text-4xl font-bold text-center text-blue-700 md:text-left capitalize mb-10">
+      <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left text-blue-700 capitalize mb-6 md:mb-10">
         We are committed to becoming India’s Leading Loan Distributor!
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Form Section (2/3 width) */}
         <form
-          className="space-y-6 col-span-2 "
+          className="space-y-6 col-span-1 md:col-span-2"
           noValidate
           validated={validated}
           onSubmit={handleSubmit}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
               className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
@@ -187,11 +187,11 @@ const BecomeAPartner = () => {
         </form>
 
         {/* Image Section (1/3 width) */}
-        <div className="col-span-1">
+        <div className="col-span-1 md:col-span-1 flex justify-center md:justify-end">
           <img
             src={partner}
             alt="Partner Banner"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-64 md:h-full object-cover rounded-lg"
           />
         </div>
       </div>
