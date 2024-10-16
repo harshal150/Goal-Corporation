@@ -166,7 +166,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="mb-6 md:mb-0 md:w-1/4">
+            <div className="mb-6 md:mb-0 md:w-2/4">
               <h5 className="font-bold mb-3 text-[20px]">Corporate Address</h5>
               <span className="text-gray-800 font-semibold">
                 Goal Corporation Pvt Ltd,<br />
