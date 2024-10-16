@@ -1,4 +1,4 @@
-import Whatwedoimg from "../../assets/team.jpg";
+import Whatwedoimg from "../../assets/about/goal2.jpeg";
 const Shapes = () => (
   <>
     <svg
@@ -127,7 +127,7 @@ const GoalInfo = () => {
               <img
                 src={Whatwedoimg}
                 alt=""
-                className="max-w-full h-auto rounded-full mx-auto"
+                className="w-full h-full rounded-full mx-auto"
               />
               <div className="absolute w-full h-full left-0 top-0 bg-slate-100  rounded-full -z-20"></div>
             </div>
