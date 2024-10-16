@@ -53,7 +53,6 @@ const faqList = [
     answer:
       "Yes, you can transfer your existing home loan to another lender through a process called home loan balance transfer. This is usually done to take advantage of lower interest rates offered by other lenders.",
   },
-
 ];
 
 const FaqItem = ({ faq }) => {
@@ -90,7 +89,7 @@ const HomeFAQ = () => {
       <div className="container px-4 sm:px-6 md:px-8 lg:px-28 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 uppercase mb-4 md:mb-8">
+            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 uppercase mb-4 md:mb-8">
               Frequently Asked Questions about Home Loans
             </h2>
             <p className="text-sm md:text-base lg:text-lg">
@@ -100,19 +99,10 @@ const HomeFAQ = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div>
-            {faqList.slice(0, Math.floor(faqList.length / 2)).map((faq, i) => (
-              <FaqItem faq={faq} key={i} />
-            ))}
-          </div>
-          <div>
-            {faqList
-              .slice(Math.floor(faqList.length / 2), faqList.length)
-              .map((faq, i) => (
-                <FaqItem faq={faq} key={i} />
-              ))}
-          </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
+          {faqList.map((faq, i) => (
+            <FaqItem faq={faq} key={i} />
+          ))}
         </div>
       </div>
     </section>

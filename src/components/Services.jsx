@@ -17,7 +17,7 @@ const contents = [
     icon: faLightbulb,
     title: "Personal Loan",
     image: "assets/bsloan.avif",
-    text: "A personal loan can help cover major expenses, consolidate debt, or fund large purchases. With our flexible repayment options, we ensure that your financial needs are met with ease. Whether it's for a wedding, education, or emergency, our low-interest personal loans are designed to support your life events without financial strain.",
+    text: "A personal loan can help cover major expenses or consolidate debt. With our flexible repayment options, we ensure your financial needs are met with ease. Whether it's for a wedding, education, or emergency, our low-interest personal loans are designed to support your life events without financial strain.",
   },
   {
     color: "bg-yellow-500",
@@ -25,7 +25,7 @@ const contents = [
     icon: faLifeRing,
     title: "Home Loan",
     image: "assets/homeloan.avif",
-    text: "Owning your dream home is now possible with our home loan solutions. We offer competitive interest rates and long-term repayment plans that suit your needs. Whether you're a first-time buyer or looking to refinance, our team of experts will guide you through each step of the process. Achieve your goal of homeownership with ease.",
+    text: "Owning your dream home is now possible with our home loan solutions. We offer competitive interest rates and long-term repayment plans that suit your needs. Whether you're a first-time buyer or looking to refinance, our team of experts will guide you through each step of the process.",
   },
   {
     color: "bg-teal-500",
@@ -33,7 +33,7 @@ const contents = [
     icon: faWindowRestore,
     image: "assets/bloan.avif",
     title: "Business Loan",
-    text: "Fuel your business growth with our business loans designed for SMEs and large corporations alike. From expansion to operational costs, we provide the necessary financial support with flexible loan terms, easy approval processes, and expert business advisory services. Grow your business without the worry of cash flow issues.",
+    text: "Fuel your business growth with our business loans designed for SMEs and large corporations alike. From expansion to operational costs, we provide the necessary financial support with flexible loan terms, easy approval processes, and expert business advisory services.",
   },
   {
     color: "bg-purple-500",
@@ -41,7 +41,7 @@ const contents = [
     icon: faHourglass,
     image: "assets/loanproperty.avif",
     title: "Loan Against Property",
-    text: "Leverage the value of your property to secure financing for personal or business needs. Our Loan Against Property offers attractive interest rates and high loan amounts based on the market value of your property. Whether you need funds for expansion or personal goals, this loan is an excellent solution.",
+    text: "Unlock funds using your property's value with our Loan Against Property. Benefit from competitive rates and high loan amounts, perfect for business or personal needs.",
   },
   {
     color: "bg-purple-500",
@@ -49,8 +49,9 @@ const contents = [
     icon: faHourglass,
     image: "assets/wc.avif",
     title: "Working Capital Loan",
-    text: "Maintain seamless business operations with our Working Capital Loans. This loan is ideal for businesses looking to manage cash flow gaps, fund daily operations, and purchase inventory. We offer flexible repayment options and quick disbursal to ensure your business runs smoothly.",
+    text: "Keep your business running smoothly with our Working Capital Loans. Ideal for managing cash flow, daily operations, and inventory needs with quick disbursal and flexible repayment.",
   },
+  
   {
     color: "bg-purple-500",
     shadow: "shadow-purple-500",
@@ -83,11 +84,11 @@ const ContentItem = ({ item, isVisible }) => {
       <h3 className="text-xl md:text-2xl font-extrabold text-[#3C3C3C] text-left mb-4 pr-5">
         {item.title}
       </h3>
-      <p className="text-gray-700 text-sm  md:text-sm leading-4 text-start mb-1">
+      <p className="text-gray-700 text-sm  md:text-sm leading-4 text-start mb-4">
         {item.text}
       </p>
       <div className="absolute bottom-4 left-4">
-        <span className="text-red-500 font-bold">
+        <span className="text-red-500 font-bold ">
           Apply Now{" "}
           <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
         </span>

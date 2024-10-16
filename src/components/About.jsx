@@ -100,7 +100,7 @@ const handleClick=()=>{
   <div className="text-center">
     <img src={map} alt="Branches" className="w-16 h-16 mx-auto mb-4"/>
     <p className="text-2xl font-bold">100+</p>
-    <p className="text-gray-500">Branches & Franchisee Location Across India</p>
+    <p className="text-gray-500">Branches & Franchisee Locations Across India</p>
   </div>
   <div className="text-center">
     <img src={Payment} alt="Disbursal" className="w-16 h-16 mx-auto mb-4"/>

@@ -140,8 +140,10 @@ const AboutContact = () => {
               <div className="text-center">
                 <p className="font-bold">Head Office</p>
               
-                NO 34,2ND FLOOR, opp. Cosmopolitan club, <br />Jaya Nagar 1st Block,
-                Jayanagar 3rd Block, <br /> Jayanagar, Bengaluru, Karnataka 560011 <br />
+                Goal Corporation Pvt Ltd,<br></br>
+# 34, 2nd Floor, Opp to Cosmopolitan Club,<br></br>
+3rd Block, Jayanagara, Bengaluru – 560011,<br></br>
+Karnataka , India
                
              
               </div>

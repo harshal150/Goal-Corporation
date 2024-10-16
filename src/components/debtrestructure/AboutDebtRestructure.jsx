@@ -47,20 +47,25 @@ const AboutDebtRestructure = () => {
       <LoanEligibilityCard />
 
       <section className="max-w-full mx-auto lg:mx-36 p-4 md:p-8 bg-white rounded-2xl shadow-2xl border border-gray-200 mt-6 md:mt-10 mb-6">
-        {/* Title */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-blue-600 uppercase mb-4 md:mb-8">
-          Debt Restructuring Eligibility
-        </h2>
+  {/* Title */}
+  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-blue-600 uppercase mb-4 md:mb-8">
+    Debt Restructuring Eligibility
+  </h2>
 
-        {/* Eligibility Criteria List */}
-        <div className="mb-4 md:mb-6">
-          <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-4">
-            <li>You must be above 21 years of age at the time of commencing your loan, and up to 65 years or less at loan maturity.</li>
-            <li>Salaried Person - 21 years to 58 years</li>
-            <li>Self-Employed Person - 25 years to 65 years</li>
-          </ul>
-        </div>
-      </section>
+  {/* Eligibility Criteria List */}
+  <div className="mb-4 md:mb-6">
+    <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-4">
+      <li>Age: 21-60 years (Salaried), 25-65 years (Self-Employed)</li>
+      <li>Active employment/business for at least 2 years</li>
+      <li>Credit score of 650+ (may vary by lender)</li>
+      <li>Proof of financial hardship or reduced income</li>
+      <li>No defaults in the past 12 months</li>
+      <li>Recovery plan required for businesses</li>
+      <li>Collateral may be needed for higher loan amounts</li>
+    </ul>
+  </div>
+</section>
+
 
       <section className="max-w-full p-4 md:p-6 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] text-gray-800">
         <div className="mx-auto lg:mx-36">

@@ -97,17 +97,10 @@ const BusinessFAQ = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div>
-            {faqList.slice(0, Math.floor(faqList.length / 2)).map((faq, i) => (
-              <FaqItem faq={faq} key={i} />
-            ))}
-          </div>
-          <div>
-            {faqList.slice(Math.floor(faqList.length / 2), faqList.length).map((faq, i) => (
-              <FaqItem faq={faq} key={i} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
+          {faqList.map((faq, i) => (
+            <FaqItem faq={faq} key={i} />
+          ))}
         </div>
       </div>
     </section>

@@ -88,35 +88,49 @@ const AboutHomeLoan = () => {
         </h2>
 
         <div className="mx-auto lg:mx-36">
-          <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Income Proof Documents</h3>
+  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Income Proof Documents</h3>
 
-          <div className="mb-4 md:mb-6">
-            <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">1. Salaried Individuals</h4>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
-              <li>Form 16</li>
-              <li>Employee Identity Card</li>
-              <li>3 Months Salary Slip</li>
-              <li>6 Month Bank Account Statement</li>
-              <li>Duration of Employment Evidence</li>
-            </ul>
-          </div>
+  {/* Salaried Individuals */}
+  <div className="mb-4 md:mb-6">
+    <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">1. Salaried Individuals</h4>
+    <ul className="list-disc list-inside space-y-1 text-gray-700">
+      <li>Form 16</li>
+      <li>Employee Identity Card</li>
+      <li>3 Months Salary Slip</li>
+      <li>6 Month Bank Account Statement</li>
+      <li>Duration of Employment Evidence</li>
+    </ul>
+  </div>
 
-          {/* Self-Employed Individuals */}
-          <div className="mb-4 md:mb-6">
-            <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">2. Self-Employed Individuals</h4>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
-              {/* List Items */}
-            </ul>
-          </div>
+  {/* Self-Employed Individuals */}
+  <div className="mb-4 md:mb-6">
+    <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">2. Self-Employed Individuals</h4>
+    <ul className="list-disc list-inside space-y-1 text-gray-700">
+      <li>Income Tax Returns (ITR) of the last 2-3 years</li>
+      <li>Audited Financial Statements (Profit & Loss Statement and Balance Sheet)</li>
+      <li>Business Registration Certificate or Proof of Business Existence</li>
+      <li>6 Month Bank Account Statement of the Business</li>
+      <li>GST Returns (if applicable)</li>
+      <li>Proof of Office Address (Lease Agreement or Utility Bills)</li>
+    </ul>
+  </div>
 
-          {/* NRI Documentation */}
-          <div>
-            <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">3. Documents Required from all Non-Resident Indians (NRIs) Applicants</h4>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
-              {/* List Items */}
-            </ul>
-          </div>
-        </div>
+  {/* NRI Documentation */}
+  <div>
+    <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
+      3. Documents Required from all Non-Resident Indians (NRIs) Applicants
+    </h4>
+    <ul className="list-disc list-inside space-y-1 text-gray-700">
+      <li>Valid Passport and Visa Copy</li>
+      <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
+      <li>Employment Proof (Appointment Letter or Employment Contract)</li>
+      <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
+      <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
+      <li>Power of Attorney (if required)</li>
+    </ul>
+  </div>
+</div>
+
       </section>
 
       <div className="px-4 md:px-8 lg:px-16">

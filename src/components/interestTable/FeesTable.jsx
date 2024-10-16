@@ -34,7 +34,7 @@ const FeesTable = () => {
             <td className="px-6 py-4">Usually 2% per month</td>
           </tr>
           <tr className="bg-blue-50 hover:bg-blue-200 transition-colors duration-200">
-            <td className="px-6 py-4">EMI / Cheque Bonus</td>
+            <td className="px-6 py-4">EMI / Cheque Bounce</td>
             <td className="px-6 py-4">Approx 499/- to 599/-</td>
           </tr>
         </tbody>
