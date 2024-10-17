@@ -71,10 +71,10 @@ const handleClick=()=>{
           We help our clients get the best loan offers..
           </p>
           <p className="text-gray-600 mb-6">
-            Goal Corporation, with a PAN India presence in over 100 cities, is a leading credit lending establishment. Founded by financial experts with 20+ years of experience, we have served over 32,000+ clients and successfully disbursed loans exceeding 20K crores+ through partnerships with 70+ banks and NBFCs. We are committed to helping you make smarter financial decisions with personalized solutions. Connect with us today to secure your financial future!
+            Goal Corporation, with a PAN India presence in over 100 cities, is a leading credit lending establishment. Founded by financial experts with 20+ years of experience, we have served over 32,000+ clients and successfully disbursed loans exceeding 20K crores+ through partnerships with 70+ banks and NBFCs. We are committed to helping you make smarter financial decisions with personalized solutions.  
           </p>
           <p className="text-gray-600 mb-8">
-            Connect with us to help you make your financial decisions right and smart.
+          Connect with us to help you make smart financial decisions and secure your financial future!
           </p>
           <button onClick={handleClick} className="flex items-center text-red-500 font-semibold hover:underline">
             About us

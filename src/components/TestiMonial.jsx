@@ -65,15 +65,17 @@ const testimonialList = [
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    // Automatically change the testimonial every 3 seconds
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       handleNext();
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [index]);
+  }, [index ,isPaused]);
 
   const handleNext = () => {
     setIsAnimating(true); // Start the animation
@@ -83,6 +85,14 @@ const Testimonial = () => {
       );
       setIsAnimating(false); // Reset animation state
     }, 500); // Duration for slide-out animation
+  };
+
+  const handlePause = () => {
+    setIsPaused(true);
+  };
+
+  const handleResume = () => {
+    setIsPaused(false);
   };
 
   const { name, position, content, image } = testimonialList[index];
@@ -111,10 +121,12 @@ const Testimonial = () => {
 
       {/* Testimonial Content Section */}
       <div className="col-span-12 md:col-span-6 md:col-start-7 flex justify-center md:justify-start">
-        <div className="flex flex-col justify-center h-full">
-          <div>
+        <div className="flex flex-col justify-center h-full"
+        >
+          <div  onMouseEnter={handlePause}
+      onMouseLeave={handleResume}>
             <p
-              className={`relative text-[22px] font-bold mb-6 md:mb-12 z-[1] transition-transform duration-500 ${
+              className={`relative text-[22px] font-bold mb-6 md:mb-12 z-[1] transition-transform duration-500  ${
                 isAnimating ? "transform -translate-x-full" : ""
               }`}
             >

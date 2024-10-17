@@ -43,7 +43,7 @@ const AboutInfo = () => {
             </p>
             <br />
             <p className="text-gray-600 text-md leading-relaxed">
-              With 30+ branches and location partners, we serve the needs of people from every strata of society, be it a personal loan of 10 lakh rupees or the debt restructuring of Rs. 100 Crore+.
+              With 100+ branches and location partners, we serve the needs of people from every strata of society, be it a personal loan of 10 lakh rupees or the debt restructuring of Rs. 100 Crore+.
             </p>
         
           </div>

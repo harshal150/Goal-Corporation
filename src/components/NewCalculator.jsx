@@ -37,10 +37,15 @@ const LoLoanCalculator = () => {
     return Math.round(EMI);
   };
 
-  const totalInterestPayable = calculateEMI() * loanTenure * 12 - loanAmount;
+  const totalInterestPayable = tenureUnit === "Yr"
+  ? calculateEMI() * loanTenure * 12 - loanAmount
+  : calculateEMI() * loanTenure - loanAmount;
+
   const totalPayment = loanAmount + totalInterestPayable;
   
-
+  const formatToIndianCurrency = (number) => {
+    return number.toLocaleString('en-IN');
+  };
   return (
     <div className="max-w-full mt-4">
       <div className="max-w-7xl mx-auto p-4 sm:p-6 bg-gray-50 rounded-lg shadow-lg bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3]">
@@ -182,7 +187,7 @@ const LoLoanCalculator = () => {
                   Loan EMI
                 </h3>
                 <p className="text-4xl font-bold text-sky-500">
-                  ₹ {calculateEMI().toLocaleString()}
+                  ₹ {formatToIndianCurrency(calculateEMI())}
                 </p>
               </div>
 
@@ -193,7 +198,7 @@ const LoLoanCalculator = () => {
                   Total Interest Payable
                 </h3>
                 <p className="text-2xl font-bold text-sky-500">
-                  ₹ {totalInterestPayable.toLocaleString()}
+                  ₹ {formatToIndianCurrency(totalInterestPayable)}
                 </p>
               </div>
 
@@ -204,7 +209,7 @@ const LoLoanCalculator = () => {
                   Total Payment (Principal + Interest)
                 </h3>
                 <p className="text-2xl font-bold text-sky-500">
-                  ₹ {totalPayment.toLocaleString()}
+                  ₹ {formatToIndianCurrency(totalPayment)}
                 </p>
               </div>
             </div>
