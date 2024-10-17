@@ -20,13 +20,13 @@ const faqList = [
     isActive: false,
     question: "How much can I borrow with a business loan?",
     answer:
-      "The loan amount you can borrow with a business loan varies by lender and your business profile. Typically, the loan amounts can range from ₹1 lakh to ₹5 crores or more, depending on the lender and your business's financial health.",
+      "The loan amount you can borrow with a business loan varies by lender and your business profile. Typically, the loan amounts can range from ₹1 lakh to ₹5 crores , depending on the lender and your business's financial health.",
   },
   {
     isActive: false,
     question: "What is the interest rate on business loans?",
     answer:
-      "Interest rates for business loans depend on various factors such as the type of business loan, the borrower's credit profile, and the lender's policies. Typically, interest rates range from 10% to 18%.",
+      "Interest rates for business loans depend on various factors such as the type of business loan, the borrower's credit profile, and the lender's policies. Typically, interest rates range from 16% to 24%.",
   },
   {
     isActive: false,

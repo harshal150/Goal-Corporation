@@ -82,7 +82,7 @@ const AboutLoanAgaints = () => {
             <li>Proof of income</li>
             <li>Property-related documents</li>
             <li>Proof of Business (for self-employed)</li>
-            <li>Account statement for the last 6 months</li>
+            <li>Account statement for the latest 12-18 months</li>
           </ul>
         </div>
       </section>
@@ -93,7 +93,7 @@ const AboutLoanAgaints = () => {
     Fees and Charges for Loan Againts Property
   </h2>
   <p className="text-xs sm:text-sm md:text-base mb-4 md:mb-6 text-center font-normal mt-4 md:mt-8 mx-4 md:mx-8 lg:mx-32">
-    The fees and charges of loan Againts Property usually vary from lender to lender and from case to case. The aforementioned table will give you a idea of the fees and charges related to home loans:
+    The fees and charges of loan Againts Property usually vary from lender to lender and from case to case. The below mentioned table will give you an idea of the fees and charges related to Loan Againts Property :
   </p>
   <div className="overflow-x-auto">
     <FeesTable />

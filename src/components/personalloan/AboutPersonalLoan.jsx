@@ -89,7 +89,7 @@ const AboutPersonalLoan = () => {
     Fees and Charges for Personal Loan
   </h2>
   <p className="text-xs sm:text-sm md:text-base mb-4 md:mb-6 text-center font-normal  mt-4 md:mt-8 mx-4 md:mx-8 lg:mx-32">
-    The fees and charges of Personal loans usually vary from lender to lender and from case to case. The aforementioned table will give you a fair idea of the fees and charges related to home loans:
+    The fees and charges of Personal loans usually vary from lender to lender and from case to case. The below mentioned table will give you a fair idea of the fees and charges related to Personal loans:
   </p>
   <div className="overflow-x-auto">
     <FeesTable/>

@@ -17,7 +17,7 @@ const Header = () => {
       image: two,
       title: "Balance Transfer of Loan",
       description:
-        "Save on interest costs by transferring your existing loan to us at lower rates. Enjoy easy repayment options and better financial management with our balance transfer solutions.",
+        "Save on interest costs by transferring your existing loan at lower rates. Enjoy easy repayment options and better financial management with our balance transfer solutions.",
     },
     {
       image: debt,
@@ -155,7 +155,7 @@ const Header = () => {
                   </span>
                 ))}
               </h1>
-              <p className="mt-6 text-[8px] sm:text-base italic md:text-base xl:text-base 2xl:text-2xl uppercase font-semibold">
+              <p className="mt-6 text-[8px] sm:text-base italic md:text-base xl:text-base 2xl:text-2xl  font-semibold">
                 {slide.description}
               </p>
               <button className="mt-6 bg-red-500 px-5 py-1.5 sm:px-6 sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition">

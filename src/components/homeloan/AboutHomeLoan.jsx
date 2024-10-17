@@ -1,7 +1,7 @@
 import React from 'react';
 import LoanCalculator from '../LoanCalculator';
 import Homeloan from '../../assets/fee&charges/Homeloan.png';
-import svicon from '../../assets/svg/home-loan.png';
+import svicon from '../../assets/loansNew/home2.gif';
 import LoanEligibilityCard from '../LoanEligibilityCard';
 import CalculateEMIButton from '../CalculateEMIButton';
 import FeesTable from '../interestTable/FeesTable';
@@ -68,7 +68,7 @@ const AboutHomeLoan = () => {
         <div className="mb-4 md:mb-6">
           <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">Employment:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Salaried Person - Minimum 2 to 3 years of Experience in MNC, or a Private or Public Limited Company</li>
+            <li>Salaried Person - Minimum 2 to 3 years of Experience in MNC , a Private or Public Limited Company Or any Government organization.</li>
             <li>Self-Employed Person - Minimum 3 years of Experience in the current field</li>
           </ul>
         </div>
@@ -138,7 +138,7 @@ const AboutHomeLoan = () => {
     Fees and Charges for Home Loan
   </h2>
   <p className="text-xs sm:text-sm md:text-base mb-4 md:mb-6 text-center font-normal mt-4 md:mt-8 mx-4 md:mx-8 lg:mx-32">
-    The fees and charges of home loans usually vary from lender to lender and from case to case. The aforementioned table will give you a fair idea of the fees and charges related to home loans:
+    The fees and charges of home loans usually vary from lender to lender and from case to case. The below mentioned table will give you a fair idea of the fees and charges related to home loans:
   </p>
   <div className="overflow-x-auto">
     <FeesTable />

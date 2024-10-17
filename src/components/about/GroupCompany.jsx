@@ -164,7 +164,7 @@ const GroupCompany = () => {
           },
           {
             name: "Goal promoters Pvt Ltd",
-            description: "Goal Promoters is confident of providing services like Real Estate, Finacial Services. We Provide Man Power Solutions for small, medium and large organizations that help them to achieve their goals. Goal Promotersis a Real Estate Advisory firm in Bangalore offering investment and consultancy services. We offer our services in the real estate market, to investment trusts, family offices and to individual investors across the world.",
+            description: "Goal Promoters is confident of providing services like Real Estate, Finacial Services. We Provide ManPower Solutions for small, medium and large organizations that help them to achieve their goals. Goal Promoters is a Real Estate Advisory firm in Bangalore offering investment and consultancy services. We offer our services in the real estate market, to investment trusts, family offices and to individual investors across the world.",
             img: promoter,
             alt: "Framework7",
           },
@@ -202,7 +202,7 @@ const GroupCompany = () => {
             rel="noreferrer"
           >
             <img
-              className="w-32 h-16 sm:w-36 sm:h-28 mb-4"
+              className="w-32 h-18 sm:w-48 sm:h-28 mb-4"
               src={company.img}
               alt={company.alt}
             />

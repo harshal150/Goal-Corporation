@@ -1,48 +1,3 @@
-// import React from 'react'
-// import { Navbar } from '../components/Navbar'
-// import { MainSection } from '../components/MainSection'
-// import Services from '../components/Services'
-// import Message from '../components/Message'
-// import Footer from '../components/Footer'
-// import { Descciption } from '../components/Descciption'
-// import { Equipment } from '../components/Equipment'
-// import Howitworks from '../components/Howitworks'
-// import LoanCalculator from '../components/LoanCalculator'
-// import Timeline from '../components/Timeline'
-// import About from '../components/About'
-// import MapComponent from '../components/MapComponent'
-// import ApplyForLoan from '../components/ApplyForLoan'
-// import Header from '../components/Header'
-// import LoLoanCalculator from '../components/NewCalculator'
-
-// export const Home = () => {
-//   return (
-//     <div className="home-page-container" style={{ overflowX: 'hidden' }}>
-//       <Navbar />
-//       <Header />
-
-//       <div className="component-wrapper">
-//         <ApplyForLoan />
-//         <Services />
-//         <Howitworks />
-//         {/* <LoanCalculator /> */}
-//       <LoLoanCalculator/>
-//         <About />
-//         <Timeline />
-//         <MapComponent />
-//         <Message />
-//       </div>
-
-//       <Footer />
-//     </div>
-//   )
-// }
-
-
-
-
-
-
 import React, { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import Services from '../components/Services';
@@ -55,8 +10,6 @@ import MapComponent from '../components/MapComponent';
 import ApplyForLoan from '../components/ApplyForLoan';
 import Header from '../components/Header';
 import LoLoanCalculator from '../components/NewCalculator';
-
-// Import FontAwesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Testimonial from '../components/TestiMonial';
@@ -88,15 +41,12 @@ export const Home = () => {
   const startChat = () => {
     const loanTypes = selectedLoans.join(', ');
     const message = `Name: ${name}, Email: ${email}, Mobile: ${mobile}, Loans: ${loanTypes}`;
-    const whatsappUrl = `https://wa.me/+918088335006?text=${encodeURIComponent(
-      message
-    )}`;
-
+    const whatsappUrl = `https://wa.me/+918088335006?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <div className="home-page-container" style={{ overflowX: '' }}>
+    <div className="home-page-container">
       <Navbar />
       <Header />
 
@@ -108,8 +58,7 @@ export const Home = () => {
         <About />
         <Timeline />
         <MapComponent />
-        {/* <Message /> */}
-        <Testimonial/>
+        <Testimonial />
       </div>
 
       {/* WhatsApp Icon */}
@@ -123,78 +72,66 @@ export const Home = () => {
       </div>
 
       {showForm && (
-  <div className="fixed bottom-24 right-2 z-50 bg-blue-400 p-6 border-black rounded-2xl shadow-3xl shadow-black w-80 h-[69%]  ">
-    <button
-      className="absolute top-2 right-2 h-10 w-10 "
-      onClick={() => setShowForm(false)}  // Event to close the modal
-    >
-      &times; {/* This is the 'X' symbol for closing */}
-    </button>
-    <h2 className="text-lg font-bold text-center mb-4 text-[#1A237E]">
-      Connect with us !!
-    </h2>
+        <div className="fixed bottom-24 right-4 md:right-8 md:w-96 w-80 bg-white rounded-xl shadow-lg p-6 z-50 border">
+          <button
+            className="absolute top-2 right-2 text-gray-600 hover:text-red-600"
+            onClick={() => setShowForm(false)}
+          >
+            &times;
+          </button>
+          <h2 className="text-xl font-semibold text-center mb-4 text-gray-800">
+            Connect with us!
+          </h2>
 
-    {/* Name Input */}
-    <div className="mb-5">
-      <input
-        type="text"
-        className="w-full border p-1.5 rounded-md focus:outline-none form-control"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Enter your name"
-      />
-    </div>
+          <div className="space-y-4">
+            <input
+              type="text"
+              className="w-full border rounded-md p-2 focus:outline-none focus:ring focus:ring-green-200"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter your name"
+            />
 
-    {/* Email Input */}
-    <div className="mb-5">
-      <input
-        type="email"
-        className="w-full border p-1.5 rounded-md focus:outline-none"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-      />
-    </div>
+            <input
+              type="email"
+              className="w-full border rounded-md p-2 focus:outline-none focus:ring focus:ring-green-200"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+            />
 
-    {/* Mobile Input */}
-    <div className="mb-5">
-      <input
-        type="text"
-        className="w-full border p-1.5 rounded-md focus:outline-none"
-        value={mobile}
-        onChange={(e) => setMobile(e.target.value)}
-        placeholder="Enter your mobile number"
-      />
-    </div>
+            <input
+              type="text"
+              className="w-full border rounded-md p-2 focus:outline-none focus:ring focus:ring-green-200"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+              placeholder="Enter your mobile number"
+            />
 
-    {/* Loan Options (Select Dropdown) */}
-    <div className="mb-8">
-      <select
-        className="w-full border p-2 rounded-md focus:outline-none text-gray-400"
-        value={selectedLoans[0] || ''} // Set selected value
-        onChange={(e) => setSelectedLoans([e.target.value])} // Update state
-      >
-        <option value="" disabled>
-          Select Loan Type
-        </option>
-        {loanOptions.map((loan) => (
-          <option key={loan} value={loan}>
-            {loan}
-          </option>
-        ))}
-      </select>
-    </div>
+            <select
+              className="w-full border rounded-md p-2 focus:outline-none focus:ring focus:ring-green-200"
+              value={selectedLoans[0] || ''}
+              onChange={(e) => setSelectedLoans([e.target.value])}
+            >
+              <option value="" disabled>
+                Select Loan Type
+              </option>
+              {loanOptions.map((loan) => (
+                <option key={loan} value={loan}>
+                  {loan}
+                </option>
+              ))}
+            </select>
+          </div>
 
-    {/* Start Chat Button */}
-    <button
-      className="w-full bg-[#25D366] text-white text-lg font-semibold py-2 rounded-lg focus:outline-none hover:bg-[#1A9F57] transition duration-300"
-      onClick={startChat}
-    >
-      Start Chat
-    </button>
-  </div>
-)}
-
+          <button
+            className="w-full bg-green-500 text-white font-medium py-2 mt-4 rounded-md hover:bg-green-600 transition duration-300"
+            onClick={startChat}
+          >
+            Start Chat
+          </button>
+        </div>
+      )}
 
       <Footer />
     </div>

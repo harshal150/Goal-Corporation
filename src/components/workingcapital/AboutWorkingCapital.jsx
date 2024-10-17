@@ -115,7 +115,7 @@ const AboutWorkingCapital = () => {
     Fees and Charges for Working Capital Loan
   </h2>
   <p className="text-xs sm:text-sm md:text-base mb-4 md:mb-6 text-center font-normal mt-4 md:mt-8 mx-4 md:mx-8 lg:mx-32">
-    The fees and charges of Working Capital loans usually vary from lender to lender and from case to case. The aforementioned table will give you a idea of the fees and charges related to home loans:
+    The fees and charges of Working Capital loans usually vary from lender to lender and from case to case. The Below mentioned table will give you an idea of the fees and charges related to Working Capital loans:
   </p>
   <div className="overflow-x-auto">
     <FeesTable />

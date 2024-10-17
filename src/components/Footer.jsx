@@ -13,7 +13,7 @@ import logo from "../assets/Goal logo orange.png";
 
 const quickLinks = [
   { value: "Company Profile", href: "/about" },
-  { value: "Director Message", href: "/about" },
+  { value: "Director's Message", href: "/about" },
   { value: "Vision & Mission", href: "/about" },
   { value: "Our Approach", href: "/about" },
 ];

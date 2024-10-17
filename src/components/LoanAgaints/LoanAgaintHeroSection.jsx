@@ -23,8 +23,8 @@ const LoanAgaintHeroSection = () => {
           <span className="text-red-500">Loan Against Property Option</span>
         </h1>
         <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  uppercase font-semibold">
-          Unlock your Property into Capital with our Flexible Loan Against
-          Property Option. Enjoy Lower Interest Rates with Instant Approval.
+          Unlock your Capital with our Flexible Loan Against
+          Property Option. Enjoy Lower Interest Rates with Faster Approval.
         </p>
         <Link
            to='/applyforloan'

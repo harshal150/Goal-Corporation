@@ -22,7 +22,7 @@ const loanType="Home Loan";
    
         </h1>
         <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  uppercase font-semibold">
-          Discover a variety of Home Loan Options with flexible terms and <br></br>competitive rates whether <br /> you're buying a dream home or refinancing needs.
+          Discover a variety of Home Loan Options with flexible terms and <br></br>competitive rates whether <br /> you're buying your dream home or refinancing needs.
         </p>
         <Link  to='/applyforloan'
         state= { {loanType }}
