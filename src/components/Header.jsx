@@ -4,6 +4,7 @@ import msme from '../assets/Header/msme.jpg';
 import two from '../assets/Header/new2.jpg';
 import leaserental from '../assets/Header/lease rental.jpg';
 import debt from '../assets/Header/debtnew.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const carouselData = [
@@ -41,6 +42,15 @@ const Header = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSliding, setIsSliding] = useState(false);
+const navigate = useNavigate();
+
+const handleClick=()=>{
+  console.log("first")
+  navigate('/applyforloan')
+
+}
+
+
 
   // Automatically change slide every 4 seconds
   useEffect(() => {
@@ -158,8 +168,9 @@ const Header = () => {
               <p className="mt-6 text-[8px] sm:text-base italic md:text-base xl:text-base 2xl:text-2xl  font-semibold">
                 {slide.description}
               </p>
-              <button className="mt-6 bg-red-500 px-5 py-1.5 sm:px-6 sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition">
-                Learn more
+              <button   onClick={handleClick}
+ className="mt-6 bg-red-500 px-5 py-1.5 sm:px-6 cursor-pointer sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition">
+                Apply Now
               </button>
             </div>
 
