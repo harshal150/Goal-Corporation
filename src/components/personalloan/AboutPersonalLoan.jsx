@@ -1,7 +1,8 @@
 import React from 'react';
 import LoanCalculator from '../LoanCalculator';
 import personal from '../../assets/fee&charges/personal.png';
-import personalsvg from '../../assets/svg/personal-loan.png';
+import personalsvg from '../../assets/loansNew/personal.gif';
+// import personalsvg from '../../assets/svg/personal-loan.png';
 import CalculateEMIButton from '../CalculateEMIButton';
 import LoanEligibilityCard from '../LoanEligibilityCard';
 import FeesTable from '../interestTable/FeesTable';
