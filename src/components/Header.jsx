@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import one from '../assets/Header/one stop.jpeg';
-import msme from '../assets/Header/msme.jpg';
-import two from '../assets/Header/new2.jpg';
-import leaserental from '../assets/Header/lease rental.jpg';
-import debt from '../assets/Header/debtnew.jpg';
-import { useNavigate } from 'react-router-dom';
+
+
+
+
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Step 1: Import useNavigate
+import one from "../assets/Header/one stop.jpeg";
+import msme from "../assets/Header/msme.jpg";
+import two from "../assets/Header/new2.jpg";
+import leaserental from "../assets/Header/lease rental.jpg";
+import debt from "../assets/Header/debtnew.jpg";
 
 const Header = () => {
+  const navigate = useNavigate(); // Step 2: Create a navigate function
+  
   const carouselData = [
     {
       image: msme,
@@ -42,15 +48,6 @@ const Header = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSliding, setIsSliding] = useState(false);
-const navigate = useNavigate();
-
-const handleClick=()=>{
-  console.log("first")
-  navigate('/applyforloan')
-
-}
-
-
 
   // Automatically change slide every 4 seconds
   useEffect(() => {
@@ -73,10 +70,11 @@ const handleClick=()=>{
     }
   };
 
-  function ShapeOne() {
+
+    function ShapeOne() {
     return (
       <svg
-        className="absolute bottom-0 left-0 z-50 hidden md:block"
+        className="absolute bottom-0 left-0  hidden md:block"
         width="404"
         height="572"
         viewBox="0 0 404 572"
@@ -94,7 +92,7 @@ const handleClick=()=>{
       </svg>
     );
   }
-  
+
   function ShapeTwo() {
     return (
       <svg
@@ -148,7 +146,8 @@ const handleClick=()=>{
             }`}
           >
             {/* Text Section */}
-            <div className="max-w-lg text-center lg:text-left mt-10 lg:mt-0 lg:mr-10">
+            <div className="max-w-lg text-center lg:text-left mt-10 lg:mt-0 lg:mr-10 relative ">
+
               <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold">
                 {slide.title.split(" ").map((word, idx) => (
                   <span
@@ -168,21 +167,25 @@ const handleClick=()=>{
               <p className="mt-6 text-[8px] sm:text-base italic md:text-base xl:text-base 2xl:text-2xl  font-semibold">
                 {slide.description}
               </p>
-              <button   onClick={handleClick}
- className="mt-6 bg-red-500 px-5 py-1.5 sm:px-6 cursor-pointer sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition">
+              <div className="">
+              <button
+                className="mt-6 bg-red-500  z-50 px-5 py-1.5 sm:px-6 cursor-pointer sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition"
+                onClick={() => navigate("/applyforloan")} // Step 3: Navigate to /applyforloan on click
+              >
                 Apply Now
               </button>
+              </div>
             </div>
+             
 
             {/* Image Section */}
             <div className="w-full sm:order-2 z-50 order-1 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:mb-10 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
-  <img
-    src={slide.image}
-    alt={slide.title}
-    className="max-w-full h-auto object-contain rounded-2xl mix-blend-multiply mb-32 sm:mb-10"
-  />
-</div>
-
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="max-w-full h-auto object-contain rounded-2xl mix-blend-multiply mb-32 sm:mb-10"
+              />
+            </div>
           </div>
         ))}
       </div>
