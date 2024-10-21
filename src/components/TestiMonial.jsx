@@ -15,6 +15,9 @@ import t3 from "../assets/client_testimonial/test3.png"
 import t4 from "../assets/client_testimonial/test4.png"
 import t5 from "../assets/client_testimonial/test5.png"
 
+import backgroundImage from '../assets/aaaaaaa/14.avif'
+
+
 
 
 
@@ -99,7 +102,13 @@ const Testimonial = () => {
   const { name, position, content, image } = testimonialList[index];
 
   return (
-    <section className="ezy__testimonial17 light py-14 md:py-24 px-6 sm:px-16 bg-white">
+    <section className="ezy__testimonial17 light py-14 md:py-24 px-6 sm:px-16 bg-white "  style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}>
   <h1 className="font-bold text-[26px] md:text-[32px] text-center mt-1 mb-5 capitalize text-[#2B8AC1]">
     What Our <span className=" ">Client Says ...</span>
   </h1>

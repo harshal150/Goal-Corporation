@@ -219,7 +219,9 @@ import msme from "../assets/Header/msme.jpg";
 import two from "../assets/Header/new2.jpg";
 import leaserental from "../assets/Header/lease rental.jpg";
 import debt from "../assets/Header/debtnew.jpg";
-import backgroundImage from "../assets/aaaaaaa/image1.avif"; // Add your background image here
+// import backgroundImage from "../assets/aaaaaaa/image1.avif"; // Add your background image here
+import backgroundImage from '../assets/aaaaaaa/14.avif'
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -295,12 +297,12 @@ const Header = () => {
   return (
     <div
       className="relative h-[70vh] lg:h-[100vh] md:h-[75vh]   w-full flex flex-col bg-white justify-between lg:flex-row items-center overflow-hidden"
-      // style={{
-      //   backgroundImage: `url(${backgroundImage})`, 
-      //   backgroundSize: "cover", 
-      //   backgroundPosition: "center", 
-      //   backgroundAttachment: "fixed", 
-      // }}
+      style={{
+        backgroundImage: `url(${backgroundImage})`, 
+        backgroundSize: "cover", 
+        backgroundPosition: "center", 
+        backgroundAttachment: "fixed", 
+      }}
     >
       <div className="relative w-full lg:w-full h-full flex justify-center items-center">
         {carouselData.map((slide, index) => (

@@ -57,7 +57,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import team from '../../assets/about/about new.avif';
+import team from '../../assets/team.jpg';
 
 const AboutInfo = () => {
   const [isVisible, setIsVisible] = useState(false);
