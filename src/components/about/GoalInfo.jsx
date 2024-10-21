@@ -1,5 +1,5 @@
-// import Whatwedoimg from "../../assets/about/goal2.jpeg";
-import Whatwedoimg from "../../assets/about/about 3.jpg";
+import Whatwedoimg from "../../assets/about/goal2.jpeg";
+// import Whatwedoimg from "../../assets/about/about 3.jpg";
 const Shapes = () => (
   <>
     <svg
