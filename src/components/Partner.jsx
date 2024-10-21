@@ -113,7 +113,7 @@ const Partners = () => {
         inView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
       }`}
     >
-      <h2 className="text-center text-4xl font-bold mb-4 capitalize text-blue-700">
+      <h2 className="text-center text-4xl font-bold mb-4 capitalize text-blue-700 mt-6">
         Our <span className="text-orange-500">Partners</span>
       </h2>
       

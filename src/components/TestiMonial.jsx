@@ -15,7 +15,8 @@ import t3 from "../assets/client_testimonial/test3.png"
 import t4 from "../assets/client_testimonial/test4.png"
 import t5 from "../assets/client_testimonial/test5.png"
 
-import backgroundImage from '../assets/aaaaaaa/14.avif'
+// import backgroundImage from '../assets/aaaaaaa/14.avif'
+import backgroundImage from '../assets/bg6.avif'
 
 
 

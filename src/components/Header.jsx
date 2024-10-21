@@ -221,6 +221,9 @@ import leaserental from "../assets/Header/lease rental.jpg";
 import debt from "../assets/Header/debtnew.jpg";
 // import backgroundImage from "../assets/aaaaaaa/image1.avif"; // Add your background image here
 import backgroundImage from '../assets/aaaaaaa/14.avif'
+// import backgroundImage from '../assets/bg4.avif'
+// import backgroundImage from '../assets/bg6.avif'
+
 
 
 const Header = () => {

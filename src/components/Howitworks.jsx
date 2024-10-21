@@ -5,6 +5,8 @@ import two from "../assets/HowItWorks/2.jpg";
 import three from "../assets/HowItWorks/3.jpg";
 import four from "../assets/HowItWorks/44.jpg";
 
+import backgroundImage from '../assets/bg4.avif'
+
 const contents = [
   {
     image: one,
@@ -45,7 +47,7 @@ const ContentItem = ({ item, isVisible, index }) => {
       <h4 className="font-bold text-xl text-[#1A237E] text-center leading-snug mb-2">
         {item.title}
       </h4>
-      <p className="opacity-90 text-gray-700 text-center">{item.text}</p>
+      <p className=" text-gray-700 text-center">{item.text}</p>
     </div>
   );
 };
@@ -89,7 +91,13 @@ const Howitworks = () => {
   const isItemVisible = (index) => visibleItems.includes(String(index));
 
   return (
-    <section className="py-14 md:py-16 text-green-900 dark:text-white">
+    <section className="py-14 md:py-16 text-green-900 dark:text-white"  style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl leading-snug font-bold md:text-4xl mb-4 text-[#2B8AC1] capitalize">
