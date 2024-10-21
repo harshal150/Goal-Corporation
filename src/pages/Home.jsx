@@ -13,6 +13,7 @@ import LoLoanCalculator from '../components/NewCalculator';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Testimonial from '../components/TestiMonial';
+import Partners from '../components/Partner';
 
 export const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -51,9 +52,10 @@ export const Home = () => {
       <Header />
 
       <div className="component-wrapper">
-        <Services />
         <ApplyForLoan />
+        <Services />
         <Howitworks />
+        <Partners/>
         <LoLoanCalculator />
         <About />
         <Timeline />
@@ -72,7 +74,8 @@ export const Home = () => {
       </div>
 
       {showForm && (
-        <div className="fixed bottom-24 right-4 md:right-8 md:w-96 w-80 bg-white rounded-xl shadow-lg p-6 z-50 border">
+        <div className="fixed bottom-24 right-4 md:right-8 md:w-80 w-72 bg-white rounded-xl shadow-lg p-6 z-50 border"
+        >
           <button
             className="absolute top-2 right-2 text-gray-600 hover:text-red-600"
             onClick={() => setShowForm(false)}

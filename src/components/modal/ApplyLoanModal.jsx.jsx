@@ -13,7 +13,8 @@ import {
 } from "react-icons/fa";
 import { TbMoneybag } from "react-icons/tb";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import contact from "../../assets/contact.avif";
+// import contact from "../../assets/contact.avif";
+import contact from "../../assets/applyloanpage.avif";
 import Swal from 'sweetalert2';
 
 
@@ -72,7 +73,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
         residenceType: formValues.residenceType,
         terms: formValues.terms ? "Accepted" : "Not Accepted",
       },
-      '7z1u5lsyh7jq02DdN' // Replace with your EmailJS Public Key
+      '7z1u5lsyh7jq02DdN' 
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
@@ -83,7 +84,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
         showConfirmButton: true,
         timer: 3000,
       }).then(() => {
-        window.location.reload(); // Reload the page after showing the success message
+        window.location.reload(); 
       });
     })
     .catch((error) => {
@@ -108,7 +109,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-6 px-4 md:px-6 lg:px-8">
+    <div className="w-full mx-auto mt-6 px-4 md:px-6 ">
       <div className="relative text-center">
         <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 animate-fadeInUp">
           Submit Your Details &{" "}
@@ -255,10 +256,43 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-blue-600 hover:bg-blue-500 text-white py-3 px-8 mb-7 rounded-xl transition-all duration-300 hover:animate-pulse"
+                    className="cp_rainbow_btn py-3 px-8 mb-7 rounded-xl transition-all duration-300 hover:animate-pulse"
                   >
                     {isSubmitting ? "Submitting..." : "Submit Application"}
                   </button>
+                  <style>{`.cp_rainbow_btn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}</style>
                 </div>
               </Form>
             )}

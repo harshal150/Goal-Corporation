@@ -25,7 +25,7 @@ const VisionMission = () => {
             />
           </div>
           {/* Vision Content */}
-          <div className="w-full md:w-2/3 md:pl-6 border-t-4 md:border-t-0 md:border-l-4 border-indigo-600">
+          <div className="w-full md:w-2/3 md:pl-6 border-t-4 md:border-t-0 md:border-l-2 border-orange-500">
             <h2 className="text-2xl md:text-4xl font-semibold text-indigo-700 mb-4">Our Vision</h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
               To create an easy access to financial products by collaborating between financial intermediaries and customers through technology and digital platforms.
@@ -46,7 +46,7 @@ const VisionMission = () => {
             />
           </div>
           {/* Mission Content */}
-          <div className="w-full md:w-2/3 md:pl-6 border-t-4 md:border-t-0 md:border-l-4 border-indigo-600">
+          <div className="w-full md:w-2/3 md:pl-6 border-t-4 md:border-t-0 md:border-l-2 border-orange-500">
             <h2 className="text-2xl md:text-4xl font-semibold text-indigo-700 mb-4">Our Mission</h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
               To be a leader in the financial consulting arena by increasing the market share through Pan India presence and enhance our disbursal capability. Touch base every aspect of funding opportunities and explore newer markets globally.

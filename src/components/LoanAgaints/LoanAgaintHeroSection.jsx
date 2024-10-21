@@ -22,17 +22,50 @@ const LoanAgaintHeroSection = () => {
           into Capital with Our <br />
           <span className="text-red-500">Loan Against Property Option</span>
         </h1>
-        <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  uppercase font-semibold">
+        <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  text-gray-600 italic capitalize font-semibold">
           Unlock your Capital with our Flexible Loan Against
           Property Option. Enjoy Lower Interest Rates with Faster Approval.
         </p>
         <Link
            to='/applyforloan'
          state= { {loanType }}
-          className="mt-6 bg-[#4ade80] px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition"
+          className="mt-6 cp_rainbow_btn px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition"
         >
           Apply Now
         </Link>
+        <style>{`.cp_rainbow_btn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}</style>
       </div>
 
       {/* Image Section */}

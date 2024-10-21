@@ -40,9 +40,9 @@ const ContentItem = ({ item, isVisible, index }) => {
       <img
         src={item.image}
         alt={item.title}
-        className="w-32 h-32 rounded-full border-4 border-white shadow-md mb-4"
+        className="w-32 h-36 rounded-2xl border-4 border-white shadow-md mb-4"
       />
-      <h4 className="font-bold text-xl text-[#1A237E] text-center leading-snug">
+      <h4 className="font-bold text-xl text-[#1A237E] text-center leading-snug mb-2">
         {item.title}
       </h4>
       <p className="opacity-90 text-gray-700 text-center">{item.text}</p>
@@ -92,8 +92,8 @@ const Howitworks = () => {
     <section className="py-14 md:py-16 text-green-900 dark:text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl leading-snug font-bold md:text-5xl mb-4 text-[#1A237E] capitalize">
-            Why Choose Us
+          <h2 className="text-2xl leading-snug font-bold md:text-4xl mb-4 text-[#2B8AC1] capitalize">
+            Why <span className="text-orange-500">Choose Us</span>
           </h2>
         </div>
         <div

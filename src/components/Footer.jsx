@@ -9,13 +9,13 @@ import {
   faPinterest,
   faWordpress,
 } from "@fortawesome/free-brands-svg-icons";
+import { RiArrowDropRightLine } from "react-icons/ri";
 import logo from "../assets/Goal logo orange.png";
 
 const quickLinks = [
   { value: "Company Profile", href: "/about" },
   { value: "Director's Message", href: "/about" },
   { value: "Vision & Mission", href: "/about" },
-  { value: "Our Approach", href: "/about" },
 ];
 
 const socialMedia = [
@@ -78,8 +78,9 @@ const QuickLinks = ({ qLink }) => (
   <li>
     <a
       href={qLink.href}
-      className="text-gray-800 font-semibold hover:text-[#007BFF] transition-colors duration-300"
+      className="text-white font-normal flex items-center transition-colors duration-300 hover:text-orange-500"
     >
+      <RiArrowDropRightLine className="mr-1" />
       {qLink.value}
     </a>
   </li>
@@ -89,8 +90,9 @@ const Equipment = ({ equip }) => (
   <li>
     <a
       href={equip.href}
-      className="text-gray-800 font-semibold hover:text-[#007BFF] transition-colors duration-300"
+      className="text-white font-normal flex items-center transition-colors duration-300 hover:text-orange-500"
     >
+      <RiArrowDropRightLine className="mr-1" />
       {equip.value}
     </a>
   </li>
@@ -100,8 +102,9 @@ const SocialMedia = ({ media }) => (
   <li>
     <a
       href={media.href}
-      className="text-gray-800 font-semibold hover:text-[#007BFF] transition-colors duration-300"
+      className="text-white font-normal flex items-center transition-colors duration-300 hover:text-orange-500"
     >
+      <RiArrowDropRightLine className="mr-1" />
       {media.value}
     </a>
   </li>
@@ -111,8 +114,9 @@ const JobInfo = ({ job }) => (
   <li>
     <a
       href={job.href}
-      className="text-gray-800 font-semibold hover:text-[#007BFF] transition-colors duration-300"
+      className="text-white font-semibold flex items-center transition-colors duration-300 hover:text-orange-500"
     >
+      <RiArrowDropRightLine className="mr-1" />
       {job.value}
     </a>
   </li>
@@ -126,7 +130,7 @@ const SocialItem = ({ social }) => (
   <li className="inline-block mr-4">
     <a
       href={social.href}
-      className="text-gray-800 hover:text-indigo-500 transition-opacity duration-300"
+      className="text-white hover:text-indigo-500 transition-opacity duration-300"
     >
       <FontAwesomeIcon icon={social.icon} className="text-xl" />
     </a>
@@ -135,7 +139,7 @@ const SocialItem = ({ social }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-[#E0EAF5] text-[#1A237E] py-10">
+    <footer className="bg-gradient-to-b from-[#192857] via-[#0E183A] to-[#0E183A] text-white py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className="mb-6 md:mb-0 text-left md:w-1/4">
@@ -143,7 +147,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:flex-row md:justify-between md:w-3/4">
             <div className="mb-6 md:mb-0 md:w-1/4">
-              <h5 className="font-bold mb-3 text-[20px]">Quick Links</h5>
+              <h5 className="font-bold mb-3 text-[18px]">Quick Links</h5>
               <ul className="space-y-2">
                 {quickLinks.map((qLink, i) => (
                   <QuickLinks qLink={qLink} key={i} />
@@ -151,28 +155,31 @@ const Footer = () => {
               </ul>
             </div>
             <div className="mb-6 md:mb-0 md:w-1/4">
-              <h5 className="font-bold mb-3 text-[20px]">Loans</h5>
-              <ul className="space-y-2">
+              <h5 className="font-bold mb-3 text-[18px]">Loans</h5>
+              <ul className="space-y-2 font-normal">
                 {equipment.map((equip, i) => (
                   <Equipment equip={equip} key={i} />
                 ))}
               </ul>
             </div>
-            <div className="mb-6 md:mb-0 md:w-1/4">
-              <h5 className="font-bold mb-3 text-[20px]">Social Media</h5>
-              <ul className="space-y-2">
+            <div className="mb-6 ml-2 md:mb-0 md:w-1/4">
+              <h5 className="font-bold mb-3 text-[18px]">Social Media</h5>
+              <ul className="space-y-2 font-normal">
                 {socialMedia.map((media, i) => (
                   <SocialMedia media={media} key={i} />
                 ))}
               </ul>
             </div>
             <div className="mb-6 md:mb-0 md:w-2/4">
-              <h5 className="font-bold mb-3 text-[20px]">Corporate Address</h5>
-              <span className="text-gray-800 font-semibold">
-                Goal Corporation Pvt Ltd,<br />
-                # 34, 2nd Floor, Opp to Cosmopolitan Club,<br />
-                3rd Block, Jayanagara, Bengaluru – 560011,<br />
-                Karnataka , India 
+              <h5 className="font-bold mb-3 text-[18px]">Corporate Address</h5>
+              <span className="text-white font-normal">
+                Goal Corporation Pvt Ltd,
+                <br />
+                # 34, 2nd Floor, Opp to Cosmopolitan Club,
+                <br />
+                3rd Block, Jayanagara, Bengaluru – 560011,
+                <br />
+                Karnataka , India
                 <br />
                 E-Mail: info@goalcorporation.com
               </span>
@@ -202,7 +209,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="mt-6 text-left text-gray-800">
+        <div className="mt-6 text-left text-white">
           <span>Copyright &copy; Goal Corporation, All rights reserved</span>
         </div>
       </div>

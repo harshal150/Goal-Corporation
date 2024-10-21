@@ -24,13 +24,46 @@ Achieve Your Business Goals <br /> with Our Hassle-Free <br />
 <span className="text-red-500">Business Loan Solution!</span>
 
 </h1>
-<p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px]  uppercase font-semibold">
-Secure Quick and Convenient Business Loans to cover fixed asset expenses and achieve <br /> all your business goals effortlessly.
+<p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-gray-600 italic capitalize font-semibold">
+Secure Quick and Convenient Business Loans to cover fixed asset expenses and achieve all your business goals effortlessly.
 </p>
 <Link  to='/applyforloan'
-        state= { {loanType }} className="mt-6 bg-[#4ade80] px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition">
+        state= { {loanType }} className=" cp_rainbow_btn mt-6 px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition">
   Apply Now
 </Link>
+                  <style>{`.cp_rainbow_btn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}</style>
 </div>
 
       {/* Image Section */}

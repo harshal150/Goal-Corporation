@@ -53,17 +53,17 @@ const AboutContact = () => {
       <Navbar />
 
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 my-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-6 md:mb-10">
-          CONTACT US
+        <h1 className="text-3xl md:text-4xl font-bold text-center capitalize text-indigo-800 mb-6 md:mb-10">
+          contact <span className=" text-orange-500">us</span>
         </h1>
 
         {/* Note Section */}
-        <div className="max-w-6xl mx-auto bg-red-100 p-4 mb-6 rounded-md text-sm">
+        {/* <div className="max-w-6xl mx-auto bg-red-100 p-4 mb-6 rounded-md text-sm">
           <p className="flex items-center">
             <span className="text-yellow-600 text-lg mr-2">⚠️</span>
             <strong>Note:</strong> We do not charge for our services to customers. If any personnel takes any charges other than bank fees, please immediately contact our toll-free number.
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-6xl mx-auto">
           {/* Left: Form */}
@@ -125,10 +125,43 @@ const AboutContact = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full h-12 hover:bg-blue-600 bg-[#4ade80] text-white font-bold rounded-md"
+              className=" cp_rainbow_btn w-full h-10 font-bold rounded-md"
             >
               SEND MESSAGE
             </button>
+            <style>{`.cp_rainbow_btn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}</style>
 
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

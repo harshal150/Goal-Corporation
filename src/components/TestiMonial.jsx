@@ -5,6 +5,7 @@ import {
   faQuoteLeft,
   faQuoteRight,
 } from "@fortawesome/free-solid-svg-icons";
+import demo from '../assets/demo.avif'
 import one from "../assets/Header/2.png";
 import two from "../assets/Header/4.webp";
 import three from "../assets/Header/home1.jpg";
@@ -99,23 +100,24 @@ const Testimonial = () => {
 
   return (
     <section className="ezy__testimonial17 light py-14 md:py-24 px-6 sm:px-16 bg-white">
-  <h1 className="font-bold text-[32px] md:text-[40px] text-center mt-10 mb-5 uppercase text-blue-700">
-    What Our Client Says
+  <h1 className="font-bold text-[26px] md:text-[32px] text-center mt-1 mb-5 capitalize text-[#2B8AC1]">
+    What Our <span className=" ">Client Says ...</span>
   </h1>
 
   <div className="container px-4 mx-auto">
     <div className="grid grid-cols-12 gap-y-8 gap-x-6">
       {/* Image Section */}
       <div className="col-span-12 md:col-span-5 flex justify-center md:justify-start">
-        <div className="relative w-60 h-60 sm:w-80 sm:h-80 rounded-full overflow-hidden mx-auto md:mx-0">
+        <div className="relative w-60 h-60 sm:w-80 sm:h-80 rounded-2xl overflow-hidden mx-auto md:mx-0">
           <div
-            className={`bg-cover bg-center bg-no-repeat object-cover w-full h-full rounded-full transition-transform duration-500 ${
+            className={`bg-cover bg-center bg-no-repeat object-cover w-full h-full rounded-2xl transition-transform duration-500 ${
               isAnimating ? "transform -translate-x-full" : ""
             }`}
             style={{
               backgroundImage: `url(${image})`,
             }}
           ></div>
+      
         </div>
       </div>
 
@@ -150,7 +152,7 @@ const Testimonial = () => {
           <div className="flex gap-2 m-0 mt-12 justify-center md:justify-start">
             {testimonialList.map((item, i) => (
               <button
-                className={`w-2 h-2 rounded-full ${
+                className={`w-5 h-0.5 rounded-full ${
                   index === i
                     ? "scale-125 bg-blue-600"
                     : "bg-gray-400 dark:bg-slate-800"

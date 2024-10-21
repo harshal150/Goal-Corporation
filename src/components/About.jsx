@@ -40,7 +40,7 @@ const handleClick=()=>{
   return (
     <div
       ref={elementRef}
-      className={`bg-white px-12 py-8 rounded-xl shadow-xl max-w-7xl mx-auto mt-20 transition-transform duration-1000 ease-out ${
+      className={`bg-white px-12 py-8 max-w-7xl mx-auto mt-20 transition-transform duration-1000 ease-out ${
         isVisible ? 'animate-bounceIn' : 'opacity-0'
       }`}
     >

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "animate.css"; // Import Animate.css
-import partner from '../../assets/becomepartner.jpg';
+import partner from '../../assets/becomepartner2.avif';
 
 const indianStates = [
   "Andhra Pradesh",
@@ -94,8 +94,8 @@ const BecomeAPartner = () => {
         isVisible ? "animate__animated animate__bounceIn" : ""
       }`}
     >
-      <h1 className="text-2xl md:text-4xl font-bold text-center md:text-left text-blue-700 capitalize mb-6 md:mb-10">
-        We are committed to becoming India’s Leading Loan Distributor!
+      <h1 className="text-2xl md:text-3xl font-bold  md:text-left text-left text-blue-700 capitalize mb-6 md:mb-10">
+        We are committed to becoming <span className=" text-orange-500">India’s Leading</span> Loan Distributor!
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -180,10 +180,43 @@ const BecomeAPartner = () => {
 
           <button
             type="submit"
-            className="w-full h-12 hover:bg-blue-600 bg-[#4ade80] text-white font-bold rounded-lg transition-all duration-300"
+            className="cp_rainbow_btn w-full h-10 font-bold rounded-lg transition-all duration-300"
           >
             SUBMIT
           </button>
+          <style>{`.cp_rainbow_btn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}</style>
         </form>
 
         {/* Image Section (1/3 width) */}

@@ -88,43 +88,75 @@ const MapComponent = () => {
           </div>
 
           {/* Content Section */}
-          <div className="flex flex-col justify-center items-center lg:items-start lg:ml-48 mt-10 lg:mt-0 lg:w-1/2 text-center lg:text-left">
+          <div className="flex flex-col justify-center items-center lg:items-start lg:w-1/2 text-center lg:text-left px-4 lg:px-8">
             {/* Heading */}
-            <h1 className="text-2xl lg:text-5xl font-bold mb-2 ">
-              Now in 30+ Cities in India
+            <h1 className="text-2xl lg:text-4xl font-bold mb-8 text-[#2B8AC1]">
+              Now in <span className="text-orange-500">30+ Cities</span> in India
             </h1>
 
-            {/* City Name Transition */}
-            <div className="mt-4  font-bold text-blue-600">
-              <span class=" mx-1 text-2xl lg:text-6xl relative inline-block stroke-current">
-                {cities[currentCityIndex].name}
-                <svg
-                  class="absolute -bottom-0.5 w-full max-h-1.5"
-                  viewBox="0 0 55 5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
+            {/* City Cards Section */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {cities.map((city, index) => (
+                <div
+                  key={index}
+                  className="bg-blue-200 p-2 rounded-lg shadow-xl cursor-pointer flex items-center justify-center hover:scale-105"
                 >
-                  <path
-                    d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002"
-                    stroke-width="2"
-                  ></path>
-                </svg>
-              </span>
+                  <FaMapMarkerAlt className="text-red-600 mr-3" />
+                  <span className="font-bold text-sm text-blue-800 ">
+                    {city.name}
+                  </span>
+                </div>
+              ))}
             </div>
 
             {/* Contact Us Button */}
             <div className="mt-8">
               <button
                 onClick={handleClick}
-                className="bg-[#1A237E] text-white px-4 py-2 lg:px-5 lg:py-2  rounded-lg text-lg font-bold hover:bg-[#4955d3] transition-colors"
+                className="cp_rainbow_bntn  text-white px-4 py-2 lg:px-5 lg:py-2 rounded-lg text-lg font-bold hover:bg-[#4955d3] transition-colors"
               >
                 Contact Us
               </button>
+              <style>
+              {`.cp_rainbow_bntn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}
+            </style>
             </div>
           </div>
         </div>
       </div>
-      <Partners />
+     
     </>
   );
 };

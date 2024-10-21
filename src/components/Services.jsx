@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from '../assets/aaaaaaa/image6.avif'
 
 const contents = [
   {
@@ -17,7 +18,7 @@ const contents = [
     icon: faLightbulb,
     title: "Personal Loan",
     image: "assets/bsloan.avif",
-    text: "A personal loan can help cover major expenses or consolidate debt. With our flexible repayment options, we ensure your financial needs are met with ease. Whether it's for a wedding, education, or emergency, our low-interest personal loans are designed to support your life events without financial strain.",
+    text: "Flexible personal loans for life's big moments with low-interest options. Cover expenses like education, travel, or medical emergencies effortlessly.",
   },
   {
     color: "bg-yellow-500",
@@ -25,7 +26,7 @@ const contents = [
     icon: faLifeRing,
     title: "Home Loan",
     image: "assets/homeloan.avif",
-    text: "Owning your dream home is now possible with our home loan solutions. We offer competitive interest rates and long-term repayment plans that suit your needs. Whether you're a first-time buyer or looking to refinance, our team of experts will guide you through each step of the process.",
+    text: "Affordable home loans with competitive rates and easy repayment plans. Build your dream home with our trusted financial support.",
   },
   {
     color: "bg-teal-500",
@@ -33,7 +34,7 @@ const contents = [
     icon: faWindowRestore,
     image: "assets/bloan.avif",
     title: "Business Loan",
-    text: "Fuel your business growth with our business loans designed for SMEs and large corporations alike. From expansion to operational costs, we provide the necessary financial support with flexible loan terms, easy approval processes, and expert business advisory services.",
+    text: "Boost your business with tailored loans and expert guidance. Get the capital you need to expand, purchase equipment, or manage operations smoothly.",
   },
   {
     color: "bg-purple-500",
@@ -41,7 +42,7 @@ const contents = [
     icon: faHourglass,
     image: "assets/loanproperty.avif",
     title: "Loan Against Property",
-    text: "Unlock funds using your property's value with our Loan Against Property. Benefit from competitive rates and high loan amounts, perfect for business or personal needs.",
+    text: "Get funds using your property with competitive rates. Ideal for large expenses or business expansion without selling your assets.",
   },
   {
     color: "bg-purple-500",
@@ -49,18 +50,19 @@ const contents = [
     icon: faHourglass,
     image: "assets/wc.avif",
     title: "Working Capital Loan",
-    text: "Keep your business running smoothly with our Working Capital Loans. Ideal for managing cash flow, daily operations, and inventory needs with quick disbursal and flexible repayment.",
+    text: "Manage cash flow and daily operations smoothly with flexible loans. Ensure your business stays on track with quick access to working capital.",
   },
-  
   {
     color: "bg-purple-500",
     shadow: "shadow-purple-500",
     icon: faHourglass,
     image: "assets/dr.avif",
     title: "Debt Restructuring",
-    text: "Struggling with debt repayment? Our Debt Restructuring services are designed to help you regain financial stability. We offer tailored solutions that reduce your debt burden, lower monthly payments, and create a sustainable financial plan for your future. Get back on track with our expert assistance.",
+    text: "Tailored solutions to reduce debt and regain financial stability. Get a personalized plan to lower payments and improve cash flow.",
   },
 ];
+
+
 
 const ContentItem = ({ item, isVisible }) => {
   const navigate = useNavigate();
@@ -71,7 +73,7 @@ const ContentItem = ({ item, isVisible }) => {
 
   return (
     <div
-      className={`bg-white rounded-lg p-4 md:p-6 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-2 w-full h-72 flex flex-col items-start relative mb-3 cursor-pointer ${
+      className={`bg-[#E3F5F8] rounded-xl p-4 md:p-6 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl  w-[90%] h-72 flex flex-col items-start relative mb-3 cursor-pointer ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
       onClick={handleItemClick} // Make the entire card clickable
@@ -79,16 +81,16 @@ const ContentItem = ({ item, isVisible }) => {
       <img
         src={item.image}
         alt={item.title}
-        className="absolute top-4 right-4 w-10 h-10 md:w-14 md:h-14 ml-4 rounded-full object-cover border-2 border-white"
+        className="  w-14 h-14 md:w-18 md:h-18  rounded-2xl object-cover border-2 border-white"
       />
-      <h3 className="text-xl md:text-2xl font-extrabold text-[#3C3C3C] text-left mb-4 pr-5">
+      <h3 className="text-xl md:text-2xl font-bold text-[#3C3C3C] text-left mb-4 mt-2">
         {item.title}
       </h3>
-      <p className="text-gray-700 text-sm  md:text-sm leading-4 text-start mb-4">
+      <p className="text-gray-700 text-sm  md:text-sm leading-2 text-start">
         {item.text}
       </p>
       <div className="absolute bottom-4 left-4">
-        <span className="text-red-500 font-bold ">
+        <span className="text-orange-500 font-bold hover:text-orange-600">
           Apply Now{" "}
           <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
         </span>
@@ -133,16 +135,23 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="ezy__howitworks12 text-black bg-gradient-to-b from-blue-50 to-blue-100 py-8 md:py-14 text-center relative z-[10]">
+    <section className="ezy__howitworks12 text-black bg-white py-8 md:py-14 text-center relative z-[10]"
+      //     style={{
+      //   backgroundImage: `url(${backgroundImage})`, 
+      //   backgroundSize: "cover", 
+      //   backgroundPosition: "center", 
+      //   backgroundAttachment: "fixed", 
+      // }}
+      >
       <div className="container mx-auto px-4">
-        <h2 className="text-xl md:text-[40px] text-left text-[#1A237E] leading-tight md:leading-none mx-4 md:mx-16 font-bold tracking-wide capitalize mb-6 md:mb-2 transition-transform duration-300 ease-in-out transform hover:scale-105 text-gradient">
-          Committed to Provide Best Services for All Your Loan Requirements...
+        <h2 className="text-xl md:text-[35px] text-center text-blue-800 leading-tight md:leading-none mx-4 md:mx-16 font-extrabold tracking-wide capitalize mb-6 md:mb-2 transition-transform duration-300 ease-in-out transform hover:scale-105 text-gradient">
+          Committed to Provide <span className="text-orange-500">Best Services</span> for All Your Loan Requirements
         </h2>
 
         {/* Grid layout for cards */}
         <div
           ref={scrollRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 gap-y-4 mt-6"
         >
           {contents.map((item, index) => (
             <div

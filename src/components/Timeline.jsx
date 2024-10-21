@@ -8,6 +8,7 @@ import three from "../assets/Timeline/3.jpg";
 import four from "../assets/Timeline/4.jpg";
 import five from "../assets/Timeline/5.jpg";
 import six from "../assets/Timeline/6.jpg";
+import backgroundImage from '../assets/aaaaaaa/14.avif'
 
 const images = [one, two, three, four, five, six];
 
@@ -90,9 +91,15 @@ const Timeline = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-white via-[#f5f8fc] to-[#E0EAF5] p-2 mt-10">
-        <h1 className="font-bold text-[32px] md:text-[40px] text-center mt-10  uppercase text-blue-700">
-          We Have The Best Team And The Best Process
+      <div className=" bg-transparent p-2 mt-10 "   style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}>
+        <h1 className="font-bold text-[26px] md:text-[35px] text-center mt-10 capitalize text-blue-500">
+          We Have The <span className="text-orange-500">Best Team</span> And The Best Process
         </h1>
         <div className="relative flex justify-center items-start mt-8 md:mt-14">
           {/* Timeline container */}
@@ -119,7 +126,7 @@ const Timeline = () => {
                     </div>
                   </div>
                   <div className="w-10/12 flex flex-col pl-2">
-                    <p className="text-sm text-gray-600">{item.title}</p>
+                    <p className="text-sm text-black font-normal">{item.title}</p>
                   </div>
                 </div>
 
@@ -128,7 +135,7 @@ const Timeline = () => {
                   {item.position === "top" && (
                     <>
                       <div className="mb-4">
-                        <p className="text-center font-semibold text-gray-600 text-base">
+                        <p className="text-center font-normal text-black text-base">
                           {item.title}
                         </p>
                       </div>
@@ -174,8 +181,8 @@ const Timeline = () => {
                       <div className="relative mt-2">
                         <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-10 border-dotted border-green-400 border-l-2"></div>
                       </div>
-                      <div className="mt-10">
-                        <p className="text-center font-semibold text-gray-600 text-base">
+                      <div className="mt-12">
+                        <p className="text-center font-normal text-black text-base">
                           {item.title}
                         </p>
                       </div>
