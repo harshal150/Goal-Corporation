@@ -114,6 +114,8 @@ import hubstair from '../../assets/group Companies/hubstair.jpg'
 import goalMain from '../../assets/Goal logo orange.png'
 import promoter from '../../assets/group Companies/motors.jpg'
 
+import bg from '../../assets/bg11.avif'
+
 const GroupCompany = () => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -143,7 +145,12 @@ const GroupCompany = () => {
   }, []);
 
   return (
-    <div className="mt-12 mb-20 max-w-7xl mx-auto text-center p-6 ">
+    <div className="mt-12 mb-20 w-full mx-auto text-center p-6 " style={{
+      backgroundImage: `url(${bg})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+    }}>
       {/* <h1 className="text-5xl font-bold text-center text-indigo-800 uppercase mb-16">
         Group Companies
       </h1> */}
@@ -209,7 +216,7 @@ const GroupCompany = () => {
             <div className="font-bold text-[25px] sm:text-[25px] capitalize text-blue-600">
               {company.name}
             </div>
-            <div className="text-sm text-left opacity-75 mt-7">{company.description}</div>
+            <div className="text-sm text-left text-gray-700 capitalize italic  mt-7">{company.description}</div>
           </Link>
         ))}
       </div>

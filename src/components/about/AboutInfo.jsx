@@ -58,6 +58,7 @@
 
 import React, { useEffect, useState } from "react";
 import team from '../../assets/team.jpg';
+import bg from '../../assets/bg10.avif';
 
 const AboutInfo = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,7 +69,13 @@ const AboutInfo = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="" style={{
+      backgroundImage: `url(${bg})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
       <div className="sm:flex items-center max-w-screen-xl mx-auto mt-7">
         {/* Text Section with Slide-In from Right */}
         <div
@@ -101,7 +108,7 @@ const AboutInfo = () => {
           }`}
         >
           <div className="image object-center text-center">
-            <img src={team} alt="Team" className="rounded-2xl h-[80vh]" />
+            <img src={team} alt="Team" className="rounded-xl h-[60vh]" />
           </div>
         </div>
       </div>

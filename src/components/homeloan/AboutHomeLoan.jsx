@@ -1,14 +1,18 @@
 import React from 'react';
 import LoanCalculator from '../LoanCalculator';
 import Homeloan from '../../assets/fee&charges/Homeloan.png';
-import svicon from '../../assets/loansNew/home2.gif';
+import svicon from '../../assets/loansNew/homeabouticon2.avif';
 import LoanEligibilityCard from '../LoanEligibilityCard';
 import CalculateEMIButton from '../CalculateEMIButton';
 import FeesTable from '../interestTable/FeesTable';
 
+import eligibilitybg from '../../assets/loansNew/eligibilitybg.avif'
+import documentation from '../../assets/loansNew/documentation.jpg'
+import feescgarges from '../../assets/loansNew/feeschargesbg3.avif'
+
 const AboutHomeLoan = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <div className="">
       {/* Hide CalculateEMIButton on mobile view */}
       <div className="hidden sm:block">
         <CalculateEMIButton />
@@ -16,7 +20,7 @@ const AboutHomeLoan = () => {
       
       <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">Home Loans</h1>
       
-      <div className="relative max-w-full mx-auto lg:mx-36 mt-6">
+      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
         {/* Text with Icon */}
         <div className="flex flex-col md:flex-row items-start">
           <div className="w-full md:w-1/2 mt-6 md:mt-10">
@@ -39,14 +43,20 @@ const AboutHomeLoan = () => {
 
       <LoanEligibilityCard />
 
-      <section className="max-w-full mx-auto lg:mx-36 p-4 md:p-8 bg-white rounded-2xl shadow-2xl border border-gray-200 mt-6 md:mt-10 mb-6">
+      <section className="max-w-full  p-4  bg-white  "  style={{
+      backgroundImage: `url(${eligibilitybg})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 uppercase mb-4 md:mb-8">
+        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
           Home Loan Eligibility
         </h2>
 
         {/* Age Section */}
-        <div className="mb-4 md:mb-6">
+        <div className="mb-4 md:mb-6 sm:mx-14">
           <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">Age:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>You must be above 21 years of age at the time of commencing your loan, and up to 65 years or less at loan maturity.</li>
@@ -56,7 +66,7 @@ const AboutHomeLoan = () => {
         </div>
 
         {/* Income Section */}
-        <div className="mb-4 md:mb-6">
+        <div className="mb-4 md:mb-6 sm:mx-14">
           <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">Income:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Salaried Person - Minimum Rs. 10,000 per month</li>
@@ -65,7 +75,7 @@ const AboutHomeLoan = () => {
         </div>
 
         {/* Employment Section */}
-        <div className="mb-4 md:mb-6">
+        <div className="mb-4 md:mb-6 sm:mx-14 ">
           <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">Employment:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Salaried Person - Minimum 2 to 3 years of Experience in MNC , a Private or Public Limited Company Or any Government organization.</li>
@@ -74,7 +84,7 @@ const AboutHomeLoan = () => {
         </div>
 
         {/* Credit Score Section */}
-        <div>
+        <div className='sm:mx-14 mb-5'>
           <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">Credit Score:</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>A credit score of 750 is considered a good score for approval.</li>
@@ -82,62 +92,83 @@ const AboutHomeLoan = () => {
         </div>
       </section>
 
-      <section className="max-w-full p-4 md:p-6 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] text-gray-800">
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 uppercase mt-4 md:mt-8 mb-4 md:mb-6">
-          Documentation for Home Loan
-        </h2>
 
-        <div className="mx-auto lg:mx-36">
-  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Income Proof Documents</h3>
 
-  {/* Salaried Individuals */}
-  <div className="mb-4 md:mb-6">
-    <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">1. Salaried Individuals</h4>
-    <ul className="list-disc list-inside space-y-1 text-gray-700">
-      <li>Form 16</li>
-      <li>Employee Identity Card</li>
-      <li>3 Months Salary Slip</li>
-      <li>6 Month Bank Account Statement</li>
-      <li>Duration of Employment Evidence</li>
-    </ul>
+<section className="max-w-full p-4 md:p-6 text-gray-800">
+  <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documentation for <span className='text-orange-500'>Home Loan</span>
+  </h2>
+
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Text Content */}
+    <div className="flex-1">
+      {/* <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Income Proof Documents</h3> */}
+
+      {/* Salaried Individuals */}
+      <div className="mb-4 md:mb-6">
+        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">1. Salaried Individuals</h4>
+        <ul className="list-disc list-inside space-y-1 text-gray-700">
+          <li>Form 16</li>
+          <li>Employee Identity Card</li>
+          <li>3 Months Salary Slip</li>
+          <li>6 Month Bank Account Statement</li>
+          <li>Duration of Employment Evidence</li>
+        </ul>
+      </div>
+
+      {/* Self-Employed Individuals */}
+      <div className="mb-4 md:mb-6">
+        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">2. Self-Employed Individuals</h4>
+        <ul className="list-disc list-inside space-y-1 text-gray-700">
+          <li>Income Tax Returns (ITR) of the last 2-3 years</li>
+          <li>Audited Financial Statements (Profit & Loss Statement and Balance Sheet)</li>
+          <li>Business Registration Certificate or Proof of Business Existence</li>
+          <li>6 Month Bank Account Statement of the Business</li>
+          <li>GST Returns (if applicable)</li>
+          <li>Proof of Office Address (Lease Agreement or Utility Bills)</li>
+        </ul>
+      </div>
+
+      {/* NRI Documentation */}
+      <div>
+        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
+          3. Documents Required from all Non-Resident Indians (NRIs) Applicants
+        </h4>
+        <ul className="list-disc list-inside space-y-1 text-gray-700">
+          <li>Valid Passport and Visa Copy</li>
+          <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
+          <li>Employment Proof (Appointment Letter or Employment Contract)</li>
+          <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
+          <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
+          <li>Power of Attorney (if required)</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg "
+      />
+    </div>
   </div>
+</section>
 
-  {/* Self-Employed Individuals */}
-  <div className="mb-4 md:mb-6">
-    <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">2. Self-Employed Individuals</h4>
-    <ul className="list-disc list-inside space-y-1 text-gray-700">
-      <li>Income Tax Returns (ITR) of the last 2-3 years</li>
-      <li>Audited Financial Statements (Profit & Loss Statement and Balance Sheet)</li>
-      <li>Business Registration Certificate or Proof of Business Existence</li>
-      <li>6 Month Bank Account Statement of the Business</li>
-      <li>GST Returns (if applicable)</li>
-      <li>Proof of Office Address (Lease Agreement or Utility Bills)</li>
-    </ul>
-  </div>
 
-  {/* NRI Documentation */}
-  <div>
-    <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-      3. Documents Required from all Non-Resident Indians (NRIs) Applicants
-    </h4>
-    <ul className="list-disc list-inside space-y-1 text-gray-700">
-      <li>Valid Passport and Visa Copy</li>
-      <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
-      <li>Employment Proof (Appointment Letter or Employment Contract)</li>
-      <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
-      <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
-      <li>Power of Attorney (if required)</li>
-    </ul>
-  </div>
-</div>
+<div>
+        <div className="px-4 md:px-8 lg:px-16 "  style={{
+      backgroundImage: `url(${feescgarges})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
 
-      </section>
-
-      <div className="px-4 md:px-8 lg:px-16">
-  <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-6 text-center font-bold text-blue-600 uppercase mt-4 md:mt-8">
+    }}>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-6 text-center font-bold text-blue-600 capitalize ">
     Fees and Charges for Home Loan
   </h2>
-  <p className="text-xs sm:text-sm md:text-base mb-4 md:mb-6 text-center font-normal mt-4 md:mt-8 mx-4 md:mx-8 lg:mx-32">
+  <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal mt-2 md:mt-6 mx-4 md:mx-8 lg:mx-32">
     The fees and charges of home loans usually vary from lender to lender and from case to case. The below mentioned table will give you a fair idea of the fees and charges related to home loans:
   </p>
   <div className="overflow-x-auto">
@@ -145,6 +176,7 @@ const AboutHomeLoan = () => {
   </div>
 </div>
 
+</div>
     </div>
   );
 };

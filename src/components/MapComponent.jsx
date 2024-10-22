@@ -2,23 +2,24 @@ import React, { useEffect, useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa"; // Importing FontAwesome pin icon
 import Partners from "./Partner";
 import { useNavigate } from "react-router-dom";
+import map1 from '../assets/map1.avif'
+import map2 from '../assets/map2.jpg'
 
-// Define pin locations with percentages to make them responsive
 const cities = [
-  { name: "Bangalore", top: "70%", left: "40%" },
-  { name: "Mumbai", top: "50%", left: "20%" },
-  { name: "Delhi", top: "75%", left: "23%" },
-  { name: "Chennai", top: "85%", left: "35%" },
-  { name: "Hyderabad", top: "75%", left: "35%" },
-  { name: "Kolkata", top: "90%", left: "30%" },
-  { name: "Pune", top: "55%", left: "22%" }, // New city added
-  { name: "Ahmedabad", top: "60%", left: "18%" }, // New city added
-  { name: "Jaipur", top: "65%", left: "24%" }, // New city added
-  { name: "Lucknow", top: "70%", left: "27%" }, // New city added
-  { name: "Surat", top: "50%", left: "69%" }, // New city added
-  { name: "Bhubaneswar", top: "40%", left: "40%" },
-  // Add more cities as needed
+  { name: "Bangalore", top: "70%", left: "50%" },  // Adjusted
+  { name: "Mumbai", top: "58%", left: "40%" },      // Adjusted
+  { name: "Delhi", top: "31%", left: "49%" },       // Adjusted
+  { name: "Chennai", top: "75%", left: "53%" },     // Adjusted
+  { name: "Hyderabad", top: "61%", left: "53%" },   // Adjusted
+  { name: "Kolkata", top: "50%", left: "70%" },     // Adjusted
+  { name: "Pune", top: "58%", left: "44%" },        // Adjusted
+  { name: "Ahmedabad", top: "53%", left: "42%" },   // Adjusted
+  { name: "Jaipur", top: "40%", left: "45%" },      // Adjusted
+  { name: "Lucknow", top: "40%", left: "56%" },     // Adjusted
+  { name: "Surat", top: "53%", left: "40%" },       // Adjusted
+  { name: "Bhubaneswar", top: "55%", left: "64%" }, // Adjusted
 ];
+
 
 const MapComponent = () => {
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
@@ -54,12 +55,12 @@ const MapComponent = () => {
 
 
             {/* India Map */}
-            <div className="relative w-[80%] h-auto object-cover z-10">
+            <div className="relative w-[80%] h-full object-cover z-10">
               <img
-                src="assets/map.jpg"
+                src={map1}
                 alt="India Map"
-                className="w-full h-auto opacity-35"
-                style={{ filter: "contrast(200%)" }}
+                className="w-full h-[150%]"
+                // style={{ filter: "contrast(200%)" }}
               />
               {/* Pin Locations */}
               {cities.map((city, index) => (

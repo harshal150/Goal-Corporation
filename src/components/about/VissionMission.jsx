@@ -1,6 +1,7 @@
 import React from "react";
 import vission from '../../assets/mission.avif';
-import mission from '../../assets/vission.avif';
+// import mission from '../../assets/vission.avif';
+import mission from '../../assets/about/vission.avif';
 
 const VisionMission = () => {
   return (

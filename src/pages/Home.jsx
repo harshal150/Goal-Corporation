@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Testimonial from '../components/TestiMonial';
 import Partners from '../components/Partner';
+import CompanyFAQ from '../components/CompanyFAQ';
 
 export const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -61,6 +62,7 @@ export const Home = () => {
         <Timeline />
         <MapComponent />
         <Testimonial />
+        <CompanyFAQ/>
       </div>
 
       {/* WhatsApp Icon */}

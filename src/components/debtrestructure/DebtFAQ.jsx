@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -56,19 +56,50 @@ const faqList = [
 
 const FaqItem = ({ faq }) => {
   const [isOpen, setIsOpen] = useState(faq.isActive);
+  const [isVisible, setIsVisible] = useState(false);
+  const faqRef = useRef(null);
 
   const toggleFaq = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (faqRef.current) {
+      observer.observe(faqRef.current);
+    }
+
+    return () => {
+      if (faqRef.current) {
+        observer.unobserve(faqRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className={`${isOpen && "active"} bg-white rounded-lg mt-4 md:mt-6 shadow-md`}>
+    <div
+      ref={faqRef}
+      className={`transform transition-transform duration-500 ease-in-out ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+      } bg-white rounded-lg mt-4 shadow-md`}
+    >
       <a
         href="#!"
         className="btn p-4 lg:p-6 w-full text-start flex justify-between items-center cursor-pointer"
         onClick={toggleFaq}
       >
-        <span className="text-sm md:text-base lg:text-lg">{faq.question}</span>
+        <span className="text-sm md:text-base lg:text-lg font-bold capitalize">{faq.question}</span>
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </a>
       <div className={`${isOpen ? "block" : "hidden"} p-4 lg:p-6 pt-0`}>
@@ -84,11 +115,11 @@ FaqItem.propTypes = {
 
 const DebtFAQ = () => {
   return (
-    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24 dark:bg-[#0b1727] text-zinc-900 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] text-gray-800">
+    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24 text-zinc-900 text-gray-800">
       <div className="container px-4 sm:px-6 md:px-8 lg:px-28 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
-            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 uppercase mb-4 md:mb-8">
+            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
               Frequently Asked Questions about Debt Restructuring
             </h2>
             <p className="text-sm md:text-base lg:text-lg">
@@ -97,7 +128,8 @@ const DebtFAQ = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
+        {/* Updated layout to display only one FAQ per line */}
+        <div className="flex flex-col gap-4 md:gap-6">
           {faqList.map((faq, i) => (
             <FaqItem faq={faq} key={i} />
           ))}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import backgroundImage from '../../assets/bg6.avif'
 
 const testimonials = [
   {
@@ -45,7 +46,13 @@ const EmployeesSpeak = () => {
   }, []);
 
   return (
-    <section
+    <section  style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}
       ref={sectionRef}
       className={`py-16 bg-gray-100 transition-transform duration-1000 ease-out ${
         isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"

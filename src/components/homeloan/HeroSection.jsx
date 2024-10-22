@@ -3,6 +3,8 @@ import React from 'react';
 import personal from '../../assets/loans/hy (1).jpg'
 import { Link } from 'react-router-dom';
 
+import bg from '../../assets/loansNew/bg4.jpg'
+
 const HeroSection = () => {
 
 
@@ -11,7 +13,14 @@ const loanType="Home Loan";
 
   
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-20">
+    <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-20" 
+    style={{
+      backgroundImage: `url(${bg})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
       {/* Text Section */}
       <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
 
@@ -74,8 +83,8 @@ const loanType="Home Loan";
 
 
       {/* Image Section */}
-      <div className="w-full sm:order-2 order-1  mt-6 mb-8 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center bg-gradient-to-b from-blue-50 to-blue-100">
-        <img src={personal} alt="Loan Against Property" className="max-w-full rounded-3xl h-auto object-contain  mix-blend-multiply" />
+      <div className="w-full sm:order-2 order-1  mt-6 mb-8 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center ">
+        <img src={personal} alt="Home loan" className="max-w-full rounded-xl h-auto object-contain  mix-blend-multiply" />
       </div>
     </div>
   );

@@ -11,9 +11,11 @@ import {
 
 const PartnerSection = () => {
   return (
-    <section className="container mx-auto my-10 px-4 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] py-6 h-auto mt-10">
-      {/* Title Section */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-700 capitalize mb-6">
+    <section className=" bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] py-6 h-auto mt-10">
+<div className="lg:px-10">
+
+        {/* Title Section */}
+        <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-700 capitalize mb-6">
         Who can Become a Partner with Goal Corporation?
       </h1>
       <p className="text-center text-gray-500 font-bold mb-10">
@@ -61,6 +63,7 @@ const PartnerSection = () => {
           <p className="text-sm md:text-base">Builder</p>
         </div>
       </div>
+</div>
 
       {/* About Loan Agent Partner Section */}
       <div className="text-center mb-10 max-w-4xl mx-auto">

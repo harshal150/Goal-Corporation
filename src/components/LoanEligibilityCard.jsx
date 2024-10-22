@@ -6,9 +6,9 @@ const data = [
   { route: '/homeloan', Title: 'Home Loan' },
   { route: '/personalloan', Title: 'Personal Loan' },
   { route: '/businessloan', Title: 'Business Loan' },
-  { route: '/workingcapital', Title: 'Working Capital' },
-  { route: '/loanagaints', Title: 'Loan Against Property' },
-  { route: '/debtrestructure', Title: 'Debt Restructure' },
+  { route: '/workingcapitalloan', Title: 'Working Capital Loan' },
+  { route: '/loanagainstproperty', Title: 'Loan Against Property' },
+  { route: '/debtrestructuring', Title: 'Debt Restructure' },
 ];
 
 const LoanEligibilityCard = () => {
@@ -16,7 +16,7 @@ const LoanEligibilityCard = () => {
   const currentRoute = data.find((item) => item.route === location.pathname) || {};
 
   return (
-    <div className="relative p-4 md:p-6 h-auto md:h-36 max-w-full mx-4 md:mx-8 lg:mx-36 bg-gradient-to-r from-sky-500 to-blue-900 rounded-lg">
+    <div className="relative py-4  md:p-6   w-full   bg-gradient-to-r from-sky-500 to-blue-900 ">
       {/* Background Animation Inside */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Decorative Shapes */}
@@ -35,9 +35,9 @@ const LoanEligibilityCard = () => {
       {/* Card Content */}
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center">
         {/* Text Section */}
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-3">
-            {currentRoute.Title} Check your Eligibility and Documentation
+        <div className="text-center md:text-left mb-4 md:mb-0 mx-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3">
+             Check your Eligibility and Documentation for <span >{currentRoute.Title}</span>
           </h2>
           <p className="text-sm md:text-base text-white font-semibold">
             Read on to know the criteria required to apply for our {currentRoute.Title}.
@@ -46,9 +46,42 @@ const LoanEligibilityCard = () => {
 
         {/* Button Section */}
         <div className="mt-4 md:mt-0">
-          <button className="bg-red-500 text-white w-full md:w-auto font-semibold px-5 md:px-7 py-2 rounded-md hover:bg-red-600 transition">
+          <button className="cp_rainbow_btn w-full  font-semibold px-7 py-2 rounded-md">
             Apply
           </button>
+          <style>{`.cp_rainbow_btn {
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%;
+        animation: anime 6s linear infinite;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: white !important;
+    }
+
+
+    .cp_rainbow_btn:hover {
+        color: white !important;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    @keyframes anime {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }`}</style>
         </div>
       </div>
     </div>

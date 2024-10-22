@@ -11,6 +11,7 @@ import GroupCompany from '../components/about/GroupCompany'
 import RewardsRecog from '../components/about/RewardsRecog'
 import EmployeesSpeak from '../components/about/EmployeesSpeak'
 import GoalInfo from '../components/about/GoalInfo'
+import AboutUsFAQ from '../components/about/AboutFAQ'
 
 
 const About = () => {
@@ -27,6 +28,7 @@ const About = () => {
         <GroupCompany/>
         <RewardsRecog/>
         <EmployeesSpeak/>
+        <AboutUsFAQ/>
         <Footer/>
     </div>
   )
