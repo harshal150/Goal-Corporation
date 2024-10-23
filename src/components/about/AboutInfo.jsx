@@ -58,7 +58,7 @@
 
 import React, { useEffect, useState } from "react";
 import team from '../../assets/team.jpg';
-import bg from '../../assets/bg10.avif';
+import bg from '../../assets/Header/bg4.jpg';
 
 const AboutInfo = () => {
   const [isVisible, setIsVisible] = useState(false);
