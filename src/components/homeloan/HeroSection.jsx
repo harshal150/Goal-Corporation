@@ -3,7 +3,9 @@ import React from 'react';
 import personal from '../../assets/loans/hy (1).jpg'
 import { Link } from 'react-router-dom';
 
-import bg from '../../assets/loansNew/bg4.jpg'
+// import bg from '../../assets/loansNew/bg4.jpg'
+// import bg from '../../assets/Header/bg8.avif'
+import bg from '../../assets/Header/bg4.jpg'
 
 const HeroSection = () => {
 

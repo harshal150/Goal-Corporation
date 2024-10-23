@@ -4,6 +4,7 @@ import React from 'react';
 
 import workingCapital from '../../assets/loansNew/wcnew1.jpg'
 import { Link } from 'react-router-dom';
+import bgimage from '../../assets/Header/bg4.jpg'
 
 const WorkingCapitalHeroSection = () => {
   
@@ -13,7 +14,14 @@ const WorkingCapitalHeroSection = () => {
   };
   
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28">
+    <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"
+      style={{
+      backgroundImage: `url(${bgimage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
      
 
 

@@ -3,6 +3,9 @@ import test1 from '../../assets/DirectorImage.jpg';
 import test2 from '../../assets/becomepartner.jpg';
 import test3 from '../../assets/Header/new1.jpg';
 
+
+import bgimage from '../../assets/Header/bg10.avif'
+ 
 const testimonials = [
   {
     id: 1,
@@ -63,7 +66,13 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-[75vh] md:h-[80vh] lg:h-[90vh] bg-gradient-to-r from-white via-[#76a4df] to-[#E0EAF5] px-4 md:px-6 lg:px-8">
+    <div className="flex items-center justify-center h-[75vh] md:h-[80vh] lg:h-[90vh]  px-4 md:px-6 lg:px-8" style={{
+      backgroundImage: `url(${bgimage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
       <div className="max-w-5xl mx-auto flex items-center justify-between space-x-2 md:space-x-6">
         {/* Left arrow - Hidden on mobile */}
         <button

@@ -2,6 +2,7 @@ import React from 'react';
 // import business from '../../assets/Header/3.qyqrOvtrund6entmdquwS0INcEUsiWkStMEVCTFEsgGKIi2SkigLIVlSmA75I0JTbcsORTjksB02f0gOy6Qt2UJLNkOkCEoghB6CAASQTQK76N7dmd7Znpme7q6urs6qys';
 import business from '../../assets/loansNew/buis3.jpg'
 import { Link } from 'react-router-dom';
+import bgimage from '../../assets/Header/bg4.jpg'
 const BusinessHeroSection = () => {
 
   const loanType="Business Loan";
@@ -11,7 +12,15 @@ const BusinessHeroSection = () => {
   };
   
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28">
+    <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"
+    
+    style={{
+      backgroundImage: `url(${bgimage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
 
 
 
