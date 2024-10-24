@@ -4,7 +4,8 @@ import test2 from '../../assets/becomepartner.jpg';
 import test3 from '../../assets/Header/new1.jpg';
 
 
-import bgimage from '../../assets/Header/bg10.avif'
+// import bgimage from '../../assets/Header/bg10.avif'
+import bgimage from '../../assets/testimonialbg2.avif'
  
 const testimonials = [
   {

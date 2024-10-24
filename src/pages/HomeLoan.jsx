@@ -6,6 +6,7 @@ import AboutHomeLoan from '../components/homeloan/AboutHomeLoan'
 import TestimonialSlider from '../components/homeloan/TestimonialSlider'
 import HomeFAQ from '../components/homeloan/HomeFAQ'
 import Table from '../components/Table'
+import Banks from '../components/homeloan/Banks'
 
 
 const HomeLoan = () => {
@@ -15,8 +16,10 @@ const HomeLoan = () => {
 
       <HeroSection/>
       <AboutHomeLoan/>
+      <Banks/>
       {/* <Table/> */}
       <HomeFAQ/>
+
       <TestimonialSlider/>
       <Footer/>
     </div>

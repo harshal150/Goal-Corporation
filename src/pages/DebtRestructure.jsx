@@ -5,6 +5,7 @@ import DebtRestructureHeroSection from '../components/debtrestructure/DebtRestru
 import AboutDebtRestructure from '../components/debtrestructure/AboutDebtRestructure'
 import DebtFAQ from '../components/debtrestructure/DebtFAQ'
 import TestimonialSlider from '../components/homeloan/TestimonialSlider'
+import Banks from '../components/homeloan/Banks'
 
 const DebtRestructure = () => {
   return (
@@ -12,6 +13,7 @@ const DebtRestructure = () => {
       <Navbar/>
       <DebtRestructureHeroSection/>
       <AboutDebtRestructure/>
+      <Banks/>
       <DebtFAQ/>
       <TestimonialSlider/>
       <Footer/>

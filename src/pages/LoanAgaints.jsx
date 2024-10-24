@@ -5,6 +5,7 @@ import AboutLoanAgaints from '../components/LoanAgaints/AboutLoanAgaints'
 import LoanAgaintHeroSection from '../components/LoanAgaints/LoanAgaintHeroSection'
 import LoanAgainstFAQ from '../components/LoanAgaints/LoanAgainstFAQ'
 import TestimonialSlider from '../components/homeloan/TestimonialSlider'
+import Banks from '../components/homeloan/Banks'
 
 const LoanAgaints = () => {
   return (
@@ -12,6 +13,7 @@ const LoanAgaints = () => {
          <Navbar/>
 <LoanAgaintHeroSection/>
 <AboutLoanAgaints/>
+<Banks/>
 <LoanAgainstFAQ/>
 <TestimonialSlider/>
 <Footer/>

@@ -1,6 +1,6 @@
 import React from 'react';
 // import personal from '../../assets/loans/personal2.jpg';
-import personal from '../../assets/loansNew/pers2.jpg';
+import personal from '../../assets/loansNew/personal loan header.avif';
 import { Link } from 'react-router-dom';
 
 
