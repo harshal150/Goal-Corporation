@@ -14,7 +14,7 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
       <div className="flex items-center space-x-4">
         <img src={logo} alt={`${bankName} logo`} className="w-24 h-32 object-contain" />
         <div>
-          <h2 className="font-semibold text-lg">{bankName}</h2>
+          <h2 className="font-semibold text-sm">{bankName}</h2>
           <p className="text-sm text-gray-500">Interest Rate Range</p>
           <p>{interestRate}</p>
         </div>
@@ -31,7 +31,7 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
       </div>
 
       <div className="flex space-x-4">
-        <button className="cp_rainbow_btn text-white px-4 py-2 rounded-full ">
+        <button className="cp_rainbow_btn text-white px-5 py-2 rounded-full ">
           Enquire Now
         </button>
         {/* <button className="border-2 border-purple-700 text-purple-700 px-4 py-2 rounded-full hover:bg-purple-100">

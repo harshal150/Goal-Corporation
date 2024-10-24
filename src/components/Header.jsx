@@ -221,8 +221,11 @@ import leaserental from "../assets/Header/lease rental.jpg";
 import debt from "../assets/Header/debtnew.jpg";
 
 
-// import backgroundImage from '../assets/aaaaaaa/14.avif'
-import backgroundImage from '../assets/Header/bg4.jpg'
+import backgroundImage from '../assets/aaaaaaa/14.avif'
+// import backgroundImage from '../assets/Header/bg4.jpg'
+
+// import backgroundImage from '../assets/aaaaaaa/28.avif'
+
 
 
 
