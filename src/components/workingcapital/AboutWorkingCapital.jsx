@@ -1,7 +1,7 @@
 import React from "react";
 import LoanCalculator from "../LoanCalculator";
 import Homeloan from "../../assets/fee&charges/Homeloan.png";
-import svgwc from "../../assets/loansNew/working capital bg.avif";
+import svgwc from "../../assets/loansNew/workcap2.avif";
 import CalculateEMIButton from "../CalculateEMIButton";
 import LoanEligibilityCard from "../LoanEligibilityCard";
 import FeesTable from "../interestTable/FeesTable";
@@ -48,7 +48,7 @@ const AboutWorkingCapital = () => {
             <img
               src={svgwc}
               alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] opacity-90"
+              className="w-[250px] h-[250px] md:w-[450px] md:h-[360px] opacity-90"
             />
           </div>
         </div>

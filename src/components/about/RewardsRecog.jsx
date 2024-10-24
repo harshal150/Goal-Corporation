@@ -21,7 +21,7 @@ const RewardsRecog = () => {
         </h1>
 
 
-          <p className="mt-5 uppercase text-[18px] text-blue-600 font-bold text-center mb-16">
+          <p className="mt-5 text-[15px] text-blue-600 font-bold text-center capitalize mb-16">
             Celebrating achievements and fostering motivation through rewards
             and recognition for outstanding contributions
           </p>

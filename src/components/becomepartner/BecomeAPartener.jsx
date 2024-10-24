@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import "animate.css"; // Import Animate.css
-import partner from '../../assets/becomepartner2.avif';
+import partner from '../../assets/becomepartner4.avif';
+
+import backgroundImage from '../../assets/aaaaaaa/14.avif'
+
 
 const indianStates = [
   "Andhra Pradesh",
@@ -88,13 +91,18 @@ const BecomeAPartner = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
+    <section  style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+    }}
+     
       className={`container mx-auto p-4 md:p-8 my-10 ${
         isVisible ? "animate__animated animate__bounceIn" : ""
       }`}
     >
-      <h1 className="text-2xl md:text-3xl font-bold  md:text-left text-left text-blue-700 capitalize mb-6 md:mb-10">
+      <h1 className="text-2xl md:text-3xl font-bold  md:text-center text-center text-blue-700 capitalize mb-6 md:mb-10">
         We are committed to becoming <span className=" text-orange-500">India’s Leading</span> Loan Distributor!
       </h1>
 

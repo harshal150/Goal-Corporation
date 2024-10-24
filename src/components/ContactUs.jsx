@@ -4,6 +4,10 @@ import { AddressMap } from "./CompanyMapLocation";
 import { Navbar } from "./Navbar";
 import Footer from "./Footer";
 
+import backgroundImage from '../assets/aaaaaaa/14.avif'
+import ContactUsFAQ from "./ContactUsFAQ";
+
+
 const indianStates = [
   "Andhra Pradesh",
   "Arunachal Pradesh",
@@ -49,11 +53,18 @@ const AboutContact = () => {
   };
 
   return (
-    <div className="home-page-container" style={{ overflowX: 'hidden' }}>
+    <div className="home-page-container"
+     style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      overflowX: 'hidden' 
+    }}>
       <Navbar />
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 my-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-center capitalize text-indigo-800 mb-6 md:mb-10">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 my-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-center capitalize text-indigo-800 mb-3 md:mb-5">
           contact <span className=" text-orange-500">us</span>
         </h1>
 
@@ -171,7 +182,7 @@ const AboutContact = () => {
                 <p>09:30 AM - 06:30 PM</p>
               </div>
               <div className="text-center">
-                <p className="font-bold">Head Office</p>
+                <p className="font-bold">Corporate Office</p>
               
                 Goal Corporation Pvt Ltd,<br></br>
 # 34, 2nd Floor, Opp to Cosmopolitan Club,<br></br>
@@ -208,13 +219,13 @@ Karnataka , India
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", stiffness: 100, duration: 0.8 }}
-            className="h-full lg:col-span-4 bg-white p-6 rounded-lg shadow-md"
+            className="h-full lg:col-span-4 py-7 rounded-lg "
           >
             <AddressMap />
           </motion.div>
         </div>
       </section>
-
+<ContactUsFAQ/>
       <Footer />
     </div>
   );

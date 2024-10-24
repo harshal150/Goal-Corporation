@@ -19,11 +19,17 @@ const quickLinks = [
 ];
 
 const socialMedia = [
-  { value: "Facebook", href: "www.facebook.com" },
-  { value: "Instagram", href: "#!" },
-  { value: "LinkedIn", href: "#!" },
-  { value: "Twitter", href: "#!" },
+  { value: "Blog", href: "www.facebook.com" },
+  { value: "FAQ's", href: "#!" },
+  { value: "Privacy Policy", href: "#!" },
+  { value: "Terms & Conditions", href: "#!" },
 ];
+// const socialMedia = [
+//   { value: "Facebook", href: "www.facebook.com" },
+//   { value: "Instagram", href: "#!" },
+//   { value: "LinkedIn", href: "#!" },
+//   { value: "Twitter", href: "#!" },
+// ];
 
 const jobInfo = [
   { value: "Select", href: "#!" },
@@ -123,7 +129,7 @@ const JobInfo = ({ job }) => (
 );
 
 const LanguageItem = ({ language }) => (
-  <option value={language.value}>{language.text}</option>
+  <option value={language.value} className="text-white">{language.text}</option>
 );
 
 const SocialItem = ({ social }) => (
@@ -193,7 +199,7 @@ const Footer = () => {
           </label>
           <select
             id="footer-language"
-            className="bg-transparent border-none text-[#1A237E] focus:outline-none"
+            className="bg-transparent border-none text-white focus:outline-none"
           >
             {language.map((lang, i) => (
               <LanguageItem language={lang} key={i} />
@@ -202,7 +208,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-6">
-          <ul className="flex justify-start">
+          <ul className="flex justify-start hover:text-white">
             {sociaIcons.map((social, i) => (
               <SocialItem social={social} key={i} />
             ))}

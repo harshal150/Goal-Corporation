@@ -11,7 +11,7 @@ import {
 
 const PartnerSection = () => {
   return (
-    <section className=" bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] py-6 h-auto mt-10">
+    <section className="  py-6 h-auto mt-10">
 <div className="lg:px-10">
 
         {/* Title Section */}

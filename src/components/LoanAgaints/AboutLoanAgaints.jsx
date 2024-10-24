@@ -1,7 +1,7 @@
 import React from "react";
 import LoanCalculator from "../LoanCalculator";
 import Homeloan from "../../assets/fee&charges/Homeloan.png";
-import svgla from "../../assets/loansNew/loan againts icon.avif";
+import svgla from "../../assets/loansNew/loan againts2.avif";
 import CalculateEMIButton from "../CalculateEMIButton";
 import LoanEligibilityCard from "../LoanEligibilityCard";
 import FeesTable from "../interestTable/FeesTable";
@@ -49,7 +49,7 @@ const AboutLoanAgaints = () => {
           <img
               src={svgla}
               alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[420px] md:h-[420px] opacity-90"
+              className="w-[250px] h-[250px] md:w-[420px] md:h-[300px] rounded-xl"
             />
           </div>
         </div>

@@ -116,15 +116,14 @@ FaqItem.propTypes = {
 const CompanyFAQ = () => {
   return (
     <section className="ezy__faq1 light py-10 md:py-14 lg:py-24 dark:bg-[#0b1727] text-zinc-900  text-gray-800">
-      <div className="container px-4 sm:px-6 md:px-8 lg:px-28 mx-auto">
+      <div className="container px-4 sm:px-6 md:px-8 lg:px-36 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
-            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-              Frequently Asked Questions about Our Company
+            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-6">
+              FAQ's
             </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              Get answers to common questions about our company and learn more about the variety of loans we offer and how we can help you achieve your financial goals.
-            </p>
+            <p className="text-sm md:text-sm lg:text-md">
+            Know about our company and the loans we provide:            </p>
           </div>
         </div>
 

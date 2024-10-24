@@ -18,7 +18,7 @@ const AboutBuisnessLoan = () => {
       </div>
 
       <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
-        Business Loans
+        Business Loan
       </h1>
 
       <section className="max-w-full mx-auto lg:mx-16 p-4 md:p-8 bg-white text-gray-800 mt-6">

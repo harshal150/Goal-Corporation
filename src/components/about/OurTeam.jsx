@@ -1,5 +1,6 @@
 import member1 from '../../assets/DirectorImage.jpg';
 import reddysir from '../../assets/keyMembers/reddy.jpg'
+import bhaswaraj from '../../assets/keyMembers/bhaswaraj.jpg'
 
 const teamMembers = [
   {
@@ -8,7 +9,7 @@ const teamMembers = [
     designation: "Director",
   },
   {
-    img: member1,
+    img: bhaswaraj,
     name: "Basavaraj N",
     designation: "Director",
   },

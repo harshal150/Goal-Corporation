@@ -1,42 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa"; // Importing FontAwesome pin icon
-import Partners from "./Partner";
 import { useNavigate } from "react-router-dom";
-import map1 from '../assets/map1.avif'
-import map2 from '../assets/map2.jpg'
+import map1 from '../assets/map1.avif';
 
 const cities = [
-  { name: "Bangalore", top: "70%", left: "50%" },  // Adjusted
-  { name: "Mumbai", top: "58%", left: "40%" },      // Adjusted
-  { name: "Delhi", top: "31%", left: "49%" },       // Adjusted
-  { name: "Chennai", top: "75%", left: "53%" },     // Adjusted
-  { name: "Hyderabad", top: "61%", left: "53%" },   // Adjusted
-  { name: "Kolkata", top: "50%", left: "70%" },     // Adjusted
-  { name: "Pune", top: "58%", left: "44%" },        // Adjusted
-  { name: "Ahmedabad", top: "53%", left: "42%" },   // Adjusted
-  { name: "Jaipur", top: "40%", left: "45%" },      // Adjusted
-  { name: "Lucknow", top: "40%", left: "56%" },     // Adjusted
-  { name: "Surat", top: "53%", left: "40%" },       // Adjusted
-  { name: "Bhubaneswar", top: "55%", left: "64%" }, // Adjusted
+  { name: "Bangalore", top: "70%", left: "50%", address: "123 MG Road, Bangalore, Karnataka" },
+  { name: "Mumbai", top: "58%", left: "40%", address: "456 Marine Drive, Mumbai, Maharashtra" },
+  { name: "Delhi", top: "31%", left: "49%", address: "789 Connaught Place, Delhi" },
+  { name: "Chennai", top: "75%", left: "53%", address: "101 Marina Beach, Chennai, Tamil Nadu" },
+  { name: "Hyderabad", top: "61%", left: "53%", address: "202 Charminar Road, Hyderabad, Telangana" },
+  { name: "Kolkata", top: "50%", left: "70%", address: "303 Park Street, Kolkata, West Bengal" },
+  { name: "Pune", top: "58%", left: "44%", address: "404 FC Road, Pune, Maharashtra" },
+  { name: "Ahmedabad", top: "53%", left: "42%", address: "505 SG Highway, Ahmedabad, Gujarat" },
+  { name: "Jaipur", top: "40%", left: "45%", address: "606 Pink City Road, Jaipur, Rajasthan" },
+  { name: "Lucknow", top: "40%", left: "56%", address: "707 Hazratganj, Lucknow, Uttar Pradesh" },
+  { name: "Surat", top: "53%", left: "40%", address: "808 Diamond Street, Surat, Gujarat" },
+  { name: "Bhubaneswar", top: "55%", left: "64%", address: "909 KIIT Road, Bhubaneswar, Odisha" },
 ];
 
-
 const MapComponent = () => {
-  const [currentCityIndex, setCurrentCityIndex] = useState(0);
-  const navigate = useNavigate()
+  const [hoveredCity, setHoveredCity] = useState(null); // Track the hovered city
+  const navigate = useNavigate();
 
-
-  const handleClick=()=>{
-    navigate('/contact')
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCityIndex((prevIndex) => (prevIndex + 1) % cities.length);
-    }, 2000); // Change city every 2 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+  const handleClick = () => {
+    navigate('/contact');
+  };
 
   return (
     <>
@@ -44,30 +32,19 @@ const MapComponent = () => {
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
           {/* Map Section */}
           <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-end">
-            {/* Background Logo */}
-            <div className="absolute inset-0 justify-center items-center z-0 hidden md:flex">
-  <img
-    src="assets/final-logo.png" // Path to your logo image
-    alt="Background Logo"
-    className="ml-20 h-auto opacity-90" // Adjust size and opacity
-  />
-</div>
-
-
             {/* India Map */}
             <div className="relative w-[80%] h-full object-cover z-10">
               <img
                 src={map1}
                 alt="India Map"
                 className="w-full h-[150%]"
-                // style={{ filter: "contrast(200%)" }}
               />
               {/* Pin Locations */}
               {cities.map((city, index) => (
                 <div
                   key={index}
                   className={`absolute transition-transform transform ${
-                    index === currentCityIndex ? "scale-150" : "scale-100"
+                    hoveredCity?.name === city.name ? "scale-150" : "scale-100"
                   }`}
                   style={{
                     top: city.top,
@@ -77,7 +54,7 @@ const MapComponent = () => {
                 >
                   {/* Pin Icon */}
                   <FaMapMarkerAlt
-                    className="text-red-600 text-2xl z-20" // Styling the pin icon
+                    className="text-red-600 text-2xl z-20"
                   />
                   {/* Pin Animation */}
                   <div
@@ -85,6 +62,31 @@ const MapComponent = () => {
                   ></div>
                 </div>
               ))}
+
+              {/* Address Card */}
+              {hoveredCity && (
+                <div
+                  className="absolute bg-blue-100 bg-opacity-95 p-4 rounded-lg shadow-2xl text-center z-50"
+                  style={{
+                    top: `calc(${hoveredCity.top} - 80px)`, // Position above the pin
+                    left: hoveredCity.left, // Align horizontally with the pin
+                    transform: "translate(-50%, -50%)", // Adjust for centering
+                    width: "250px",
+                  }}
+                >
+                  {/* Triangular pointer */}
+                  <div
+                    className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-0 h-0"
+                    style={{
+                      borderLeft: "10px solid transparent",
+                      borderRight: "10px solid transparent",
+                      borderTop: "10px solid rgba(255, 255, 255, 0.9)",
+                    }}
+                  />
+                  <h4 className="text-lg font-bold text-blue-800">{hoveredCity.name}</h4>
+                  <p className="text-sm text-gray-700">{hoveredCity.address}</p>
+                </div>
+              )}
             </div>
           </div>
 
@@ -96,11 +98,13 @@ const MapComponent = () => {
             </h1>
 
             {/* City Cards Section */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 relative">
               {cities.map((city, index) => (
                 <div
                   key={index}
                   className="bg-blue-200 p-2 rounded-lg shadow-xl cursor-pointer flex items-center justify-center hover:scale-105"
+                  onMouseEnter={() => setHoveredCity(city)} // Show address on hover
+                  onMouseLeave={() => setHoveredCity(null)} // Hide address when not hovering
                 >
                   <FaMapMarkerAlt className="text-red-600 mr-3" />
                   <span className="font-bold text-sm text-blue-800 ">
@@ -114,7 +118,7 @@ const MapComponent = () => {
             <div className="mt-8">
               <button
                 onClick={handleClick}
-                className="cp_rainbow_bntn  text-white px-4 py-2 lg:px-5 lg:py-2 rounded-lg text-lg font-bold hover:bg-[#4955d3] transition-colors"
+                className="cp_rainbow_bntn text-white px-4 py-2 lg:px-5 lg:py-2 rounded-lg text-lg font-bold hover:bg-[#4955d3] transition-colors"
               >
                 Contact Us
               </button>
@@ -152,12 +156,11 @@ const MapComponent = () => {
             background-position: 0% 50%;
         }
     }`}
-            </style>
+              </style>
             </div>
           </div>
         </div>
       </div>
-     
     </>
   );
 };

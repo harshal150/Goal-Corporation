@@ -4,7 +4,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const BenefitsSection = () => {
   return (
-    <section className="flex justify-center items-center px-4 py-8 ">
+    <section className="flex justify-center items-center px-4 py-8 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] ">
       <div className="max-w-4xl text-center">
         {/* Title Section */}
         <h1 className="text-2xl md:text-4xl font-bold text-blue-700 mb-6">

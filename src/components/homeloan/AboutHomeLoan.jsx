@@ -1,7 +1,7 @@
 import React from "react";
 import LoanCalculator from "../LoanCalculator";
 import Homeloan from "../../assets/fee&charges/Homeloan.png";
-import svicon from "../../assets/loansNew/homeabouticon2.avif";
+import svicon from "../../assets/loansNew/homeloan.jpg";
 import LoanEligibilityCard from "../LoanEligibilityCard";
 import CalculateEMIButton from "../CalculateEMIButton";
 import FeesTable from "../interestTable/FeesTable";
@@ -19,7 +19,7 @@ const AboutHomeLoan = () => {
       </div>
 
       <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
-        Home Loans
+        Home Loan
       </h1>
 
       <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
@@ -47,7 +47,7 @@ const AboutHomeLoan = () => {
             <img
               src={svicon}
               alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] opacity-90"
+              className="w-[250px] h-[250px] md:w-[450px] md:h-[360px] rounded-xl"
             />
           </div>
         </div>

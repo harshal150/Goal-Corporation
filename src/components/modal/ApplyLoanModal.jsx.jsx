@@ -14,8 +14,10 @@ import {
 import { TbMoneybag } from "react-icons/tb";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 // import contact from "../../assets/contact.avif";
-import contact from "../../assets/applyloanpage.avif";
+import contact from "../../assets/applyloanpage2.jpg";
 import Swal from 'sweetalert2';
+import backgroundImage from '../../assets/aaaaaaa/14.avif'
+
 
 
 // Validation schema using Yup
@@ -79,10 +81,13 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
       console.log('SUCCESS!', response.status, response.text);
       Swal.fire({
         icon: 'success',
-        title: 'Your application has been submitted!',
-        text: 'Thank you for your submission. We will contact you shortly.',
-        showConfirmButton: true,
-        timer: 3000,
+        title: 'APPLICATION SUBMISSION SUCCESSFUL !!!',
+       html: `Dear ${formValues.fullName},<br/><br/>
+         Thank you for showing interest in Goal Corporation.<br/>
+         Our Customer Relation Executive shall be in touch with you shortly to take your application forward!!<br/><br/>
+         Have a Great Day!!!!`,
+  showConfirmButton: true,
+  timer: 5000,
       }).then(() => {
         window.location.reload(); 
       });
@@ -98,6 +103,8 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
     });
   };
 
+
+
   if (isSubmitted) {
     return (
       <div className="text-center mt-10 h-50 w-full">
@@ -107,19 +114,24 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
       </div>
     );
   }
+  
 
   return (
-    <div className="w-full mx-auto mt-6 px-4 md:px-6 ">
-      <div className="relative text-center">
-        <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 animate-fadeInUp">
-          Submit Your Details &{" "}
-          <span className="text-red-500 animate-wiggle">
-            {loanType && loanType !== "" ? `Get ${loanType} Starting From ${interestRate}% ROI` : "We'll Contact You Shortly"}
-          </span>
-        </h3>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+    <div className="w-full min-h-screen flex justify-center items-center px-4 py-10" style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+    }}>
+      <div className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-bold">
+            Submit Your Details &{" "}
+            <span className="text-red-500">
+              {loanType && loanType !== "" ? `Get ${loanType} Starting From ${interestRate}% ROI` : "We'll Contact You Shortly"}
+            </span>
+          </h3>
+        </div>
         <div className="col-span-3 md:col-span-2">
         <Formik
             initialValues={{
@@ -246,11 +258,20 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
                 </div>
 
                 <div className="flex items-start space-x-2 mt-4">
-                  <Field type="checkbox" name="terms" className="form-checkbox mt-2" />
-                  <span className="text-gray-700">
-                   I understand and agree to the general terms of service of Goal Corporation Pvt Ltd.
-                  </span>
-                </div>
+  <Field type="checkbox" name="terms" className="form-checkbox mt-2" />
+  <span className="text-gray-700 text-justify">
+    I have read and agree to Credit Score Terms of Use and hereby appoint <strong>Goal Corporation</strong> as my authorised representative to receive my credit information from Cibil / Equifax / Experian / CRIF Highmark (bureau).<br /><br />
+    I hereby unconditionally consent to and instruct the bureau to provide my credit information to me and <strong>Goal Corporation</strong> on a month-to-month basis. I understand that I shall have the option to opt out/unsubscribe from the service.<br /><br />
+    By submitting this form, I hereby authorize <strong>Goal Corporation</strong> to do all of the following in connection with providing me the Services:
+    <ol className="list-decimal list-inside">
+      <li>Verify my identity and share with Credit bureaus my required personally identifiable information;</li>
+      <li>Request and receive my Credit report, and credit score from Credit bureaus, including but not limited to a copy of my consumer credit report and score, at any time for (i) a limited period of six months or (ii) till such time the credit information is required to be retained to satisfy the purpose for which it was provided or (iii) until you withdraw your consent to store such Consumer Credit Information whichever is earlier;</li>
+      <li>Retain a copy of my credit information, along with the other information I have given <strong>Goal Corporation</strong> access to under this Authorization, for use in accordance with Credit Score Terms of Use, Terms of Use, and Privacy Policy;</li>
+      <li>Share my details with banking partners in order to assist me in rectifying and removing negative observations from my credit information report and increase my chances of loan approval in the future;</li>
+      <li>Provide me with customized recommendations and personalized offers via email, text, call, or online display of the products and services of <strong>Goal Corporation</strong> and/or its business partners/affiliates.</li>
+    </ol>
+  </span>
+</div>
 
                 <div className="text-center mt-6 mb-6">
                   <button
@@ -299,9 +320,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
           </Formik>
         </div>
 
-        <div className="hidden md:flex justify-center items-center">
-          <img src={contact} alt="Contact" className="w-full h-full object-cover rounded-lg" />
-        </div>
+       
       </div>
     </div>
   );
