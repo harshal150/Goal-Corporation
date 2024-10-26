@@ -1,62 +1,44 @@
-import React from "react";
-import LoanCalculator from "../LoanCalculator";
-import Homeloan from "../../assets/fee&charges/Homeloan.png";
-import svgwc from "../../assets/loansNew/workcap2.avif";
-import CalculateEMIButton from "../CalculateEMIButton";
-import LoanEligibilityCard from "../LoanEligibilityCard";
-import FeesTable from "../interestTable/FeesTable";
-
+import React from 'react'
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
-const AboutWorkingCapital = () => {
-  return (
-    <div className="">
-      {/* Hide CalculateEMIButton on mobile view */}
-      <div className="hidden sm:block">
-        <CalculateEMIButton />
-      </div>
+import WorkCapFAQ from '../../components//workingcapital/WorkCapFAQ'
 
-      <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+const WorkingCapitalLoanBelowComponent = () => {
+  return (
+    <div>
+      
+      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Working Capital Loan
       </h1>
 
-
-
-      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
+      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-2">
         {/* Text with Icon */}
         <div className="flex flex-col md:flex-row items-start">
-          <div className="w-full md:w-1/2 mt-6 md:mt-10">
+          <div className="w-full  mt-6 md:mt-10">
             <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
-            A working capital loan is a valuable financial tool that helps
-              SMEs bridge the gap between expenses and revenue. Whether it's due
-              to delayed payments from clients or any other reason, our working
-              capital loans ensure that your business has the necessary funds to
-              meet its immediate financial obligations and sustain its
-              operations.
+            A working capital loan is a loan taken to finance a company's everyday operations. This loan is not used to buy long-term assets or investments but instead to cover short-term operational needs such as payroll, rent, and inventory. Such loans can be designed in various different ways to suit the specific need of the borrower, such as Term Loan, OD, CC etc.         </p>
+          <h2 className='font-bold mb-3'>Benefits and Features :</h2>
+            <p className='text-left mb-4 md:mb-8  text-[10px] md:text-[14px]  space-y-2'>
+
+
+            •	Working Capital Loan is a secured loan against the value of the collateral offered, hence, reducing the risk for the lender. This generally leads to lower interest rates compared to unsecured loans. <br></br>
+•	The loan amount is determined based on factors, such as Turn Over of business, Debtors, Creditors, Stocks, the value of the collateral. Normally, WC assures a much higher loan amount compared to Business loans or other unsecured loans.<br></br>
+•	Typically, in case of WC Loans, the repayment is in the form of interest for the limit utilised. This limit needs to be renewed annually and business is assessed by the lender on regular intervals.<br></br>
+•	The end use of the loan amount / limit / drawing power can be for a wide range of purposes, offering the flexibility to address various day to day financial needs of a business.<br></br>
+•	Regular submission of documents and scrutiny by lender helps the business owner also in keeping tab of the business in a much proficient way. <br></br>
+•	Government schemes like CGTMSE helps business owners to reap the benefit of subsidies offered to new and existing businesses.<br></br>
+•	Longer tenure in case of WC Term Loans help businesses to avail maximum funding with lower EMIs which reduces the burden of cash outflow.<br></br>
+•	Higher LTV up to 100% of property value offered as collateral can be availed for WC Loans.<br></br>
+
+
             </p>
-            <p className="text-left mb-6 md:mb-10 text-[12px] md:text-[16px]">
-            At Goal Corporation, we have a deep understanding of you and your
-              business needs. We strive to provide you with a swift and seamless
-              experience, ensuring that your SME finance requirements are met
-              effectively. Here's how we make sure your experience with us is
-              exceptional:
-            </p>
+           
           </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src={svgwc}
-              alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[450px] md:h-[360px] opacity-90"
-            />
-          </div>
+          
         </div>
       </div>
-
-      <LoanEligibilityCard />
-
-
 
       <section
         className="max-w-full  p-4  bg-white  "
@@ -69,7 +51,7 @@ const AboutWorkingCapital = () => {
       >
         {/* Title */}
         <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-        Working Capital Loan Eligibility
+        Working Capital Loan Eligibility Criteria
         </h2>
 
         {/* Age Section */}
@@ -94,11 +76,7 @@ const AboutWorkingCapital = () => {
 
 
 
-
-
-
-
-
+   
       <section className="max-w-full p-4 md:p-6 text-gray-800">
         <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
         Documents required to apply for <span className="text-orange-500"> Working Capital Loan</span>
@@ -150,38 +128,10 @@ const AboutWorkingCapital = () => {
       </section>
 
 
-
-
-
-
-      
-      <div>
-        <div
-          className="px-4 md:px-8 lg:px-16 "
-          style={{
-            backgroundImage: `url(${feescgarges})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-      <div className="py-8">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-      Fees and Charges for Working Capital Loan
-          </h2>
-      </div>
-          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">
-          The fees and charges of Working Capital loans usually vary from lender
-          to lender and from case to case. The Below mentioned table will give
-          you an idea of the fees and charges related to Working Capital loans:
-          </p>
-          <div className="overflow-x-auto">
-            <FeesTable />
-          </div>
-        </div>
-      </div>
+{/* <PersonalFAQ/> */}
+<WorkCapFAQ/>
     </div>
-  );
-};
+  )
+}
 
-export default AboutWorkingCapital;
+export default WorkingCapitalLoanBelowComponent

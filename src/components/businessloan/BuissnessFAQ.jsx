@@ -121,11 +121,11 @@ const HomeFAQ = () => {
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
             <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-              Frequently Asked Questions about Business Loans
+              FAQ's about Business Loans
             </h2>
-            <p className="text-sm md:text-base lg:text-lg">
+            {/* <p className="text-sm md:text-base lg:text-lg">
               Get answers to common questions about business loans, and understand how these loans can help you achieve your goals with ease.
-            </p>
+            </p> */}
           </div>
         </div>
 

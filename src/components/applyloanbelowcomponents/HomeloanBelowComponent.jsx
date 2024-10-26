@@ -1,59 +1,44 @@
-import React from "react";
-import LoanCalculator from "../LoanCalculator";
-import Homeloan from "../../assets/fee&charges/Homeloan.png";
-import svicon from "../../assets/loansNew/homeloan.jpg";
-import LoanEligibilityCard from "../LoanEligibilityCard";
-import CalculateEMIButton from "../CalculateEMIButton";
-import FeesTable from "../interestTable/FeesTable";
-
+import React from 'react'
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
-const AboutHomeLoan = () => {
-  return (
-    <div className="">
-      {/* Hide CalculateEMIButton on mobile view */}
-      <div className="hidden sm:block">
-        <CalculateEMIButton />
-      </div>
+import HomeFAQ from '../../components/homeloan/HomeFAQ'
 
-      <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+const HomeloanBelowComponent = () => {
+  return (
+    <div>
+      
+      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Home Loan
       </h1>
 
-      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
+      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-2">
         {/* Text with Icon */}
         <div className="flex flex-col md:flex-row items-start">
-          <div className="w-full md:w-1/2 mt-6 md:mt-10">
+          <div className="w-full  mt-6 md:mt-10">
             <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
-              A home holds immense significance in our lives. It is not just a
-              physical structure but a sanctuary where we find solace, love, and
-              a sense of belonging. It is the place we eagerly return to after a
-              long day, where we create cherished memories with our loved ones,
-              and where our dreams take shape. Home is where our hearts reside,
-              and it forms the very essence of our existence.
+            A Home Loan, or a Housing Loan, is a kind of long-term mortgage loan which enables individuals to purchase or construct a residential property (flat, villa, row house, individual house or a bungalow) by borrowing funds from banks or NBFCs. A home Loan is secured by mortgaging the property being purchased or constructed. 
             </p>
-            <p className="text-left mb-6 md:mb-10 text-[12px] md:text-[16px]">
-              Understanding the profound importance of having a home, Goal
-              Corporation is dedicated to helping you fulfill your dream of
-              owning one. We believe that everyone deserves a place they can
-              call their own, a haven where laughter echoes through the halls
-              and love fills every corner. That's why we offer home loans with
-              the lowest home loan interest rates.
+          <h2 className='font-bold mb-3'>Benifits :</h2>
+            <p className='text-left mb-4 md:mb-8  text-[10px] md:text-[14px]  space-y-2'>
+
+
+            •	Higher LTV (Loan to Value) up to 90% of property market value.<br></br>
+•	Better repayment option with a longer tenure up to 30 years/ 360 months.<br></br>
+•	Competitive Interest Rates starting at 8.50% ensuring low EMI of Rs.769 per lakh.<br></br>
+•	Maximum FOIR (fixed obligation to income ration) and clubbing of multiple income for higher loan eligibility.<br></br>
+•	Diverse use of loan facility like purchase of house, construction, extension/renovation of existing property, furnishing and fixtures.<br></br>
+•	Balance transfer option for reduction of rate of interest and top up facility on existing loan.<br></br>
+•	Special loans for NRIs/ PIOs to purchase property in India.
+
             </p>
+           
           </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src={svicon}
-              alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[450px] md:h-[360px] rounded-xl"
-            />
-          </div>
+          
         </div>
       </div>
 
-      <LoanEligibilityCard />
 
       <section
         className="max-w-full  p-4  bg-white  "
@@ -124,6 +109,8 @@ const AboutHomeLoan = () => {
           </ul>
         </div>
       </section>
+
+
 
       <section className="max-w-full p-4 md:p-6 text-gray-800">
   <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
@@ -221,38 +208,10 @@ const AboutHomeLoan = () => {
   </div>
 </section>
 
+<HomeFAQ/>
 
-   
-
-
-
-      <div>
-        <div
-          className="px-4 md:px-8 lg:px-16 "
-          style={{
-            backgroundImage: `url(${feescgarges})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-      <div className="py-8">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-      Fees and Charges for Home Loan
-          </h2>
-      </div>
-          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">
-          The fees and charges of home loans usually vary from lender to
-            lender and from case to case. The below mentioned table will give
-            you a fair idea of the fees and charges related to home loans:
-          </p>
-          <div className="overflow-x-auto">
-            <FeesTable />
-          </div>
-        </div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutHomeLoan;
+export default HomeloanBelowComponent

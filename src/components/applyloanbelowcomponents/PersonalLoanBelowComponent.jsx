@@ -1,66 +1,44 @@
-import React from "react";
-import LoanCalculator from "../LoanCalculator";
-import personal from "../../assets/fee&charges/personal.png";
-import personalsvg from "../../assets/loansNew/personalbg.avif";
-// import personalsvg from '../../assets/svg/personal-loan.png';
-import CalculateEMIButton from "../CalculateEMIButton";
-import LoanEligibilityCard from "../LoanEligibilityCard";
-import FeesTable from "../interestTable/FeesTable";
-
+import React from 'react'
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
-const AboutPersonalLoan = () => {
-  return (
-    <div className="">
-      {/* Hide CalculateEMIButton on mobile view */}
-      <div className="hidden sm:block">
-        <CalculateEMIButton />
-      </div>
+import PersonalFAQ from '../../components/personalloan/PersonalFAQ'
 
-      <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+const PersonalLoanBelowComponent = () => {
+  return (
+    <div>
+      
+      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Personal Loan
       </h1>
 
-   
-
-
-
-      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
+      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-2">
         {/* Text with Icon */}
         <div className="flex flex-col md:flex-row items-start">
-          <div className="w-full md:w-1/2 mt-6 md:mt-10">
+          <div className="w-full  mt-6 md:mt-10">
             <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
-            With Goal Corporation, you can now avail an instant personal loan
-              online, making the entire process quick and convenient. Whether
-              you're planning a trip to your dream destination, renovating your
-              home with modern furnishings, organising your dream wedding, or
-              facing a medical emergency, an online Personal Loan from Goal
-              Corporation will always be there to help you fulfill your
-              requirements with the lowest personal loan interest rate.
+            With Goal Corporation, you can now avail an instant personal loan online, making the entire process quick and convenient. Whether you're planning a trip to your dream destination, renovating your home with modern furnishings, organising your dream wedding, or facing a medical emergency, an online Personal Loan from Goal Corporation will always be there to help you fulfill your requirements with the lowest personal loan interest rate.            </p>
+          <h2 className='font-bold mb-3'>Benefits and Features :</h2>
+            <p className='text-left mb-4 md:mb-8  text-[10px] md:text-[14px]  space-y-2'>
+
+
+            
+•	No Restrictions on the End-Use <br></br>
+•	Competitive Interest Rates, Starting at Just 10.49% p.a.<br></br>
+•	Loan Amounts of up to Rs. 75 Lakhs<br></br>
+•	Flexible Repayment Tenure.<br></br>
+•	Top-Up Loan Options.<br></br>
+•	Minimal Documentation<br></br>
+•	Quick Disbursals<br></br>
+
+
             </p>
-            {/* <p className="text-left mb-6 md:mb-10 text-[12px] md:text-[16px]">
-            At Goal Corporation, we have a deep understanding of you and your
-              business needs. We strive to provide you with a swift and seamless
-              experience, ensuring that your SME finance requirements are met
-              effectively. Here's how we make sure your experience with us is
-              exceptional:
-            </p> */}
+           
           </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src={personalsvg}
-              alt="Home Loan Icon"
-              className="w-[220px] h-[220px] md:w-[420px] md:h-[360px]"
-            />
-          </div>
+          
         </div>
       </div>
-
-      <LoanEligibilityCard />
-
-
 
       <section
         className="max-w-full  p-4  bg-white  "
@@ -97,13 +75,8 @@ const AboutPersonalLoan = () => {
 
 
 
-
-
-
-
-
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-8">
         Documents required to apply for <span className="text-orange-500">Personal Loan</span>
         </h2>
 
@@ -169,35 +142,10 @@ const AboutPersonalLoan = () => {
       </section>
 
 
+<PersonalFAQ/>
 
-            
-      <div>
-        <div
-          className="px-4 md:px-8 lg:px-16 "
-          style={{
-            backgroundImage: `url(${feescgarges})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-      <div className="py-8">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-      Fees and Charges for Personal Loan
-          </h2>
-      </div>
-          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">
-          The fees and charges of Personal loans usually vary from lender to
-          lender and from case to case. The below mentioned table will give you
-          a fair idea of the fees and charges related to Personal loans:
-          </p>
-          <div className="overflow-x-auto">
-            <FeesTable />
-          </div>
-        </div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutPersonalLoan;
+export default PersonalLoanBelowComponent

@@ -13,7 +13,7 @@ const ApplyLoanPage = () => {
     <div>
     <Navbar/>
       <ApplyLoanModal loanType={loanType}/>
-      <LoanApplicationFAQ/>
+      {/* <LoanApplicationFAQ/> */}
       <Footer/>
     </div>
   )

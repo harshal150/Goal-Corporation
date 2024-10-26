@@ -98,7 +98,7 @@ const BecomeAPartner = () => {
       backgroundAttachment: "fixed", 
     }}
      
-      className={`container mx-auto p-4 md:p-8 my-10 ${
+      className={` mx-auto p-4 md:p-8 my-10 ${
         isVisible ? "animate__animated animate__bounceIn" : ""
       }`}
     >

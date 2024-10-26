@@ -31,18 +31,13 @@ const AboutLoanAgaints = () => {
         {/* Text with Icon */}
         <div className="flex flex-col md:flex-row items-start">
           <div className="w-full md:w-1/2 mt-6 md:mt-10">
-          <p className="text-left mb-4 md:mb-8 text-[12px] mt-5 md:text-[16px]">
+          
+            <p className="text-left mb-6 md:mb-10 text-[12px] mt-5 md:text-[16px]">
+            A loan against property (LAP) is a secured loan that allows a person to borrow money from a financial institution by pledging his/her property as collateral. This is a secured loan where the property offered is the security. The property can be anything from residential, commercial, industrial, land or any other special property like hotel, hospital, school, colleges etc.
+            </p>
+            <p className="text-left mb-4 md:mb-8 text-[12px] mt-5 md:text-[16px]">
               Unlock the Potential of Your Property with Loan Against Property
               from Goal Corporation
-            </p>
-            <p className="text-left mb-6 md:mb-10 text-[12px] md:text-[16px]">
-              At Goal Corporation, we are a leading corporate loan distribution
-              company dedicated to providing you with the best financial
-              solutions. We bring you Loan Against Property offerings from top
-              Banks and NBFCs across India, ensuring you have access to the
-              funds you need. With our competitive interest rates starting as
-              low as 9%* p.a., we make borrowing against your property
-              affordable and convenient.
             </p>
           </div>
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">

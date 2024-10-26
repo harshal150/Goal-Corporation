@@ -125,9 +125,9 @@ const HomeFAQ = () => {
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
             <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-              Frequently Asked Questions about Home Loans
+             FAQ's about Home Loans
             </h2>
-            <p className="text-sm md:text-base lg:text-lg">
+            <p className="text-sm md:text-sm lg:text-sm">
               Get answers to common questions about home loans and understand how home loans can help you own your dream home with ease.
             </p>
           </div>

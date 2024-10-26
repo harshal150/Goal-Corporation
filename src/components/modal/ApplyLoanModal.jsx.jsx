@@ -17,6 +17,12 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import contact from "../../assets/applyloanpage2.jpg";
 import Swal from 'sweetalert2';
 import backgroundImage from '../../assets/aaaaaaa/14.avif'
+import HomeloanBelowComponent from "../applyloanbelowcomponents/HomeloanBelowComponent";
+import PersonalLoanBelowComponent from "../applyloanbelowcomponents/PersonalLoanBelowComponent";
+import WorkingCapitalLoanBelowComponent from "../applyloanbelowcomponents/WorkingCapitalBelowComponent";
+import LoanAgaintsBelowComponent from "../applyloanbelowcomponents/LoanAgaintsBelowComponent";
+import BusinessLoanBelowComponent from "../applyloanbelowcomponents/BusinessLoanBelowComponent";
+import DebtRestructureBelowComponent from "../applyloanbelowcomponents/DebtRestructureBelowComponent";
 
 
 
@@ -117,7 +123,8 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
   
 
   return (
-    <div className="w-full min-h-screen flex justify-center items-center px-4 py-10" style={{
+ <>
+     <div className="w-full min-h-screen flex justify-center items-center px-4 py-10" style={{
       backgroundImage: `url(${backgroundImage})`, 
       backgroundSize: "cover", 
       backgroundPosition: "center", 
@@ -322,7 +329,16 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
 
        
       </div>
+
     </div>
+      {/* <HomeloanBelowComponent/> */}
+      {/* <PersonalLoanBelowComponent/> */}
+      {/* <WorkingCapitalLoanBelowComponent/> */}
+      {/* <LoanAgaintsBelowComponent/> */}
+      {/* <BusinessLoanBelowComponent/> */}
+      <DebtRestructureBelowComponent/>
+      
+ </>
   );
 };
 
