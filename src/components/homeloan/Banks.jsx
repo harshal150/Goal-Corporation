@@ -1,12 +1,12 @@
 import React from 'react';
-import canara from '../../assets/partner/Frame1.png';
-import pnb from '../../assets/partner/Frame2.png';
-import union from '../../assets/partner/Frame3.png';
-import kotak from '../../assets/partner/Frame4.png';
-import idfc from '../../assets/partner/Frame5.png';
+import canara from '../../assets/partner/canara.jpg';
+import pnb from '../../assets/partner/pnb housing.png';
+import union from '../../assets/partner/union.png';
+import kotak from '../../assets/partner/kotak.jpeg';
+import idfc from '../../assets/partner/idfc.png';
 import dbs from '../../assets/partner/Frame6.png';
 import axis from '../../assets/partner/Frame7.png';
-import hdfc from '../../assets/partner/Frame8.png';
+import hdfc from '../../assets/partner/hdfc.jpeg';
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
   return (
@@ -30,8 +30,8 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
         <p>{loanAmount}</p>
       </div>
 
-      <div className="flex mt-4 md:mt-0 justify-center space-x-4">
-        <button className="cp_rainbow_btn text-white px-5 py-2 rounded-full">
+      <div className="flex mt-4 text-sm md:mt-0 justify-center space-x-4">
+        <button className="cp_rainbow_btn text-white px-6 py-2 rounded-full">
           Enquire Now
         </button>
       </div>
@@ -41,7 +41,7 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
           background-size: 600%;
           animation: anime 6s linear infinite;
           font-weight: 500;
-          font-size: 14px;
+          font-size: 10px;
           border-radius: 5px;
           transition: 0.5s;
           text-decoration: none;
@@ -66,7 +66,7 @@ const Banks = () => {
   const loanData = [
     {
       logo: canara,
-      bankName: 'Canara Bank Home Loan',
+      bankName: 'Canara Bank Loan',
       interestRate: '8.55% p.a. to 11.75% p.a.',
       processingFee: '0.50% (min. ₹1,500; max. ₹10,000)',
       loanAmount: '₹1 lakh - ₹3 crore',
@@ -80,45 +80,45 @@ const Banks = () => {
     },
     {
       logo: union,
-      bankName: 'Union Bank Home Loan',
+      bankName: 'Union Bank Loan',
       interestRate: '8.35% p.a. (PSU Employee), 8.50% CIBIL (above 750)',
-      processingFee: '0.50% or ₹15,000 (whichever lower)',
+      processingFee: '0.50% or ₹15,000',
       loanAmount: 'Max 30 years; salaried & self-employed',
     },
     {
       logo: kotak,
-      bankName: 'Kotak Mahindra Bank Home Loan',
+      bankName: 'Kotak Mahindra Bank Loan',
       interestRate: '8.65% p.a. without insurance, 8.60% with insurance',
       processingFee: 'Salaried 10k + GST, Self 0.25 GST',
       loanAmount: '₹50 lakh to ₹3 crore',
     },
     {
       logo: idfc,
-      bankName: 'IDFC Bank Home Loan',
+      bankName: 'IDFC Bank Loan',
       interestRate: '8.75% p.a. to 9.50% p.a.',
-      processingFee: 'Salaried 0.25% & self-employed 0.5% of loan amt, Initial fee ₹3,500',
+      processingFee: 'Salaried 0.25% & self-employed 0.5% of loan amt',
       loanAmount: 'Max 25 years; salaried & self-employed',
     },
     {
       logo: dbs,
-      bankName: 'DBS Bank Home Loan',
+      bankName: 'DBS Bank Loan',
       interestRate: '8.35% p.a. onwards for salaried & self-employed',
       processingFee: '₹10,000+ taxes; Initial fee ₹5,000 + GST',
       loanAmount: '₹10 lakh - ₹5 crore',
     },
     {
       logo: axis,
-      bankName: 'Axis Bank Home Loan',
+      bankName: 'Axis Bank Loan',
       interestRate: '8.70% p.a. onwards',
       processingFee: 'Up to 1%',
       loanAmount: '₹10 lakh - ₹5 crore',
     },
     {
       logo: hdfc,
-      bankName: 'HDFC Limited Home Loan',
+      bankName: 'HDFC Limited Loan',
       interestRate: '8.40% - 8.50% (800+ CIBIL), 8.35% p.a. onwards',
       processingFee: '₹1,770 + GST for salaried, ₹2,665 for self-employed',
-      loanAmount: 'No restriction on loan amount',
+      loanAmount: 'No restriction ',
     },
   ];
 
