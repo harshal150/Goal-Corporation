@@ -51,18 +51,26 @@ const indianStates = [
   "Lakshadweep", "Delhi", "Puducherry", "Ladakh", "Jammu and Kashmir"
 ];
 
-const loan_interest = {
-  "Personal Loan": 12,
-  "Home Loan": 8,
-  "Loans Against Property": 9,
-  "Working Capital Loan": 10,
-  "Business Loan": 11,
-  "Debt Restructuring": 13,
+
+
+const loanDetails = {
+  "Home Loan": { component: HomeloanBelowComponent, interestRate: 8 },
+  "Personal Loan": { component: PersonalLoanBelowComponent, interestRate: 12 },
+  "Loans Against Property": { component: LoanAgaintsBelowComponent, interestRate: 9 },
+  "Working Capital Loan": { component: WorkingCapitalLoanBelowComponent, interestRate: 10 },
+  "Business Loan": { component: BusinessLoanBelowComponent, interestRate: 11 },
+  "Debt Restructuring": { component: DebtRestructureBelowComponent, interestRate: 13 },
 };
 
 const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const interestRate = loan_interest[loanType] || "NA";
+
+  const loanInfo=loanDetails[loanType] || {};
+
+  const interestRate=loanInfo.interestRate || null;
+  const LoanComponent=loanInfo.component || 'NA';
+ 
+
   const sendEmail = (formValues) => {
     emailjs.send(
       'service_m22h58p', // Replace with your EmailJS Service ID
@@ -331,12 +339,13 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType }) => {
       </div>
 
     </div>
-      {/* <HomeloanBelowComponent/> */}
+      {/*<HomeloanBelowComponent/> */}
       {/* <PersonalLoanBelowComponent/> */}
       {/* <WorkingCapitalLoanBelowComponent/> */}
       {/* <LoanAgaintsBelowComponent/> */}
       {/* <BusinessLoanBelowComponent/> */}
-      <DebtRestructureBelowComponent/>
+      {/* <DebtRestructureBelowComponent/> */}
+      {LoanComponent ?<LoanComponent />:(<p>UnknownLoan Type</p>)}
       
  </>
   );
