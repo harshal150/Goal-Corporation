@@ -59,6 +59,9 @@ import AboutContact from './components/ContactUs';
 import ApplyLoanPage from './pages/ApplyLoanPage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import PrivacyPolicy from './components/quicklinks/PrivacyPolicy';
+import TermsAndConditions from './components/quicklinks/TermsConditions';
+import CareersPage from './components/quicklinks/Careers';
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -180,6 +183,9 @@ function App() {
         <Route path="/debtrestructuring" element={<DebtRestructure />} />
         <Route path="/becomepartner" element={<BecomePartner />} />
         <Route path="/applyforloan" element={<ApplyLoanPage />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/termsconditions" element={<TermsAndConditions />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Routes>
     </BrowserRouter>
   );

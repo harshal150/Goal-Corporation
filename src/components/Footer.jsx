@@ -19,10 +19,10 @@ const quickLinks = [
 ];
 
 const socialMedia = [
-  { value: "Blog", href: "www.facebook.com" },
+  { value: "Careers", href: "/careers" },
   { value: "FAQ's", href: "#!" },
-  { value: "Privacy Policy", href: "#!" },
-  { value: "Terms & Conditions", href: "#!" },
+  { value: "Privacy Policy", href: "/privacypolicy" },
+  { value: "Terms & Conditions", href: "/termsconditions" },
 ];
 // const socialMedia = [
 //   { value: "Facebook", href: "www.facebook.com" },
@@ -153,7 +153,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:flex-row md:justify-between md:w-3/4">
             <div className="mb-6 md:mb-0 md:w-1/4">
-              <h5 className="font-bold mb-3 text-[18px]">Quick Links</h5>
+              <h5 className="font-bold mb-3 text-[18px]">About Us</h5>
               <ul className="space-y-2">
                 {quickLinks.map((qLink, i) => (
                   <QuickLinks qLink={qLink} key={i} />
@@ -169,7 +169,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="mb-6 ml-2 md:mb-0 md:w-1/4">
-              <h5 className="font-bold mb-3 text-[18px]">Social Media</h5>
+              <h5 className="font-bold mb-3 text-[18px]">Quick Links</h5>
               <ul className="space-y-2 font-normal">
                 {socialMedia.map((media, i) => (
                   <SocialMedia media={media} key={i} />
