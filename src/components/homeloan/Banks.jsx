@@ -3,16 +3,16 @@ import canara from '../../assets/partner/Frame1.png';
 import pnb from '../../assets/partner/Frame2.png';
 import union from '../../assets/partner/Frame3.png';
 import kotak from '../../assets/partner/Frame4.png';
-import idfc from '../../assets/partner/Frame5.png'; // Replace with actual paths for new logos
+import idfc from '../../assets/partner/Frame5.png';
 import dbs from '../../assets/partner/Frame6.png';
 import axis from '../../assets/partner/Frame7.png';
 import hdfc from '../../assets/partner/Frame8.png';
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
   return (
-    <div className="flex items-center justify-between bg-gray-100 shadow-md rounded-lg p-6 mb-4">
-      <div className="flex items-center space-x-4">
-        <img src={logo} alt={`${bankName} logo`} className="w-24 h-32 object-contain" />
+    <div className="bg-gray-100 shadow-md rounded-lg p-6 mb-4 flex flex-col md:flex-row md:items-center justify-between text-center md:text-left">
+      <div className="flex flex-col items-center md:flex-row md:space-x-4">
+        <img src={logo} alt={`${bankName} logo`} className="w-24 h-32 object-contain mb-4 md:mb-0" />
         <div>
           <h2 className="font-semibold text-sm">{bankName}</h2>
           <p className="text-sm text-gray-500">Interest Rate Range</p>
@@ -20,57 +20,44 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
         </div>
       </div>
 
-      <div>
+      <div className="mt-4 md:mt-0">
         <p className="text-sm text-gray-500">Processing Fee Range</p>
         <p>{processingFee}</p>
       </div>
 
-      <div>
+      <div className="mt-4 md:mt-0">
         <p className="text-sm text-gray-500">Loan Amount</p>
         <p>{loanAmount}</p>
       </div>
 
-      <div className="flex space-x-4">
-        <button className="cp_rainbow_btn text-white px-5 py-2 rounded-full ">
+      <div className="flex mt-4 md:mt-0 justify-center space-x-4">
+        <button className="cp_rainbow_btn text-white px-5 py-2 rounded-full">
           Enquire Now
         </button>
-        {/* <button className="border-2 border-purple-700 text-purple-700 px-4 py-2 rounded-full hover:bg-purple-100">
-          Details
-        </button> */}
-        <style>{`.cp_rainbow_btn {
-        background: linear-gradient(-45deg,  #FF3D77, #338AFF ,#00008B);
-        background-size: 600%;
-        animation: anime 6s linear infinite;
-        font-weight: 500;
-        font-size: 14px;
-        border-radius: 5px;
-        transition: 0.5s;
-        text-decoration: none;
-        color: white !important;
-    }
-
-
-    .cp_rainbow_btn:hover {
-        color: white !important;
-        text-decoration: none;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-
-    @keyframes anime {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-    }`}</style>
       </div>
+      <style>{`
+        .cp_rainbow_btn {
+          background: linear-gradient(-45deg, #FF3D77, #338AFF, #00008B);
+          background-size: 600%;
+          animation: anime 6s linear infinite;
+          font-weight: 500;
+          font-size: 14px;
+          border-radius: 5px;
+          transition: 0.5s;
+          text-decoration: none;
+          color: white !important;
+        }
+
+        .cp_rainbow_btn:hover {
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        @keyframes anime {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </div>
   );
 };
