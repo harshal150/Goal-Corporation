@@ -7,12 +7,13 @@ import LoanApplicationFAQ from '../components/modal/ApplyLoanPagwFAQ.jsx'
 
 const ApplyLoanPage = () => {
   const location = useLocation();
-  const { loanType } = location.state || '';
+  const { loanType ,selectedLink} = location.state || {};
+ 
   // console.log(loanType) 
   return (
     <div>
     <Navbar/>
-      <ApplyLoanModal loanType={loanType}/>
+      <ApplyLoanModal loanType={loanType} sliderHomeLink={selectedLink}/>
       {/* <LoanApplicationFAQ/> */}
       <Footer/>
     </div>

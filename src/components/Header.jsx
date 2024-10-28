@@ -20,10 +20,12 @@ import backgroundImage from '../assets/aaaaaaa/14.avif'
 
 
 
-
+ 
 
 const Header = () => {
   const navigate = useNavigate();
+
+
   
   const carouselData = [
     {
@@ -31,30 +33,35 @@ const Header = () => {
       title: "Empowering MSMEs With Quick Loan",
       description:
         "Get fast and flexible financing options tailored specifically for Micro, Small, and Medium Enterprises (MSMEs) to support your business growth and operations.",
+      link:'EmpoweringMSMEs'  ,
     },
     {
       image: two,
       title: "Balance Transfer of Loan",
       description:
         "Save on interest costs by transferring your existing loan at lower rates. Enjoy easy repayment options and better financial management with our balance transfer solutions.",
+        link:'BalanceTransfer'  
     },
     {
       image: debt,
       title: "Debt Consolidation & Refinance",
       description:
         "Combine multiple debts into one manageable loan or refinance existing loans to reduce your financial burden and simplify your payments.",
+        link:'DebtConsolidationRefinance'
     },
     {
       image: leaserental,
       title: "Lease Rental Discounting",
       description:
         "Unlock the potential of your rental income by availing loans against future lease rentals, ensuring steady cash flow and financial stability for your business.",
+        link:'LeaseRental',
     },
     {
       image: one,
       title: "Check your credit score for free",
       description:
         "A CIBIL score is a three-digit number that represents your creditworthiness based on your credit history. Find out your CIBIL score quickly in few clicks and take control of your financial path.",
+        link:'CreditScoreCheck'
     },
   ];
 
@@ -139,7 +146,10 @@ const Header = () => {
               <div className="">
                 <button
                   className=" cp_rainbow_btn mt-6 bg-red-500 z-50 px-5 py-1.5 sm:px-6 cursor-pointer sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition"
-                  onClick={() => navigate("/applyforloan")}
+                  // onClick={() => navigate("/applyforloan")}
+                  onClick={() =>
+                    navigate("/applyforloan", { state: { selectedLink: slide.link } })
+                  } 
                 >
                   Apply Now
                 </button>
