@@ -17,7 +17,7 @@ const AboutDebtRestructure = () => {
         <CalculateEMIButton />
       </div>
 
-      <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[32px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Debt Restructuring
       </h1>
 

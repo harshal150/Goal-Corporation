@@ -43,10 +43,10 @@ const Ourteam = () => {
         <div className="flex justify-center text-center">
           <div className="sm:max-w-5xl">
           
-            <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-6">
+            <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-6">
             KEY MEMBERS
         </h1>
-            <p className="font-semibold text-base text-gray-600 opacity-80 mb-12">
+            <p className="font-semibold text-sm text-gray-600 mb-12">
               Meet the talented individuals who power our vision and drive our mission forward. Each member brings unique expertise and passion to our team, united by a shared dedication to excellence and innovation.
             </p>
           </div>

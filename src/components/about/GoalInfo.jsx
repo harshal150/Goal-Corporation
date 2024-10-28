@@ -96,8 +96,8 @@ const GoalInfo = () => {
         <div className="grid grid-cols-12 gap-6 items-center">
           <div className="col-span-12 lg:col-span-7 xl:col-span-6 mb-3 lg:mb-0">
             <div className="max-w-xl">
-              <h4 className="text-2xl font-bold leading-tight tracking-wide text-[#3730A3] lg:text-4xl mb-2 text-center lg:text-left ml-3">
-                GOAL FOR US IS
+              <h4 className="text-xl font-bold leading-tight tracking-wide text-[#3730A3] lg:text-3xl mb-2 text-center lg:text-left ml-3">
+                Goal For Us Is
               </h4>
               <p className="text-gray-600 text-md leading-relaxed text-left ml-3">
                 <br />

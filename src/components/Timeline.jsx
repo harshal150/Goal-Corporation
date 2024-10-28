@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaRocket, FaHandshake, FaBriefcase, FaChartLine } from "react-icons/fa";
 import logo1 from "../assets/pinkTag.svg";
 import logo2 from "../assets/blueTag.svg";
-import one from "../assets/Timeline/1.jpg";
-import two from "../assets/Timeline/2.jpg";
-import three from "../assets/Timeline/3.jpg";
+import one from "../assets/Timeline/one.jpg";
+import two from "../assets/Timeline/two.jpg";
+import three from "../assets/Timeline/three.jpg";
 import four from "../assets/Timeline/4.jpg";
 import five from "../assets/Timeline/5.jpg";
 import six from "../assets/Timeline/6.jpg";
@@ -98,7 +98,7 @@ const Timeline = () => {
       backgroundAttachment: "fixed", 
       opacity:"50"
     }}>
-        <h1 className="font-bold text-[26px] md:text-[35px] text-center mt-10 capitalize text-blue-500">
+        <h1 className="font-bold text-[23px] md:text-[30px] text-center mt-10 capitalize text-blue-500">
           We Have The <span className="text-orange-500">Best Team</span> And The Best Process
         </h1>
         <div className="relative flex justify-center items-start mt-8 md:mt-14">

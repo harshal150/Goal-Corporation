@@ -117,8 +117,8 @@ const DirectorMsg = () => {
       ref={elementRef} // Attach the ref to the outer container
       className={`bg-gray-50 py-8 px-4 md:py-16 md:px-4 transform transition-all duration-1000 ease-out`}
     >
-      <h1 className="text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-5">
-        DIRECTOR'S MESSAGE
+      <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-5">
+        Directors Message
       </h1>
 
       <div className="max-w-full mx-auto flex flex-col md:flex-row items-center md:items-start shadow-lg rounded-lg p-4 md:p-8">

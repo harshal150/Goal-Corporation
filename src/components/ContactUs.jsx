@@ -87,20 +87,20 @@ const AboutContact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
-                className="w-full h-12 border border-gray-300 rounded-md p-4"
+                className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
                 placeholder="Name"
               />
               <input
                 type="email"
-                className="w-full h-12 border border-gray-300 rounded-md p-4"
+                className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
                 placeholder="Email Id"
               />
               <input
                 type="tel"
-                className="w-full h-12 border border-gray-300 rounded-md p-4"
+                className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
                 placeholder="Mobile Number"
               />
-              <select className="w-full h-12 border border-gray-300 rounded-md text-gray-500 px-4">
+              <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md text-gray-500 px-4">
                 <option value="" className="text-gray-500">
                   Select State
                 </option>
@@ -112,10 +112,10 @@ const AboutContact = () => {
               </select>
               <input
                 type="text"
-                className="w-full h-12 border border-gray-300 rounded-md p-4"
+                className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
                 placeholder="City"
               />
-              <select className="w-full h-12 border border-gray-300 rounded-md text-gray-500 px-4">
+              <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md text-gray-500 px-4">
                 <option value="" className="text-gray-500">
                   Reason to Connect
                 </option>
@@ -126,11 +126,11 @@ const AboutContact = () => {
             </div>
             <input
               type="text"
-              className="w-full h-12 border border-gray-300 rounded-md p-4"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
               placeholder="Subject"
             />
             <textarea
-              className="w-full border border-gray-300 rounded-md p-4"
+              className="w-full md:w-[80%]  border border-gray-300 rounded-md p-4"
               rows="4"
               placeholder="Message"
             ></textarea>

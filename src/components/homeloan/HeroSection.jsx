@@ -27,7 +27,7 @@ const loanType="Home Loan";
       <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
 
 
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-500">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
         Make Your Home Ownership
           Dreams Come True with Our{' '} <br></br><span className="text-red-500">Home Loan Solution!</span> <br />
    

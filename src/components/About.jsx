@@ -50,7 +50,7 @@ const handleClick=()=>{
         {/* Left section: Title, description, and button */}
         <div className="lg:w-1/2 mb-8 lg:mb-0">
           <h3 className="text-blue-500 text-5xl font-semibold mb-4">
-            <div className="logo text-[40px] mt-4 ">
+            <div className="logo text-[32px] mt-4 ">
               <span className="mx-1 font-bold relative inline-block stroke-current">
                 Goal Corporation
                 <svg
@@ -67,7 +67,7 @@ const handleClick=()=>{
               </span>
             </div>
           </h3>
-          <p className="text-xl font-medium mb-4">
+          <p className="text-lg font-medium mb-4">
           We help our clients get the best loan offers..
           </p>
           <p className="text-gray-600 mb-6">

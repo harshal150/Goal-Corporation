@@ -5,7 +5,8 @@ import WorkingCapitalHeroSection from '../components/workingcapital/WorkingCapit
 import AboutWorkingCapital from '../components/workingcapital/AboutWorkingCapital'
 import WorkCapFAQ from '../components/workingcapital/WorkCapFAQ'
 import TestimonialSlider from '../components/homeloan/TestimonialSlider'
-import Banks from '../components/homeloan/Banks'
+import WorkCapBanks from '../components/workingcapital/WorkCapBanks'
+// import wcBanks from '../components/workingcapital/wcBanks'
 
 const WorkingCapital = () => {
   return (
@@ -14,7 +15,9 @@ const WorkingCapital = () => {
 
 <WorkingCapitalHeroSection/>
 <AboutWorkingCapital/>
-<Banks/>
+<WorkCapBanks/>
+{/* <wcBanks/> */}
+{/* <Banks/> */}
 <WorkCapFAQ/>
 <TestimonialSlider/>
 <Footer/>

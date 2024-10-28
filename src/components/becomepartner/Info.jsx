@@ -11,14 +11,14 @@ import {
 
 const PartnerSection = () => {
   return (
-    <section className="  py-6 h-auto mt-10">
+    <section className="  py-6 px-6 h-auto mt-10">
 <div className="lg:px-10">
 
         {/* Title Section */}
-        <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-700 capitalize mb-6">
+        <h1 className="text-2xl md:text-4xl font-bold text-left text-blue-700 capitalize mb-6">
         Who can Become a Partner with Goal Corporation?
       </h1>
-      <p className="text-center text-gray-500 font-bold mb-10">
+      <p className="text-left text-sm text-gray-500 font-semibold mb-10">
         Enhance your professional status. Fire up your entrepreneurial instincts
         and drive into victory! Any person with interpersonal skills and a
         passion for success can be a part of Team Goal Corporation.

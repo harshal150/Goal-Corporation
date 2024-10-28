@@ -1,6 +1,6 @@
 import React from "react";
 import LoanCalculator from "../LoanCalculator";
-import business from "../../assets/fee&charges/business.png";
+import business from "../../assets/loansNew/businessloan1.avif";
 import CalculateEMIButton from "../CalculateEMIButton";
 import LoanEligibilityCard from "../LoanEligibilityCard";
 import FeesTable from "../interestTable/FeesTable";
@@ -17,60 +17,47 @@ const AboutBuisnessLoan = () => {
         <CalculateEMIButton />
       </div>
 
-      <h1 className="text-[32px] md:text-[50px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[32px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Business Loan
       </h1>
 
-      <section className="max-w-full mx-auto lg:mx-16 p-4 md:p-8 bg-white text-gray-800 mt-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-          {/* Step 1 */}
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 border border-gray-200 text-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-white hover:via-[#f5f8fc] hover:to-[#E0EAF5]">
-            <div className="text-4xl md:text-5xl lg:text-6xl text-blue-400 font-bold mb-4">
-              1
-            </div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4">
-              Get High Business Loan Eligibility
-            </h3>
-            <p className=" text-gray-600    text-left text-[12px] md:text-[16px]">
-              Before applying for the loan, prepare a business plan, know your
-              credit score, decide the loan amount, do some market research on
-              available business loan options, and keep the documents ready.
+      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
+        {/* Text with Icon */}
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="w-full md:w-1/2 mt-6 md:mt-10">
+            <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
+            A business loan is a loan specifically intended for business purposes. It can be used to cover operational costs, expand the business, purchase new equipment, or manage cash flow. Business loans are a faster way of availing financial assistance from Banks/ NBFCs for all business requirements. This type of loan can be availed in various ways, like lump sum disbursement, OD/CC, DOD etc.
+            </p>
+            <p className="text-left mb-6 md:mb-10 text-[16px] md:text-[20px]">
+              Key Takeaways:
+              <ul className="text-[14px] md:text-[15px] ml-5 md:ml-10 mt-3 text-left list-disc space-y-2">
+                <li>
+                •	Maximum loan amount of up to Rs.75 lakhs
+                </li>
+                <li>
+                •	Faster processing of loan – disbursement within 5-7 working day
+                </li>
+                <li>
+                •	Collateral free (Unsecured) loans 
+                </li>
+                <li>
+                •	Flexible repayment tenure (up to 5 years)
+                </li>
+                <li>
+                •	Multiple lender options 
+                </li>
+              </ul>
             </p>
           </div>
-
-          {/* Step 2 */}
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 border border-gray-200 text-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-white hover:via-[#f5f8fc] hover:to-[#E0EAF5]">
-            <div className="text-4xl md:text-5xl lg:text-6xl text-blue-400 font-bold mb-4">
-              2
-            </div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4">
-              Common Documents Required
-            </h3>
-            <p className="text-gray-600    text-left text-[12px] md:text-[16px]">
-              Proof of address & photo identity proof of the promoters, business
-              proof, income proof, partnership deed for partnership firm,
-              articles of association, memorandum of association, board
-              resolution, PAN card, etc.
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 border border-gray-200 text-center transform transition duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-white hover:via-[#f5f8fc] hover:to-[#E0EAF5]">
-            <div className="text-4xl md:text-5xl lg:text-6xl text-blue-400 font-bold mb-4">
-              3
-            </div>
-            <h3 className="text-lg md:text-xl font-semibold mb-4">
-              Criteria for Business Loan Approval
-            </h3>
-            <p className="text-gray-600    text-left text-[12px] md:text-[16px]">
-              Applicants should be aged between 21 to 65 years, having business
-              vintage of a minimum of 1-2 years. The minimum business turnover
-              and a minimum annual turnover as per the ITR will be required. The
-              business should be profit-making for at least the last 1 year.
-            </p>
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src={business}
+              alt="Home Loan Icon"
+              className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] opacity-90"
+            />
           </div>
         </div>
-      </section>
+      </div>
 
       <LoanEligibilityCard />
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "animate.css"; // Import Animate.css
-import partner from '../../assets/becomepartner4.avif';
+import partner from '../../assets/becomepartnernew.avif';
 
 import backgroundImage from '../../assets/aaaaaaa/14.avif'
 
@@ -102,7 +102,7 @@ const BecomeAPartner = () => {
         isVisible ? "animate__animated animate__bounceIn" : ""
       }`}
     >
-      <h1 className="text-2xl md:text-3xl font-bold  md:text-center text-center text-blue-700 capitalize mb-6 md:mb-10">
+      <h1 className="text-2xl md:text-3xl font-bold  md:text-left text-left text-blue-700 capitalize mb-6 md:mb-10">
         We are committed to becoming <span className=" text-orange-500">India’s Leading</span> Loan Distributor!
       </h1>
 
@@ -117,35 +117,35 @@ const BecomeAPartner = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="First Name"
             />
             <input
               type="text"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="Middle Name"
             />
             <input
               type="text"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="Last Name"
             />
             <input
               type="tel"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="Mobile Number"
             />
             <input
               type="text"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="Pan Number"
             />
             <input
               type="email"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="Email"
             />
-            <select className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-500">
+            <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-500">
               <option value="">Select Profession</option>
               {professions.map((profession) => (
                 <option key={profession} value={profession}>
@@ -153,7 +153,7 @@ const BecomeAPartner = () => {
                 </option>
               ))}
             </select>
-            <select className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-500">
+            <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-500">
               <option value="">Select State</option>
               {indianStates.map((state) => (
                 <option key={state} value={state}>
@@ -163,7 +163,7 @@ const BecomeAPartner = () => {
             </select>
             <input
               type="text"
-              className="w-full h-12 border border-gray-300 rounded-lg px-4 text-gray-800"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="City Name"
             />
           </div>

@@ -9,8 +9,8 @@ const VisionMission = () => {
       {/* Vision & Mission Header */}
       <div className="text-center mb-12 md:mb-16">
   
-        <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-6 md:mb-10">
-        VISION & MISSION
+        <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-6 md:mb-10">
+        Vission & Mission
         </h1>
       </div>
 
@@ -27,7 +27,7 @@ const VisionMission = () => {
           </div>
           {/* Vision Content */}
           <div className="w-full md:w-2/3 md:pl-6 border-t-4 md:border-t-0 md:border-l-2 border-orange-500">
-            <h2 className="text-2xl md:text-4xl font-semibold text-indigo-700 mb-4">Our Vision</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-indigo-700 mb-4">Our Vision</h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
               To create an easy access to financial products by collaborating between financial intermediaries and customers through technology and digital platforms.
             </p>
@@ -48,7 +48,7 @@ const VisionMission = () => {
           </div>
           {/* Mission Content */}
           <div className="w-full md:w-2/3 md:pl-6 border-t-4 md:border-t-0 md:border-l-2 border-orange-500">
-            <h2 className="text-2xl md:text-4xl font-semibold text-indigo-700 mb-4">Our Mission</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-indigo-700 mb-4">Our Mission</h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
               To be a leader in the financial consulting arena by increasing the market share through Pan India presence and enhance our disbursal capability. Touch base every aspect of funding opportunities and explore newer markets globally.
             </p>

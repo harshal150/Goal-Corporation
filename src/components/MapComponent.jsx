@@ -5,10 +5,10 @@ import map1 from '../assets/map1.avif';
 
 const cities = [
   { name: "Bangalore", top: "70%", left: "50%", address: "123 MG Road, Bangalore, Karnataka" },
-  { name: "Mumbai", top: "58%", left: "40%", address: "456 Marine Drive, Mumbai, Maharashtra" },
+  { name: "Mumbai", top: "58%", left: "40%", address: "C-209, Crystal Plaza, New Link Road, Andheri West, Mumbai 400053, opposite to Infiniti Mall" },
   { name: "Delhi", top: "31%", left: "49%", address: "789 Connaught Place, Delhi" },
   { name: "Chennai", top: "75%", left: "53%", address: "101 Marina Beach, Chennai, Tamil Nadu" },
-  { name: "Hyderabad", top: "61%", left: "53%", address: "202 Charminar Road, Hyderabad, Telangana" },
+  { name: "Hyderabad", top: "61%", left: "53%", address: "Unit No.202, 1st  Floor, Vasavi MPM Grand, 2nd  Level, Beside Metro Station, Yellareddyguda, Ameerpet, Hyderabad, 500073" },
   { name: "Kolkata", top: "50%", left: "70%", address: "303 Park Street, Kolkata, West Bengal" },
   { name: "Pune", top: "58%", left: "44%", address: "404 FC Road, Pune, Maharashtra" },
   { name: "Ahmedabad", top: "53%", left: "42%", address: "505 SG Highway, Ahmedabad, Gujarat" },
@@ -93,7 +93,7 @@ const MapComponent = () => {
           {/* Content Section */}
           <div className="flex flex-col justify-center items-center lg:items-start lg:w-1/2 text-center lg:text-left px-4 lg:px-8">
             {/* Heading */}
-            <h1 className="text-2xl lg:text-4xl font-bold mb-8 text-[#2B8AC1]">
+            <h1 className="text-xl lg:text-3xl font-bold mb-8 text-[#2B8AC1]">
               Now in <span className="text-orange-500">30+ Cities</span> in India
             </h1>
 

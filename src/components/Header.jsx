@@ -95,7 +95,7 @@ const Header = () => {
 
   return (
     <div
-      className="relative h-[70vh] lg:h-[100vh] md:h-[75vh]   w-full flex flex-col bg-white justify-between lg:flex-row items-center overflow-hidden"
+      className="relative h-[70vh] lg:h-[83vh] md:h-[75vh]   w-full flex flex-col bg-white justify-between lg:flex-row items-center overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`, 
         backgroundSize: "cover", 
@@ -117,7 +117,7 @@ const Header = () => {
           >
             {/* Text Section */}
             <div className="max-w-lg text-center lg:text-left mt-10 lg:mt-0 lg:mr-10 relative">
-              <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-4xl font-bold capitalize">
+              <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold capitalize">
                 {slide.title.split(" ").map((word, idx) => (
                   <span
                     key={idx}
@@ -196,7 +196,7 @@ const Header = () => {
         {carouselData.map((_, index) => (
           <div
             key={index}
-            className={`w-6 h-1 rounded-sm ${
+            className={`w-6 h-1.5 rounded-sm cursor-pointer ${
               currentIndex === index ? "bg-blue-500" : "bg-gray-300"
             }`}
             onClick={() => setCurrentIndex(index)}
