@@ -146,7 +146,7 @@ const SocialItem = ({ social }) => (
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-[#192857] via-[#0E183A] to-[#0E183A] text-white py-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-0">
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className="mb-6 md:mb-0 text-left md:w-1/4">
             <img src={logo} height="50" alt="Logo" />

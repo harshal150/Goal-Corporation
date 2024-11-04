@@ -3,34 +3,31 @@ import Footer from "../Footer";
 import { Navbar } from "../Navbar";
 import careers from '../../assets/careers.avif'
 
+import bgimage from '../../assets/Header/bbb.avif'
+
+
 const CareersPage = () => {
   const jobOpenings = [
     {
-      title: "Loan Advisor",
+      title: "Virtual Relationship Manager",
       type: "Full-time",
-      location: "Mumbai, India",
-      description: "Guide customers in selecting loan products that best meet their needs.",
+      location: "Chennai, India",
+      description: "Build and maintain virtual relationships with clients to drive engagement.",
     },
     {
-      title: "Customer Service Specialist",
+      title: "Junior Sales Manager",
       type: "Full-time",
-      location: "Bangalore, India",
-      description: "Support customers with loan-related inquiries and process applications.",
+      location: "Hyderabad, India",
+      description: "Assist in managing sales teams and developing sales strategies for loan products.",
     },
     {
-      title: "Sales Executive",
+      title: "Sales Manager",
       type: "Full-time",
-      location: "Delhi, India",
-      description: "Drive loan sales across various categories like home loan, personal loan, etc.",
-    },
-    {
-      title: "Data Analyst",
-      type: "Part-time",
-      location: "Remote",
-      description: "Analyze loan trends and customer data to optimize business strategies.",
+      location: "Pune, India",
+      description: "Oversee and lead the sales team to achieve loan sales targets.",
     },
   ];
-
+  
   return (
 <>
 <Navbar/>
@@ -41,23 +38,7 @@ const CareersPage = () => {
       backgroundAttachment: "fixed", 
 
     }}>
-      {/* Hero Section */}
-      {/* <section className="bg-blue-700 text-white py-20 text-center">
-        <h1 className="text-4xl font-bold mb-4">Join Our Team at <span className=" text-orange-500">Goal Corporation</span></h1>
-        <p className="max-w-2xl mx-auto text-lg">
-          Be a part of our mission to simplify loan applications and empower customers to achieve their financial goals.
-        </p>
-      </section> */}
-
-      {/* Company Intro
-      <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Why Work With Us?</h2>
-        <p className="max-w-3xl mx-auto text-lg mb-4">
-          At Goal Corporation, we are dedicated to providing the best loan solutions to our clients. Whether it's a home loan, personal loan, business loan, or working capital, we ensure a smooth and supportive process. Join us in making a meaningful impact!
-        </p>
-      </section> */}
-
-      {/* Job Listings */}
+     
       <section className="py-16 px-6">
         <h2 className="text-4xl font-semibold text-center mb-12 text-white">Current Openings</h2>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -110,13 +91,91 @@ const CareersPage = () => {
       {/* Call to Action */}
       <section className="bg-white  py-20 text-center" >
         <h2 className="text-3xl font-bold mb-4">Ready to Start <span className=" text-blue-700">Your Career?</span></h2>
-        <p className="max-w-2xl mx-auto mb-8 text-md">
-          We’re always on the lookout for passionate and talented individuals to join our growing team. Apply today and help us make financial dreams a reality.
+        <p className="max-w-3xl mx-auto mb-8 text-md">
+        Ready to take the next step in your career? We love to hear from you! Please submit your resume to <span className="text-blue-500 font-bold">hr@goalcorporation.com</span> with the subject line of the position you’re applying for.
         </p>
         <button className="cp_rainbow_btn py-3 px-6 rounded-lg ">
           View All Openings
         </button>
       </section>
+
+
+
+      <section className="min-h-screen flex items-center justify-center bg-gray-200 p-6" style={{
+      backgroundImage: `url(${bgimage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+
+    }}>
+      <div className="bg-white shadow-lg rounded-lg w-full  p-6 max-w-2xl">
+        <h2 className="text-2xl font-bold text-center text-indigo-700 mb-6">
+          Job Application Form
+        </h2>
+        
+        <form className="space-y-4">
+          {/* Full Name */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Full Name</label>
+            <input
+              type="text"
+              placeholder="Enter your full name"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+
+          {/* Mobile Number */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Mobile Number</label>
+            <input
+              type="tel"
+              placeholder="Enter your mobile number"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+
+          {/* Role */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Role</label>
+            <input
+              type="text"
+              placeholder="Enter the role you're applying for"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+
+          {/* Resume Link */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Resume Link</label>
+            <input
+              type="url"
+              placeholder="Enter your resume link"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+
+          {/* Submit Button */}
+          <div className="pt-4">
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-200"
+            >
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
     </div>
     <Footer></Footer>
 </>

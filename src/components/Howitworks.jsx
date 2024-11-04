@@ -42,7 +42,7 @@ const ContentItem = ({ item, isVisible, index }) => {
       <img
         src={item.image}
         alt={item.title}
-        className="w-32 h-36 rounded-2xl border-4 border-white shadow-md mb-4"
+        className="w-28 h-32 rounded-2xl border-4 border-white shadow-md mb-4"
       />
       <h4 className="font-bold text-xl text-[#1A237E] text-center leading-snug mb-2">
         {item.title}
@@ -100,7 +100,7 @@ const Howitworks = () => {
     }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-2xl leading-snug font-bold md:text-4xl mb-4 text-[#2B8AC1] capitalize">
+          <h2 className="text-xl leading-snug font-bold md:text-2xl mb-4 text-[#2B8AC1] capitalize">
             Why <span className="text-orange-500">Choose Us</span>
           </h2>
         </div>

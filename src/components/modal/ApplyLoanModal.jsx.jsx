@@ -140,7 +140,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
 
   const homeLinkInfo = HomeLink[sliderHomeLink] || {};
   const HomeLinkComponent = homeLinkInfo.component || "NA";
-  const homeImage = homeLinkInfo.image || debt;
+  const homeImage = homeLinkInfo.image || balacetransfee;
 
   const sendEmail = (formValues) => {
     emailjs
@@ -212,7 +212,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-2xl overflow-hidden">
+        <div className="flex w-full max-w-6xl bg-white rounded-lg shadow-2xl overflow-hidden">
           {/* Form Section (Left Aligned) */}
           <div className="w-full md:w-2/3 p-6 lg:p-8">
             <h3 className="text-2xl font-bold text-center mb-6">
@@ -246,7 +246,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
               }}
             >
               {({ handleBlur, isSubmitting }) => (
-                <Form className="space-y-4">
+                <Form className="space-y-1">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {" "}
                     {/* Reduced gap */}
@@ -348,28 +348,25 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    <div className="relative">
-                      <label
-                        htmlFor="state"
-                        className="block text-gray-700 font-medium"
-                      >
-                        State
-                      </label>
-                      <FaBuilding className="absolute left-2 top-9 text-blue-700" />
-                      <Field
-                        name="state"
-                        as="select"
-                        className="form-input w-full md:w-[80%] pl-8 py-2 border border-gray-300 rounded-lg text-sm"
-                        onBlur={handleBlur}
-                      >
-                        <option value="">Select State</option>
-                        {indianStates.map((state) => (
-                          <option key={state} value={state}>
-                            {state}
-                          </option>
-                        ))}
-                      </Field>
-                    </div>
+                  <div className="relative">
+                    <label
+                      htmlFor="residenceType"
+                      className="block text-gray-700 font-medium"
+                    >
+                      Residence Type
+                    </label>
+                    <FaBuilding className="absolute left-2 top-9 text-blue-700" />
+                    <Field
+                      name="residenceType"
+                      as="select"
+                      className="form-input w-full md:w-[80%] pl-8 py-2 border border-gray-300 rounded-lg text-sm"
+                      onBlur={handleBlur}
+                    >
+                      <option value="">Select Residence Type</option>
+                      <option value="owned">Owned</option>
+                      <option value="rented">Rented</option>
+                    </Field>
+                  </div>
                     <div className="relative">
                       <label
                         htmlFor="city"
@@ -481,25 +478,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
                     </div>
                   </div>
 
-                  <div className="relative">
-                    <label
-                      htmlFor="residenceType"
-                      className="block text-gray-700 font-medium"
-                    >
-                      Residence Type
-                    </label>
-                    <FaBuilding className="absolute left-2 top-9 text-blue-700" />
-                    <Field
-                      name="residenceType"
-                      as="select"
-                      className="form-input w-full md:w-[35%] pl-8 py-2 border border-gray-300 rounded-lg text-sm"
-                      onBlur={handleBlur}
-                    >
-                      <option value="">Select Residence Type</option>
-                      <option value="owned">Owned</option>
-                      <option value="rented">Rented</option>
-                    </Field>
-                  </div>
+           
                   <div className="flex items-start space-x-2 mt-4">
                     <Field
                       type="checkbox"

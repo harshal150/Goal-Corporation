@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import map1 from '../assets/map1.avif';
 
 const cities = [
-  { name: "Bangalore", top: "70%", left: "50%", address: "123 MG Road, Bangalore, Karnataka" },
+  { name: "Bangalore", top: "70%", left: "47%", address: "123 MG Road, Bangalore, Karnataka" },
+  { name: "Nagarbhavi ", top: "68%", left: "46%", address: "NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
+  { name: "JayaNagar", top: "70%", left: "44%", address: " NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
   { name: "Mumbai", top: "58%", left: "40%", address: "C-209, Crystal Plaza, New Link Road, Andheri West, Mumbai 400053, opposite to Infiniti Mall" },
   { name: "Delhi", top: "31%", left: "49%", address: "789 Connaught Place, Delhi" },
   { name: "Chennai", top: "75%", left: "53%", address: "101 Marina Beach, Chennai, Tamil Nadu" },
@@ -93,7 +95,7 @@ const MapComponent = () => {
           {/* Content Section */}
           <div className="flex flex-col justify-center items-center lg:items-start lg:w-1/2 text-center lg:text-left px-4 lg:px-8">
             {/* Heading */}
-            <h1 className="text-xl lg:text-3xl font-bold mb-8 text-[#2B8AC1]">
+            <h1 className="text-xl lg:text-2xl font-bold mb-8 text-[#2B8AC1]">
               Now in <span className="text-orange-500">30+ Cities</span> in India
             </h1>
 

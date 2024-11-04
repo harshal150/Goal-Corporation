@@ -118,7 +118,7 @@ const GroupCompany = () => {
             rel="noreferrer"
           >
             <img
-              className="w-28 h-16 sm:w-48 sm:h-24 mb-4"
+              className="w-40 h-18 sm:w-56 sm:h-28 mb-4"
               src={company.img}
               alt={company.alt}
             />

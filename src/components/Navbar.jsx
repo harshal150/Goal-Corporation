@@ -56,20 +56,20 @@ export const Navbar = () => {
           <div className="hidden md:flex space-x-8 z-50">
             <Link
               to="/"
-              className="relative text-black px-3 py-2 rounded-md text-lg font-semibold transition-all duration-300 hover:text-orange-500"
+              className="relative text-black px-3 py-2 rounded-md text-md font-semibold transition-all duration-300 hover:text-orange-500"
             >
               Home
             </Link>
 
             <Link
               to="/about"
-              className="relative text-black px-3 py-2 rounded-md text-lg font-semibold transition-all duration-300 hover:text-orange-500"
+              className="relative text-black px-3 py-2 rounded-md text-md font-semibold transition-all duration-300 hover:text-orange-500"
             >
               About Us
             </Link>
 
             <div className="relative group">
-              <span className="relative text-black px-3 py-2 rounded-md text-lg font-semibold flex items-center transition-all duration-300 hover:text-orange-500">
+              <span className="relative text-black px-3 py-2 rounded-md text-md font-semibold flex items-center transition-all duration-300 hover:text-orange-500">
                 Loans
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -126,9 +126,17 @@ export const Navbar = () => {
 
             <Link
               to="/becomepartner"
-              className="relative text-black px-3 py-2 rounded-md text-lg font-semibold transition-all duration-300 hover:text-orange-500"
+              className="relative text-black px-3 py-2 rounded-md text-md font-semibold transition-all duration-300 hover:text-orange-500"
             >
               Become a Partner
+            </Link>
+
+            
+            <Link
+              to="/careers"
+              className="relative text-black px-3 py-2 rounded-md text-md font-semibold transition-all duration-300 hover:text-orange-500"
+            >
+              Careers
             </Link>
 
             {/* Contact Us Button */}

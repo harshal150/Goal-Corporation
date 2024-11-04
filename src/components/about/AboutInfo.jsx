@@ -28,7 +28,7 @@ const AboutInfo = () => {
           }`}
         >
           <div className="text">
-            <h1 className="text-xl md:text-3xl font-bold text-center text-[#2B8AC1] mb-10">
+            <h1 className="text-xl md:text-2xl font-bold text-center text-[#2B8AC1] mb-10">
               About <span className="text-orange-500">Goal Corporation</span>
             </h1>
             <p className="text-gray-600 text-md leading-relaxed">

@@ -1,5 +1,5 @@
-import Whatwedoimg from "../../assets/about/goal2.jpeg";
-// import Whatwedoimg from "../../assets/about/about 3.jpg";
+// import Whatwedoimg from "../../assets/about/goal2.jpeg";
+import Whatwedoimg from "../../assets/about/teamgoal.jpg";
 const Shapes = () => (
   <>
     <svg
@@ -89,11 +89,11 @@ const Shapes = () => (
 
 const GoalInfo = () => {
   return (
-    <header className="py-14 md:py-24 bg-white  text-zinc-900  relative overflow-hidden z-10">
+    <header className="py-14 md:py-16 bg-white  text-zinc-900  relative overflow-hidden z-10">
       <Shapes />
 
       <div className="container px-4 mx-auto">
-        <div className="grid grid-cols-12 gap-6 items-center">
+        <div className="grid grid-cols-10 gap-6 items-center">
           <div className="col-span-12 lg:col-span-7 xl:col-span-6 mb-3 lg:mb-0">
             <div className="max-w-xl">
               <h4 className="text-xl font-bold leading-tight tracking-wide text-[#3730A3] lg:text-3xl mb-2 text-center lg:text-left ml-3">
@@ -123,7 +123,7 @@ const GoalInfo = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-5 relative text-center">
+          <div className="col-span-10 lg:col-span-3 relative text-end">
             <div className="relative">
               <img
                 src={Whatwedoimg}

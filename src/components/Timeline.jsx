@@ -98,7 +98,7 @@ const Timeline = () => {
       backgroundAttachment: "fixed", 
       opacity:"50"
     }}>
-        <h1 className="font-bold text-[23px] md:text-[30px] text-center mt-10 capitalize text-blue-500">
+        <h1 className="font-bold text-[23px] md:text-2xl text-center mt-10 capitalize text-blue-500">
           We Have The <span className="text-orange-500">Best Team</span> And The Best Process
         </h1>
         <div className="relative flex justify-center items-start mt-8 md:mt-14">
@@ -135,7 +135,7 @@ const Timeline = () => {
                   {item.position === "top" && (
                     <>
                       <div className="mb-4">
-                        <p className="text-center font-normal text-black text-base">
+                        <p className="text-center font-normal text-black text-sm">
                           {item.title}
                         </p>
                       </div>
@@ -162,7 +162,7 @@ const Timeline = () => {
                       className="h-32 w-32"
                     />
                     <div className="absolute flex justify-center items-center">
-                      <p className="text-black font-bold text-lg text-center">{item.year}</p>
+                      <p className="text-black font-bold text-sm text-center">{item.year}</p>
                     </div>
                   </div>
 
@@ -182,7 +182,7 @@ const Timeline = () => {
                         <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-10 border-dotted border-green-400 border-l-2"></div>
                       </div>
                       <div className="mt-12">
-                        <p className="text-center font-normal text-black text-base">
+                        <p className="text-center font-normal text-black text-sm">
                           {item.title}
                         </p>
                       </div>

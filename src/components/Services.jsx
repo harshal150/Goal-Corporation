@@ -90,7 +90,7 @@ const ContentItem = ({ item, isVisible }) => {
         {item.text}
       </p>
       <div className="absolute bottom-4 left-4">
-        <span className="text-orange-500 font-bold hover:text-orange-600">
+        <span className="text-orange-400 font-bold hover:text-orange-600">
           Apply Now{" "}
           <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
         </span>
@@ -144,7 +144,7 @@ const Services = () => {
       // }}
       >
       <div className="container mx-auto px-4">
-        <h2 className="text-xl md:text-[30px] text-left text-blue-800 leading-tight md:leading-none mx-4 md:mx-16 font-extrabold tracking-wide capitalize mb-6 md:mb-2 transition-transform duration-300 ease-in-out transform hover:scale-105 text-gradient">
+        <h2 className="text-xl md:text-2xl text-center text-blue-800 leading-tight md:leading-none mx-4 md:mx-16 font-extrabold tracking-wide capitalize mb-10 transition-transform duration-300 ease-in-out transform hover:scale-105 text-gradient">
           Committed to Provide <span className="text-orange-500">Best Services</span> for All Your Loan Requirements...
         </h2>
 

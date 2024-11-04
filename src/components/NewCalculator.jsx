@@ -5,7 +5,7 @@
 
 import React, { useState } from "react";
 import { Pie } from "react-chartjs-2";
-import backgroundImage from '../assets/aaaaaaa/28.avif';
+import backgroundVideo from '../assets/Header/calculatorbg.mp4';
 
 const LoLoanCalculator = () => {
   const [loanAmount, setLoanAmount] = useState(100000);
@@ -45,21 +45,29 @@ const LoLoanCalculator = () => {
   };
 
   return (
-    <div className="" style={{
-      backgroundImage: `url(${backgroundImage})`, 
-      backgroundSize: "cover", 
-      backgroundPosition: "center", 
-      backgroundAttachment: "fixed", 
-      // opacity: "50"
-    }}>
+    <div className="relative" >
+     <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        style={{ opacity: 0.9 }} // Adjust opacity for a blackish effect
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[-1]" />
 <div className="max-w-6xl mx-auto mt-10 p-6 bg-transparent rounded-lg flex flex-wrap justify-between">
   {/* Left Side: Calculator */}
   <div className="w-full md:w-1/2 mb-4 md:mb-0 p-6 bg-white rounded-lg shadow-lg">
-    <h2 className="text-4xl font-bold text-left mb-12 text-blue-600">
+    <h2 className="text-2xl font-bold text-left mb-6 text-blue-600">
       EMI <span className="text-orange-500">Calculator</span>
     </h2>
           
-    <div className="mb-4">
+    <div className="mb-1">
             <label className="block text-gray-700 font-semibold mb-2">Loan Amount</label>
             <input
               type="number"
@@ -82,7 +90,7 @@ const LoLoanCalculator = () => {
             </div>
           </div>
 
-          <div className="mb-4">
+          <div className="mb-2">
             <label className="block text-gray-700 font-semibold mb-2">Interest Rate (%)</label>
             <input
               type="number"
@@ -105,17 +113,17 @@ const LoLoanCalculator = () => {
             </div>
           </div>
 
-          <div className="mb-4">
+          <div className="mb-2">
             <label className="block text-gray-700 font-semibold mb-2">Loan Tenure ({tenureType})</label>
             <div className="flex items-center mb-2">
               <button
-                className={`mr-2 px-4 py-1 rounded ${tenureType === "Months" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+                className={`mr-2 px-4 py-1 rounded ${tenureType === "Months" ? "bg-orange-400 text-white" : "bg-gray-200"}`}
                 onClick={() => handleTenureTypeChange("Months")}
               >
                 Months
               </button>
               <button
-                className={`px-4 py-1 rounded ${tenureType === "Years" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+                className={`px-4 py-1 rounded ${tenureType === "Years" ? "bg-green-500 text-white" : "bg-gray-200"}`}
                 onClick={() => handleTenureTypeChange("Years")}
               >
                 Years
@@ -150,7 +158,7 @@ const LoLoanCalculator = () => {
 
 
     {/* Pie Chart */}
-    <div className="w-1/2 mt-6">
+    <div className="w-1/2  mb-10">
   <Pie 
     data={data} 
     options={{ 

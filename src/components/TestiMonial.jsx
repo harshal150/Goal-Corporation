@@ -110,7 +110,7 @@ const Testimonial = () => {
       backgroundAttachment: "fixed", 
       opacity:"50"
     }}>
-  <h1 className="font-bold text-[26px] md:text-[32px] text-center mt-1 mb-5 capitalize text-[#2B8AC1]">
+  <h1 className="font-bold text-[26px] md:text-2xl text-center mt-1 mb-5 capitalize text-[#2B8AC1]">
     What Our <span className=" ">Client Says ...</span>
   </h1>
 

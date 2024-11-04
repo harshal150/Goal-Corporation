@@ -15,6 +15,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Testimonial from '../components/TestiMonial';
 import Partners from '../components/Partner';
 import CompanyFAQ from '../components/CompanyFAQ';
+// import FoundingMembers from '../components/about/FoundingMembers';
 
 export const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -49,7 +50,7 @@ export const Home = () => {
 
   return (
     <div className="home-page-container">
-      <Navbar />
+      {/* <Navbar /> */}
       <Header />
 
       <div className="component-wrapper">
