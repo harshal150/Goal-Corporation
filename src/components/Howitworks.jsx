@@ -5,7 +5,9 @@ import two from "../assets/HowItWorks/2.jpg";
 import three from "../assets/HowItWorks/3.jpg";
 import four from "../assets/HowItWorks/44.jpg";
 
-import backgroundImage from '../assets/bg4.avif'
+// import backgroundImage from '../assets/bg4.avif'
+// import backgroundImage from '../assets/HowItWorks/bg5.avif'
+import backgroundImage from '../assets/HowItWorks/bg6.webp'
 
 const contents = [
   {
@@ -44,10 +46,10 @@ const ContentItem = ({ item, isVisible, index }) => {
         alt={item.title}
         className="w-28 h-32 rounded-2xl border-4 border-white shadow-md mb-4"
       />
-      <h4 className="font-bold text-xl text-[#1A237E] text-center leading-snug mb-2">
+      <h4 className="font-bold text-xl text-green-500 text-center leading-snug mb-2">
         {item.title}
       </h4>
-      <p className=" text-gray-700 text-center">{item.text}</p>
+      <p className=" text-white text-center">{item.text}</p>
     </div>
   );
 };
@@ -91,7 +93,7 @@ const Howitworks = () => {
   const isItemVisible = (index) => visibleItems.includes(String(index));
 
   return (
-    <section className="py-14 md:py-16 text-green-900 dark:text-white"  style={{
+    <section className="py-14 md:py-16 text-green-900 "  style={{
       backgroundImage: `url(${backgroundImage})`, 
       backgroundSize: "cover", 
       backgroundPosition: "center", 

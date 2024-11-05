@@ -12,12 +12,14 @@ import RewardsRecog from '../components/about/RewardsRecog'
 import EmployeesSpeak from '../components/about/EmployeesSpeak'
 import GoalInfo from '../components/about/GoalInfo'
 import AboutUsFAQ from '../components/about/AboutFAQ'
+import StrategicTeam from '../components/about/StrategicTeam'
+import SeniorTeam from '../components/about/SeniorTeam'
 
 
 const About = () => {
   return (
     <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <AboutInfo/>
         <GoalInfo/>
         <AboutMainSection/>
@@ -25,6 +27,8 @@ const About = () => {
         <DirectorMsg/>
         <VisionMission/>
         <Ourteam/>
+        <StrategicTeam/>
+        <SeniorTeam/>
         <GroupCompany/>
         <RewardsRecog/>
         <EmployeesSpeak/>
