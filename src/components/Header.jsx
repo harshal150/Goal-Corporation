@@ -317,7 +317,7 @@ const Header = () => {
       <HomeNavbar />
 
       {/* Carousel Content */}
-      <div className="relative w-full h-full flex flex-col justify-center items-center text-white text-center px-5 sm:px-10 lg:px-36 z-50">
+      <div className="relative w-full h-full flex flex-col justify-center items-center text-white text-center px-5 sm:px-10 lg:px-36 z-40">
         {carouselData.map((slide, index) => (
           <div
             key={index}
