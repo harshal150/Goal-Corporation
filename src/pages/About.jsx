@@ -14,6 +14,7 @@ import GoalInfo from '../components/about/GoalInfo'
 import AboutUsFAQ from '../components/about/AboutFAQ'
 import StrategicTeam from '../components/about/StrategicTeam'
 import SeniorTeam from '../components/about/SeniorTeam'
+import OurValues from '../components/about/Values'
 
 
 const About = () => {
@@ -23,6 +24,7 @@ const About = () => {
         <AboutInfo/>
         <GoalInfo/>
         <AboutMainSection/>
+        <OurValues/>
         {/* <LoanInfo/> */}
         <DirectorMsg/>
         <VisionMission/>

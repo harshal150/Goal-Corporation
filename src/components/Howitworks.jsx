@@ -7,7 +7,9 @@ import four from "../assets/HowItWorks/44.jpg";
 
 // import backgroundImage from '../assets/bg4.avif'
 // import backgroundImage from '../assets/HowItWorks/bg5.avif'
-import backgroundImage from '../assets/HowItWorks/bg6.webp'
+// import backgroundImage from '../assets/HowItWorks/bg6.webp'
+import backgroundImage from '../assets/testimonial/bg2.avif'
+
 
 const contents = [
   {

@@ -36,6 +36,9 @@ import msme from "../../assets/new/empow.webp";
 import balacetransfee from "../../assets/new/balancetransfer.webp";
 import leaserental from "../../assets/new/leaseRental.webp";
 import { Link } from "react-router-dom";
+import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
+import { HomeNavbar } from "../HomeNavbar";
+
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
@@ -102,20 +105,20 @@ const indianStates = [
 ];
 
 const loanDetails = {
-  "Home Loan": { component: HomeloanBelowComponent, interestRate: 8 },
-  "Personal Loan": { component: PersonalLoanBelowComponent, interestRate: 12 },
+  "Home Loan": { component: HomeloanBelowComponent, interestRate: 8.35 },
+  "Personal Loan": { component: PersonalLoanBelowComponent, interestRate: 10.5 },
   "Loans Against Property": {
     component: LoanAgaintsBelowComponent,
-    interestRate: 9,
+    interestRate: 9.15,
   },
   "Working Capital Loan": {
     component: WorkingCapitalLoanBelowComponent,
-    interestRate: 10,
+    interestRate: 9,
   },
-  "Business Loan": { component: BusinessLoanBelowComponent, interestRate: 11 },
+  "Business Loan": { component: BusinessLoanBelowComponent, interestRate: 12 },
   "Debt Restructuring": {
     component: DebtRestructureBelowComponent,
-    interestRate: 13,
+    interestRate: 9.5,
   },
 };
 
@@ -203,16 +206,26 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
 
   return (
     <>
-      <div
-        className="w-full min-h-screen flex justify-center items-center px-4 py-10"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="flex w-full max-w-6xl bg-white rounded-lg shadow-2xl overflow-hidden">
+          <div className="relative w-full min-h-screen items-center overflow-hidden ">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+          style={{ opacity: 0.9 }}
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10 " /> */}
+
+        {/* Navbar */}
+        <HomeNavbar />
+
+    <div className="flex flex-col items-center z-50">
+    <div className="flex w-full max-w-6xl bg-white rounded-lg shadow-2xl overflow-hidden lg:mt-5 mb-5">
           {/* Form Section (Left Aligned) */}
           <div className="w-full md:w-2/3 p-6 lg:p-8">
             <h3 className="text-2xl font-bold text-center mb-6">
@@ -456,7 +469,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
                         className="text-red-500 text-xs mt-1"
                       />
                     </div>
-                    <div className="relative">
+                    <div className="relative lg:mb-8">
                       <label
                         htmlFor="dob"
                         className="block text-gray-700 font-medium"
@@ -479,13 +492,13 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
                   </div>
 
            
-                  <div className="flex items-start space-x-2 mt-4">
+                  <div className="flex items-start space-x-2 mt-8">
                     <Field
                       type="checkbox"
                       name="terms"
                       className="form-checkbox mt-2"
                     />
-                    <span className="text-gray-700 text-justify text-[10px]">
+                    <span className="text-gray-700 text-justify text-[10px] lg:mb-7">
                       I have read and agree to Credit Score Terms of Use and
                       hereby appoint <strong>Goal Corporation</strong> as my
                       authorised representative to receive my credit information
@@ -504,7 +517,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
                       <Link
                         to="/termsconditions"
                         target="_blank"
-                        className="text-blue-500 font-semibold"
+                        className="text-blue-500 font-semibold "
                       >
                         {" "}
                         Terms and Condition.
@@ -535,6 +548,7 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
             />
           </div>
         </div>
+    </div>
       </div>
       {/* Commented Components */}
       {/*<HomeloanBelowComponent/> */}

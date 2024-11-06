@@ -16,7 +16,7 @@ import t4 from "../assets/client_testimonial/test4.png"
 import t5 from "../assets/client_testimonial/test5.png"
 
 // import backgroundImage from '../assets/aaaaaaa/14.avif'
-import backgroundImage from '../assets/bg6.avif'
+import backgroundImage from '../assets/testimonial/bg2.avif'
 
 
 
@@ -108,10 +108,10 @@ const Testimonial = () => {
       backgroundSize: "cover", 
       backgroundPosition: "center", 
       backgroundAttachment: "fixed", 
-      opacity:"50"
+      // opacity:"50"
     }}>
   <h1 className="font-bold text-[26px] md:text-2xl text-center mt-1 mb-5 capitalize text-[#2B8AC1]">
-    What Our <span className=" ">Client Says ...</span>
+    What Our <span className="text-orange-500">Client Says ...</span>
   </h1>
 
   <div className="container px-4 mx-auto">
@@ -142,10 +142,10 @@ const Testimonial = () => {
                 isAnimating ? "transform -translate-x-full" : ""
               }`}
             >
-              <span className="text-sm font-normal italic">{content}</span>
+              <span className="text-sm text-white font-normal italic">{content}</span>
             </p>
             <h4
-              className={`text-xl font-bold mb-2 transition-transform duration-500 ${
+              className={`text-xl font-extrabold mb-2 transition-transform duration-500 text-white  ${
                 isAnimating ? "transform -translate-x-full" : ""
               }`}
             >

@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import { useLocation } from 'react-router-dom'
 import LoanApplicationFAQ from '../components/modal/ApplyLoanPagwFAQ.jsx'
+import { HomeNavbar } from '../components/HomeNavbar.jsx'
 
 const ApplyLoanPage = () => {
   const location = useLocation();
@@ -12,7 +13,8 @@ const ApplyLoanPage = () => {
   // console.log(loanType) 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
+    {/* <HomeNavbar/> */}
       <ApplyLoanModal loanType={loanType} sliderHomeLink={selectedLink}/>
       {/* <LoanApplicationFAQ/> */}
       <Footer/>
