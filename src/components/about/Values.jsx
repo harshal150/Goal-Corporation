@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUsers, FaRegStar, FaHandshake, FaShieldAlt, FaTrophy, FaLightbulb } from 'react-icons/fa';
+import { FaUsers, FaRegStar, FaHandshake, FaShieldAlt, FaLightbulb } from 'react-icons/fa';
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
 
 const values = [
@@ -42,7 +42,6 @@ const values = [
 ];
 
 const OurValues = () => {
-  // Split the values array into two halves
   const firstRow = values.slice(0, 3);
   const secondRow = values.slice(3);
 
@@ -59,15 +58,15 @@ const OurValues = () => {
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      
+
       <h2 className="text-3xl font-bold text-orange-500 mb-12">Our Values</h2>
 
       {/* First Row */}
-      <div className="flex justify-center gap-8 mb-8">
+      <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
         {firstRow.map((value, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center text-center p-6 w-64 rounded-lg shadow-lg ${value.color}`}
+            className={`flex flex-col items-center text-center p-6 w-full md:w-64 rounded-lg shadow-lg ${value.color}`}
           >
             <div className="mb-4">
               {value.icon}
@@ -79,11 +78,11 @@ const OurValues = () => {
       </div>
 
       {/* Second Row */}
-      <div className="flex justify-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center gap-8">
         {secondRow.map((value, index) => (
           <div
-            key={index + 3} // Adjust the key to avoid duplicate keys
-            className={`flex flex-col items-center text-center p-6 w-64 rounded-lg shadow-lg ${value.color}`}
+            key={index + 3}
+            className={`flex flex-col items-center text-center p-6 w-full md:w-64 rounded-lg shadow-lg ${value.color}`}
           >
             <div className="mb-4">
               {value.icon}
