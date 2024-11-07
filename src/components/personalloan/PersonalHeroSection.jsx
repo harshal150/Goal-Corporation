@@ -95,7 +95,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import personal from '../../assets/loansNew/personal loan header.avif';
-import personal from '../../assets/loansNew/plnew.jpg';
+// import personal from '../../assets/loansNew/plnew.jpg';
+import personal from '../../assets/loansNew/pl1.jpg';
+// import personal from '../../assets/loansNew/pl2.jpg';
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
 import { HomeNavbar } from '../HomeNavbar';
 

@@ -93,7 +93,8 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import loanAgain from "../../assets/loansNew/lap1.jpg";
+// import loanAgain from "../../assets/loansNew/lap1.jpg";
+import loanAgain from "../../assets/loansNew/lap2.jpg";
 import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
 import { HomeNavbar } from "../HomeNavbar";
 

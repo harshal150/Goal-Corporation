@@ -4,6 +4,8 @@ import { Navbar } from "../Navbar";
 import careers from '../../assets/careers.avif';
 
 import CareersFAQ from "./CareersFAQ";
+import WorkWithUs from "./WorkWithUs";
+import LifeAtGoalCorporation from "./LifeAtGoalCorporation";
 
 const CareersPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,6 +55,9 @@ const CareersPage = () => {
             Ready to take the next step in your career? We love to hear from you! Please submit your resume to <span className="text-blue-500 font-bold">hr@goalcorporation.com</span> with the subject line of the position you’re applying for.
           </p>
         </section>
+
+        <WorkWithUs/>
+        <LifeAtGoalCorporation/>
       <div
         className="min-h-screen text-gray-800"
         style={{
