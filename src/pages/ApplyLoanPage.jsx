@@ -14,7 +14,6 @@ const ApplyLoanPage = () => {
   return (
     <div>
     {/* <Navbar/> */}
-    {/* <HomeNavbar/> */}
       <ApplyLoanModal loanType={loanType} sliderHomeLink={selectedLink}/>
       {/* <LoanApplicationFAQ/> */}
       <Footer/>

@@ -389,7 +389,7 @@ const AboutContact = () => {
         </div>
       </section>
 
-      {/* Footer */}
+   
       <ContactUsFAQ />
       <Footer />
     </div>
