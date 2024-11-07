@@ -111,7 +111,7 @@ const LoanAgaintHeroSection = () => {
   };
   
   return (
-    <div className="relative h-[75vh] lg:h-[95vh] overflow-hidden">
+    <div className="relative h-[90vh] lg:h-[95vh] overflow-hidden">
       {/* Navbar */}
       <HomeNavbar />
 

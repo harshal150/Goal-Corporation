@@ -97,7 +97,7 @@ const BusinessHeroSection = () => {
   const loanType = "Business Loan";
 
   return (
-    <div className="relative h-[75vh] lg:h-[95vh] overflow-hidden">
+    <div className="relative h-[90vh] lg:h-[95vh] overflow-hidden">
       {/* Navbar */}
       <HomeNavbar />
 
@@ -120,7 +120,7 @@ const BusinessHeroSection = () => {
         {/* Text Section */}
         <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            Achieve Your Business Goals <br /> with Our Hassle-Free <br />
+            Achieve Your Business Goals with Our Hassle-Free{" "}
             <span className="text-red-500">Business Loan Solution!</span>
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">

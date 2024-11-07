@@ -189,20 +189,20 @@ export const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/"
-              className="text-white hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
+              className="text-black hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
             >
               Home
             </Link>
             
             <Link
               to="/about"
-              className="text-white hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
+              className="text-black hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
             >
               About Us
             </Link>
 
             <div className="relative group">
-              <span className="relative text-white px-3 py-2 rounded-md text-lg font-semibold flex items-center transition-all duration-300 hover:text-orange-500">
+              <span className="relative text-black px-3 py-2 rounded-md text-lg font-semibold flex items-center transition-all duration-300 hover:text-orange-500">
                 Loans
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,13 +260,13 @@ export const Navbar = () => {
 
             <Link
               to="/contact"
-              className="text-white hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
+              className="text-black hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
             >
               Contact Us
             </Link>
             <Link
               to="/becomepartner"
-              className="text-white hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
+              className="text-black hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
             >
               Become a Partner
             </Link>

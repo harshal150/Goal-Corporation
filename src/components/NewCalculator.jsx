@@ -255,7 +255,7 @@ const LoLoanCalculator = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative px-2">
       <video
         autoPlay
         loop
@@ -385,7 +385,7 @@ const LoLoanCalculator = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center mb-3">
               <div className="flex items-center space-x-2 mb-1 sm:mb-0">
                 <i className="fas fa-coins text-green-700"></i>
-                <span className="text-base sm:text-lg font-semibold text-gray-700">Monthly EMI:</span>
+                <span className="text-sm md:text-lg font-semibold text-gray-700">Monthly EMI:</span>
               </div>
               <span className="text-lg sm:text-xl font-bold text-green-700">
                 ₹{Number(monthlyEMI).toLocaleString('en-IN')}
@@ -394,7 +394,7 @@ const LoLoanCalculator = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center mb-3">
               <div className="flex items-center space-x-2 mb-1 sm:mb-0">
                 <i className="fas fa-percent text-orange-600"></i>
-                <span className="text-base sm:text-lg font-semibold text-gray-700">Total Interest Payable:</span>
+                <span className="text-sm sm:text-lg font-semibold text-gray-700">Total Interest :</span>
               </div>
               <span className="text-lg sm:text-xl font-bold text-orange-600">
                 ₹{Number(totalInterest).toLocaleString('en-IN')}
@@ -403,7 +403,7 @@ const LoLoanCalculator = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center">
               <div className="flex items-center space-x-2 mb-1 sm:mb-0">
                 <i className="fas fa-money-bill-alt text-blue-600"></i>
-                <span className="text-base sm:text-lg font-semibold text-gray-700">Total Payment:</span>
+                <span className="text-sm sm:text-lg font-semibold text-gray-700">Total Payment:</span>
               </div>
               <span className="text-lg sm:text-xl font-bold text-blue-600">
                 ₹{Number(totalPayment).toLocaleString('en-IN')}

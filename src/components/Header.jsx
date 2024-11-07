@@ -296,7 +296,7 @@ const Header = () => {
   };
 
   return (
-    <div className="relative w-full lg:h-screen h-[80vh] flex flex-col justify-between overflow-hidden">
+    <div className="relative w-full lg:h-screen h-[90vh] flex flex-col justify-between overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay

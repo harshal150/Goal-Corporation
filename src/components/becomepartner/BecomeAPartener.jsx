@@ -82,7 +82,7 @@ const BecomeAPartner = () => {
         Your browser does not support the video tag.
       </video>
 <HomeNavbar/>
-      <h1 className="text-2xl md:text-3xl font-bold  md:text-left text-left text-[#2B8AC1] capitalize mb-6 md:mb-5 lg:p-10">
+      <h1 className="text-xl md:text-3xl font-bold  md:text-left text-left text-[#2B8AC1] capitalize mb-6 md:mb-5 mt-10 lg:mt-2 lg:p-10">
         We are committed to becoming <span className=" text-orange-500">India’s Leading</span> Loan Distributor!
       </h1>
 
