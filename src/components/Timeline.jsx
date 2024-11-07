@@ -8,7 +8,8 @@ import three from "../assets/Timeline/three.jpg";
 import four from "../assets/Timeline/4.jpg";
 import five from "../assets/Timeline/5.jpg";
 import six from "../assets/Timeline/6.jpg";
-import backgroundImage from '../assets/aaaaaaa/14.avif'
+// import backgroundImage from '../assets/aaaaaaa/14.avif'
+import backgroundImage from '../assets/testimonial/bg2.avif'
 
 const images = [one, two, three, four, five, six];
 
@@ -91,10 +92,10 @@ const Timeline = () => {
 
   return (
     <>
-      <div className=" bg-transparent p-2 mt-10 "   style={{
+      <div className=" bg-transparent p-2 mt-5 "   style={{
       backgroundImage: `url(${backgroundImage})`, 
       backgroundSize: "cover", 
-      backgroundPosition: "center", 
+      backgroundPosition: "top", 
       backgroundAttachment: "fixed", 
       opacity:"50"
     }}>
@@ -126,7 +127,7 @@ const Timeline = () => {
                     </div>
                   </div>
                   <div className="w-10/12 flex flex-col pl-2">
-                    <p className="text-sm text-black font-normal">{item.title}</p>
+                    <p className="text-sm text-white font-normal">{item.title}</p>
                   </div>
                 </div>
 
@@ -135,7 +136,7 @@ const Timeline = () => {
                   {item.position === "top" && (
                     <>
                       <div className="mb-4">
-                        <p className="text-center font-normal text-black text-sm">
+                        <p className="text-center font-normal text-white text-sm">
                           {item.title}
                         </p>
                       </div>
@@ -182,7 +183,7 @@ const Timeline = () => {
                         <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-10 border-dotted border-green-400 border-l-2"></div>
                       </div>
                       <div className="mt-12">
-                        <p className="text-center font-normal text-black text-sm">
+                        <p className="text-center font-normal text-white text-sm">
                           {item.title}
                         </p>
                       </div>

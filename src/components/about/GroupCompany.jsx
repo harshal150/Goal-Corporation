@@ -9,6 +9,8 @@ import promoter from "../../assets/group Companies/motors.jpg";
 import biomedical from '../../assets/group Companies/biomedical2.avif'
 
 import bg from "../../assets/bg11.avif";
+import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
+
 
 const GroupCompany = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,18 +42,24 @@ const GroupCompany = () => {
 
   return (
     <div
-      className="mt-12 mb-20 w-full mx-auto text-center p-6 "
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
+      className="relative mt-12 mb-20 w-full mx-auto text-center p-6 "
+     
     >
+    <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        style={{ opacity: 0.9 }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       {/* <h1 className="text-5xl font-bold text-center text-indigo-800 uppercase mb-16">
         Group Companies
       </h1> */}
-      <h1 className="text-4xl md:text-4xl font-bold text-center text-indigo-800 mb-16">
+      <h1 className="text-xl md:text-3xl font-bold text-center text-orange-500 mb-16">
         Group Companies
       </h1>
 

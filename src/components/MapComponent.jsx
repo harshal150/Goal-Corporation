@@ -104,7 +104,7 @@ const MapComponent = () => {
               {cities.map((city, index) => (
                 <div
                   key={index}
-                  className="bg-blue-200 p-2 rounded-lg shadow-xl cursor-pointer flex items-center justify-center hover:scale-105"
+                  className="bg-blue-200 p-1.5 rounded-lg shadow-xl cursor-pointer flex items-center justify-center hover:scale-105"
                   onMouseEnter={() => setHoveredCity(city)} // Show address on hover
                   onMouseLeave={() => setHoveredCity(null)} // Hide address when not hovering
                 >

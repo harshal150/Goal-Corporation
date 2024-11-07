@@ -14,7 +14,7 @@ import backgroundImage from '../assets/testimonial/bg2.avif'
 const contents = [
   {
     image: one,
-    title: "Dedicated Relationship Manager",
+    title: "Personalised Guidance",
     text: "Our team is dedicated to building long-term relationships with clients, providing personalized support and guidance throughout your financial journey.",
   },
   {
@@ -48,10 +48,10 @@ const ContentItem = ({ item, isVisible, index }) => {
         alt={item.title}
         className="w-28 h-32 rounded-2xl border-4 border-white shadow-md mb-4"
       />
-      <h4 className="font-bold text-xl text-green-500 text-center leading-snug mb-2">
+      <h4 className="font-bold  text-orange-500 text-center text-xl leading-snug mb-2">
         {item.title}
       </h4>
-      <p className=" text-white text-center">{item.text}</p>
+      <p className=" text-white text-sm text-center">{item.text}</p>
     </div>
   );
 };

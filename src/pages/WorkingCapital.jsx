@@ -11,7 +11,7 @@ import WorkCapBanks from '../components/workingcapital/WorkCapBanks'
 const WorkingCapital = () => {
   return (
     <div>
-         <Navbar/>
+         {/* <Navbar/> */}
 
 <WorkingCapitalHeroSection/>
 <AboutWorkingCapital/>

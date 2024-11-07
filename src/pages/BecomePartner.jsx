@@ -10,7 +10,7 @@ import BecomePartnerFAQ from '../components/becomepartner/BecomeAPartnerFAQ'
 const BecomePartner = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <BecomeAPartner/>
       <PartnerSection/>
       <BenefitsSection/>

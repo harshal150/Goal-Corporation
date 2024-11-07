@@ -3,6 +3,8 @@ import Footer from "../Footer";
 import { Navbar } from "../Navbar";
 import careers from '../../assets/careers.avif';
 
+import CareersFAQ from "./CareersFAQ";
+
 const CareersPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -45,6 +47,12 @@ const CareersPage = () => {
   return (
     <>
       <Navbar />
+      <section className="bg-white py-20 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Start <span className="text-blue-700">Your Career?</span></h2>
+          <p className="max-w-3xl mx-auto mb-8 text-md">
+            Ready to take the next step in your career? We love to hear from you! Please submit your resume to <span className="text-blue-500 font-bold">hr@goalcorporation.com</span> with the subject line of the position you’re applying for.
+          </p>
+        </section>
       <div
         className="min-h-screen text-gray-800"
         style={{
@@ -97,12 +105,7 @@ const CareersPage = () => {
           </div>
         </section>
 
-        <section className="bg-white py-20 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start <span className="text-blue-700">Your Career?</span></h2>
-          <p className="max-w-3xl mx-auto mb-8 text-md">
-            Ready to take the next step in your career? We love to hear from you! Please submit your resume to <span className="text-blue-500 font-bold">hr@goalcorporation.com</span> with the subject line of the position you’re applying for.
-          </p>
-        </section>
+     
 
         {/* Modal */}
         {isModalOpen && (
@@ -177,6 +180,7 @@ const CareersPage = () => {
           </div>
         )}
       </div>
+      <CareersFAQ/>
       <Footer />
     </>
   );

@@ -2,14 +2,27 @@ import React from "react";
 import vission from '../../assets/mission.avif';
 // import mission from '../../assets/vission.avif';
 import mission from '../../assets/about/vission.avif';
+import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
+
 
 const VisionMission = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 via-purple-50 to-blue-50 py-16">
+    <div className="relative min-h-screen  py-16">
+    <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        style={{ opacity: 0.9 }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       {/* Vision & Mission Header */}
       <div className="text-center mb-12 md:mb-16">
   
-        <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-6 md:mb-10">
+        <h1 className="text-xl md:text-3xl font-bold text-center text-orange-500 mb-6 md:mb-10">
         Vission & Mission
         </h1>
       </div>

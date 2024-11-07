@@ -10,7 +10,7 @@ import Banks from '../components/homeloan/Banks'
 const PersonalLoan = () => {
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <PersonalHeroSection/>
       <AboutPersonalLoan/>
       <Banks/>

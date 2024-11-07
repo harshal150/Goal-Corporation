@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import backgroundImage from '../../assets/bg6.avif'
+import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
 
 const testimonials = [
   {
@@ -46,20 +47,25 @@ const EmployeesSpeak = () => {
   }, []);
 
   return (
-    <section  style={{
-      backgroundImage: `url(${backgroundImage})`, 
-      backgroundSize: "cover", 
-      backgroundPosition: "center", 
-      backgroundAttachment: "fixed", 
-      opacity:"50"
-    }}
+    <section  
       ref={sectionRef}
-      className={`py-16 bg-gray-100 transition-transform duration-1000 ease-out ${
+      className={`relative py-16 bg-gray-100 transition-transform duration-1000 ease-out ${
         isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
       }`}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        style={{ opacity: 0.9 }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-12">
+        <h2 className="text-4xl font-extrabold text-center text-orange-500 mb-12">
           Employees Speak
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -3,38 +3,11 @@ import "animate.css"; // Import Animate.css
 import partner from '../../assets/becomepartnernew.avif';
 
 import backgroundImage from '../../assets/aaaaaaa/14.avif'
+import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
+
+import { HomeNavbar } from '../HomeNavbar';
 
 
-const indianStates = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-];
 
 const professions = [
   "Agriculture/Farmer",
@@ -91,18 +64,25 @@ const BecomeAPartner = () => {
   }, []);
 
   return (
-    <section  style={{
-      backgroundImage: `url(${backgroundImage})`, 
-      backgroundSize: "cover", 
-      backgroundPosition: "center", 
-      backgroundAttachment: "fixed", 
-    }}
-     
-      className={` mx-auto p-4 md:p-8 my-10 ${
+    <section  
+      className={`relative mx-auto px-3 overflow-hidden ${
         isVisible ? "animate__animated animate__bounceIn" : ""
       }`}
     >
-      <h1 className="text-2xl md:text-3xl font-bold  md:text-left text-left text-blue-700 capitalize mb-6 md:mb-10">
+
+<video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        style={{ opacity: 0.9 }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+<HomeNavbar/>
+      <h1 className="text-2xl md:text-3xl font-bold  md:text-left text-left text-[#2B8AC1] capitalize mb-6 md:mb-5 lg:p-10">
         We are committed to becoming <span className=" text-orange-500">India’s Leading</span> Loan Distributor!
       </h1>
 
@@ -120,11 +100,7 @@ const BecomeAPartner = () => {
               className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
               placeholder="First Name"
             />
-            <input
-              type="text"
-              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
-              placeholder="Middle Name"
-            />
+           
             <input
               type="text"
               className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
@@ -153,14 +129,11 @@ const BecomeAPartner = () => {
                 </option>
               ))}
             </select>
-            <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-500">
-              <option value="">Select State</option>
-              {indianStates.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
+            <input
+              type="number"
+              className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
+              placeholder="Pincode"
+            />
             <input
               type="text"
               className="w-full md:w-[80%] h-10 border border-gray-300 rounded-lg px-4 text-gray-800"
@@ -174,13 +147,13 @@ const BecomeAPartner = () => {
               type="checkbox"
               className="h-4 w-4 border border-gray-300 rounded mr-2"
             />
-            <label htmlFor="agree" className="text-sm text-gray-600">
+            <label htmlFor="agree" className="text-sm text-white">
               I agree to the{" "}
-              <a href="#" className="text-blue-600 underline">
+              <a href="/termsconditions" className="text-blue-600 font-bold">
                 terms & conditions
               </a>{" "}
               and{" "}
-              <a href="#" className="text-blue-600 underline">
+              <a href="/privacypolicy" className="text-blue-600 font-bold">
                 privacy policy
               </a>.
             </label>

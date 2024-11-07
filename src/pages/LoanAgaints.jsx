@@ -11,7 +11,7 @@ import LapBanks from '../components/LoanAgaints/LapBanks'
 const LoanAgaints = () => {
   return (
     <div>
-         <Navbar/>
+         {/* <Navbar/> */}
 <LoanAgaintHeroSection/>
 <AboutLoanAgaints/>
 <LapBanks/>

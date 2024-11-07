@@ -367,7 +367,7 @@ const LoLoanCalculator = () => {
         {/* Right Side: EMI and Pie Chart */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-between">
           {/* Pie Chart */}
-          <div className="w-1/2 mb-6">
+          <div className="w-1/2 mb-6 text-white">
             <Pie 
               data={data} 
               options={{ 
@@ -376,6 +376,7 @@ const LoLoanCalculator = () => {
               }} 
               width={250} 
               height={250} 
+              color="white"
             />
           </div>
 

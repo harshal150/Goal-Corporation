@@ -51,7 +51,7 @@ const handleClick=()=>{
         <div className="lg:w-1/2 mb-8 lg:mb-0">
           <h3 className="text-blue-500 text-5xl font-semibold mb-4">
             <div className="logo text-2xl mt-4 ">
-              <span className="mx-1 font-bold relative inline-block stroke-current">
+              <span className=" font-bold relative inline-block stroke-current">
                 Goal Corporation
                 <svg
                   className="absolute -bottom-0.5 w-full max-h-1.5"
