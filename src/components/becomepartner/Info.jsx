@@ -16,7 +16,7 @@ const PartnerSection = () => {
 
         {/* Title Section */}
         <h1 className="text-xl md:text-3xl font-bold text-left text-blue-700 capitalize mb-6">
-        Who can Become a Partner with Goal Corporation?
+        Who can Become a Partner with <span className="text-orange-500">Goal Corporation?</span>
       </h1>
       <p className="text-left text-sm text-gray-500 font-semibold mb-10">
         Enhance your professional status. Fire up your entrepreneurial instincts

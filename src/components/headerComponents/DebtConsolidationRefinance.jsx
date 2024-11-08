@@ -1,6 +1,7 @@
 import React from 'react';
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
+import backgroundImage from '../../assets/testimonial/bg2.avif';
 
 import DebtConsolidationRefinanceFAQ from '../headerCompoFAQs/DebtConsolidationRefinanceFAQs';
 const DebtConsolidationRefinance = () => {
@@ -33,7 +34,7 @@ const DebtConsolidationRefinance = () => {
       <section
         className="max-w-full p-4 bg-white"
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -43,7 +44,7 @@ const DebtConsolidationRefinance = () => {
           Eligibility <span className='text-orange-500'>Criteria</span> 
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <ul className="list-none space-y-4 md:space-y-6">
+          <ul className="list-none space-y-4 md:space-y-6 text-white">
             <li><strong>Credit Score:</strong> A score of 650 or higher is generally preferred for debt consolidation or refinancing.</li>
             <li><strong>Income Stability:</strong> Proof of a stable income to demonstrate repayment capacity.</li>
             <li><strong>Existing Debt-to-Income Ratio:</strong> A manageable debt-to-income ratio is often required to qualify for new or refinanced loans.</li>

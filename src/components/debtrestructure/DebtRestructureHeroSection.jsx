@@ -122,7 +122,7 @@ const DebtRestructureHeroSection = () => {
         {/* Text Section */}
         <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            <span className="text-[#EF4444]">Debt Restructuring:</span> A Strategic 
+            <span className="text-orange-500">Debt Restructuring:</span> A Strategic 
             Solution for Managing Financial Obligations and Avoiding Default
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
@@ -131,12 +131,12 @@ const DebtRestructureHeroSection = () => {
           <Link
             to='/applyforloan'
             state={{ loanType }}
-            className="cp_rainbow_btn mt-6 px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg text-white font-bold hover:bg-[#2563EB] transition"
+            className="drl mt-6 p-3 py-3 text-base"
           >
             Apply Now
           </Link>
           <style>{`
-            .cp_rainbow_btn {
+            .drl {
               background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
               background-size: 600%;
               animation: anime 6s linear infinite;

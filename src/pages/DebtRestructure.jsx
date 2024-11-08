@@ -38,9 +38,9 @@ const DebtRestructure = () => {
         <DebtRestructureHeroSection />
       </div>
       <AboutDebtRestructure />
-      <Banks />
-      <DebtFAQ />
+      {/* <Banks /> */}
       <TestimonialSlider />
+      <DebtFAQ />
       <Footer />
     </div>
   );

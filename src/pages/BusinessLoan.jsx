@@ -38,9 +38,9 @@ const BusinessLoan = () => {
         <BusinessHeroSection />
       </div>
       <AboutBuisnessLoan />
-      <Banks />
-      <BusinessFAQ />
+      {/* <Banks /> */}
       <TestimonialSlider />
+      <BusinessFAQ />
       <Footer />
     </div>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
+import backgroundImage from '../../assets/testimonial/bg2.avif';
+
 
 import BalanceTransferFAQ from '../headerCompoFAQs/BalanceTransferFAQ';
 const BalanceTransfer = () => {
@@ -50,7 +52,7 @@ const BalanceTransfer = () => {
       <section
         className="max-w-full p-4 bg-white"
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -60,7 +62,7 @@ const BalanceTransfer = () => {
           Eligibility <span className='text-orange-500'>Criteria</span>
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <ul className="list-none space-y-4 md:space-y-6">
+          <ul className="list-none space-y-4 md:space-y-6 text-white">
             <li><strong>Credit Score:</strong> Generally, 650 or higher is preferred, though this varies by lender.</li>
             <li><strong>Credit History:</strong> Reviewed to assess payment behavior and creditworthiness.</li>
             <li><strong>Income Level:</strong> Proof of stable income is usually necessary to demonstrate repayment ability.</li>
@@ -75,7 +77,7 @@ const BalanceTransfer = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
           Documents Required for <span className='text-orange-500'>Balance Transfer</span> 
         </h2>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">

@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Footer from "../Footer";
-import { Navbar } from "../Navbar";
-import careers from '../../assets/careers.avif';
-
+import { Navbar } from "../Navbar"; // Uncomment Navbar
+import backgroundImage from '../../assets/testimonial/bg2.avif';
 import CareersFAQ from "./CareersFAQ";
 import WorkWithUs from "./WorkWithUs";
 import LifeAtGoalCorporation from "./LifeAtGoalCorporation";
 
 const CareersPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const lifeAtGoalRef = useRef(null);
 
   const jobOpenings = [
     {
@@ -34,7 +35,6 @@ const CareersPage = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  // Disable background scrolling when modal is open
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
@@ -42,26 +42,50 @@ const CareersPage = () => {
       document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = "auto"; // Cleanup on component unmount
+      document.body.style.overflow = "auto";
     };
   }, [isModalOpen]);
 
+  // Intersection Observer for Navbar visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsNavbarVisible(!entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (lifeAtGoalRef.current) {
+      observer.observe(lifeAtGoalRef.current);
+    }
+
+    return () => {
+      if (lifeAtGoalRef.current) {
+        observer.unobserve(lifeAtGoalRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <section className="bg-white py-20 text-center overflow-hidden">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start <span className="text-blue-700">Your Career?</span></h2>
-          <p className="max-w-3xl mx-auto mb-8 text-md">
-            Ready to take the next step in your career? We love to hear from you! Please submit your resume to <span className="text-blue-500 font-bold">hr@goalcorporation.com</span> with the subject line of the position you’re applying for.
-          </p>
-        </section>
+      {isNavbarVisible && <Navbar />} {/* Conditionally render Navbar */}
 
-        <WorkWithUs/>
-        <LifeAtGoalCorporation/>
+      <div ref={lifeAtGoalRef}>
+        <LifeAtGoalCorporation />
+      </div>
+      <WorkWithUs />
+
+      <section className="bg-white py-20 text-center overflow-hidden">
+        <h2 className="text-3xl font-bold mb-4">Ready to Start <span className="text-blue-700">Your Career?</span></h2>
+        <p className="max-w-3xl mx-auto mb-8 text-md">
+          Ready to take the next step in your career? We love to hear from you! Please submit your resume to <span className="text-blue-500 font-bold">hr@goalcorporation.com</span> with the subject line of the position you’re applying for.
+        </p>
+      </section>
+
       <div
         className="min-h-screen text-gray-800"
         style={{
-          backgroundImage: `url(${careers})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -109,8 +133,6 @@ const CareersPage = () => {
             ))}
           </div>
         </section>
-
-     
 
         {/* Modal */}
         {isModalOpen && (
@@ -185,7 +207,8 @@ const CareersPage = () => {
           </div>
         )}
       </div>
-      <CareersFAQ/>
+      
+      <CareersFAQ />
       <Footer />
     </>
   );

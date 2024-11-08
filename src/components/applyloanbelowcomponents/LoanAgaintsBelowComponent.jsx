@@ -4,12 +4,14 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
 import LoanAgaintsFAQ from '../../components/LoanAgaints/LoanAgainstFAQ'
+import backgroundImage from '../../assets/testimonial/bg2.avif'
+
 
 const LoanAgaintsBelowComponent = () => {
   return (
     <div>
       
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Loan Againts Property
       </h1>
 
@@ -45,20 +47,20 @@ const LoanAgaintsBelowComponent = () => {
       <section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
       >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-        Loan Againts Property Eligibility Criteria
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+        Loan Againts Property <span className='text-orange-500'>Eligibility Criteria</span>
         </h2>
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-        <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-4">
+        <ul className="list-disc list-inside text-white space-y-2 md:space-y-4">
       <strong>  Nationality: </strong>You need to be a Citizen of India with documents to prove your claim.<br></br><br></br>
 <strong>Occupation and Income:</strong> Your lender will require you to furnish details regarding your occupation and income to prove your professional and financial stability to determine your creditworthiness.<br></br><br></br>
 <strong>Credit History: </strong>Your three-digit Credit Score, indicative of your track record in respect of repayment of loans, and other forms of credit will be a deciding factor to prove your eligibility for a LAP.<br></br><br></br>
@@ -75,7 +77,7 @@ const LoanAgaintsBelowComponent = () => {
 
    
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
         Documents required to apply for <span className="text-orange-500"> Working Capital Loan</span>
         </h2>
 

@@ -3,7 +3,7 @@ import image from '../../assets/careersteam.jpg'
 const WorkWithUs = () => {
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center p-8 bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg shadow-lg">
+    <div className="flex flex-col md:flex-row items-center justify-center p-8 rounded-lg shadow-lg">
       <div className="md:w-1/2 p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Work <span className='text-orange-500'>with Us</span></h2>
         <p className="text-gray-700 mb-6">
@@ -17,7 +17,7 @@ const WorkWithUs = () => {
         <img
           src={image}
           alt="Team at Goal Corporation"
-          className="w-full h-full object-cover rounded-lg shadow-md"
+          className="w-full h-80 object-cover rounded-lg shadow-md"
         />
       </div>
     </div>

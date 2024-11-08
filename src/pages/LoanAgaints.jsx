@@ -39,10 +39,10 @@ const LoanAgaints = () => {
         <LoanAgaintHeroSection />
       </div>
       <AboutLoanAgaints />
-      <LapBanks />
+      {/* <LapBanks /> */}
       {/* <Banks /> */}
-      <LoanAgainstFAQ />
       <TestimonialSlider />
+      <LoanAgainstFAQ />
       <Footer />
     </div>
   );

@@ -4,12 +4,13 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
 import PersonalFAQ from '../../components/personalloan/PersonalFAQ'
+import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 const PersonalLoanBelowComponent = () => {
   return (
     <div>
       
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Personal Loan
       </h1>
 
@@ -43,20 +44,20 @@ const PersonalLoanBelowComponent = () => {
       <section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
       >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-        Personal Loan Eligibility Criteria
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+        Personal Loan  <span className="text-orange-500">Eligibility Criteria </span>
         </h2>
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-        <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-4">
+        <ul className="list-disc list-inside text-white space-y-2 md:space-y-4">
             <li>Age should fall under the range of 21 years to 60 years</li>
             <li>
               Net monthly income should be ₹15,000 for salaried and
@@ -76,7 +77,7 @@ const PersonalLoanBelowComponent = () => {
 
 
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-8">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-8">
         Documents required to apply for <span className="text-orange-500">Personal Loan</span>
         </h2>
 

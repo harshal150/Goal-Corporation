@@ -9,6 +9,10 @@ import FeesTable from "../interestTable/FeesTable";
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
+import backgroundImage from '../../assets/testimonial/bg2.avif'
+
+
+import Banks from "./Banks";
 
 const AboutHomeLoan = () => {
   return (
@@ -18,47 +22,172 @@ const AboutHomeLoan = () => {
         <CalculateEMIButton />
       </div>
 
-      <h1 className="text-[28px] md:text-[35px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Home Loan
       </h1>
+      <div className="relative max-w-full mx-auto lg:mx-12 px-8 mt-6">
+  {/* Text with Icon */}
+  <div className="flex flex-col md:flex-row items-start">
+    <div className="w-full md:w-1/2 mt-4 md:mt-8">
+      <p className="text-left mb-4 md:mb-6 text-[12px] md:text-[16px]">
+        A home is more than just a structure; it's a sanctuary of comfort,
+        love, and memories. It’s where we find belonging and make dreams come
+        true.
+      </p>
+      <p className="text-left mb-4 md:mb-6 text-[12px] md:text-[16px]">
+        At Goal Corporation, we understand the importance of owning a home.
+        Our low-interest home loans help turn this dream into reality, giving
+        everyone a place they can truly call their own.
+      </p>
+    </div>
+    <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+      <img
+        src={svicon}
+        alt="Home Loan Icon"
+        className="w-[200px] h-[200px] md:w-[350px] md:h-[280px] rounded-xl"
+      />
+    </div>
+  </div>
+</div>
 
-      <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
-        {/* Text with Icon */}
-        <div className="flex flex-col md:flex-row items-start">
-          <div className="w-full md:w-1/2 mt-6 md:mt-10">
-            <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
-              A home holds immense significance in our lives. It is not just a
-              physical structure but a sanctuary where we find solace, love, and
-              a sense of belonging. It is the place we eagerly return to after a
-              long day, where we create cherished memories with our loved ones,
-              and where our dreams take shape. Home is where our hearts reside,
-              and it forms the very essence of our existence.
-            </p>
-            <p className="text-left mb-6 md:mb-10 text-[12px] md:text-[16px]">
-              Understanding the profound importance of having a home, Goal
-              Corporation is dedicated to helping you fulfill your dream of
-              owning one. We believe that everyone deserves a place they can
-              call their own, a haven where laughter echoes through the halls
-              and love fills every corner. That's why we offer home loans with
-              the lowest home loan interest rates.
-            </p>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src={svicon}
-              alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[450px] md:h-[360px] rounded-xl"
-            />
+
+      <LoanEligibilityCard />
+      <Banks/>
+
+      <div>
+        <div
+          className="px-4 md:px-8 lg:px-16 "
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+      <div className="py-8">
+      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-orange-600 capitalize ">
+      <span className="text-blue-500">Fees and Charges</span> for Home Loan
+          </h2>
+      </div>
+          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center text-white font-normal md:mt-2 mx-4 md:mx-8 lg:mx-32">
+          The fees and charges of home loans usually vary from lender to
+            lender and from case to case. The below mentioned table will give
+            you a fair idea of the fees and charges related to home loans:
+          </p>
+          <div className="overflow-x-auto">
+            <FeesTable />
           </div>
         </div>
       </div>
 
-      <LoanEligibilityCard />
+      <section className="max-w-full p-4 md:p-6 text-gray-800">
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documentation for <span className="text-orange-500">Home Loan</span>
+  </h2>
 
-      <section
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Category
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Required Documents
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">1. Salaried Individuals</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Form 16</li>
+                <li>Employee Identity Card</li>
+                <li>3 Months Salary Slip</li>
+                <li>6 Month Bank Account Statement</li>
+                <li>Duration of Employment Evidence</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">2. Self-Employed Individuals</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>PAN</li>
+                <li>Trade License</li>
+                <li>Partnership Deed</li>
+                <li>Article of Association</li>
+                <li>Memorandum of Association</li>
+                <li>Import Export Code</li>
+                <li>SEBI Registration Certificate</li>
+                <li>ROC Registration Certificate</li>
+                <li>Financial Statement Audited by CA</li>
+                <li>Profit & Loss Account Statement</li>
+                <li>Balance Sheet</li>
+                <li>6 Months Bank Account Statement</li>
+                <li>Professional Practice License for Doctors, Consultants, etc.</li>
+                <li>Registration Certificate of Establishment for Shops, Factories, and Other Establishments</li>
+                <li>Business Address Proof</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">
+              3. Documents Required from all Non-Resident Indians (NRIs)
+            </td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Valid Passport and Visa Copy</li>
+                <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
+                <li>Employment Proof (Appointment Letter or Employment Contract)</li>
+                <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
+                <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
+                <li>Power of Attorney (if required)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">4. Other Documents</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Property Documents – entire set of link documents</li>
+                <li>Sale Deed of current owner</li>
+                <li>Stamped Agreement of Sale</li>
+                <li>No Objection Certificate (NOC) from Housing Society/Builder</li>
+                <li>Possession Certificate</li>
+                <li>Land Tax Receipt</li>
+                <li>Construction Cost Estimate</li>
+                <li>Bank Account Statement of Payment Made to Seller or Builder</li>
+                <li>Payment Receipt of Payment Made to Seller or Builder</li>
+                <li>In case of resale property, share certificate is required</li>
+                <li>Occupancy Certificate</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+<section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -71,10 +200,10 @@ const AboutHomeLoan = () => {
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Age:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               You must be above 21 years of age at the time of commencing your
               loan, and up to 65 years or less at loan maturity.
@@ -86,10 +215,10 @@ const AboutHomeLoan = () => {
 
         {/* Income Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Income:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>Salaried Person - Minimum Rs. 10,000 per month</li>
             <li>Self-Employed Person - Minimum Rs. 2,00,000 per year</li>
           </ul>
@@ -97,10 +226,10 @@ const AboutHomeLoan = () => {
 
         {/* Employment Section */}
         <div className="mb-4 md:mb-6 sm:mx-14 ">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Employment:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               Salaried Person - Minimum 2 to 3 years of Experience in MNC , a
               Private or Public Limited Company Or any Government organization.
@@ -114,10 +243,10 @@ const AboutHomeLoan = () => {
 
         {/* Credit Score Section */}
         <div className="sm:mx-14 mb-5">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Credit Score:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               A credit score of 750 is considered a good score for approval.
             </li>
@@ -125,132 +254,12 @@ const AboutHomeLoan = () => {
         </div>
       </section>
 
-      <section className="max-w-full p-4 md:p-6 text-gray-800">
-  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-    Documentation for <span className="text-orange-500">Home Loan</span>
-  </h2>
-
-  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-    {/* Text Content */}
-    <div className="flex-1">
-      {/* Salaried Individuals */}
-      <div className="mb-4 md:mb-6">
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          1. Salaried Individuals
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>Form 16</li>
-          <li>Employee Identity Card</li>
-          <li>3 Months Salary Slip</li>
-          <li>6 Month Bank Account Statement</li>
-          <li>Duration of Employment Evidence</li>
-        </ul>
-      </div>
-
-      {/* Self-Employed Individuals */}
-      <div className="mb-4 md:mb-6">
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          2. Self-Employed Individuals
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>PAN</li>
-          <li>Trade License</li>
-          <li>Partnership Deed</li>
-          <li>Article of Association</li>
-          <li>Memorandum of Association</li>
-          <li>Import Export Code</li>
-          <li>SEBI Registration Certificate</li>
-          <li>ROC Registration Certificate</li>
-          <li>Financial Statement Audited by CA</li>
-          <li>Profit & Loss Account Statement</li>
-          <li>Balance Sheet</li>
-          <li>6 Months Bank Account Statement</li>
-          <li>Professional Practice License for Doctors, Consultants, etc.</li>
-          <li>
-            Registration Certificate of Establishment for Shops, Factories, and
-            Other Establishments
-          </li>
-          <li>Business Address Proof</li>
-        </ul>
-      </div>
-
-      {/* NRI Documentation */}
-      <div className="mb-4 md:mb-6">
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          3. Documents Required from all Non-Resident Indians (NRIs) Applicants
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>Valid Passport and Visa Copy</li>
-          <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
-          <li>Employment Proof (Appointment Letter or Employment Contract)</li>
-          <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
-          <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
-          <li>Power of Attorney (if required)</li>
-        </ul>
-      </div>
-
-      {/* Other Documents */}
-      <div>
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          4. Other Documents
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>Property Documents – entire set of link documents</li>
-          <li>Sale Deed of current owner</li>
-          <li>Stamped Agreement of Sale</li>
-          <li>No Objection Certificate (NOC) from Housing Society/Builder</li>
-          <li>Possession Certificate</li>
-          <li>Land Tax Receipt</li>
-          <li>Construction Cost Estimate</li>
-          <li>Bank Account Statement of Payment Made to Seller or Builder</li>
-          <li>Payment Receipt of Payment Made to Seller or Builder</li>
-          <li>In case of resale property, share certificate is required</li>
-          <li>Occupancy Certificate</li>
-        </ul>
-      </div>
-    </div>
-
-    {/* Image on Right */}
-    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-      <img
-        src={documentation}
-        alt="Documentation Illustration"
-        className="w-[130%] h-auto object-cover rounded-lg "
-      />
-    </div>
-  </div>
-</section>
-
 
    
 
 
 
-      <div>
-        <div
-          className="px-4 md:px-8 lg:px-16 "
-          style={{
-            backgroundImage: `url(${feescgarges})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-      <div className="py-8">
-      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-      <span className="text-orange-500">Fees and Charges</span> for Home Loan
-          </h2>
-      </div>
-          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">
-          The fees and charges of home loans usually vary from lender to
-            lender and from case to case. The below mentioned table will give
-            you a fair idea of the fees and charges related to home loans:
-          </p>
-          <div className="overflow-x-auto">
-            <FeesTable />
-          </div>
-        </div>
-      </div>
+ 
     </div>
   );
 };

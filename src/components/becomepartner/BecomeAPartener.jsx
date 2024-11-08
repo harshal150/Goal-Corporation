@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "animate.css"; // Import Animate.css
-import partner from '../../assets/becomepartnernew.avif';
+import partner from '../../assets/becomepartnr1.jpg';
 
 import backgroundImage from '../../assets/aaaaaaa/14.avif'
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
@@ -161,7 +161,7 @@ const BecomeAPartner = () => {
 
           <button
             type="submit"
-            className="cp_rainbow_btn w-full h-10 font-bold rounded-lg transition-all duration-300"
+            className="cp_rainbow_btn w-full md:w-[90%] h-10 font-bold rounded-lg transition-all duration-300"
           >
             SUBMIT
           </button>
@@ -205,7 +205,7 @@ const BecomeAPartner = () => {
           <img
             src={partner}
             alt="Partner Banner"
-            className="w-full h-64 md:h-full object-cover rounded-lg"
+            className="w-full md:h-96 mb-5 object-cover rounded-lg"
           />
         </div>
       </div>

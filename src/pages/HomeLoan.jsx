@@ -39,10 +39,10 @@ const HomeLoan = () => {
         <HeroSection />
       </div>
       <AboutHomeLoan />
-      <Banks />
+      {/* <Banks /> */}
       {/* <Table /> */}
-      <HomeFAQ />
       <TestimonialSlider />
+      <HomeFAQ />
       <Footer />
     </div>
   );

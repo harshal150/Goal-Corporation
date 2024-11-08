@@ -2,6 +2,7 @@ import React from 'react'
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
+import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 import DebtFAQ from '../../components/debtrestructure/DebtFAQ'
 
@@ -9,7 +10,7 @@ const DebtRestructureBelowComponent = () => {
   return (
     <div>
       
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Debt Restructuring
       </h1>
 
@@ -57,20 +58,20 @@ const DebtRestructureBelowComponent = () => {
       <section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
       >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-        Debt Restructuring Eligibility
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+        Debt Restructuring <span className='text-orange-500'>Eligibility</span>
         </h2>
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-        <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-4">
+        <ul className="list-disc list-inside text-white space-y-2 md:space-y-4">
             <li>Age: 21-60 years (Salaried), 25-65 years (Self-Employed)</li>
             <li>Active employment/business for at least 2 years</li>
             <li>Credit score of 650+ (may vary by lender)</li>
@@ -87,7 +88,7 @@ const DebtRestructureBelowComponent = () => {
 
    
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
         Documents required to apply for <span className="text-orange-500">Debt Restructuring</span>
         </h2>
 

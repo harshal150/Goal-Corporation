@@ -8,6 +8,9 @@ import FeesTable from "../interestTable/FeesTable";
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
+import Banks from "../homeloan/Banks";
+import backgroundImage from '../../assets/testimonial/bg2.avif'
+
 
 const AboutBuisnessLoan = () => {
   return (
@@ -60,13 +63,163 @@ const AboutBuisnessLoan = () => {
       </div>
 
       <LoanEligibilityCard />
+      <Banks/>
+
+
+                  
+      <div>
+        <div
+          className="px-4 md:px-8 lg:px-16 "
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+      <div className="py-8">
+      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
+      Fees and Charges for<span className="text-orange-500"> Business Loan   </span>
+          </h2>
+      </div>
+          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-white text-center font-normal md:mt-3 mx-4 md:mx-8 lg:mx-32">
+          The fees and charges of Business loan usually vary from lender to
+          lender and from case to case. The below mentioned table will give you
+          a fair idea of the fees and charges related to business loans:
+          you an idea of the fees and charges related to Working Capital loans:
+          </p>
+          <div className="overflow-x-auto">
+            <FeesTable />
+          </div>
+        </div>
+      </div>
 
     
 
-      <section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section className="max-w-full p-4 md:p-6 text-gray-800">
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents required to apply for <span className="text-orange-500">Business Loan</span>
+  </h2>
+
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Document Type
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">ITR</td>
+            <td className="px-4 py-3 border-b text-gray-700">ITR for the past 2-3 years</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Bank Account Statement</td>
+            <td className="px-4 py-3 border-b text-gray-700">Current Bank Account Statement for the last 12 months</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">PAN Card</td>
+            <td className="px-4 py-3 border-b text-gray-700">Photocopy of PAN Card</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Residence Address Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Voter Card, Passport, Aadhaar Card, Telephone Bill, Electricity Bill
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Business Address Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">Telephone Bill or Electricity Bill</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Financial Statements</td>
+            <td className="px-4 py-3 border-b text-gray-700">Last Financial Year's provisional Financials and future year's projections</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Business Profile</td>
+            <td className="px-4 py-3 border-b text-gray-700">Company's business profile on letterhead</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Photographs</td>
+            <td className="px-4 py-3 border-b text-gray-700">2 photographs of promoters and property owners</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Existing Loan Documents</td>
+            <td className="px-4 py-3 border-b text-gray-700">Sanction letter and Repayment schedule</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">GST Documents</td>
+            <td className="px-4 py-3 border-b text-gray-700">GST registration certificate and GST returns of the latest 2 years</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">D-Vat/Sale Tax Registration</td>
+            <td className="px-4 py-3 border-b text-gray-700">D-Vat/Sale tax registration copy</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Udhayam Aadhaar</td>
+            <td className="px-4 py-3 border-b text-gray-700">Udhayam Aadhaar registration certificate</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Rent Agreement</td>
+            <td className="px-4 py-3 border-b text-gray-700">Rent agreement copy of factory and residence (if property is rented)</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Business Continuity Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">3 years of proof such as old ITR or Company registration</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Company Documents for Pvt Ltd Companies</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Company PAN Card, Certificate of Incorporation, MOA, AOA, List of Directors, and Shareholding pattern
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Documents for Partnership Companies</td>
+            <td className="px-4 py-3 border-b text-gray-700">Partnership Deed, Company PAN Card</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+<section
   className="max-w-full p-4 bg-white"
   style={{
-    backgroundImage: `url(${eligibilitybg})`,
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -78,7 +231,7 @@ const AboutBuisnessLoan = () => {
   </h2>
 
   <div className="mb-4 md:mb-6 sm:mx-14">
-    <ul className="list-none space-y-4 md:space-y-6">
+    <ul className="list-none space-y-4 md:space-y-6 text-white">
       <li className="flex items-start">
         
         <p>
@@ -188,102 +341,6 @@ const AboutBuisnessLoan = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<section className="max-w-full p-4 md:p-6 text-gray-800">
-  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-    Documents required to apply for <span className="text-orange-500">Business Loan</span>
-  </h2>
-
-  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-    {/* Text Content */}
-    <div className="flex-1">
-      <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-        <li>ITR for the past 2-3 years</li>
-        <li>Current Bank Account Statement for the last 12 months</li>
-        <li>Photocopy of PAN Card</li>
-        <li>
-          Address Proof for Residence such as Voter Card, Passport, Aadhaar Card,
-          Telephone Bill, Electricity Bill
-        </li>
-        <li>
-          Address proof for Business such as the Telephone Bill or Electricity Bill
-        </li>
-        <li>
-          Last Financial Year's provisional Financials and future year's projections
-        </li>
-        <li>Company's business profile on the letterhead</li>
-        <li>2 photographs of promoters and property owners</li>
-        <li>Sanction letter and Repayment schedule of existing loan</li>
-        <li>GST registration certificate and GST returns of latest 2 years</li>
-        <li>D-Vat/Sale tax registration copy</li>
-        <li>Udhayam Aadhaar registration certificate</li>
-        <li>
-          Rent agreement copy of factory and residence (if property is rented)
-        </li>
-        <li>
-          Business Continuity proof of 3 years (3 years old ITR/Company registration
-          etc)
-        </li>
-        <li>
-          Company PAN Card, Certificate of Incorporation, MOA, AOA, List of
-          Directors, and Shareholding pattern for Pvt Ltd companies
-        </li>
-        <li>Partnership Deed, Company pan Card for Partnership Companies</li>
-      </ul>
-    </div>
-
-    {/* Image on Right */}
-    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-      <img
-        src={documentation}
-        alt="Documentation Illustration"
-        className="w-[130%] h-auto object-cover rounded-lg "
-      />
-    </div>
-  </div>
-</section>
-
-
-
-
-            
-      <div>
-        <div
-          className="px-4 md:px-8 lg:px-16 "
-          style={{
-            backgroundImage: `url(${feescgarges})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-      <div className="py-8">
-      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-      Fees and Charges for<span className="text-orange-500"> Business Loan   </span>
-          </h2>
-      </div>
-          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">
-          The fees and charges of Business loan usually vary from lender to
-          lender and from case to case. The below mentioned table will give you
-          a fair idea of the fees and charges related to business loans:
-          you an idea of the fees and charges related to Working Capital loans:
-          </p>
-          <div className="overflow-x-auto">
-            <FeesTable />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

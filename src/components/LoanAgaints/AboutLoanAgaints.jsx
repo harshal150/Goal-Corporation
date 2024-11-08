@@ -8,6 +8,10 @@ import FeesTable from "../interestTable/FeesTable";
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
+import LapBanks from "./LapBanks";
+
+import backgroundImage from '../../assets/testimonial/bg2.avif'
+
 
 
 
@@ -26,40 +30,118 @@ const AboutLoanAgaints = () => {
       
 
   
-
       <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-6">
-        {/* Text with Icon */}
-        <div className="flex flex-col md:flex-row items-start">
-          <div className="w-full md:w-1/2 mt-6 md:mt-10">
-          
-            <p className="text-left mb-6 md:mb-10 text-[12px] mt-5 md:text-[16px]">
-            A loan against property (LAP) is a secured loan that allows a person to borrow money from a financial institution by pledging his/her property as collateral. This is a secured loan where the property offered is the security. The property can be anything from residential, commercial, industrial, land or any other special property like hotel, hospital, school, colleges etc.
-            </p>
-            <p className="text-left mb-4 md:mb-8 text-[12px] mt-5 md:text-[16px]">
-              Unlock the Potential of Your Property with Loan Against Property
-              from Goal Corporation
-            </p>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <img
-              src={svgla}
-              alt="Home Loan Icon"
-              className="w-[250px] h-[250px] md:w-[420px] md:h-[300px] rounded-xl"
-            />
+  {/* Text with Icon */}
+  <div className="flex flex-col md:flex-row items-start">
+    <div className="w-full md:w-1/2 mt-6 md:mt-10">
+      <p className="text-left mb-6 md:mb-10 text-[12px] mt-5 md:text-[16px]">
+        A loan against property (LAP) is a secured loan that allows a person to borrow money from a financial institution by pledging his/her property as collateral. This is a secured loan where the property offered is the security. The property can be anything from residential, commercial, industrial, land or any other special property like hotel, hospital, school, colleges, etc.
+      </p>
+    </div>
+    <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+      <img
+        src={svgla}
+        alt="Home Loan Icon"
+        className="w-[250px] h-[220px] md:w-[420px] md:h-[270px] rounded-xl mb-3"
+      />
+    </div>
+  </div>
+</div>
+
+
+      <LoanEligibilityCard />
+      <LapBanks/>
+
+
+      <div>
+        <div
+          className="px-4 md:px-8 lg:px-16 "
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+      <div className="py-8">
+      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
+          Fees and Charges for <span className="text-orange-500">Loan Againts Property</span>
+          </h2>
+      </div>
+          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-white text-center font-normal md:mt-3 mx-4 md:mx-8 lg:mx-32">
+          The fees and charges of loan Againts Property usually vary from lender
+          to lender and from case to case. The below mentioned table will give
+          you an idea of the fees and charges related to Loan Againts Property :
+          </p>
+          <div className="overflow-x-auto">
+            <FeesTable />
           </div>
         </div>
       </div>
 
-      <LoanEligibilityCard />
 
 
+      <section className="max-w-full p-4 md:p-6 text-gray-800">
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents required for <span className="text-orange-500">Loan Against Property</span>
+  </h2>
+
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Document Type
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Proof of Identity/Residence</td>
+            <td className="px-4 py-3 border-b text-gray-700">Documents confirming identity and address, such as Passport, Aadhar, or Utility Bills</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Proof of Income</td>
+            <td className="px-4 py-3 border-b text-gray-700">Salary slips, ITR, or financial statements for self-employed applicants</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Property-Related Documents</td>
+            <td className="px-4 py-3 border-b text-gray-700">Title deed, encumbrance certificate, and previous sale deeds</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Proof of Business (for self-employed)</td>
+            <td className="px-4 py-3 border-b text-gray-700">Business registration documents or certificates</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Account Statement</td>
+            <td className="px-4 py-3 border-b text-gray-700">Account statement for the latest 12-18 months</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
 
 
 
       <section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -72,10 +154,10 @@ const AboutLoanAgaints = () => {
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Age:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               You must be above 21 years of age at the time of commencing your
               loan, and up to 65 years or less at loan maturity.
@@ -85,7 +167,7 @@ const AboutLoanAgaints = () => {
           </ul>
         </div>
 
-        <ul className="list-none space-y-4 md:space-y-6 text-gray-700 mb-4 md:mb-6 sm:mx-14">
+        <ul className="list-none space-y-4 md:space-y-6 text-white mb-4 md:mb-6 sm:mx-14">
           <li>
             <strong>Nationality:</strong> You need to be a Citizen of India with
             documents to prove your claim.
@@ -135,35 +217,6 @@ const AboutLoanAgaints = () => {
 
 
 
-      <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-        Documents required for <span className="text-orange-500">Loan Against Property</span>
-        </h2>
-
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          {/* Text Content */}
-          <div className="flex-1">
-       
-
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700 mb-4 md:mb-6">
-            <li>Proof of identity/residence</li>
-            <li>Proof of income</li>
-            <li>Property-related documents</li>
-            <li>Proof of Business (for self-employed)</li>
-            <li>Account statement for the latest 12-18 months</li>
-          </ul>
-          </div>
-
-          {/* Image on Right */}
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg "
-            />
-          </div>
-        </div>
-      </section>
 
 
 
@@ -176,33 +229,7 @@ const AboutLoanAgaints = () => {
 
 
 
-
-
-      <div>
-        <div
-          className="px-4 md:px-8 lg:px-16 "
-          style={{
-            backgroundImage: `url(${feescgarges})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-      <div className="py-8">
-      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-          Fees and Charges for <span className="text-orange-500">Loan Againts Property</span>
-          </h2>
-      </div>
-          <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">
-          The fees and charges of loan Againts Property usually vary from lender
-          to lender and from case to case. The below mentioned table will give
-          you an idea of the fees and charges related to Loan Againts Property :
-          </p>
-          <div className="overflow-x-auto">
-            <FeesTable />
-          </div>
-        </div>
-      </div>
+  
     </div>
   );
 };

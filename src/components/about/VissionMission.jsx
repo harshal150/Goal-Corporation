@@ -4,11 +4,18 @@ import vission from '../../assets/mission.avif';
 import mission from '../../assets/about/vission.avif';
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
 
+import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 const VisionMission = () => {
   return (
-    <div className="relative min-h-screen  py-16">
-    <video
+    <div className=" min-h-screen  py-16" style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}>
+    {/* <video
         autoPlay
         loop
         muted
@@ -18,7 +25,7 @@ const VisionMission = () => {
       >
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       {/* Vision & Mission Header */}
       <div className="text-center mb-12 md:mb-16">
   

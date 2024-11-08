@@ -2,6 +2,9 @@ import React from 'react';
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
 
+import backgroundImage from '../../assets/testimonial/bg2.avif';
+
+
 import EmpoweringMSMEsFAQ from '../headerCompoFAQs/EmpoweringMSMEsFAQ';
 const EmpoweringMSMEs = () => {
   return (
@@ -33,7 +36,7 @@ const EmpoweringMSMEs = () => {
       <section
         className="max-w-full p-4 bg-white"
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -43,7 +46,7 @@ const EmpoweringMSMEs = () => {
           Eligibility <span className='text-orange-500'>Criteria</span>
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <ul className="list-none space-y-4 md:space-y-6">
+          <ul className="list-none space-y-4 md:space-y-6 text-white">
             <li><strong>Business Vintage:</strong> Minimum 1 year of business operations is preferred.</li>
             <li><strong>Annual Turnover:</strong> Annual revenue should align with lender requirements, generally starting from Rs.10 lakhs.</li>
             <li><strong>Credit Score:</strong> A credit score of 650 or higher is generally preferred for quick loan approvals.</li>

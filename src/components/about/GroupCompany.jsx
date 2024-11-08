@@ -11,6 +11,7 @@ import biomedical from '../../assets/group Companies/biomedical2.avif'
 import bg from "../../assets/bg11.avif";
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
 
+import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 const GroupCompany = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,9 +44,15 @@ const GroupCompany = () => {
   return (
     <div
       className="relative mt-12 mb-20 w-full mx-auto text-center p-6 "
-     
+      style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}
     >
-    <video
+    {/* <video
         autoPlay
         loop
         muted
@@ -55,7 +62,7 @@ const GroupCompany = () => {
       >
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       {/* <h1 className="text-5xl font-bold text-center text-indigo-800 uppercase mb-16">
         Group Companies
       </h1> */}

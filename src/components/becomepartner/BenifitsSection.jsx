@@ -1,18 +1,25 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 const BenefitsSection = () => {
   return (
-    <section className="flex justify-center items-center px-4 py-8 bg-gradient-to-r from-white via-[#d3e2f7] to-[#aac6e3] ">
-      <div className="max-w-4xl text-left">
+    <section className="flex justify-center items-center px-4 py-8 "  style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}>
+      <div className="max-w-5xl text-left">
         {/* Title Section */}
-        <h1 className="text-xl md:text-3xl font-bold text-blue-700 mb-6">
-          Why Partner With Goal Corporation? - Benefits And Perks
+        <h1 className="text-xl md:text-3xl font-bold text-[#2B8AC1] mb-6">
+          Why Partner With Goal Corporation? - <span className="text-orange-500">Benefits And Perks</span>
         </h1>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm md:text-base mb-8">
+        <p className="text-white text-sm md:text-base mb-8">
           Goal Corporation, a one-stop-shop for all types of Loans, Credit Cards,
           Fixed Deposits, and Insurance covers 1000+ cities in India to serve
           32,000+ under-served borrowers. Goal Corporation's 20+ years' financial
@@ -29,21 +36,21 @@ const BenefitsSection = () => {
               icon={faCheckCircle}
               className="text-red-500 text-xl md:text-2xl mr-3"
             />
-            <span className="font-semibold text-gray-800">Investment Free</span>
+            <span className="font-semibold text-white">Investment Free</span>
           </li>
           <li className="flex items-start">
             <FontAwesomeIcon
               icon={faCheckCircle}
               className="text-red-500 text-xl md:text-2xl mr-3"
             />
-            <span className="font-semibold text-gray-800">Instant Pay-outs</span>
+            <span className="font-semibold text-white">Instant Pay-outs</span>
           </li>
           <li className="flex items-start">
             <FontAwesomeIcon
               icon={faCheckCircle}
               className="text-red-500 text-xl md:text-2xl mr-3"
             />
-            <span className="font-semibold text-gray-800">
+            <span className="font-semibold text-white">
               High Potential Industry
             </span>
           </li>
@@ -52,7 +59,7 @@ const BenefitsSection = () => {
               icon={faCheckCircle}
               className="text-red-500 text-xl md:text-2xl mr-3"
             />
-            <span className="font-semibold text-gray-800">
+            <span className="font-semibold text-white">
               Guaranteed Success
             </span>
           </li>
@@ -61,7 +68,7 @@ const BenefitsSection = () => {
               icon={faCheckCircle}
               className="text-red-500 text-xl md:text-2xl mr-3"
             />
-            <span className="font-semibold text-gray-800">
+            <span className="font-semibold text-white">
               Channel Partner Recognition
             </span>
           </li>
@@ -70,7 +77,7 @@ const BenefitsSection = () => {
               icon={faCheckCircle}
               className="text-red-500 text-xl md:text-2xl mr-3"
             />
-            <span className="font-semibold text-gray-800">Easy Process</span>
+            <span className="font-semibold text-white">Easy Process</span>
           </li>
         </ul>
       </div>

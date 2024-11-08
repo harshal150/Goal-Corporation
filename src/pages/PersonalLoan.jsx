@@ -38,9 +38,9 @@ const PersonalLoan = () => {
         <PersonalHeroSection />
       </div>
       <AboutPersonalLoan />
-      <Banks />
-      <PersonalFAQ />
+      {/* <Banks /> */}
       <TestimonialSlider />
+      <PersonalFAQ />
       <Footer />
     </div>
   );

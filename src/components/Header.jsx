@@ -331,10 +331,10 @@ const Header = () => {
                 <span
                   key={idx}
                   className={
-                    idx === 1
+                    idx === 2
                       ? "text-orange-500"
                       : idx === 3
-                      ? "text-green-500"
+                      ? "text-orange-500"
                       : ""
                   }
                 >
@@ -362,11 +362,11 @@ const Header = () => {
       </div>
 
       {/* Dots Navigation */}
-      <div className="absolute bottom-5 w-full flex justify-center items-center space-x-2">
+      <div className="absolute bottom-5 w-full flex justify-center items-center space-x-2 z-40">
         {carouselData.map((_, index) => (
           <div
             key={index}
-            className={`w-6 h-0.5 rounded-sm cursor-pointer ${
+            className={`w-6 h-1 rounded-sm cursor-pointer ${
               currentIndex === index ? "bg-blue-500" : "bg-gray-300"
             }`}
             onClick={() => setCurrentIndex(index)}

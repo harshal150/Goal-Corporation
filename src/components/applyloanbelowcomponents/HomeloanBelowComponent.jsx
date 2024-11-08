@@ -4,12 +4,13 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
 import HomeFAQ from '../../components/homeloan/HomeFAQ'
+import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 const HomeloanBelowComponent = () => {
   return (
     <div>
       
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Home Loan
       </h1>
 
@@ -43,23 +44,23 @@ const HomeloanBelowComponent = () => {
       <section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
       >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-          Home Loan Eligibility
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+          Home Loan <span className='text-orange-500'>Eligibility</span>
         </h2>
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Age:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               You must be above 21 years of age at the time of commencing your
               loan, and up to 65 years or less at loan maturity.
@@ -71,10 +72,10 @@ const HomeloanBelowComponent = () => {
 
         {/* Income Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Income:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>Salaried Person - Minimum Rs. 10,000 per month</li>
             <li>Self-Employed Person - Minimum Rs. 2,00,000 per year</li>
           </ul>
@@ -82,10 +83,10 @@ const HomeloanBelowComponent = () => {
 
         {/* Employment Section */}
         <div className="mb-4 md:mb-6 sm:mx-14 ">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Employment:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               Salaried Person - Minimum 2 to 3 years of Experience in MNC , a
               Private or Public Limited Company Or any Government organization.
@@ -99,10 +100,10 @@ const HomeloanBelowComponent = () => {
 
         {/* Credit Score Section */}
         <div className="sm:mx-14 mb-5">
-          <h3 className="text-lg md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4">
+          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
             Credit Score:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white space-y-2">
             <li>
               A credit score of 750 is considered a good score for approval.
             </li>
@@ -113,7 +114,7 @@ const HomeloanBelowComponent = () => {
 
 
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-  <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
     Documentation for <span className="text-orange-500">Home Loan</span>
   </h2>
 

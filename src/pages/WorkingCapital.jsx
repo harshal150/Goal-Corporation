@@ -39,11 +39,11 @@ const WorkingCapital = () => {
         <WorkingCapitalHeroSection />
       </div>
       <AboutWorkingCapital />
-      <WorkCapBanks />
+      {/* <WorkCapBanks /> */}
       {/* <wcBanks /> */}
       {/* <Banks /> */}
-      <WorkCapFAQ />
       <TestimonialSlider />
+      <WorkCapFAQ />
       <Footer />
     </div>
   );

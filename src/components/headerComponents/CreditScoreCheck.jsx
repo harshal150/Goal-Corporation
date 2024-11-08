@@ -1,6 +1,7 @@
 import React from 'react';
 import eligibilitybg from "../../assets/loansNew/eligibilitybg.avif";
 import documentation from "../../assets/loansNew/documentation.jpg";
+import backgroundImage from '../../assets/testimonial/bg2.avif';
 
 import CreditScoreCheckFAQ from '../headerCompoFAQs/CreditScoreCheckFAQ';
 const CreditScoreCheck = () => {
@@ -33,7 +34,7 @@ const CreditScoreCheck = () => {
       <section
         className="max-w-full p-4 bg-white"
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -43,7 +44,7 @@ const CreditScoreCheck = () => {
           How to Check Your <span className='text-orange-500'>Credit Score</span>
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <ul className="list-none space-y-4 md:space-y-6">
+          <ul className="list-none space-y-4 md:space-y-6 text-white">
             <li><strong>Visit a Credit Bureau:</strong> Major credit bureaus like CIBIL, Experian, and Equifax offer one free credit report each year.</li>
             <li><strong>Use Financial Apps:</strong> Many financial apps allow free credit score checks, with easy sign-ups and instant results.</li>
             <li><strong>Bank Services:</strong> Check if your bank offers a free credit score as part of its digital services.</li>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaUsers, FaRegStar, FaHandshake, FaShieldAlt, FaLightbulb } from 'react-icons/fa';
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
+import backgroundImage from '../../assets/testimonial/bg2.avif'
+
 
 const values = [
   {
@@ -46,8 +48,14 @@ const OurValues = () => {
   const secondRow = values.slice(3);
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen p-8 hover:cursor-pointer">
-      <video
+    <div className=" flex flex-col items-center justify-center min-h-screen p-8 hover:cursor-pointer" style={{
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+      backgroundAttachment: "fixed", 
+      opacity:"50"
+    }}>
+      {/* <video
         autoPlay
         loop
         muted
@@ -57,7 +65,7 @@ const OurValues = () => {
       >
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
 
       <h2 className="text-3xl font-bold text-orange-500 mb-12">Our Values</h2>
 

@@ -4,12 +4,14 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 
 import WorkCapFAQ from '../../components//workingcapital/WorkCapFAQ'
+import backgroundImage from '../../assets/testimonial/bg2.avif'
+
 
 const WorkingCapitalLoanBelowComponent = () => {
   return (
     <div>
       
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Working Capital Loan
       </h1>
 
@@ -43,20 +45,20 @@ const WorkingCapitalLoanBelowComponent = () => {
       <section
         className="max-w-full  p-4  bg-white  "
         style={{
-          backgroundImage: `url(${eligibilitybg})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
       >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
         Working Capital Loan Eligibility Criteria
         </h2>
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-        <ul className="list-disc list-inside text-gray-700 space-y-2 md:space-y-4">
+        <ul className="list-disc list-inside text-white space-y-2 md:space-y-4">
         <strong>Age of Applicant:</strong> The borrower should be a minimum of 21 years of age when applying for the loan and should be no older than 65 years on maturity of the loan.  <br></br><br></br>
 <strong>Nature of Business:</strong> Working Capital finance eligibility depends on the nature of the business. Individuals, proprietors, partnership firms, private or public companies, retailers, traders or any other business owner engaged in the business of service, manufacturing products, or trading sectors are eligible to apply for WC Loan. <br></br><br></br>
 <strong>Turnover:</strong> Depending on the chosen lending bank, the business turnover amount would vary.  <br></br><br></br>
@@ -78,7 +80,7 @@ const WorkingCapitalLoanBelowComponent = () => {
 
    
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
         Documents required to apply for <span className="text-orange-500"> Working Capital Loan</span>
         </h2>
 
