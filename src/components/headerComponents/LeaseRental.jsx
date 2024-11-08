@@ -7,7 +7,7 @@ import LeaseRentalFAQ from '../headerCompoFAQs/LeaseRentalFAQ';
 const LeaseRental = () => {
   return (
     <div>
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Lease Rental Discounting (LRD)
       </h1>
 
@@ -40,8 +40,8 @@ const LeaseRental = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-          Eligibility Criteria
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+          Eligibility <span className='text-orange-500'>Criteria</span>
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
           <ul className="list-none space-y-4 md:space-y-6">
@@ -76,7 +76,7 @@ const LeaseRental = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
           Documents Required to Apply for <span className="text-orange-500">Lease Rental Discounting</span>
         </h2>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">

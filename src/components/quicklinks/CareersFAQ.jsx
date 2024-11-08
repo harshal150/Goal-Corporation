@@ -107,7 +107,7 @@ FaqItem.propTypes = {
 
 const CareersFAQ = () => {
   return (
-    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24 dark:bg-[#0b1727] text-zinc-900  text-gray-800">
+    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24  text-zinc-900  text-gray-800">
       <div className="container px-4 sm:px-6 md:px-8 lg:px-36 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">

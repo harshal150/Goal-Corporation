@@ -5,7 +5,8 @@ import test3 from '../../assets/Header/new1.jpg';
 
 
 // import bgimage from '../../assets/Header/bg10.avif'
-import bgimage from '../../assets/testimonialbg2.avif'
+// import bgimage from '../../assets/testimonialbg2.avif'
+import bgimage from '../../assets/testimonialproducts3.avif'
  
 const testimonials = [
   {
@@ -86,16 +87,16 @@ const TestimonialSlider = () => {
         {/* Testimonial */}
         <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl flex flex-col md:flex-row items-center w-full md:w-[80%] space-y-4 md:space-y-0 md:space-x-8 transition-transform transform hover:scale-105 duration-300 ease-in-out">
           <div className="w-full md:w-2/3 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-blue-600 mb-4 md:mb-6">
-              Our Customer Success Stories
+            <h2 className="text-xl md:text-3xl lg:text-3xl font-extrabold text-blue-600 mb-4 md:mb-6">
+              Our Customer <span className='text-orange-500'>Success Stories</span>
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-800 italic mb-4 md:mb-6">
               "{testimonials[currentIndex].text}"
             </p>
-            <p className="font-bold text-lg md:text-xl lg:text-2xl text-gray-900">
+            <p className="font-bold text-lg md:text-xl lg:text-xl text-gray-900">
               {testimonials[currentIndex].author}
             </p>
-            <p className="text-sm md:text-base lg:text-lg text-gray-600">
+            <p className="text-sm md:text-base lg:text-sm text-gray-600">
               {testimonials[currentIndex].role}
             </p>
           </div>

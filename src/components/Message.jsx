@@ -79,7 +79,7 @@ const Rating = ({ rating, showLabel, className, ...rest }) => (
 					content = (
 						<FontAwesomeIcon
 							icon={faStar}
-							className="text-yellow-200 dark:text-opacity-20"
+							className="text-yellow-200 "
 						/>
 					);
 
@@ -99,7 +99,7 @@ Rating.propTypes = {
 const TestimonialItem = ({ item }) => {
 	const { rating, content, photo, name } = item;
 	return (
-		<div className="bg-white dark:text-slate-800 shadow-xl rounded-xl hover:-translate-y-1 h-full duration-300 p-6">
+		<div className="bg-white  shadow-xl rounded-xl hover:-translate-y-1 h-full duration-300 p-6">
 			<div className="mt-4">
 				{/* <Rating rating={rating} showLabel={false} /> */}
 				<p className="opacity-50 mb-6 leading-loose font-semibold">{content}</p>
@@ -135,7 +135,7 @@ const Message = () => {
 		}
 	};
 	return (
-		<section className="ezy__testimonial20 light py-14 p-10 md:py-24 bg-white dark:bg-[#F9F6F1] text-zinc-900 dark:text-white flex justify-center">
+		<section className="ezy__testimonial20 light py-14 p-10 md:py-24 bg-white  text-zinc-900  flex justify-center">
 			<div className="container relative">
 				<div className="flex justify-between mb-md-4">
 					<div className="w-2/3 lg:max-w-lg">
@@ -150,13 +150,13 @@ const Message = () => {
 					<div className="w-1/3">
 						<div className="flex justify-end items-center relative h-full">
 							<button
-								className="text-lg bg-white shadow-xl dark:bg-slate-800 opacity-75 hover:opacity-100 w-12 h-12 flex justify-center items-center rounded-full mr-4"
+								className="text-lg bg-white shadow-xl opacity-75 hover:opacity-100 w-12 h-12 flex justify-center items-center rounded-full mr-4"
 								onClick={() => handleControl("prev")}
 							>
 								<FontAwesomeIcon icon={faAngleLeft} />
 							</button>
 							<button
-								className="text-lg bg-white shadow-xl dark:bg-slate-800 opacity-75 hover:opacity-100 w-12 h-12 flex justify-center items-center rounded-full"
+								className="text-lg bg-white shadow-xl  opacity-75 hover:opacity-100 w-12 h-12 flex justify-center items-center rounded-full"
 								onClick={() => handleControl("next")}
 							>
 								<FontAwesomeIcon icon={faAngleRight} />

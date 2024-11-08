@@ -33,7 +33,7 @@ const features = [
 
 const FeatureItem = ({ feature }) => {
 	return (
-		<div className="bg-blue-50 dark:bg-[#fff] rounded-[20px] relative p-6 lg:p-8 shadow-lg  ">
+		<div className="bg-blue-50  rounded-[20px] relative p-6 lg:p-8 shadow-lg  ">
 			<img
 				src={feature.image}
 				alt={feature.title}
@@ -47,7 +47,7 @@ const FeatureItem = ({ feature }) => {
 
 export const Equipment = () => {
 	return (
-		<section className="py-14 md:py-24 bg-[#EBF6F9] text-zinc-900 dark:text-zinc-900 flex justify-center items-start">
+		<section className="py-14 md:py-24 bg-[#EBF6F9] text-zinc-900  flex justify-center items-start">
 			<div className="container px-4 ">
 				<div className="text-center mb-12">
 					<h2 className="text-[30px] md:text-[45px] leading-none font-bold text-blue-900 mb-6">

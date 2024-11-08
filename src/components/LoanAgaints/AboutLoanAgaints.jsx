@@ -20,7 +20,7 @@ const AboutLoanAgaints = () => {
         <CalculateEMIButton />
       </div>
 
-      <h1 className="text-[32px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[35px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Loan Against Property
       </h1>
       
@@ -66,8 +66,8 @@ const AboutLoanAgaints = () => {
         }}
       >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-        Eligibility Criteria for Loan Against Property
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+        Eligibility Criteria for <span className="text-orange-500">Loan Against Property</span>
         </h2>
 
         {/* Age Section */}
@@ -136,7 +136,7 @@ const AboutLoanAgaints = () => {
 
 
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
         Documents required for <span className="text-orange-500">Loan Against Property</span>
         </h2>
 
@@ -189,8 +189,8 @@ const AboutLoanAgaints = () => {
           }}
         >
       <div className="py-8">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
-          Fees and Charges for Loan Againts Property
+      <h2 className="text-xl sm:text-3xl md:text-3xl mb-2 md:mb-2 text-center font-bold text-blue-600 capitalize ">
+          Fees and Charges for <span className="text-orange-500">Loan Againts Property</span>
           </h2>
       </div>
           <p className="text-xs sm:text-sm  md:text-base mb-4 md:mb-6 text-center font-normal md:mt-6 mx-4 md:mx-8 lg:mx-32">

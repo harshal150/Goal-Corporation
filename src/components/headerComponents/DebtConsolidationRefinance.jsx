@@ -6,8 +6,8 @@ import DebtConsolidationRefinanceFAQ from '../headerCompoFAQs/DebtConsolidationR
 const DebtConsolidationRefinance = () => {
   return (
     <div>
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
-        Debt Consolidation & Refinance
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+        Debt Consolidation & <span className='text-orange-500'>Refinance</span> 
       </h1>
 
       <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-2">
@@ -39,8 +39,8 @@ const DebtConsolidationRefinance = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-          Eligibility Criteria
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+          Eligibility <span className='text-orange-500'>Criteria</span> 
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
           <ul className="list-none space-y-4 md:space-y-6">
@@ -56,8 +56,8 @@ const DebtConsolidationRefinance = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents Required for Debt Consolidation & Refinance
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+          Documents Required for <span className='text-orange-500'>Debt Consolidation & Refinance</span> 
         </h2>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
           <div className="flex-1">

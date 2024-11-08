@@ -124,7 +124,7 @@ const WorkingCapitalHeroSection = () => {
         {/* Text Section */}
         <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            Goal Corporation offers flexible Working Capital loans to help businesses manage daily operations.
+            Goal Corporation offers <span className='text-[#EF4444]'>flexible Working Capital loans</span> to help businesses manage daily operations.
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
             Explore our wide range of Working Capital loan options designed to fit your unique requirements.

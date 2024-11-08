@@ -120,12 +120,12 @@ FaqItem.propTypes = {
 
 const HomeFAQ = () => {
   return (
-    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24 dark:bg-[#0b1727] text-zinc-900  text-gray-800" >
+    <section className="ezy__faq1 light py-10 md:py-14 lg:py-24  text-zinc-900  text-gray-800" >
       <div className="container px-4 sm:px-6 md:px-8 lg:px-24 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
-            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-             FAQ's about Home Loans
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
+             FAQ's about <span className="text-orange-500">Home Loan</span>
             </h2>
             <p className="text-sm md:text-sm lg:text-sm">
               Get answers to common questions about home loans and understand how home loans can help you own your dream home with ease.

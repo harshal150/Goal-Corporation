@@ -92,7 +92,7 @@ const FaqItem = ({ faq }) => {
       ref={faqRef}
       className={`transform transition-transform duration-500 ease-in-out ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      } shadow dark:shadow-none bg-white rounded-lg mt-4 md:mt-6`}
+      } shadow  bg-white rounded-lg mt-4 md:mt-6`}
     >
       <a
         href="#!"
@@ -120,7 +120,7 @@ const PersonalFAQ = () => {
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
             <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-              FAQ's about Personal Loan
+              FAQ's about <span className="text-orange-500">Personal Loan</span>
             </h2>
             {/* <p className="text-sm md:text-base lg:text-lg">
               Get answers to common questions about personal loans and understand how they can help you.

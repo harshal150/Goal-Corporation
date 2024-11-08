@@ -8,7 +8,7 @@ const LifeAtGoalCorporation = () => {
         navigate("/about");
     }
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center p-8  rounded-lg shadow-lg">
+    <div className="flex flex-col md:flex-row items-center justify-center p-8 rounded-lg shadow-lg">
       <div className="md:w-1/2 p-6">
         <img
           src={image}

@@ -6,7 +6,7 @@ import BalanceTransferFAQ from '../headerCompoFAQs/BalanceTransferFAQ';
 const BalanceTransfer = () => {
   return (
     <div>
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Balance Transfer
       </h1>
 
@@ -31,7 +31,7 @@ const BalanceTransfer = () => {
 
       {/* Benefits and Features Section */}
       <section className="max-w-full p-4 bg-white">
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+        <h2 className="text-[12px] md:text-[16px] text-left font-bold text-black mt-6 capitalize mb-4 md:mb-8 lg:ml-16">
           Benefits and Features
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
@@ -56,8 +56,8 @@ const BalanceTransfer = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-          Eligibility Criteria
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+          Eligibility <span className='text-orange-500'>Criteria</span>
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
           <ul className="list-none space-y-4 md:space-y-6">
@@ -76,7 +76,7 @@ const BalanceTransfer = () => {
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
         <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents Required for Balance Transfer
+          Documents Required for <span className='text-orange-500'>Balance Transfer</span> 
         </h2>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
           <div className="flex-1">

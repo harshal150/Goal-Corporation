@@ -6,8 +6,8 @@ import CreditScoreCheckFAQ from '../headerCompoFAQs/CreditScoreCheckFAQ';
 const CreditScoreCheck = () => {
   return (
     <div>
-      <h1 className="text-[28px] md:text-[40px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
-        Check Your Credit Score for Free
+      <h1 className="text-[28px] md:text-[32px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
+        Check Your <span className='text-orange-500'>Credit Score for Free</span>
       </h1>
 
       <div className="relative max-w-full mx-auto lg:mx-12 px-10 mt-2">
@@ -39,8 +39,8 @@ const CreditScoreCheck = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-          How to Check Your Credit Score
+        <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
+          How to Check Your <span className='text-orange-500'>Credit Score</span>
         </h2>
         <div className="mb-4 md:mb-6 sm:mx-14">
           <ul className="list-none space-y-4 md:space-y-6">
@@ -55,8 +55,8 @@ const CreditScoreCheck = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-2xl md:text-4xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents and Information Needed
+        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+          Documents and <span className='text-orange-500'>Information Needed</span>
         </h2>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
           <div className="flex-1">

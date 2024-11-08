@@ -36,10 +36,10 @@ const LoanEligibilityCard = () => {
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center">
         {/* Text Section */}
         <div className="text-center md:text-left mb-4 md:mb-0 mx-3">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3">
-             Check your Eligibility and Documentation for <span >{currentRoute.Title}</span>
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
+             Check your <span className='text-orange-300'>Eligibility</span> and <span className='text-orange-300'>Documentation</span>  for <span >{currentRoute.Title}</span>
           </h2>
-          <p className="text-sm md:text-base text-white font-semibold">
+          <p className="text-sm md:text-sm text-white font-semibold">
             Read on to know the criteria required to apply for our {currentRoute.Title}.
           </p>
         </div>

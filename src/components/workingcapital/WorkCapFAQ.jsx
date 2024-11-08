@@ -120,7 +120,7 @@ const WorkCapFAQ = () => {
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
             <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-             FAQ's about Working Capital Loan
+             FAQ's about  <span className="text-orange-500">Working Capital Loan</span>
             </h2>
             {/* <p className="text-sm md:text-base lg:text-lg">
               Get answers to common questions about working capital loans and understand how they can help your business manage its day-to-day operational expenses.
