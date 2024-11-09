@@ -5,8 +5,8 @@ import map1 from '../assets/map1.avif';
 
 const cities = [
   { name: "Bangalore", top: "70%", left: "47%", address: "123 MG Road, Bangalore, Karnataka" },
-  { name: "Nagarbhavi ", top: "68%", left: "46%", address: "NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
-  { name: "JayaNagar", top: "70%", left: "44%", address: " NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
+  // { name: "Nagarbhavi ", top: "68%", left: "46%", address: "NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
+  // { name: "JayaNagar", top: "70%", left: "44%", address: " NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
   { name: "Mumbai", top: "58%", left: "40%", address: "C-209, Crystal Plaza, New Link Road, Andheri West, Mumbai 400053, opposite to Infiniti Mall" },
   { name: "Delhi", top: "31%", left: "49%", address: "789 Connaught Place, Delhi" },
   { name: "Chennai", top: "75%", left: "53%", address: "101 Marina Beach, Chennai, Tamil Nadu" },
