@@ -77,28 +77,51 @@ const BalanceTransfer = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents Required for <span className='text-orange-500'>Balance Transfer</span> 
-        </h2>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          <div className="flex-1">
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-              <li>List of Documents (LOD)</li>
-              <li>Statement of Accounts (SOA)</li>
-              <li>Foreclosure Letter (FC)</li>
-              <li>Latest 1 year Bank Statement from where EMI is served</li>
-            </ul>
-          </div>
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
-      
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents Required for <span className="text-orange-500">Balance Transfer</span> 
+  </h2>
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    <div className="flex-1">
+      <p className="text-gray-700 text-md mb-3">
+        Other than the basic documents required for processing any loan, like KYC, Financial documents, Banking, and Property Legal documents, the following documents are specifically required for Balance Transfer Loans:
+      </p>
+      <table className="w-full text-left border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100 text-gray-700">
+            <th className="px-4 py-2 border border-gray-300">Document Name</th>
+            <th className="px-4 py-2 border border-gray-300">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">List of Documents (LOD)</td>
+            <td className="px-4 py-2 border border-gray-300">Comprehensive list of all relevant documents for the loan.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Statement of Accounts (SOA)</td>
+            <td className="px-4 py-2 border border-gray-300">Detailed statement of loan accounts with previous lender.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Foreclosure Letter (FC)</td>
+            <td className="px-4 py-2 border border-gray-300">Letter confirming closure or foreclosure of previous loan.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Latest 1-year Bank Statement</td>
+            <td className="px-4 py-2 border border-gray-300">Bank statement from where EMI payments were made.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
       <BalanceTransferFAQ />
     </div>
   );

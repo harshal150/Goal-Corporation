@@ -88,41 +88,63 @@ const DebtRestructureBelowComponent = () => {
 
    
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-        Documents required to apply for <span className="text-orange-500">Debt Restructuring</span>
-        </h2>
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents required to apply for <span className="text-orange-500">Debt Restructuring</span>
+  </h2>
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          {/* Text Content */}
-          <div className="flex-1">
-            {/* <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Income Proof Documents</h3> */}
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Document Type
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Proof of Identity/Residence</td>
+            <td className="px-4 py-3 border-b text-gray-700">Documents confirming identity and address, such as Passport, Aadhar, or Utility Bills</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Proof of Income</td>
+            <td className="px-4 py-3 border-b text-gray-700">Recent salary slips, ITR, or bank statements</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Property-Related Documents</td>
+            <td className="px-4 py-3 border-b text-gray-700">Title deed, property tax receipts, or sale deed</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Proof of Business (for Self-Employed)</td>
+            <td className="px-4 py-3 border-b text-gray-700">Business registration documents, GST registration, etc.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Account Statement</td>
+            <td className="px-4 py-3 border-b text-gray-700">Bank account statement for the last 6 months</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Existing Loans Statement</td>
+            <td className="px-4 py-3 border-b text-gray-700">Statement of accounts for all existing loans</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            {/* Salaried Individuals */}
-            <div className="mb-4 md:mb-6">
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-            <li>Proof of identity/residence</li>
-            <li>Proof of income</li>
-            <li>Property-related documents</li>
-            <li>Proof of Business (for self-employed)</li>
-            <li>Account statement for the last 6 months</li>
-            <li>All existing loans statement of account</li>
-          </ul>
-            </div>
-
-           
-       
-          </div>
-
-          {/* Image on Right */}
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg "
-            />
-          </div>
-        </div>
-      </section>
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
 
 
 {/* <PersonalFAQ/> */}

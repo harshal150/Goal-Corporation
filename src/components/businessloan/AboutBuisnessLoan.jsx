@@ -10,6 +10,7 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 import Banks from "../homeloan/Banks";
 import backgroundImage from '../../assets/testimonial/bg2.avif'
+import BusinessBanks from "./BusinessBanks";
 
 
 const AboutBuisnessLoan = () => {
@@ -35,13 +36,13 @@ const AboutBuisnessLoan = () => {
               Key Takeaways:
               <ul className="text-[14px] md:text-[15px] ml-5 md:ml-10 mt-3 text-left list-disc space-y-2">
                 <li>
-                •	Maximum loan amount of up to Rs.75 lakhs
+                	Maximum loan amount of up to Rs.75 lakhs
                 </li>
                 <li>
-                •	Faster processing of loan – disbursement within 5-7 working day
+                	Faster processing of loan – disbursement within 5-7 working day
                 </li>
                 <li>
-                •	Collateral free (Unsecured) loans 
+                	Collateral free (Unsecured) loans 
                 </li>
                 <li>
                 •	Flexible repayment tenure (up to 5 years)
@@ -63,8 +64,8 @@ const AboutBuisnessLoan = () => {
       </div>
 
       <LoanEligibilityCard />
-      <Banks/>
-
+      {/* <Banks/> */}
+   <BusinessBanks/>
 
                   
       <div>

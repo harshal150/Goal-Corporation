@@ -57,29 +57,56 @@ const DebtConsolidationRefinance = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents Required for <span className='text-orange-500'>Debt Consolidation & Refinance</span> 
-        </h2>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          <div className="flex-1">
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-              <li>Proof of income (recent pay stubs or bank statements)</li>
-              <li>Existing loan account statements</li>
-              <li>Identification documents (e.g., PAN Card, Aadhaar)</li>
-              <li>Proof of residence (e.g., utility bill, rental agreement)</li>
-              <li>Credit report, if required by the lender</li>
-              <li>Financial statements, if applicable, to show existing debt obligations</li>
-            </ul>
-          </div>
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents Required for <span className="text-orange-500">Debt Consolidation & Refinance</span>
+  </h2>
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    <div className="flex-1">
+      <table className="w-full text-left border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100 text-gray-700">
+            <th className="px-4 py-2 border border-gray-300">Document Name</th>
+            <th className="px-4 py-2 border border-gray-300">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Proof of Income</td>
+            <td className="px-4 py-2 border border-gray-300">Recent pay stubs or bank statements showing income.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Existing Loan Statements</td>
+            <td className="px-4 py-2 border border-gray-300">Statements from accounts of current loans or debts.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Identification Documents</td>
+            <td className="px-4 py-2 border border-gray-300">Government ID, such as PAN Card or Aadhaar.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Proof of Residence</td>
+            <td className="px-4 py-2 border border-gray-300">Utility bill or rental agreement to confirm residence.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Credit Report</td>
+            <td className="px-4 py-2 border border-gray-300">Credit report, if required by the lender.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Financial Statements</td>
+            <td className="px-4 py-2 border border-gray-300">Documents showing existing debt obligations, if applicable.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
 
       <DebtConsolidationRefinanceFAQ />
     </div>

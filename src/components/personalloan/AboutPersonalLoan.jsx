@@ -12,6 +12,7 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 import Banks from "../homeloan/Banks";
 import backgroundImage from '../../assets/testimonial/bg2.avif'
+import PersonalBanks from "./PersonalBanks";
 
 
 const AboutPersonalLoan = () => {
@@ -63,7 +64,8 @@ const AboutPersonalLoan = () => {
       </div>
 
       <LoanEligibilityCard />
-      <Banks/>
+      {/* <Banks/> */}
+      <PersonalBanks/>
       <div>
         <div
           className="px-4 md:px-8 lg:px-16 "

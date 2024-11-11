@@ -53,7 +53,7 @@ const WorkingCapitalLoanBelowComponent = () => {
       >
         {/* Title */}
         <h2 className="text-xl md:text-3xl text-center font-bold text-blue-600 mt-6 capitalize mb-4 md:mb-8">
-        Working Capital Loan Eligibility Criteria
+        Working Capital Loan <span className='text-orange-500'>Eligibility Criteria</span>
         </h2>
 
         {/* Age Section */}
@@ -79,56 +79,96 @@ const WorkingCapitalLoanBelowComponent = () => {
 
 
    
+
+
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-        Documents required to apply for <span className="text-orange-500"> Working Capital Loan</span>
-        </h2>
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents required to apply for <span className="text-orange-500">Working Capital Loan</span>
+  </h2>
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          {/* Text Content */}
-          <div className="flex-1">
-          <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-            <li>
-              Individual KYC (Photo, Pan, Aadhar Card of all applicants and
-              co-applicants)
-            </li>
-            <li>
-              Residence light bill of proprietor/all directors/all partners (If
-              rented then rent agreement)
-            </li>
-            <li>Permanent Address Proof</li>
-            <li>
-              Business KYC (Company Pan Card, Udyam Certificate, Gumasta
-              Certificate, GST Certificate, List of Directors & Shareholding
-              Pattern, Partnership Deed, Certification of Incorporation)
-            </li>
-            <li>
-              MOA (Memorandum of Association) and AOA (Articles of Association)
-            </li>
-            <li>Office light bill (If rented then rent agreement)</li>
-            <li>Latest 2 year Company ITR with audit report (CA Attested)</li>
-            <li>Latest 2 year ITR of all directors (CA Attested)</li>
-            <li>1 year GST return.</li>
-            <li>1 year current account statement.</li>
-            <li>
-              All ongoing loans on company and individual name sanction letters.
-            </li>
-            <li>Repayment track record of all ongoing loans.</li>
-            <li>Form 32 and Form 20B (if required)</li>
-          </ul>
-          </div>
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Document Type
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Individual KYC</td>
+            <td className="px-4 py-3 border-b text-gray-700">Photo, PAN, Aadhar Card of all applicants and co-applicants</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Residence Light Bill</td>
+            <td className="px-4 py-3 border-b text-gray-700">Proprietor/all directors/all partners (If rented, include rent agreement)</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Permanent Address Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">Document to confirm permanent residence</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Business KYC</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Company PAN Card, Udyam Certificate, Gumasta Certificate, GST Certificate, List of Directors & Shareholding Pattern, Partnership Deed, Certification of Incorporation
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">MOA and AOA</td>
+            <td className="px-4 py-3 border-b text-gray-700">Memorandum of Association and Articles of Association</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Office Light Bill</td>
+            <td className="px-4 py-3 border-b text-gray-700">Office light bill (If rented, include rent agreement)</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Company ITR</td>
+            <td className="px-4 py-3 border-b text-gray-700">Latest 2 years' Company ITR with audit report (CA attested)</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Directors' ITR</td>
+            <td className="px-4 py-3 border-b text-gray-700">Latest 2 years' ITR of all directors (CA attested)</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">GST Return</td>
+            <td className="px-4 py-3 border-b text-gray-700">1 year GST return</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Current Account Statement</td>
+            <td className="px-4 py-3 border-b text-gray-700">1 year current account statement</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Ongoing Loans</td>
+            <td className="px-4 py-3 border-b text-gray-700">All ongoing loans on company and individual names with sanction letters</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Repayment Track Record</td>
+            <td className="px-4 py-3 border-b text-gray-700">Record of repayments for all ongoing loans</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Form 32 and Form 20B</td>
+            <td className="px-4 py-3 border-b text-gray-700">Required if applicable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-          {/* Image on Right */}
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg "
-            />
-          </div>
-        </div>
-      </section>
-
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
 
 {/* <PersonalFAQ/> */}
 <WorkCapFAQ/>

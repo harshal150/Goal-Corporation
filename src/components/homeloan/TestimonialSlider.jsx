@@ -118,7 +118,6 @@
 // export default TestimonialSlider;
 
 
-
 import React from "react";
 import PropTypes from "prop-types";
 import test1 from '../../assets/DirectorImage.jpg';
@@ -134,37 +133,33 @@ const testimonialList = [
     },
     description: "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
   },
-  // Additional initial testimonials
-  ...[
-    {
-      text: "I've been associated with this platform for more than 6 months. The transparency I've seen is unmatched.",
-      author: { fullName: "Mr. John Doe", picture: test1, designation: "Business Owner" },
-    },
-    {
-      text: "This platform has helped me bridge the gap between my business goals and successful execution.",
-      author: { fullName: "Ms. Jane Smith", picture: test2, designation: "Entrepreneur" },
-    },
-    {
-      text: "Their timely support and detailed information have been crucial for our growth and smooth operations.",
-      author: { fullName: "Mr. William Turner", picture: test3, designation: "Operations Manager" },
-    },
-   
-  ],
+  {
+    text: "I've been associated with this platform for more than 6 months. The transparency I've seen is unmatched.",
+    author: { fullName: "Mr. John Doe", picture: test1, designation: "Business Owner" },
+  },
+  {
+    text: "This platform has helped me bridge the gap between my business goals and successful execution.",
+    author: { fullName: "Ms. Jane Smith", picture: test2, designation: "Entrepreneur" },
+  },
+  {
+    text: "Their timely support and detailed information have been crucial for our growth and smooth operations.",
+    author: { fullName: "Mr. William Turner", picture: test3, designation: "Operations Manager" },
+  },
 ];
 
 const TestimonialItem = ({ testimonial }) => (
-  <div className="bg-white shadow-md rounded-xl p-6 h-[220px] w-[300px] md:w-[530px] md:h-[250px] transition-transform transform  hover:shadow-2xl hover:border  flex items-center cursor-pointer">
+  <div className="bg-white shadow-md rounded-xl p-6 h-auto w-full md:w-[530px] transition-transform transform hover:shadow-2xl hover:border flex items-center cursor-pointer">
     <div className="mr-4">
       <img
         src={testimonial.author.picture}
         alt={testimonial.author.fullName}
-        className="w-24 h-24 md:w-48 md:h-28 rounded-2xl "
+        className="w-32 h-16 sm:w-32 sm:h-32 md:w-52 md:h-28 rounded-full"
       />
     </div>
     <div>
-      <h4 className="text-xl md:text-2xl font-medium mb-1">{testimonial.author.fullName}</h4>
+      <h4 className="text-lg md:text-xl font-medium mb-1">{testimonial.author.fullName}</h4>
       <p className="text-sm text-gray-500 mb-2">{testimonial.author.designation}</p>
-      <p className="opacity-80">{testimonial.description || testimonial.text}</p>
+      <p className="opacity-80 text-sm">{testimonial.description || testimonial.text}</p>
     </div>
   </div>
 );
@@ -175,14 +170,14 @@ TestimonialItem.propTypes = {
 
 const TestimonialSlider = () => {
   return (
-    <section className="ezy__testimonial10 light py-14 md:py-24 bg-white text-zinc-900 dark:text-white">
+    <section className="light py-10 md:py-14 lg:py-24 bg-white text-zinc-900">
       <div className="container relative px-4 mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-xl md:text-3xl font-bold mb-4 text-blue-500">
+          <h2 className="text-lg md:text-2xl font-bold mb-4 text-blue-500">
             Our Customer's <span className="text-orange-500">Success Stories</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           {testimonialList.map((testimonial, i) => (
             <div className="col-span-1 flex justify-center" key={i}>
               <TestimonialItem testimonial={testimonial} />

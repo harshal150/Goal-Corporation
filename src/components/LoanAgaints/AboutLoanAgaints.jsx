@@ -154,9 +154,9 @@ const AboutLoanAgaints = () => {
 
         {/* Age Section */}
         <div className="mb-4 md:mb-6 sm:mx-14">
-          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 md:mb-4">
+          <p className="text-md md:text-md font-bold  text-white mb-2 md:mb-4">
             Age:
-          </h3>
+          </p>
           <ul className="list-disc list-inside text-white space-y-2">
             <li>
               You must be above 21 years of age at the time of commencing your

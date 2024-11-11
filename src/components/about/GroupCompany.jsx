@@ -127,7 +127,7 @@ const GroupCompany = () => {
         ].map((company, index) => (
           <Link
             key={index}
-            className="group flex flex-col items-center justify-center w-[300px] sm:w-[380px] lg:w-[380px] h-full p-4 text-center bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl hover:bg-indigo-50 transition-all duration-300 ease-in-out"
+            className="group flex flex-col items-center justify-center w-[300px] sm:w-[380px] lg:w-[340px] h-full p-4 text-center bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl hover:bg-indigo-50 transition-all duration-300 ease-in-out"
             to={company.link}
             target="_blank"
             rel="noreferrer"

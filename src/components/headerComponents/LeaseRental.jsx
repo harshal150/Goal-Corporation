@@ -77,27 +77,48 @@ const LeaseRental = () => {
 
       {/* Documentation Section */}
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents Required to Apply for <span className="text-orange-500">Lease Rental Discounting</span>
-        </h2>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          <div className="flex-1">
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-              <li>Proof of property ownership</li>
-              <li>Lease agreement with the tenant</li>
-              <li>Evidence of consistent rental income</li>
-              <li>Bank statements and other relevant financial documents</li>
-            </ul>
-          </div>
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents Required to Apply for <span className="text-orange-500">Lease Rental Discounting</span>
+  </h2>
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    <div className="flex-1">
+      <table className="w-full text-left border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100 text-gray-700">
+            <th className="px-4 py-2 border border-gray-300">Document Name</th>
+            <th className="px-4 py-2 border border-gray-300">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Proof of Property Ownership</td>
+            <td className="px-4 py-2 border border-gray-300">Documentation showing ownership of the property.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Lease Agreement</td>
+            <td className="px-4 py-2 border border-gray-300">Signed lease agreement with the tenant.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Evidence of Rental Income</td>
+            <td className="px-4 py-2 border border-gray-300">Proof of consistent rental income from the property.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Bank Statements & Financial Documents</td>
+            <td className="px-4 py-2 border border-gray-300">Recent bank statements and other financial records.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
       
       <LeaseRentalFAQ />
 

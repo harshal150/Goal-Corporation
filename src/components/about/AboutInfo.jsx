@@ -35,7 +35,7 @@ const AboutInfo = () => {
 
 
     <HomeNavbar/>
-      <div className="sm:flex items-center max-w-screen-xl mx-auto mt-7">
+      <div className="sm:flex items-center max-w-screen-xl mx-auto mt-1">
         {/* Text Section with Slide-In from Right */}
         <div
           className={`sm:w-3/5 p-10 transform transition-all duration-1000 ease-out delay-300 ${

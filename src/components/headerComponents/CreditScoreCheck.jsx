@@ -54,30 +54,54 @@ const CreditScoreCheck = () => {
         </div>
       </section>
 
-      {/* Documentation Section */}
-      <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents and <span className='text-orange-500'>Information Needed</span>
-        </h2>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          <div className="flex-1">
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-              <li>Basic identification details (e.g., name, date of birth)</li>
-              <li>PAN Card number or equivalent ID</li>
-              <li>Address information, if required</li>
-              <li>Mobile number for verification</li>
-              <li>Email address for report delivery</li>
-            </ul>
-          </div>
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+  {/* Documentation Section */}
+<section className="max-w-full p-4 md:p-6 text-gray-800">
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents and <span className="text-orange-500">Information Needed</span>
+  </h2>
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    <div className="flex-1">
+      <table className="w-full text-left border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100 text-gray-700">
+            <th className="px-4 py-2 border border-gray-300">Information Type</th>
+            <th className="px-4 py-2 border border-gray-300">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Basic Identification</td>
+            <td className="px-4 py-2 border border-gray-300">Name, date of birth, and other personal details.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">PAN Card or Equivalent ID</td>
+            <td className="px-4 py-2 border border-gray-300">Government-issued ID number for identification.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Address Information</td>
+            <td className="px-4 py-2 border border-gray-300">Residential or mailing address, if required.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Mobile Number</td>
+            <td className="px-4 py-2 border border-gray-300">Phone number for verification purposes.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Email Address</td>
+            <td className="px-4 py-2 border border-gray-300">Email for receiving reports and communications.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
 
       <CreditScoreCheckFAQ />
     </div>

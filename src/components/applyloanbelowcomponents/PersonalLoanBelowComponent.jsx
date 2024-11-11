@@ -76,72 +76,87 @@ const PersonalLoanBelowComponent = () => {
 
 
 
+ 
       <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-8">
-        Documents required to apply for <span className="text-orange-500">Personal Loan</span>
-        </h2>
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents required to apply for <span className="text-orange-500">Personal Loan</span>
+  </h2>
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          {/* Text Content */}
-          <div className="flex-1">
-            {/* <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Income Proof Documents</h3> */}
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Document Type
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Identity Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Passport, Voter’s ID, Driving License, PAN Card, Aadhaar Card
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Residence/Address Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Passport, Voter’s ID, Driving License, PAN Card, Aadhaar Card, Electricity Bill, Telephone Bill, Ration Card
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Age Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Passport, Voter’s ID, Driving License, PAN Card, Aadhaar Card
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Income Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">1 year Bank statement, 3 months Salary Slips</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Employment Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">Employment Certificate, Office address proof</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">GST or VAT Registration</td>
+            <td className="px-4 py-3 border-b text-gray-700">For Self-employed individuals</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Photograph</td>
+            <td className="px-4 py-3 border-b text-gray-700">Passport-size photographs</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Business Proof</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Business registration documents such as a partnership deed, Memorandum of Association (MOA), Articles of Association (AOA), etc.
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">Income Tax Returns</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              Documents of the past 2-3 years to verify income and tax payment history
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            {/* Salaried Individuals */}
-            <div className="mb-4 md:mb-6">
-             
-          <ul className="list-disc list-inside space-y-2 md:space-y-4 text-gray-700">
-            <li>
-              <strong>Identity Proof</strong> – Passport, Voter’s ID, Driving
-              License, PAN Card, Aadhaar Card
-            </li>
-            <li>
-              <strong>Proof of Residence or Address Proof</strong> – Passport,
-              Voter’s ID, Driving License, PAN Card, Aadhaar Card, Electricity
-              Bill, Telephone Bill, Ration Card
-            </li>
-            <li>
-              <strong>Age Proof</strong> – Passport, Voter’s ID, Driving
-              License, PAN Card, Aadhaar Card
-            </li>
-            <li>
-              <strong>Income Proof</strong> – 1 year Bank statement, 3 months
-              Salary Slips
-            </li>
-            <li>
-              <strong>Employment Proof</strong> – Employment Certificate, Office
-              address proof
-            </li>
-            <li>GST or VAT Registration for Self-employed</li>
-            <li>
-              <strong>Photograph</strong> – Passport-size photographs
-            </li>
-            <li>
-              <strong>Business proof</strong> – Business registration documents
-              such as a partnership deed, Memorandum of Association (MOA),
-              Articles of Association (AOA), etc.
-            </li>
-            <li>
-              <strong>Income tax returns</strong> – Documents of the past 2-3
-              years to verify income and tax payment history
-            </li>
-          </ul>
-            </div>
-
-           
-       
-          </div>
-
-          {/* Image on Right */}
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg "
-            />
-          </div>
-        </div>
-      </section>
-
+    {/* Image on Right */}
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
 
 <PersonalFAQ/>
 

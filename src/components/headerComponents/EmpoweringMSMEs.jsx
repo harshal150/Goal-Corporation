@@ -50,38 +50,65 @@ const EmpoweringMSMEs = () => {
             <li><strong>Business Vintage:</strong> Minimum 1 year of business operations is preferred.</li>
             <li><strong>Annual Turnover:</strong> Annual revenue should align with lender requirements, generally starting from Rs.10 lakhs.</li>
             <li><strong>Credit Score:</strong> A credit score of 650 or higher is generally preferred for quick loan approvals.</li>
-            <li><strong>Business Type:</strong> Applicable to all registered MSMEs including proprietorships, partnerships, LLPs, and private limited companies.</li>
+            <li><strong>Business Type:</strong> Applicable to all registered MSMEs including Proprietorships, Partnerships, LLPs and Private Limited Companies.</li>
             <li><strong>Cash Flow Stability:</strong> Consistent cash flow records help establish repayment ability.</li>
             <li><strong>Indian Citizenship:</strong> The applicant should be an Indian citizen with a registered business in India.</li>
           </ul>
         </div>
       </section>
 
-      {/* Documentation Section */}
-      <section className="max-w-full p-4 md:p-6 text-gray-800">
-        <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
-          Documents Required for <span className='text-orange-500'>Quick Loan</span>
-        </h2>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-          <div className="flex-1">
-            <ul className="list-disc list-inside space-y-2 md:space-y-3 text-gray-700">
-              <li>PAN Card of the business or proprietor</li>
-              <li>Proof of business registration (e.g., GST registration, Udyam registration)</li>
-              <li>Last 6 months’ bank statements</li>
-              <li>Address proof of business premises</li>
-              <li>Latest ITR (if applicable)</li>
-              <li>Basic KYC documents of the proprietor or directors</li>
-            </ul>
-          </div>
-          <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
-            <img
-              src={documentation}
-              alt="Documentation Illustration"
-              className="w-[130%] h-auto object-cover rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+   {/* Documentation Section */}
+<section className="max-w-full p-4 md:p-6 text-gray-800">
+  <h2 className="text-xl md:text-3xl mt-6 text-center font-bold text-blue-600 capitalize mb-4 md:mb-6">
+    Documents Required for <span className="text-orange-500">Quick Loan</span>
+  </h2>
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+    <div className="flex-1">
+      <table className="w-full text-left border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100 text-gray-700">
+            <th className="px-4 py-2 border border-gray-300">Document Name</th>
+            <th className="px-4 py-2 border border-gray-300">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">PAN Card</td>
+            <td className="px-4 py-2 border border-gray-300">PAN Card of the business or proprietor.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Proof of Business Registration</td>
+            <td className="px-4 py-2 border border-gray-300">Documents such as GST registration or Udyam registration.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Bank Statements</td>
+            <td className="px-4 py-2 border border-gray-300">Bank statements from the last 12 months.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Business Address Proof</td>
+            <td className="px-4 py-2 border border-gray-300">Proof of address for the business premises.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">ITR</td>
+            <td className="px-4 py-2 border border-gray-300">Income Tax Returns for the last 2 years, if applicable.</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border border-gray-300">Basic KYC Documents</td>
+            <td className="px-4 py-2 border border-gray-300">KYC documents of the proprietor or directors.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="flex-shrink-0 lg:w-1/3 flex items-center mb-5">
+      <img
+        src={documentation}
+        alt="Documentation Illustration"
+        className="w-[130%] h-auto object-cover rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
 
       <EmpoweringMSMEsFAQ />
     </div>

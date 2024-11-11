@@ -1,7 +1,7 @@
 // import React from 'react';
 // import { FaUsers, FaRegStar, FaHandshake, FaShieldAlt, FaLightbulb } from 'react-icons/fa';
 // import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
-import backgroundImage from "../../assets/testimonial/bg2.avif";
+// import backgroundImage from "../../assets/testimonial/bg2.avif";
 
 // const values = [
 //   {
@@ -121,6 +121,11 @@ import {
 } from "react-icons/fa";
 import PropTypes from "prop-types";
 
+import values from "../../assets/values.avif";
+import backgroundImage from "../../assets/testimonial/bg2.avif";
+
+
+
 // const serviceList = [
 // 	{
 // 		color: "red",
@@ -222,8 +227,8 @@ const ServiceItem = ({ service, isRightAlign }) => (
       </span>
     </div>
     <div>
-      <h4 className="text-2xl font-medium mb-4">{service.title}</h4>
-      <p className="opacity-80">{service.description}</p>
+      <h4 className="text-2xl font-medium text-md mb-4">{service.title}</h4>
+      <p className="opacity-80 text-sm">{service.description}</p>
     </div>
   </div>
 );
@@ -249,11 +254,11 @@ const OurValues = () => {
         opacity: "50",
       }}
     >
-      <section className="ezy__service13 light py-14 md:py-24 bg-white dark:bg-transparent dark:text-white">
+      <section className=" light py-4  bg-transperant text-white ">
         <div className="container px-4 mx-auto">
           <div className="flex items-center justify-center mb-6 sm:mb-12">
             <div className="w-full max-w-xl text-center">
-              <h2 className="text-3xl leading-none md:text-[45px] font-bold mb-4">
+              <h2 className="text-xl leading-none md:text-3xl font-bold ">
                 Our Values
               </h2>
               {/* <h2 className="text-3xl font-bold text-white-500 mb-12">Our Values</h2> */}
@@ -263,25 +268,27 @@ const OurValues = () => {
 						</p> */}
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-6 lg:gap-12 pt-12">
+          <div className="grid grid-cols-3 gap-6 lg:gap-6 pt-6">
             <div className="col-span-3 lg:col-span-1 lg:order-2">
               <div
                 className="bg-center bg-no-repeat bg-cover rounded-2xl h-full min-h-[200px]"
-                style={{
-                  backgroundImage:
-                    "url(https://cdn.easyfrontend.com/pictures/sign-in-up/sign3.jpg)",
-                }}
-              ></div>
+                // style={{
+                //   backgroundImage:values,
+                // }}
+              >
+              <img src={values} alt="ff" className="h-full rounded-xl" />
+
+              </div>
             </div>
             <div className="col-span-3 lg:col-span-1 ezy__service13-list">
-              <div className="lg:my-12">
+              <div className="lg:my-6">
                 {serviceList.slice(3, 6).map((service, i) => (
                   <ServiceItem service={service} key={i} isRightAlign={true} />
                 ))}
               </div>
             </div>
             <div className="col-span-3 lg:col-span-1 ezy__service13-list lg:order-3">
-              <div className="lg:my-12">
+              <div className="lg:my-6">
                 {serviceList.slice(0, 3).map((service, i) => (
                   <ServiceItem service={service} key={i} />
                 ))}

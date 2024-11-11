@@ -119,83 +119,89 @@ const HomeloanBelowComponent = () => {
   </h2>
 
   <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
-    {/* Text Content */}
-    <div className="flex-1">
-      {/* Salaried Individuals */}
-      <div className="mb-4 md:mb-6">
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          1. Salaried Individuals
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>Form 16</li>
-          <li>Employee Identity Card</li>
-          <li>3 Months Salary Slip</li>
-          <li>6 Month Bank Account Statement</li>
-          <li>Duration of Employment Evidence</li>
-        </ul>
-      </div>
-
-      {/* Self-Employed Individuals */}
-      <div className="mb-4 md:mb-6">
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          2. Self-Employed Individuals
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>PAN</li>
-          <li>Trade License</li>
-          <li>Partnership Deed</li>
-          <li>Article of Association</li>
-          <li>Memorandum of Association</li>
-          <li>Import Export Code</li>
-          <li>SEBI Registration Certificate</li>
-          <li>ROC Registration Certificate</li>
-          <li>Financial Statement Audited by CA</li>
-          <li>Profit & Loss Account Statement</li>
-          <li>Balance Sheet</li>
-          <li>6 Months Bank Account Statement</li>
-          <li>Professional Practice License for Doctors, Consultants, etc.</li>
-          <li>
-            Registration Certificate of Establishment for Shops, Factories, and
-            Other Establishments
-          </li>
-          <li>Business Address Proof</li>
-        </ul>
-      </div>
-
-      {/* NRI Documentation */}
-      <div className="mb-4 md:mb-6">
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          3. Documents Required from all Non-Resident Indians (NRIs) Applicants
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>Valid Passport and Visa Copy</li>
-          <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
-          <li>Employment Proof (Appointment Letter or Employment Contract)</li>
-          <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
-          <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
-          <li>Power of Attorney (if required)</li>
-        </ul>
-      </div>
-
-      {/* Other Documents */}
-      <div>
-        <h4 className="text-md md:text-lg font-semibold mb-1 md:mb-2">
-          4. Other Documents
-        </h4>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
-          <li>Property Documents – entire set of link documents</li>
-          <li>Sale Deed of current owner</li>
-          <li>Stamped Agreement of Sale</li>
-          <li>No Objection Certificate (NOC) from Housing Society/Builder</li>
-          <li>Possession Certificate</li>
-          <li>Land Tax Receipt</li>
-          <li>Construction Cost Estimate</li>
-          <li>Bank Account Statement of Payment Made to Seller or Builder</li>
-          <li>Payment Receipt of Payment Made to Seller or Builder</li>
-          <li>In case of resale property, share certificate is required</li>
-          <li>Occupancy Certificate</li>
-        </ul>
-      </div>
+    {/* Table Content */}
+    <div className="flex-1 overflow-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Category
+            </th>
+            <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
+              Required Documents
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">1. Salaried Individuals</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Form 16</li>
+                <li>Employee Identity Card</li>
+                <li>3 Months Salary Slip</li>
+                <li>6 Month Bank Account Statement</li>
+                <li>Duration of Employment Evidence</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">2. Self-Employed Individuals</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>PAN</li>
+                <li>Trade License</li>
+                <li>Partnership Deed</li>
+                <li>Article of Association</li>
+                <li>Memorandum of Association</li>
+                <li>Import Export Code</li>
+                <li>SEBI Registration Certificate</li>
+                <li>ROC Registration Certificate</li>
+                <li>Financial Statement Audited by CA</li>
+                <li>Profit & Loss Account Statement</li>
+                <li>Balance Sheet</li>
+                <li>6 Months Bank Account Statement</li>
+                <li>Professional Practice License for Doctors, Consultants, etc.</li>
+                <li>Registration Certificate of Establishment for Shops, Factories, and Other Establishments</li>
+                <li>Business Address Proof</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">
+              3. Documents Required from all Non-Resident Indians (NRIs)
+            </td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Valid Passport and Visa Copy</li>
+                <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
+                <li>Employment Proof (Appointment Letter or Employment Contract)</li>
+                <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
+                <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
+                <li>Power of Attorney (if required)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-3 border-b text-gray-700 font-medium">4. Other Documents</td>
+            <td className="px-4 py-3 border-b text-gray-700">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Property Documents – entire set of link documents</li>
+                <li>Sale Deed of current owner</li>
+                <li>Stamped Agreement of Sale</li>
+                <li>No Objection Certificate (NOC) from Housing Society/Builder</li>
+                <li>Possession Certificate</li>
+                <li>Land Tax Receipt</li>
+                <li>Construction Cost Estimate</li>
+                <li>Bank Account Statement of Payment Made to Seller or Builder</li>
+                <li>Payment Receipt of Payment Made to Seller or Builder</li>
+                <li>In case of resale property, share certificate is required</li>
+                <li>Occupancy Certificate</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     {/* Image on Right */}
@@ -203,7 +209,7 @@ const HomeloanBelowComponent = () => {
       <img
         src={documentation}
         alt="Documentation Illustration"
-        className="w-[130%] h-auto object-cover rounded-lg "
+        className="w-[130%] h-auto object-cover rounded-lg"
       />
     </div>
   </div>
