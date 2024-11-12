@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import canara from '../../assets/partner/canara.jpg';
 import pnb from '../../assets/partner/pnb housing.png';
@@ -18,11 +15,11 @@ import axisfinance from '../../assets/partner/axis finance.png'
 import bajajlap from '../../assets/partner/bajaj lap.jpeg'
 import piramal from '../../assets/partner/piramal.png'
 import icicihfc from '../../assets/partner/icici hfc.jpeg'
-import poonawala from '../../assets/partner/Frame10.png'
 import { Link } from 'react-router-dom';
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
-    const loanType = "Business Loan";
+    const loanType = "Debt Restructuring";
+
   return (
     <div className="bg-gray-100 shadow-md rounded-lg p-6 mb-4 flex flex-col md:flex-row md:items-center justify-between text-center md:text-left">
       <div className="flex flex-col items-center md:flex-row md:space-x-4">
@@ -83,56 +80,56 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
   );
 };
 
-const BusinessBanks = () => {
+const DebtBanks = () => {
   const loanData = [
     {
       logo: icici,
       bankName: 'ICICI Bank Loan',
-      interestRate: '13.25% to 19.50%',
-      processingFee: '2% + GST',
-      loanAmount: '2 lacs to 70 lacs',
+      interestRate: '08.65% to 09.25%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '5 lacs to 15 crore',
     },
     {
       logo: kotak,
       bankName: 'Kotak Mahindra Bank Loan',
-      interestRate: '14.00% to 20.00%',
-      processingFee: '2% + GST',
-      loanAmount: '5 lacs to 2 crore',
+      interestRate: '08.65% to 09.25%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '5 lacs to 15 crore',
     },
     {
       logo: hdfc,
       bankName: 'HDFC Bank Loan',
-      interestRate: '10.75% to 22.50%',
-      processingFee: '2% + GST',
-      loanAmount: '1 lacs to 75 lacs',
+      interestRate: '08.65% to 09.25%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '5 lacs to 15 crore',
     },
     {
       logo: axis,
       bankName: 'Axis Bank Loan',
-      interestRate: '11.05% to 20.00%',
-      processingFee: '1.75% + GST to 3% + GST',
-      loanAmount: '5 lacs to 75 lacs ',
+      interestRate: '08.65% to 09.25%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '5 lacs to 15 crore',
     },
     {
       logo: idfc,
       bankName: 'IDFC Bank Loan',
-      interestRate: '11.00% to 19.00%',
-      processingFee: '1.50% + GST to 3% + GST',
-      loanAmount: 'Rs.10 lacs to Rs.1 crore',
+      interestRate: '09.25% to 10.50%',
+      processingFee: '0.50% + GST',
+      loanAmount: 'Rs.10 L to Rs.15 cr',
     },
     {
       logo: godrej,
       bankName: 'Godrej Capital',
-      interestRate: '17.00%',
-      processingFee: '3% + GST',
-      loanAmount: '5 lacs to 50 lacs',
+      interestRate: '09.25% to 11.50%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '5 lacs to 15 crore',
     },
     {
       logo: lt,
       bankName: 'L&T Housing Finance',
-      interestRate: '12.50% to 25%',
-      processingFee: '2% + GST',
-      loanAmount: '1 lacs to 50 lacs',
+      interestRate: '08.65% to 09.25%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '5 lacs to 15 crore',
     },
     {
       logo: axisfinance,
@@ -144,16 +141,16 @@ const BusinessBanks = () => {
     {
       logo: bajajlap,
       bankName: 'Bajaj Housing Finance',
-      interestRate: '09.75% to 30.00%',
-      processingFee: 'upto 3.54%',
-      loanAmount: '2 lacs to 80 lacs',
+      interestRate: '08.50% to 9.00%',
+      processingFee: '10k + GST to 0.25% + GST',
+      loanAmount: '20 lacs to 10 crore',
     },
     {
       logo: piramal,
       bankName: 'Piramal',
-      interestRate: '16.49%',
-      processingFee: 'upto 5% + GST',
-      loanAmount: '3 lacs to 20 lacs',
+      interestRate: '10.5% to 12.50%',
+      processingFee: '1% + GST',
+      loanAmount: '10 lakh to 2 crore',
     },
     {
       logo: icicihfc,
@@ -162,13 +159,6 @@ const BusinessBanks = () => {
       processingFee: '0.75% to 1% + GST',
       loanAmount: '10 lakh to 2 crore',
     },
-    {
-        logo: poonawala,
-        bankName: 'PoonaWala',
-        interestRate: '15.00%',
-        processingFee: '3% GST',
-        loanAmount: '10 lacs to 50 lacs',
-      },
   ];
   
   
@@ -189,4 +179,4 @@ const BusinessBanks = () => {
   );
 };
 
-export default BusinessBanks;
+export default DebtBanks;

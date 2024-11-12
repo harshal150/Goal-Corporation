@@ -10,6 +10,7 @@ import documentation from "../../assets/loansNew/documentation.jpg";
 import feescgarges from "../../assets/loansNew/feeschargesbg3.avif";
 import Banks from "../homeloan/Banks";
 import backgroundImage from '../../assets/testimonial/bg2.avif'
+import DebtBanks from "./DebtBanks";
 
 const AboutDebtRestructure = () => {
   return (
@@ -72,7 +73,8 @@ const AboutDebtRestructure = () => {
       </div>
 
       <LoanEligibilityCard />
-      <Banks/>
+      {/* <Banks/> */}
+      <DebtBanks/>
 
 
             

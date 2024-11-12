@@ -35,10 +35,10 @@ const AboutInfo = () => {
 
 
     <HomeNavbar/>
-      <div className="sm:flex items-center max-w-screen-xl mx-auto mt-1">
+      <div className="sm:flex items-start max-w-screen-xl mx-auto">
         {/* Text Section with Slide-In from Right */}
         <div
-          className={`sm:w-3/5 p-10 transform transition-all duration-1000 ease-out delay-300 ${
+          className={`sm:w-3/5 p-16 transform transition-all duration-1000 ease-out delay-300 ${
             isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           }`}
         >
@@ -62,7 +62,7 @@ const AboutInfo = () => {
 
         {/* Image Section with Slide-In from Left */}
         <div
-          className={`hidden sm:block sm:w-2/5  transform transition-all duration-1000 ease-out ${
+          className={`hidden sm:block sm:w-2/5 lg:mt-16  transform transition-all duration-1000 ease-out ${
             isVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >

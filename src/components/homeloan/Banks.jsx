@@ -15,8 +15,11 @@ import axisfinance from '../../assets/partner/axis finance.png'
 import bajajlap from '../../assets/partner/bajaj lap.jpeg'
 import piramal from '../../assets/partner/piramal.png'
 import icicihfc from '../../assets/partner/icici hfc.jpeg'
+import { Link } from 'react-router-dom';
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
+  const loanType = "Home Loan";
+
   return (
     <div className="bg-gray-100 shadow-md rounded-lg p-6 mb-4 flex flex-col md:flex-row md:items-center justify-between text-center md:text-left">
       <div className="flex flex-col items-center md:flex-row md:space-x-4">
@@ -39,9 +42,16 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
       </div>
 
       <div className="flex mt-4 text-sm md:mt-0 justify-center space-x-4">
-        <button className="cp_rainbow_btn text-white px-6 py-2 rounded-full">
+        {/* <button className="cp_rainbow_btn text-white px-6 py-2 rounded-full">
           Enquire Now
-        </button>
+        </button> */}
+        <Link
+            to='/applyforloan'
+            state={{ loanType }}
+            className="cp_rainbow_btn text-white px-6 py-2 rounded-full"
+          >
+            Apply Now
+          </Link>
       </div>
       <style>{`
         .cp_rainbow_btn {

@@ -33,7 +33,7 @@ const GroupCompany = () => {
       observer.observe(elementRef.current);
     }
 
-    // Clean up the observer on component unmount
+    // Clean up the observer on component unmountaa
     return () => {
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
@@ -140,7 +140,7 @@ const GroupCompany = () => {
             <div className="font-bold text-[20px] sm:text-[22px] capitalize text-blue-600">
               {company.name}
             </div>
-            <div className="text-[12px] text-left text-gray-700 capitalize italic  mt-7">
+            <div className="text-[12px] text-left text-gray-700 capitalize italic mt-7">
               {company.description}
             </div>
           </Link>
