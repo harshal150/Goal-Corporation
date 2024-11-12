@@ -45,10 +45,10 @@ const AboutBuisnessLoan = () => {
                 	Collateral free (Unsecured) loans 
                 </li>
                 <li>
-                •	Flexible repayment tenure (up to 5 years)
+                	Flexible repayment tenure (up to 5 years)
                 </li>
                 <li>
-                •	Multiple lender options 
+                	Multiple lender options 
                 </li>
               </ul>
             </p>
