@@ -33,7 +33,7 @@ const LoLoanCalculator = () => {
   const totalInterest = (totalPayment - loanAmount).toFixed(2);
 
   const data = {
-    labels: ["Principal", "Interest"],
+    labels: ["Principle", "Interest"],
     datasets: [
       {
         data: [loanAmount, totalInterest],

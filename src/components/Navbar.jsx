@@ -128,7 +128,7 @@ export const Navbar = () => {
               to="/becomepartner"
               className="relative text-black px-3 py-2 rounded-md text-md font-semibold transition-all duration-300 hover:text-orange-500"
             >
-              Become a Partner
+              Become Partner
             </Link>
 
             
@@ -268,7 +268,7 @@ export const Navbar = () => {
               to="/becomepartner"
               className="text-black hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-300"
             >
-              Become a Partner
+              Become Partner
             </Link>
           </div>
         </div>

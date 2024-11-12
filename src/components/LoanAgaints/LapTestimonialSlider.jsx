@@ -18,7 +18,7 @@ const testimonialList = [
       // designation: "Founder / CEO",
     },
     description:
-      "Hello Mr. Annappa and Mr. Ananth, First of all I would like to thank Goal Corp Team for meeting me in personal and getting to know my financial requirements for construction of Home.  I was sanctioned 60,00,000/- ( Sixty Lakhs) for construction of Home and 10,00,000/- ( Ten Lakhs) against property {LAP}. In total I was sanctioned 70,00,000/- (Seventy Lakhs).The team was extremely helpful, and it made my experience so much better. Selection and Recommendations of Bank's is also quite great. I would like to thank once again!"
+      "First of all I would like to thank Goal Corp Team for meeting me in personal and getting to know my financial requirements for construction of Home.  I was sanctioned 60,00,000/- ( Sixty Lakhs) for construction of Home and 10,00,000/- ( Ten Lakhs) against property {LAP}. In total I was sanctioned 70,00,000/- (Seventy Lakhs).The team was extremely helpful, and it made my experience so much better. Selection and Recommendations of Bank's is also quite great. I would like to thank once again!"
 ,
   },
   
