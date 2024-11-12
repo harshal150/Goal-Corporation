@@ -1,6 +1,3 @@
-
-
-
 // import React, { useEffect, useRef, useState } from "react";
 // import logo from '../../assets/DirectorImage.jpg';
 
@@ -79,10 +76,8 @@
 
 // export default DirectorMsg;
 
-
-
 import React, { useEffect, useRef, useState } from "react";
-import logo from '../../assets/DirectorImage.jpg';
+import logo from "../../assets/DirectorImage.jpg";
 
 const DirectorMsg = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -115,9 +110,9 @@ const DirectorMsg = () => {
   return (
     <div
       ref={elementRef} // Attach the ref to the outer container
-      className={`bg-gray-50 py-8 px-4 md:py-16 md:px-4 transform transition-all duration-1000 ease-out`}
+      className={`bg-gray-50 py-8 px-4 md:py-12 md:px-4 transform transition-all duration-1000 ease-out`}
     >
-      <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-5">
+      <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-2">
         Directors Message
       </h1>
 
@@ -132,13 +127,40 @@ const DirectorMsg = () => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-2/3 md:pl-6">
-          <p className="text-gray-600 text-md leading-relaxed mb-4">
-            Dear Patron,<br /><br />
-            With a vast experience in the field of Financial Consulting we started this journey in 2005 and today we are able to reach all needy clienteles.  We provide Financial Consulting, Borrowing, Financial restructuring and helping them get a hassle-free service.  We have set ambitious goals for ourselves - being a well-known brand Pan India. We are fortunate to have a young and dynamic team supported by seasoned professionals partnering with us to achieve this.            <br /><br />
-            We have always believed in quality - be it in our work, our service or our products. Each one embodies our underlying ethos, that no task is too small and we try accomplish each one of them. We realize that in today's scenario, when people are being flooded with information and products, we need to stand out and deliver quality services to them.            <br /><br />
-            Nothing is achieved without able and willing partners, who are like-minded in their approach to our business. It is important to us to have a personal equation and a mutually beneficial working relationship with all our partners and customers.            <br /><br />
-            We would also like to give back to the society, as much we can and as often through our CSR initiatives.            <br /><br />
+        <div className="w-full md:w-2/3 md:pl-6 text-sm">
+          <p className="text-gray-600 text-md leading-relaxed mb-2">
+            Dear Patron,
+            <br />
+            <br />
+            <p className="mb-2">
+              {" "}
+              With a vast experience in the field of Financial Consulting we
+              started this journey in 2005 and today we are able to reach all
+              needy clienteles. We provide Financial Consulting, Borrowing,
+              Financial restructuring and helping them get a hassle-free
+              service. We have set ambitious goals for ourselves - being a
+              well-known brand Pan India. We are fortunate to have a young and
+              dynamic team supported by seasoned professionals partnering with
+              us to achieve this. <br />
+            </p>
+            <p className="mb-2">
+              {" "}
+              We have always believed in quality - be it in our work, our
+              service or our products. Each one embodies our underlying ethos,
+              that no task is too small and we try accomplish each one of them.
+              We realize that in today's scenario, when people are being flooded
+              with information and products, we need to stand out and deliver
+              quality services to them. <br />
+             
+            </p>{" "}
+            
+          <p className="mb-2">Nothing is achieved without able and willing partners, who are
+            like-minded in their approach to our business. It is important to us
+            to have a personal equation and a mutually beneficial working
+            relationship with all our partners and customers. <br /></p>
+            We would also like to give back to the society, as much we can and
+            as often through our CSR initiatives. <br />
+         
             Sincerely,
           </p>
 

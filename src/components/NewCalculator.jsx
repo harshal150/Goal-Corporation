@@ -51,17 +51,7 @@ const LoLoanCalculator = () => {
       backgroundAttachment: "fixed", 
       opacity:"50"
     }}>
-      {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-        style={{ opacity: 0.9 }}
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
+    
 
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[-1]" />
       <div className="max-w-5xl mx-auto mt-8 py-10 bg-transparent rounded-lg flex flex-row justify-between gap-4">
@@ -163,17 +153,24 @@ const LoLoanCalculator = () => {
         <div className="w-full md:w-1/2 flex flex-col items-center justify-between">
           {/* Pie Chart */}
           <div className="w-1/2 mb-6 text-white">
-            <Pie 
-              data={data} 
-              options={{ 
-                responsive: true, 
-                maintainAspectRatio: false 
-              }} 
-              width={250} 
-              height={250} 
-              color="white"
-            />
-          </div>
+  <Pie 
+    data={data} 
+    options={{ 
+      responsive: true, 
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: {
+            color: "white", // Set legend label color to white
+          }
+        }
+      }
+    }} 
+    width={250} 
+    height={250} 
+  />
+</div>
+
 
           {/* EMI Card */}
           <div className="p-3 sm:p-4 bg-gradient-to-r from-white to-blue-50 border border-gray-200 rounded-xl mt-3 shadow-lg w-full">

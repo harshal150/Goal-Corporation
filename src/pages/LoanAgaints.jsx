@@ -7,6 +7,7 @@ import LoanAgainstFAQ from '../components/LoanAgaints/LoanAgainstFAQ';
 import TestimonialSlider from '../components/homeloan/TestimonialSlider';
 import Banks from '../components/homeloan/Banks';
 import LapBanks from '../components/LoanAgaints/LapBanks';
+import LapTestimonialSlider from '../components/LoanAgaints/LapTestimonialSlider';
 
 const LoanAgaints = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -41,7 +42,8 @@ const LoanAgaints = () => {
       <AboutLoanAgaints />
       {/* <LapBanks /> */}
       {/* <Banks /> */}
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
+      <LapTestimonialSlider/>
       <LoanAgainstFAQ />
       <Footer />
     </div>

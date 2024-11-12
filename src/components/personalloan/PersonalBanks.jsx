@@ -12,7 +12,7 @@ import kotak from '../../assets/partner/kotak.jpeg';
 import idfc from '../../assets/partner/idfc.png';
 import dbs from '../../assets/partner/Frame6.png';
 import axis from '../../assets/partner/Frame7.png';
-import hdfc from '../../assets/partner/hdfc.jpeg';
+import hdfc from '../../assets/partner/hdfc.jpg';
 
 import icici from '../../assets/partner/icici.jpeg'
 import godrej from '../../assets/partner/godrej.jpeg'

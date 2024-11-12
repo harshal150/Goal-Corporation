@@ -9,7 +9,7 @@ const cities = [
   // { name: "JayaNagar", top: "70%", left: "44%", address: " NO 34,2ND FLOOR, opp. Cosmopolitan club, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011" },
   { name: "Mumbai", top: "58%", left: "40%", address: "C-209, Crystal Plaza, New Link Road, Andheri West, Mumbai 400053, opposite to Infiniti Mall" },
   { name: "Hyderabad", top: "61%", left: "53%", address: "Unit No.202, 1st  Floor, Vasavi MPM Grand, 2nd  Level, Beside Metro Station, Yellareddyguda, Ameerpet, Hyderabad, 500073" },
-  { name: "Pune", top: "58%", left: "44%", address: "404 FC Road, Pune, Maharashtra" },
+  { name: "Pune", top: "58%", left: "44%", address: "No.109, first floor, Bharat bhavan A wing Co- op premises Limited, 1369 shukrwar peth pune - 411002" },
   { name: "Delhi", top: "31%", left: "49%", address: "789 Connaught Place, Delhi" },
   { name: "Chennai", top: "75%", left: "53%", address: "101 Marina Beach, Chennai, Tamil Nadu" },
   { name: "Kolkata", top: "50%", left: "70%", address: "303 Park Street, Kolkata, West Bengal" },
