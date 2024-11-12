@@ -228,13 +228,20 @@ const ApplyLoanModal = ({ isOpen, onClose, loanType, sliderHomeLink }) => {
     <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden lg:mt-5 mb-5">
       {/* Form Section (Left Aligned) */}
       <div className="w-full md:w-2/3 p-4 lg:p-6">
-        <h3 className="text-xl font-semibold text-center mb-4">
+        <h3 className="text-md font-semibold text-center mb-4">
           Submit Your Details &{" "}
           <span className="text-red-500">
-            {loanType
-              ? `Get ${loanType} Starting From ${interestRate}% ROI`
-              : "We'll Contact You Shortly"}
-          </span>
+  {loanType ? (
+    <>
+      {`Get ${loanType} Starting From ${interestRate}%`}<sup>*</sup> onwards ROI
+    </>
+  ) : (
+    "We'll Contact You Shortly"
+  )}
+</span>
+
+
+
         </h3>
         <Formik
           initialValues={{

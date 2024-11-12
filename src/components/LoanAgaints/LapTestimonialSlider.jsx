@@ -23,7 +23,7 @@ const testimonialList = [
   },
   
   {
-    text: "Dear sir. I am here by writing this mail to show my gratitude for the outstanding service and support offered by your team during the loan process.  I availed the loan without any hindrance and trouble. It's all because of your timely service.. you took good initiative to finish the loan process within stipulated time. thank you. ",
+    text: "Dear sir, I am hereby writing this mail to show my gratitude for the outstanding service and support offered by your team during the loan process.  I availed the loan without any hindrance and trouble. It's all because of your timely service.. you took good initiative to finish the loan process within stipulated time. Thank you. ",
     author: {
       fullName: "Adikeshavan S",
       picture: adhikeshavn,
@@ -31,7 +31,7 @@ const testimonialList = [
     },
   },
   {
-    text: "Dear sir. I am here by writing this mail to good service and support ,quick process, well update during the loan process of my LAP, Thank you for supporting !!!",
+    text: "Hi, I am hereby writing to show my appreciation for the good service and support, quick process and timely update from Goal Corp team during the loan process of my LAP. Thank you for your support...",
     author: {
       fullName: "Vimala N",
       picture: vimala,
