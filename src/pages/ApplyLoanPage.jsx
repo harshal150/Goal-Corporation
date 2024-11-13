@@ -8,13 +8,13 @@ import { HomeNavbar } from '../components/HomeNavbar.jsx'
 
 const ApplyLoanPage = () => {
   const location = useLocation();
-  const { loanType ,selectedLink} = location.state || {};
+  const { loanType ,selectedLink,bankName} = location.state || {};
  
   // console.log(loanType) 
   return (
     <div>
     {/* <Navbar/> */}
-      <ApplyLoanModal loanType={loanType} sliderHomeLink={selectedLink}/>
+      <ApplyLoanModal loanType={loanType} sliderHomeLink={selectedLink} bankName={bankName}/>
       {/* <LoanApplicationFAQ/> */}
       <Footer/>
     </div>

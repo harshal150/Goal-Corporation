@@ -50,7 +50,7 @@ const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) =
         </button> */}
         <Link
             to='/applyforloan'
-            state={{ loanType }}
+            state={{ loanType ,bankName}}
             className="cp_rainbow_btn text-white px-6 py-2 rounded-full"
           >
             Apply Now
