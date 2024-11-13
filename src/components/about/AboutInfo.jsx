@@ -98,7 +98,7 @@ const AboutInfo = () => {
         autoPlay
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        className="absolute top-0 left-0 w-full h-screen object-cover z-[-1]"
         style={{ opacity: 0.9 }}
       >
         <source src={backgroundVideo} type="video/mp4" />
@@ -107,7 +107,7 @@ const AboutInfo = () => {
 
       <HomeNavbar />
 
-      <div className="sm:flex items-start max-w-screen-xl mx-auto mt-2 lg:mt-1">
+      <div className="sm:flex items-start max-w-screen-xl mx-auto mt-2 lg:mt-1 mb-2">
         {/* Text Section with Slide-In from Right */}
         <div
           className={`sm:w-3/5 p-8 md:p-12 lg:p-16 transform transition-all duration-1000 ease-out delay-300 ${
@@ -137,7 +137,7 @@ const AboutInfo = () => {
           }`}
         >
           <div className="text-center">
-            <img src={team} alt="Team" className="rounded-xl h-[50vh] md:h-[55vh] lg:h-[60vh]" />
+            <img src={team} alt="Team" className="rounded-xl h-[50vh] md:h-[55vh] lg:h-[55vh] lg:mb-5" />
           </div>
         </div>
       </div>

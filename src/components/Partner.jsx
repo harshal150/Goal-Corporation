@@ -148,7 +148,7 @@ import kotak from '../assets/partner/kotakbanks.png';
 import csb from '../assets/partner/new/CSB.png';
 import indian from '../assets/partner/new/INDIAN.jpeg';
 import arka from '../assets/partner/new/arka fincorp.png';
-import chla from '../assets/partner/new/chola finanace.jpeg';
+import chla from '../assets/partner/new/chola1.png';
 import cholamandalam from '../assets/partner/new/cholamandalam investment finance.jpeg';
 import duetshe from '../assets/partner/new/duetshe bank.png';
 import edelwise from '../assets/partner/new/edelweiss.png';
@@ -160,6 +160,7 @@ import rbl from '../assets/partner/new/rbl.png';
 import smfg from '../assets/partner/new/smfg.jpeg';
 import standerd from '../assets/partner/new/standard chartered.png';
 import urgo from '../assets/partner/new/urgo capital.jpeg';
+import dcb from '../assets/partner/new/dcb.png';
 
 const partners = [
   { name: "Unity", logo: ten },
@@ -185,6 +186,7 @@ const partners = [
   { name: "Hinduja", logo: hinduja },
   { name: "Indian Bank", logo: indian },
   { name: "CSB", logo: csb },
+  { name: "dcb", logo: dcb },
   { name: "Krezy Bee", logo: crazybee },
   { name: "Fedfina", logo: fedfin },
   { name: "Edelweiss", logo: edelwise },
@@ -247,7 +249,7 @@ const Partners = () => {
               <div
                 key={index}
                 className="p-4 flex-shrink-0 transition-transform transform hover:scale-105"
-                style={{ width: "200px", height: "150px" }}
+                style={{ width: "150px", height: "150px" }}
               >
                 <img
                   src={partner.logo}
