@@ -81,7 +81,7 @@
 
 import React, { useEffect, useState } from "react";
 // import team from '../../assets/team.jpg';
-import team from '../../assets/about/hero.jpg';
+import team from '../../assets/about/hero2.jpg';
 import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
 import { HomeNavbar } from "../HomeNavbar";
 
