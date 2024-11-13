@@ -81,7 +81,7 @@ const GroupCompany = () => {
               "This flagship company of Goal group is engaged purely in Financial Consulting, bridging between the customers and bankers for their lending needs and financial restructuring. The different products offered are Home Loans, Mortgage Loans, Balance Transfer, Personal Loan, Construction Loan and so on.  The company handles most difficult cases in terms of disbursal and handholding the customers.",
             img: goalMain,
             alt: "Framework7",
-            link:"https://www.goalcorporation.com/scientific-equipments.php"
+            link:"https://goal-corporation-gamma.vercel.app/"
           },
           {
             name: "Goal promoters Pvt Ltd",
@@ -89,7 +89,7 @@ const GroupCompany = () => {
               "Goal Promoters is confident of providing services like Real Estate, Finacial Services. We Provide ManPower Solutions for small, medium and large organizations that help them to achieve their goals. Goal Promoters is a Real Estate Advisory firm in Bangalore offering investment and consultancy services. We offer our services in the real estate market, to investment trusts, family offices and to individual investors across the world.",
             img: promoter,
             alt: "Framework7",
-            link:"www.google.com"
+            link:"https://goalpromoters.com/"
           },
           {
             name: "Kukkeshwara Education Trust",
@@ -97,7 +97,7 @@ const GroupCompany = () => {
               "Aa a philanthropic initiative we have Goal International Public School at a remote place called Manki, Honnavar, in North Canara district, providing a quality education to the rural folks. Having more than 1000 student base, this ICSE syllabi school is being appreciated for its exemplary standards in that area ",
             img: kukkeshwara,
             alt: "Atropos",
-            link:"https://www.goalcorporation.com/scientific-equipments.php"
+            link:""
           },
           {
             name: "Goal Bio Medical",
@@ -122,7 +122,7 @@ const GroupCompany = () => {
               "Hubstairs, an initiative by the Goal group, provides modern and flexible coworking spaces designed to foster collaboration and innovation. Operating for the last four years, it offers businesses and freelancers a productive environment with premium amenities.",
             img: hubstair,
             alt: "Hubstairs-Coworking Space",
-            link:"https://www.goalcorporation.com/scientific-equipments.php"
+            link:"https://hubstairscoworks.com/"
           },
         ].map((company, index) => (
           <Link

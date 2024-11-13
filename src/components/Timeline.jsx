@@ -8,10 +8,11 @@ import three from "../assets/Timeline/three.jpg";
 import four from "../assets/Timeline/4.jpg";
 import five from "../assets/Timeline/5.jpg";
 import six from "../assets/Timeline/6.jpg";
+import ten from '../assets/Timeline/2020.jpg'
 // import backgroundImage from '../assets/aaaaaaa/14.avif'
 import backgroundImage from '../assets/testimonial/bg2.avif'
 
-const images = [one, two, three, four, five, six];
+const images = [one, two, four,three, ten, six];
 
 const timelineData = [
   {

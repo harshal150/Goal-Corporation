@@ -118,10 +118,10 @@ const HomeloanBelowComponent = () => {
     Documentation for <span className="text-orange-500">Home Loan</span>
   </h2>
 
-  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-12">
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-12 mx-auto lg:mx-2">
     {/* Table Content */}
     <div className="flex-1 overflow-auto">
-      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+      <table className="w-full bg-white border border-gray-300 rounded-lg">
         <thead>
           <tr>
             <th className="px-4 py-2 border-b text-left text-md md:text-lg font-semibold text-gray-700">
@@ -132,16 +132,13 @@ const HomeloanBelowComponent = () => {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-sm">
           <tr>
             <td className="px-4 py-3 border-b text-gray-700 font-medium">1. Salaried Individuals</td>
             <td className="px-4 py-3 border-b text-gray-700">
               <ul className="list-disc list-inside space-y-1">
-                <li>Form 16</li>
-                <li>Employee Identity Card</li>
-                <li>3 Months Salary Slip</li>
-                <li>6 Month Bank Account Statement</li>
-                <li>Duration of Employment Evidence</li>
+                <li>Form 16, Identity Card, 3-Month Salary Slip</li>
+                <li>6-Month Bank Account Statement, Employment Proof</li>
               </ul>
             </td>
           </tr>
@@ -149,21 +146,10 @@ const HomeloanBelowComponent = () => {
             <td className="px-4 py-3 border-b text-gray-700 font-medium">2. Self-Employed Individuals</td>
             <td className="px-4 py-3 border-b text-gray-700">
               <ul className="list-disc list-inside space-y-1">
-                <li>PAN</li>
-                <li>Trade License</li>
-                <li>Partnership Deed</li>
-                <li>Article of Association</li>
-                <li>Memorandum of Association</li>
-                <li>Import Export Code</li>
-                <li>SEBI Registration Certificate</li>
-                <li>ROC Registration Certificate</li>
-                <li>Financial Statement Audited by CA</li>
-                <li>Profit & Loss Account Statement</li>
-                <li>Balance Sheet</li>
-                <li>6 Months Bank Account Statement</li>
-                <li>Professional Practice License for Doctors, Consultants, etc.</li>
-                <li>Registration Certificate of Establishment for Shops, Factories, and Other Establishments</li>
-                <li>Business Address Proof</li>
+                <li>PAN, Trade License, Partnership Deed</li>
+                <li>Memorandum of Association, Import Export Code, SEBI/RCO Registration</li>
+                <li>Audited Financial Statements, 6-Month Bank Statement</li>
+                <li>Certificates for specific professions, Business Address Proof</li>
               </ul>
             </td>
           </tr>
@@ -173,12 +159,9 @@ const HomeloanBelowComponent = () => {
             </td>
             <td className="px-4 py-3 border-b text-gray-700">
               <ul className="list-disc list-inside space-y-1">
-                <li>Valid Passport and Visa Copy</li>
-                <li>Overseas Address Proof (Utility Bills or Rental Agreement)</li>
-                <li>Employment Proof (Appointment Letter or Employment Contract)</li>
-                <li>Income Tax Returns (ITR) or NRE/NRO Bank Account Statements</li>
-                <li>Recent Salary Slips (if employed) or Income Proof (if self-employed)</li>
-                <li>Power of Attorney (if required)</li>
+                <li>Valid Passport, Visa, Overseas Address Proof</li>
+                <li>Employment Letter/Contract, NRE/NRO Bank Statements</li>
+                <li>Income/Employment Proof if self-employed, Power of Attorney</li>
               </ul>
             </td>
           </tr>
@@ -186,17 +169,9 @@ const HomeloanBelowComponent = () => {
             <td className="px-4 py-3 border-b text-gray-700 font-medium">4. Other Documents</td>
             <td className="px-4 py-3 border-b text-gray-700">
               <ul className="list-disc list-inside space-y-1">
-                <li>Property Documents – entire set of link documents</li>
-                <li>Sale Deed of current owner</li>
-                <li>Stamped Agreement of Sale</li>
-                <li>No Objection Certificate (NOC) from Housing Society/Builder</li>
-                <li>Possession Certificate</li>
-                <li>Land Tax Receipt</li>
-                <li>Construction Cost Estimate</li>
-                <li>Bank Account Statement of Payment Made to Seller or Builder</li>
-                <li>Payment Receipt of Payment Made to Seller or Builder</li>
-                <li>In case of resale property, share certificate is required</li>
-                <li>Occupancy Certificate</li>
+                <li>Sale Deed, Stamped Agreement, No Objection Certificate</li>
+                <li>Possession Certificate, Land Tax Receipt, Construction Estimate</li>
+                <li>Payment Receipts, Share Certificate for resale, Occupancy Certificate</li>
               </ul>
             </td>
           </tr>
@@ -214,6 +189,7 @@ const HomeloanBelowComponent = () => {
     </div>
   </div>
 </section>
+
 
 <HomeFAQ/>
 

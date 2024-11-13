@@ -77,7 +77,8 @@
 // export default DirectorMsg;
 
 import React, { useEffect, useRef, useState } from "react";
-import logo from "../../assets/DirectorImage.jpg";
+// import logo from "../../assets/DirectorImage.jpg";
+import logo from "../../assets/DirectorImage2.jpg";
 
 const DirectorMsg = () => {
   const [isVisible, setIsVisible] = useState(false);
