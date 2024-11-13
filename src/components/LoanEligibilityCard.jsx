@@ -46,9 +46,9 @@ const LoanEligibilityCard = () => {
 
         {/* Button Section */}
         <div className="mt-4 md:mt-0">
-          <button className="cp_rainbow_btn w-full  font-semibold px-7 py-2 rounded-md">
+          {/* <button className="cp_rainbow_btn w-full  font-semibold px-7 py-2 rounded-md">
             Apply
-          </button>
+          </button> */}
           <style>{`.cp_rainbow_btn {
         background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
         background-size: 600%;
