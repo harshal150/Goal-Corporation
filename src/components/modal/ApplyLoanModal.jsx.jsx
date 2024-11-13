@@ -239,7 +239,7 @@ const ApplyLoanModal = ({
               <h3 className="text-md font-semibold text-center mb-4">
                 {bankName && (
                   <>
-                    <span className="text-lg font-bold">{bankName}</span> {" "}
+                    <span className="text-md">Thank you for choosing <span className="text-red-500"> {bankName}!</span> .</span> {" "}
                   </>
                 )}
                 Submit Your Details &{" "}
