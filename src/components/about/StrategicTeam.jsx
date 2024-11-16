@@ -1,33 +1,35 @@
 
 
-import member1 from '../../assets/DirectorImage.jpg';
 import reddysir from '../../assets/keyMembers/reddy.jpg';
-import bhaswaraj from '../../assets/keyMembers/bhaswaraj.jpg';
-// import newMember from '../../assets/keyMembers/newMember.jpg';
-import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
+
 import backgroundImage from '../../assets/testimonial/bg2.avif'
+
+import nandakishore from '../../assets/employeespeaks/newmem/Nandkishore Jha.jpg'
+import surendra from '../../assets/employeespeaks/newmem/Surendra Hegde.jpg'
+
 
 
 const teamMembers = [
-  {
-    img: member1,
-    name: "Thrapthi Nayak",
-    designation: "Director",
-  },
-  {
-    img: bhaswaraj,
-    name: "Basavaraj N",
-    designation: "Director",
-  },
   {
     img: reddysir,
     name: "CA Sriram Reddy",
     designation: "Director",
   },
   {
-    img: bhaswaraj,
-    name: "John Doe",
-    designation: "Project Manager",
+    img: nandakishore,
+    name: "Nandkishore Jha",
+    designation: "Chief Business Officer",
+  },
+ 
+  {
+    img: surendra,
+    name: "Surendra Hegde",
+    designation: "Chief Operating Officer",
+  },
+  {
+    img: surendra,
+    name: "Surendra Hegde",
+    designation: "Chief Operating Officer",
   },
 ];
 

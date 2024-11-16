@@ -10,14 +10,14 @@ const cities = [
   { name: "Mumbai", top: "58%", left: "40%", address: "C-209, Crystal Plaza, New Link Road, Andheri West, Mumbai 400053, opposite to Infiniti Mall" },
   { name: "Hyderabad", top: "61%", left: "53%", address: "Unit No.202, 1st  Floor, Vasavi MPM Grand, 2nd  Level, Beside Metro Station, Yellareddyguda, Ameerpet, Hyderabad, 500073" },
   { name: "Pune", top: "58%", left: "44%", address: "No.109, first floor, Bharat bhavan A wing Co- op premises Limited, 1369 shukrwar peth pune - 411002" },
-  { name: "Delhi", top: "31%", left: "49%", address: "789 Connaught Place, Delhi" },
-  { name: "Chennai", top: "75%", left: "53%", address: "101 Marina Beach, Chennai, Tamil Nadu" },
-  { name: "Kolkata", top: "50%", left: "70%", address: "303 Park Street, Kolkata, West Bengal" },
-  { name: "Ahmedabad", top: "53%", left: "42%", address: "505 SG Highway, Ahmedabad, Gujarat" },
-  { name: "Jaipur", top: "40%", left: "45%", address: "606 Pink City Road, Jaipur, Rajasthan" },
-  { name: "Lucknow", top: "40%", left: "56%", address: "707 Hazratganj, Lucknow, Uttar Pradesh" },
-  { name: "Surat", top: "53%", left: "40%", address: "808 Diamond Street, Surat, Gujarat" },
-  { name: "Bhubaneswar", top: "55%", left: "64%", address: "909 KIIT Road, Bhubaneswar, Odisha" },
+  { name: "Delhi", top: "31%", left: "49%", address: "Delhi" },
+  { name: "Chennai", top: "75%", left: "53%", address: "Chennai" },
+  { name: "Kolkata", top: "50%", left: "70%", address: "Kolkata" },
+  { name: "Ahmedabad", top: "53%", left: "42%", address: "Ahmedabad" },
+  { name: "Jaipur", top: "40%", left: "45%", address: " Jaipur" },
+  { name: "Lucknow", top: "40%", left: "56%", address: "Lucknow" },
+  { name: "Surat", top: "53%", left: "40%", address: " Surat" },
+  { name: "Bhubaneswar", top: "55%", left: "64%", address: "Bhubaneswar" },
 ];
 
 const MapComponent = () => {

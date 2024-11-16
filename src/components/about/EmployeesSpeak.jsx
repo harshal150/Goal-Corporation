@@ -9,23 +9,32 @@ import subrayRoy from '../../assets/employeespeaks/subrayRoy.jpg'
 import joshna from '../../assets/employeespeaks/joshna.jpg'
 import prashant from '../../assets/employeespeaks/prashant K.jpg'
 
+
+import Balakrishna from '../../assets/employeespeaks/Balakrishna.jpg'
+import ravi from '../../assets/employeespeaks/ravi naik.jpg'
+import ashok from '../../assets/employeespeaks/Ashok MN.jpg'
+import mahabaleshwar from '../../assets/employeespeaks/Mahabaleshwar Naik.jpg'
+import santosh from '../../assets/employeespeaks/santosh.jpg'
+
+
+
 const testimonials = [
   {
     name: "Ashok MN",
     title: "(Branch Manager)",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: ashok,
     quote: "I joined this company as sales manager in 2021, currently holding the Branch Manager’s Post. I am grateful to the organization which provided me with the platform where I learnt about the financial sector.",
   },
   {
     name: "Ravi Naik",
     title: "(Branch Manager)",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: ravi,
     quote: "During my tenure in Goal Cooperation Pvt. Ltd, I have seen that the company always has an excellent team with a wide range of skill sets, which can help any client to achieve their objectives and goals. Working with the Goal team is an Outstanding Experience. The team always goes beyond to deliver as promised and more. I am very glad to have worked with everyone here.",
   },
   {
     name: "Mahabaleshwar Naik",
     title: "(Branch Manager)",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
+    image: mahabaleshwar,
     quote: "I have been working with Goal Cooperation Pvt.Ltd since its inception. I have learnt a lot to help me enhance my skills. The opportunities to learn and grow here are abundant. I feel Goal Cooperation Pvt.Ltd is a career-oriented company in the financial sector. I also feel that the working atmosphere is very good and motivates employees to work hard.",
   },
   {
@@ -37,7 +46,7 @@ const testimonials = [
   {
     name: "Santosh Naik",
     title: "(Sales Manager)",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: santosh,
     quote: "I joined Goal Corporation as Jr. Sales Manager and have since been elevated to Sales Manager. I have improved my customer relation skills, communication, and personality after joining here. Being educated in a remote village, I was not able to communicate properly, but my seniors and managers taught me everything. Now, I feel proud to be part of this great company.",
   },
   {
@@ -49,7 +58,7 @@ const testimonials = [
   {
     name: "Balakrishna S",
     title: "(Sales/Legal Coordinator)",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: Balakrishna,
     quote: "I am associated with our MD right from the beginning of his journey in the financial sector. I take care of all Legal requirements - scrutiny of documents, filing, submission to Banks, etc. I have also grown along with the company. There are ample opportunities here for a beginner to shape up his career.",
   },
   {

@@ -114,7 +114,7 @@ const GroupCompany = () => {
               "Goal Fuel Park specializes in the sales and distribution of fuel and petrochemical products, providing reliable energy solutions for industrial, commercial, and consumer needs. The firm is dedicated to quality and efficiency in fuel management and supply chain operations.",
             img: "https://swiperjs.com/images/projects/atropos.svg",
             alt: "Goal Fuel Park",
-            link:"https://www.goalcorporation.com/scientific-equipments.php"
+            link:""
           },
           {
             name: "Hubstairs-Coworking Space",
