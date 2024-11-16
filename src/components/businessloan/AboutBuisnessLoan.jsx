@@ -30,7 +30,7 @@ const AboutBuisnessLoan = () => {
         <div className="flex flex-col md:flex-row items-start">
           <div className="w-full md:w-1/2 mt-6 md:mt-10">
             <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
-            A business loan is a loan specifically intended for business purposes. It can be used to cover operational costs, expand the business, purchase new equipment, or manage cash flow. Business loans are a faster way of availing financial assistance from Banks/ NBFCs for all business requirements. This type of loan can be availed in various ways, like lump sum disbursement, OD/CC, DOD etc.
+            A business loan is a loan designed specifically for business-related expenses. It can be used to cover operational costs, fund business expansion, purchase new equipment, or manage cash flow. Business loans provide a quick way to access financial assistance from banks or NBFCs (Non-Banking Financial Companies) to meet various business needs. These loans can be disbursed in different formats, such as lump sum payments, overdraft (OD), cash credit (CC), or demand overdraft (DOD), depending on the business's requirements.
             </p>
             <p className="text-left mb-6 md:mb-10 text-[16px] md:text-[20px]">
               Key Takeaways:

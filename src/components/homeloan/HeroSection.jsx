@@ -36,12 +36,12 @@ const HeroSection = () => {
       {/* Text Section */}
       <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-400">
-          Make Your Home Ownership
-          Dreams Come True with Our{' '} <br />
+        Turn Your Homeownership Dreams into Reality with Our Flexible{' '} 
           <span className="text-orange-500">Home Loan Solution!</span> <br />
+       
         </h1>
         <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
-          Discover a variety of Home Loan Options with flexible terms and competitive rates whether you're buying your dream home or refinancing needs.
+        Explore a range of home loan options with flexible terms and competitive rates, whether you're purchasing your dream home or refinancing your current mortgage
         </p>
         <Link to='/applyforloan' state={{ loanType }} className="hlm p-3 py-2 text-base">
           Apply Now

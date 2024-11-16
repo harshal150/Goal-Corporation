@@ -30,14 +30,10 @@ const AboutHomeLoan = () => {
   <div className="flex flex-col md:flex-row items-start">
     <div className="w-full md:w-1/2 mt-4 md:mt-8">
       <p className="text-left mb-4 md:mb-6 text-[12px] md:text-[16px]">
-        A home is more than just a structure; it's a sanctuary of comfort,
-        love, and memories. It’s where we find belonging and make dreams come
-        true.
+      A home is more than just a physical structure; it is a place of comfort, love, and cherished memories. It’s where we create a sense of belonging and bring our dreams to life.
       </p>
       <p className="text-left mb-4 md:mb-6 text-[12px] md:text-[16px]">
-        At Goal Corporation, we understand the importance of owning a home.
-        Our low-interest home loans help turn this dream into reality, giving
-        everyone a place they can truly call their own.
+      At Goal Corporation, we recognize how vital homeownership is. That’s why we offer low-interest home loans to help turn your dream of owning a home into a reality—giving you a place you can truly call your own.
       </p>
     </div>
     <div className="w-full md:w-1/2 flex justify-center md:justify-end">

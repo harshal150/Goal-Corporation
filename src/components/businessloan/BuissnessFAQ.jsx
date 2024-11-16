@@ -9,7 +9,7 @@ const faqList = [
     isActive: false,
     question: "What is a business loan?",
     answer:
-      "A business loan is a loan specifically intended for business purposes. It can be used to cover operational costs, expand the business, purchase new equipment, or manage cash flow.",
+      "A business loan is a financial product designed specifically for business purposes. It can be used to cover operational expenses, fund business expansion, purchase new equipment, or manage cash flow.",
   },
   {
     isActive: false,

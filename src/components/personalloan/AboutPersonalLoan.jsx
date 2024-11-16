@@ -36,13 +36,7 @@ const AboutPersonalLoan = () => {
         <div className="flex flex-col md:flex-row items-start">
           <div className="w-full md:w-1/2 mt-6 md:mt-10">
             <p className="text-left mb-4 md:mb-8 text-[12px] md:text-[16px]">
-            With Goal Corporation, you can now avail an instant personal loan
-              online, making the entire process quick and convenient. Whether
-              you're planning a trip to your dream destination, renovating your
-              home with modern furnishings, organising your dream wedding, or
-              facing a medical emergency, an online Personal Loan from Goal
-              Corporation will always be there to help you fulfill your
-              requirements with the lowest personal loan interest rate.
+            With Goal Corporation, you can now easily apply for an instant personal loan online, making the entire process fast and hassle-free. Whether you're planning a getaway to your dream destination, renovating your home with stylish furnishings, organizing the wedding of your dreams, or handling an unexpected medical emergency, an online Personal Loan from Goal Corporation is here to support you. Enjoy competitive interest rates and quick approvals to meet all your financial needs with ease.
             </p>
             {/* <p className="text-left mb-6 md:mb-10 text-[12px] md:text-[16px]">
             At Goal Corporation, we have a deep understanding of you and your

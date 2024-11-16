@@ -12,13 +12,13 @@ const faqList = [
     isActive: false,
     question: "What is a home loan?",
     answer:
-      "A home loan is a secured loan that helps individuals purchase a property or a house. It involves borrowing a lump sum from a financial institution and repaying it in monthly installments over a predetermined period.",
+      "A home loan is a type of secured loan that enables individuals to purchase a property or home. It involves borrowing a lump sum from a lender, such as a bank or financial institution, and repaying the loan in fixed monthly installments over an agreed-upon term.",
   },
   {
     isActive: false,
     question: "What are the eligibility criteria for a home loan?",
     answer:
-      "Eligibility criteria vary by lender but generally include factors like age, income, credit score, employment stability, and property value. Lenders assess these to ensure the borrower's ability to repay the loan.",
+      "Eligibility criteria for home loans can vary by lender, but typically include factors such as age, income, credit score, employment stability, and the value of the property. Lenders evaluate these aspects to determine the borrower’s ability to repay the loan and assess the overall risk.",
   },
   {
     isActive: false,

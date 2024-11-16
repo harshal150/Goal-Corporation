@@ -78,7 +78,7 @@ const teamMembers = [
   {
     img: tejas,
     name: "Tejesh N",
-    designation: "Associate VP-Sales",
+    designation: "Cluster Head – Builder Business ",
   },
 ];
 

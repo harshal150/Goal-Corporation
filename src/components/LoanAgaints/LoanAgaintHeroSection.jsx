@@ -47,12 +47,11 @@ const LoanAgaintHeroSection = () => {
         {/* Text Section */}
         <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            Transform your Property <br />
-            into Capital with Our <br />
-            <span className="text-orange-500">Loan Against Property Option</span>
+          Unlock the Potential of Converting Your Property into Capital with Our {" "}
+            <span className="text-orange-500">Loan Against Property Option !</span>
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
-            Unlock your Capital with our Flexible Loan Against Property Option. Enjoy Lower Interest Rates with Faster Approval.
+          Ease your financial concerns with our Loan Against Property option, Enjoy the benefits of lower interest rates and fast approval!
           </p>
           <Link
             to='/applyforloan'

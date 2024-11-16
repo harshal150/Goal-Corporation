@@ -35,11 +35,11 @@ const BusinessHeroSection = () => {
         {/* Text Section */}
         <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            Achieve Your Business Goals with Our Hassle-Free{" "}
+          Reach Your Business Goals with Our Simple and Convenient {" "}
             <span className="text-orange-500">Business Loan Solution!</span>
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
-            Secure Quick and Convenient Business Loans to cover fixed asset expenses and achieve all your business goals effortlessly.
+          Secure fast funding to cover fixed asset expenses and effortlessly achieve your business objectives
           </p>
           <Link
             to='/applyforloan'
