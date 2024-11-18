@@ -1,9 +1,6 @@
-
-
-
-import aram from '../../assets/employeespeaks/newmem/Aram Nayak.jpg'
-import thrapti from '../../assets/employeespeaks/newmem/Thrapthi Nayak.jpg'
-import basvarajj from '../../assets/employeespeaks/newmem/Basavaraj N.jpg'
+import aram from '../../assets/employeespeaks/newmem/AramNayak.jpg'
+import thrapti from '../../assets/employeespeaks/newmem/ThrapthiNayak.jpg'
+import basvarajj from '../../assets/employeespeaks/newmem/BasavarajN.jpg'
 
 const teamMembers = [
   {
@@ -11,7 +8,6 @@ const teamMembers = [
     name: "Aram Nayak",
     designation: "Chairman and Managing Director",
   },
-
   {
     img: thrapti,
     name: "Thrapthi Nayak ",
@@ -21,11 +17,6 @@ const teamMembers = [
     img: basvarajj,
     name: "Basavaraj N",
     designation: "Director",
-  },
-  {
-    img: basvarajj,
-    name: "John Doe",
-    designation: "Project Manager",
   },
 ];
 
@@ -48,10 +39,7 @@ const OurTeam = () => {
     <section className="py-16">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-indigo-700 mb-12">Founding Members</h2>
-        {/* <p className="text-gray-600 mb-12 max-w-xl mx-auto">
-          Meet the talented individuals who drive our mission forward with passion and dedication.
-        </p> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
           {teamMembers.map((member, index) => (
             <TeamMemberItem key={index} member={member} />
           ))}

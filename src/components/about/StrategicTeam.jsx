@@ -1,13 +1,8 @@
-
-
-import reddysir from '../../assets/keyMembers/reddy.jpg';
-
-import backgroundImage from '../../assets/testimonial/bg2.avif'
-
-import nandakishore from '../../assets/employeespeaks/newmem/Nandkishore Jha.jpg'
-import surendra from '../../assets/employeespeaks/newmem/Surendra Hegde.jpg'
-
-
+// import reddysir from '../../assets/keyMembers/reddy.jpg';
+import reddysir from '../../assets/employeespeaks/newmem/reddy2.jpg';
+import backgroundImage from '../../assets/testimonial/bg2.avif';
+import nandakishore from '../../assets/employeespeaks/newmem/NandkishoreJha.jpg';
+import surendra from '../../assets/employeespeaks/newmem/SurendraHegde.jpg';
 
 const teamMembers = [
   {
@@ -19,12 +14,6 @@ const teamMembers = [
     img: nandakishore,
     name: "Nandkishore Jha",
     designation: "Chief Business Officer",
-  },
- 
-  {
-    img: surendra,
-    name: "Surendra Hegde",
-    designation: "Chief Operating Officer",
   },
   {
     img: surendra,
@@ -49,30 +38,19 @@ const TeamMemberItem = ({ member }) => (
 
 const StrategicTeam = () => {
   return (
-    <section className="relative py-16 " style={{
-      backgroundImage: `url(${backgroundImage})`, 
-      backgroundSize: "cover", 
-      backgroundPosition: "center", 
-      backgroundAttachment: "fixed", 
-      opacity:"50"
-    }}>
-     {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-        style={{ opacity: 0.9 }}
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
+    <section
+      className="relative py-16"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        opacity: "50",
+      }}
+    >
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-orange-500 mb-12">Strategic Leadership</h2>
-        {/* <p className="text-gray-600 mb-12 max-w-xl mx-auto">
-          Meet the talented individuals who drive our mission forward with passion and dedication.
-        </p> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
           {teamMembers.map((member, index) => (
             <TeamMemberItem key={index} member={member} />
           ))}

@@ -94,7 +94,7 @@ const GroupCompany = () => {
           {
             name: "Kukkeshwara Education Trust",
             description:
-              "Aa a philanthropic initiative we have Goal International Public School at a remote place called Manki, Honnavar, in North Canara district, providing a quality education to the rural folks. Having more than 1000 student base, this ICSE syllabi school is being appreciated for its exemplary standards in that area ",
+              "As a philanthropic initiative we have Goal International Public School at a remote place called Manki, Honnavar, in North Canara district, providing a quality education to the rural folks. Having more than 1000 student base, this ICSE syllabi school is being appreciated for its exemplary standards in that area ",
             img: kukkeshwara,
             alt: "Atropos",
             link:""

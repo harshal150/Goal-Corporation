@@ -7,13 +7,13 @@ import rakshita from '../../assets/employeespeaks/rakshita.jpg'
 import swatii from '../../assets/employeespeaks/swatiii.jpg'
 import subrayRoy from '../../assets/employeespeaks/subrayRoy.jpg'
 import joshna from '../../assets/employeespeaks/joshna.jpg'
-import prashant from '../../assets/employeespeaks/prashant K.jpg'
+import prashant from '../../assets/employeespeaks/prashantK.jpg'
 
 
 import Balakrishna from '../../assets/employeespeaks/Balakrishna.jpg'
-import ravi from '../../assets/employeespeaks/ravi naik.jpg'
-import ashok from '../../assets/employeespeaks/Ashok MN.jpg'
-import mahabaleshwar from '../../assets/employeespeaks/Mahabaleshwar Naik.jpg'
+import ravi from '../../assets/employeespeaks/ravinaik.jpg'
+import ashok from '../../assets/employeespeaks/AshokMN.jpg'
+import mahabaleshwar from '../../assets/employeespeaks/MahabaleshwarNaik.jpg'
 import santosh from '../../assets/employeespeaks/santosh.jpg'
 
 

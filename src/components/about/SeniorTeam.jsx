@@ -1,18 +1,14 @@
 
 
-import member1 from '../../assets/DirectorImage.jpg';
-import reddysir from '../../assets/keyMembers/reddy.jpg';
-import bhaswaraj from '../../assets/keyMembers/bhaswaraj.jpg';
 
-
-import mahableshwar from '../../assets/employeespeaks/Mahabaleshwar Naik.jpg'
-import RaviNaik from '../../assets/employeespeaks/ravi naik.jpg'
+import mahableshwar from '../../assets/employeespeaks/MahabaleshwarNaik.jpg'
+import RaviNaik from '../../assets/employeespeaks/ravinaik.jpg'
 import SantoshNaik from '../../assets/employeespeaks/santosh.jpg'
-import Anil from '../../assets/employeespeaks/newmem/Anil Kumar.jpg'
+import Anil from '../../assets/employeespeaks/newmem/AnilKumar.jpg'
 import Nilim from '../../assets/employeespeaks/newmem/Nilim.jpg'
-import Siddjart from '../../assets/DirectorImage.jpg'
-import Ashok from '../../assets/employeespeaks/Ashok MN.jpg'
-import Sushma from '../../assets/employeespeaks/newmem/Sushma T.jpg'
+import Siddjart from '../../assets/employeespeaks/Siddhart.jpg'
+import Ashok from '../../assets/employeespeaks/AshokMN.jpg'
+import Sushma from '../../assets/employeespeaks/newmem/SushmaT.jpg'
 import Balkrishna from '../../assets/employeespeaks/Balakrishna.jpg'
 import Umesh from '../../assets/employeespeaks/newmem/Umesh.jpg'
 import priti from '../../assets/DirectorImage.jpg'
@@ -71,15 +67,11 @@ const teamMembers = [
     designation: "Sr Sales Manager ",
   },
   {
-    img: priti,
+    img: Sushma,
     name: "Preeti NR",
     designation: "Sr Exe – Finance",
   },
-  {
-    img: tejas,
-    name: "Tejesh N",
-    designation: "Cluster Head – Builder Business ",
-  },
+  
 ];
 
 const TeamMemberItem = ({ member }) => (

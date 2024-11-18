@@ -247,7 +247,7 @@ const ApplyLoanModal = ({
                   {loanType ? (
                     <>
                       {`Get ${loanType} Starting From ${interestRate}%`}
-                      <sup>*</sup> onwards ROI
+                      <sup>*</sup> onwards
                     </>
                   ) : (
                     "We'll Contact You Shortly"
