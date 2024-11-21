@@ -14,7 +14,7 @@ import Balakrishna from '../../assets/employeespeaks/Balakrishna.jpg'
 import ravi from '../../assets/employeespeaks/ravinaik.jpg'
 import ashok from '../../assets/employeespeaks/AshokMN.jpg'
 import mahabaleshwar from '../../assets/employeespeaks/MahabaleshwarNaik.jpg'
-import santosh from '../../assets/employeespeaks/santosh.jpg'
+import santosh from '../../assets/employeespeaks/santoshh.jpg'
 
 
 

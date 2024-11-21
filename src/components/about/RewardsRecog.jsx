@@ -4,10 +4,17 @@ import two from '../../assets/RewardsRecognition/2.jpg'
 import three from '../../assets/RewardsRecognition/10.jpg'
 import four from '../../assets/RewardsRecognition/4.jpg'
 import five from '../../assets/RewardsRecognition/5.jpg'
-import six from '../../assets/RewardsRecognition/6.jpg'
-import seven from '../../assets/RewardsRecognition/7.jpg'
-import eight from '../../assets/RewardsRecognition/8.jpg'
-import nine from '../../assets/RewardsRecognition/9.jpg'
+// import six from '../../assets/RewardsRecognition/6.jpg'
+// import seven from '../../assets/RewardsRecognition/7.jpg'
+// import eight from '../../assets/RewardsRecognition/8.jpg'
+// import nine from '../../assets/RewardsRecognition/9.jpg'
+
+
+import award1 from '../../assets/RewardsRecognition/awards/1.JPG'
+import award2 from '../../assets/RewardsRecognition/awards/2.JPG'
+import award3 from '../../assets/RewardsRecognition/awards/3.JPG'
+import award4 from '../../assets/RewardsRecognition/awards/4.JPG'
+
 const RewardsRecog = () => {
   return (
     <div>
@@ -105,49 +112,49 @@ const RewardsRecog = () => {
             {/* bottom cards */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src={six}
+                src={award4}
                 alt="Sport"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-xl font-bold text-white">Axis Bank</h4>
+                  {/* <h4 className="text-xl font-bold text-white">Axis Bank</h4> */}
                 </div>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src={seven}
+                src={award2}
                 alt="Sport"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-xl font-bold text-white">Standard Chartered</h4>
+                  {/* <h4 className="text-xl font-bold text-white">Standard Chartered</h4> */}
                 </div>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src={eight}
+                src={award3}
                 alt="Sport"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-xl font-bold text-white">Yes Bank</h4>
+                  {/* <h4 className="text-xl font-bold text-white">Yes Bank</h4> */}
                 </div>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src={nine}
+                src={award1}
                 alt="Sport"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-xl font-bold text-white">Yes Bank</h4>
+                  {/* <h4 className="text-xl font-bold text-white">Yes Bank</h4> */}
                 </div>
               </div>
             </div>
