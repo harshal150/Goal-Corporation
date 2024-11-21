@@ -142,11 +142,11 @@ export const Navbar = () => {
             {/* Contact Us Button */}
             <Link
               to="/contact"
-              className="cp_rainbow_btn bg-orange-500 text-white px-4 py-2 rounded-md text-lg font-semibold transition-all duration-300 hover:bg-orange-600"
+              className="navbutton bg-orange-500 text-white px-4 py-2 rounded-md text-lg font-semibold transition-all duration-300 hover:bg-orange-600"
             >
               Contact Us
             </Link>
-            <style>{`.cp_rainbow_btn {
+            <style>{`.navbutton {
         background: linear-gradient(-45deg,  #FF3D77, #338AFF ,#00008B);
         background-size: 600%;
         animation: anime 6s linear infinite;

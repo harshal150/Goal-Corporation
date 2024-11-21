@@ -19,6 +19,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import PrivacyPolicy from './components/quicklinks/PrivacyPolicy';
 import TermsAndConditions from './components/quicklinks/TermsConditions';
 import CareersPage from './components/quicklinks/Careers';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -49,6 +50,7 @@ function App() {
     const message = `Name: ${name}, Email: ${email}, Mobile: ${mobile}, Loans: ${loanTypes}`;
     const whatsappUrl = `https://wa.me/+918088335006?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+    setShowForm(false)
   };
 
   return (
@@ -131,7 +133,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<AboutContact />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/homeloan" element={<HomeLoan />} />
         <Route path="/personalloan" element={<PersonalLoan />} />
         <Route path="/businessloan" element={<BusinessLoan />} />

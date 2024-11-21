@@ -23,6 +23,7 @@ const socialMedia = [
   { value: "FAQ's", href: "#!" },
   { value: "Privacy Policy", href: "/privacypolicy" },
   { value: "Terms & Conditions", href: "/termsconditions" },
+  { value: "Goal Biomedicals", href: "/termsconditions" },
 ];
 // const socialMedia = [
 //   { value: "Facebook", href: "www.facebook.com" },

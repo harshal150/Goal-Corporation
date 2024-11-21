@@ -1,13 +1,6 @@
 
-
-
-
-
-
 import React from 'react';
-import canara from '../../assets/partner/canara.jpg';
-import pnb from '../../assets/partner/pnb housing.png';
-import union from '../../assets/partner/union.png';
+
 import kotak from '../../assets/partner/kotak.jpeg';
 import idfc from '../../assets/partner/idfc.png';
 import dbs from '../../assets/partner/Frame6.png';
@@ -22,6 +15,9 @@ import bajajlap from '../../assets/partner/bajaj lap.jpeg'
 import piramal from '../../assets/partner/piramal.png'
 import icicihfc from '../../assets/partner/icici hfc.jpeg'
 import poonawala from '../../assets/partner/Frame10.png'
+import tatacap from '../../assets/partner/tata capital.avif'
+import indusland from '../../assets/partner/new/indusind.png'
+import adityabirla from '../../assets/partner/new/aditya.png'
 import { Link } from 'react-router-dom';
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
@@ -91,88 +87,109 @@ const PersonalBanks = () => {
   const loanData = [
     {
       logo: icici,
-      bankName: 'ICICI Bank Loan',
+      bankName: 'ICICI Bank ',
       interestRate: '10.75% - 15.75%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
     {
       logo: kotak,
-      bankName: 'Kotak Mahindra Bank',
+      bankName: 'Kotak Mahindra ',
       interestRate: '10.50% - 14.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
     {
       logo: hdfc,
-      bankName: 'HDFC Bank Loan',
+      bankName: 'HDFC Bank ',
       interestRate: '10.50% - 14.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
     {
       logo: axis,
-      bankName: 'Axis Bank Loan',
+      bankName: 'Axis Bank ',
       interestRate: '10.75% - 14.75%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
     {
       logo: idfc,
-      bankName: 'IDFC Bank Loan',
+      bankName: 'IDFC Bank ',
       interestRate: '10.75% - 20.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
-    // {
-    //   logo: godrej,
-    //   bankName: 'Godrej Capital',
-    //   interestRate: '17.00%',
-    //   processingFee: '3% + GST',
-    //   loanAmount: '5 lacs to 50 lacs',
-    // },
-    // {
-    //   logo: lt,
-    //   bankName: 'L&T Housing Finance',
-    //   interestRate: '12.50% to 25%',
-    //   processingFee: '2% + GST',
-    //   loanAmount: '1 lacs to 50 lacs',
-    // },
-    // {
-    //   logo: axisfinance,
-    //   bankName: 'Axis Finance',
-    //   interestRate: '10.50% to 12.50%',
-    //   processingFee: '0.75% to 1% + GST',
-    //   loanAmount: '20 lacs to 15 crore',
-    // },
-    // {
-    //   logo: bajajlap,
-    //   bankName: 'Bajaj Housing Finance',
-    //   interestRate: '09.75% to 30.00%',
-    //   processingFee: 'upto 3.54%',
-    //   loanAmount: '2 lacs to 80 lacs',
-    // },
-    // {
-    //   logo: piramal,
-    //   bankName: 'Piramal',
-    //   interestRate: '16.49%',
-    //   processingFee: 'upto 5% + GST',
-    //   loanAmount: '3 lacs to 20 lacs',
-    // },
-    // {
-    //   logo: icicihfc,
-    //   bankName: 'ICICI HFC',
-    //   interestRate: '09.50% to 12.00%',
-    //   processingFee: '0.75% to 1% + GST',
-    //   loanAmount: '10 lakh to 2 crore',
-    // },
-    // {
-    //     logo: poonawala,
-    //     bankName: 'PoonaWala',
-    //     interestRate: '15.00%',
-    //     processingFee: '3% GST',
-    //     loanAmount: '10 lacs to 50 lacs',
-    //   },
+    {
+      logo: tatacap,
+      bankName: 'Tata Capital Bank ',
+      interestRate: '10.75% - 20.00%',
+      processingFee: '1% + GST',
+      loanAmount: '1 lacs to 50 lacs',
+    },
+    {
+      logo: adityabirla,
+      bankName: 'Tata Capital Bank ',
+      interestRate: '10.75% - 20.00%',
+      processingFee: '1% + GST',
+      loanAmount: '1 lacs to 50 lacs',
+    },
+    {
+      logo: indusland,
+      bankName: 'Tata Capital Bank ',
+      interestRate: '10.75% - 20.00%',
+      processingFee: '1% + GST',
+      loanAmount: '1 lacs to 50 lacs',
+    },
+    {
+      logo: godrej,
+      bankName: 'Godrej Capital',
+      interestRate: '17.00%',
+      processingFee: '3% + GST',
+      loanAmount: '5 lacs to 50 lacs',
+    },
+    {
+      logo: lt,
+      bankName: 'L&T Finance',
+      interestRate: '12.50% to 25%',
+      processingFee: '2% + GST',
+      loanAmount: '1 lacs to 50 lacs',
+    },
+    {
+      logo: axisfinance,
+      bankName: 'Axis Finance',
+      interestRate: '10.50% to 12.50%',
+      processingFee: '0.75% to 1% + GST',
+      loanAmount: '20 lacs to 15 crore',
+    },
+    {
+      logo: bajajlap,
+      bankName: 'Bajaj Finance',
+      interestRate: '09.75% to 30.00%',
+      processingFee: 'upto 3.54%',
+      loanAmount: '2 lacs to 80 lacs',
+    },
+    {
+      logo: piramal,
+      bankName: 'Piramal',
+      interestRate: '16.49%',
+      processingFee: 'upto 5% + GST',
+      loanAmount: '3 lacs to 20 lacs',
+    },
+    {
+      logo: icicihfc,
+      bankName: 'ICICI HFC',
+      interestRate: '09.50% to 12.00%',
+      processingFee: '0.75% to 1% + GST',
+      loanAmount: '10 lakh to 2 crore',
+    },
+    {
+        logo: poonawala,
+        bankName: 'PoonaWala',
+        interestRate: '15.00%',
+        processingFee: '3% GST',
+        loanAmount: '10 lacs to 50 lacs',
+      },
   ];
   
   

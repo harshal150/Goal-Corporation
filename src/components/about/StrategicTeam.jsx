@@ -24,7 +24,7 @@ const teamMembers = [
 
 const TeamMemberItem = ({ member }) => (
   <div className="text-center">
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+    <div className="bg-white shadow-lg  rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
       <img
         src={member.img}
         alt={member.name}

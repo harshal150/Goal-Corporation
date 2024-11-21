@@ -76,7 +76,7 @@ const teamMembers = [
 
 const TeamMemberItem = ({ member }) => (
   <div className="text-center">
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+    <div className="bg-white shadow-lg rounded-lg  overflow-hidden transform transition duration-300 hover:scale-105">
       <img
         src={member.img}
         alt={member.name}
@@ -92,7 +92,7 @@ const SeniorTeam = () => {
   return (
     <section className="py-16 ">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-indigo-700 mb-12">Senior Leadership</h2>
+        <h2 className="text-3xl font-bold text-indigo-700 mb-12">Our Driving Force...</h2>
         {/* <p className="text-gray-600 mb-12 max-w-xl mx-auto">
           Meet the talented individuals who drive our mission forward with passion and dedication.
         </p> */}

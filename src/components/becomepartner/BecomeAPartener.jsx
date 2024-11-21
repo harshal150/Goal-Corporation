@@ -51,7 +51,7 @@ const BecomeAPartner = () => {
 
       // Display the SweetAlert2 modal
       Swal.fire({
-        title: "Thank you for joining us!",
+        title: "Thank you for choosing us to be your partner!",
         text: "We have received your application. Our team will review it and get in touch with you soon to discuss the next steps. Welcome aboard!",
         icon: "success",
         confirmButtonText: "OK",

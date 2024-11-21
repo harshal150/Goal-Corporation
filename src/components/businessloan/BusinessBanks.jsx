@@ -19,6 +19,7 @@ import bajajlap from '../../assets/partner/bajaj lap.jpeg'
 import piramal from '../../assets/partner/piramal.png'
 import icicihfc from '../../assets/partner/icici hfc.jpeg'
 import poonawala from '../../assets/partner/Frame10.png'
+import tatacap from '../../assets/partner/tata capital.avif'
 import { Link } from 'react-router-dom';
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
@@ -87,35 +88,35 @@ const BusinessBanks = () => {
   const loanData = [
     {
       logo: icici,
-      bankName: 'ICICI Bank Loan',
+      bankName: 'ICICI Bank ',
       interestRate: '13.25% to 19.50%',
       processingFee: '2% + GST',
       loanAmount: '2 lacs to 70 lacs',
     },
     {
       logo: kotak,
-      bankName: 'Kotak Mahindra Bank Loan',
+      bankName: 'Kotak Mahindra Bank ',
       interestRate: '14.00% to 20.00%',
       processingFee: '2% + GST',
       loanAmount: '5 lacs to 2 crore',
     },
     {
       logo: hdfc,
-      bankName: 'HDFC Bank Loan',
+      bankName: 'HDFC Bank ',
       interestRate: '10.75% to 22.50%',
       processingFee: '2% + GST',
       loanAmount: '1 lacs to 75 lacs',
     },
     {
       logo: axis,
-      bankName: 'Axis Bank Loan',
+      bankName: 'Axis Bank ',
       interestRate: '11.05% to 20.00%',
       processingFee: '1.75% + GST to 3% + GST',
       loanAmount: '5 lacs to 75 lacs ',
     },
     {
       logo: idfc,
-      bankName: 'IDFC Bank Loan',
+      bankName: 'IDFC Bank ',
       interestRate: '11.00% to 19.00%',
       processingFee: '1.50% + GST to 3% + GST',
       loanAmount: 'Rs.10 lacs to Rs.1 crore',
@@ -143,7 +144,7 @@ const BusinessBanks = () => {
     },
     {
       logo: bajajlap,
-      bankName: 'Bajaj Housing Finance',
+      bankName: 'Bajaj Finance',
       interestRate: '09.75% to 30.00%',
       processingFee: 'upto 3.54%',
       loanAmount: '2 lacs to 80 lacs',
@@ -156,12 +157,13 @@ const BusinessBanks = () => {
       loanAmount: '3 lacs to 20 lacs',
     },
     {
-      logo: icicihfc,
-      bankName: 'ICICI HFC',
-      interestRate: '09.50% to 12.00%',
-      processingFee: '0.75% to 1% + GST',
-      loanAmount: '10 lakh to 2 crore',
+      logo: tatacap,
+      bankName: 'Tata Capital',
+      interestRate: '16.00%',
+      processingFee: 'upto 2% + GST',
+      loanAmount: '3 lacs to 20 lacs',
     },
+   
     {
         logo: poonawala,
         bankName: 'PoonaWala',

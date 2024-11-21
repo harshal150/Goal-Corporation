@@ -1,5 +1,5 @@
-import aram from '../../assets/employeespeaks/newmem/AramNayak.jpg'
-import thrapti from '../../assets/employeespeaks/newmem/ThrapthiNayak.jpg'
+import aram from '../../assets/employeespeaks/newmem/AramNayak2.jpg'
+import thrapti from '../../assets/employeespeaks/newmem/ThrapthiNayak1.jpg'
 import basvarajj from '../../assets/employeespeaks/newmem/BasavarajN.jpg'
 
 const teamMembers = [
@@ -22,17 +22,19 @@ const teamMembers = [
 
 const TeamMemberItem = ({ member }) => (
   <div className="text-center">
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+    <div className="bg-white shadow-lg rounded-lg mx-auto overflow-hidden transform transition duration-300 hover:scale-105">
       <img
         src={member.img}
         alt={member.name}
-        className="w-full h-64 object-cover object-top"
+        className="w-full h-72 object-cover object-top" // Use object-center for centering the image
       />
     </div>
     <h3 className="mt-4 text-xl font-semibold text-gray-800">{member.name}</h3>
     <p className="text-indigo-600 font-medium">{member.designation}</p>
   </div>
 );
+
+
 
 const OurTeam = () => {
   return (

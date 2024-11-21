@@ -10,7 +10,7 @@ const CalculateEMIButton = () => {
   };
 
   return (
-    <div className="relative z-50">
+    <div className="relative z-30">
       {/* Button */}
       <button
         className="cp_rainbow_btn font-semibold px-4 py-2 rounded-lg flex items-center space-x-2 shadow-lg hover:bg-blue-600 transition"
@@ -20,7 +20,7 @@ const CalculateEMIButton = () => {
         <span>Calculate EMI</span>
       </button>
       <style>{`.cp_rainbow_btn {
-        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background: linear-gradient(-45deg,);
         background-size: 600%;
         animation: anime 6s linear infinite;
         font-weight: 500;
@@ -56,17 +56,17 @@ const CalculateEMIButton = () => {
       {/* Conditionally render the drawer */}
       {isDrawerOpen && (
         <div
-          className="absolute top-0 right-0 h-[40%] bg-white shadow-lg w-[70%] transform transition-transform duration-300"
+          className="absolute top-0 right-0 h-[40%] bg-white shadow-lg w-[70%] transform  transition-transform duration-300"
           style={{ right: '0' }}
         >
           {/* Close Button */}
           <button
-            className="absolute top-4 right-4 bg-red-500 text-white p-2 rounded-full"
+            className="absolute top-14 z-50 right-8 bg-red-500 text-white p-1 rounded-lg mb-5"
             onClick={toggleDrawer}
           >
             ✕
           </button>
-          <div className="p-4">
+          <div className="p-4 ">
             <LoLoanCalculator />
           </div>
         </div>

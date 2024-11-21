@@ -16,6 +16,8 @@ import bajajlap from '../../assets/partner/bajaj lap.jpeg'
 import piramal from '../../assets/partner/piramal.png'
 import icicihfc from '../../assets/partner/icici hfc.jpeg'
 import { Link } from 'react-router-dom';
+// import rbl from '../../assets/partner/new/rbl.png'
+import rbl from '../../assets/partner/rbl.png'
 
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
   const loanType = "Loans Against Property";
@@ -84,35 +86,35 @@ const LapBanks = () => {
     const loanData = [
         {
           logo: icici,
-          bankName: 'ICICI Bank Loan',
+          bankName: 'ICICI Bank ',
           interestRate: '09.50% to 11.50%',
           processingFee: '0.60% + GST to 1% + GST',
           loanAmount: '5 lacs to 15 crore',
         },
         {
           logo: kotak,
-          bankName: 'Kotak Mahindra Bank Loan',
+          bankName: 'Kotak Mahindra Bank ',
           interestRate: '09.50% to 11.50%',
           processingFee: '0.60% + GST to 1% + GST',
           loanAmount: '5 lacs to 15 crore',
         },
         {
           logo: hdfc,
-          bankName: 'HDFC Bank Loan',
+          bankName: 'HDFC Bank ',
           interestRate: '09.50% to 11.50%',
           processingFee: '0.60% + GST to 1% + GST',
           loanAmount: '5 lacs to 15 crore',
         },
         {
           logo: axis,
-          bankName: 'Axis Bank Loan',
+          bankName: 'Axis Bank ',
           interestRate: '09.50% to 11.50%',
           processingFee: '0.60% + GST to 1% + GST',
           loanAmount: '5 lacs to 15 crore',
         },
         {
           logo: idfc,
-          bankName: 'IDFC Bank Loan',
+          bankName: 'IDFC Bank ',
           interestRate: '09.40% to 10.25%',
           processingFee: '0.5% + GST to 1% + GST',
           loanAmount: '50 lakh to 50 crore',
@@ -140,7 +142,14 @@ const LapBanks = () => {
         },
         {
           logo: bajajlap,
-          bankName: 'Bajaj Housing Finance',
+          bankName: 'Bajaj Finance',
+          interestRate: '09.75% to 11.00%',
+          processingFee: '0.60% + GST to 1% + GST',
+          loanAmount: '20 lacs to 15 crore',
+        },
+        {
+          logo: rbl,
+          bankName: 'RBL Bank',
           interestRate: '09.75% to 11.00%',
           processingFee: '0.60% + GST to 1% + GST',
           loanAmount: '20 lacs to 15 crore',

@@ -98,7 +98,7 @@ const FaqItem = ({ faq }) => {
 
 const ContactUsFAQ = () => {
   return (
-    <section className="faq-section py-10 md:py-14 lg:py-16 bg-white ">
+    <section className="bg-white py-10 md:py-14 lg:py-16  ">
       <div className="container px-4 sm:px-6 md:px-8 lg:px-36 mx-auto">
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">

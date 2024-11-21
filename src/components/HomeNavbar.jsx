@@ -438,8 +438,8 @@ export const HomeNavbar = () => {
             {/* Contact Us Button */}
             <Link
               to="/contact"
-              className={`xlr p-3 py-2 text-center ${
-                isActive("/contact") ? "text-orange-500" : "text-white hover:text-orange-500"
+              className={`xlr p-3 py-2 text-center font-semibold ${
+                isActive("/contact") ? "text-orange-500" : "text-white hover:text-orange-500 "
               }`}
             >
               Contact Us

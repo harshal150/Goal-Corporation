@@ -30,6 +30,12 @@ const CareersPage = () => {
       location: "Pune, India",
       description: "Oversee and lead the sales team to achieve loan sales targets.",
     },
+    {
+      title: "Branch Manager",
+      type: "Full-time",
+      location: "Delhi / Ahmedabad / Mumbai , India ",
+      description: "To Establish the branch and lead the business in the given city.",
+    },
   ];
 
   const openModal = () => setIsModalOpen(true);

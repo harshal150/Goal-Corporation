@@ -15,6 +15,17 @@ import award2 from '../../assets/RewardsRecognition/awards/2.JPG'
 import award3 from '../../assets/RewardsRecognition/awards/3.JPG'
 import award4 from '../../assets/RewardsRecognition/awards/4.JPG'
 
+
+import award5 from '../../assets/RewardsRecognition/awards/5.JPG'
+import award6 from '../../assets/RewardsRecognition/awards/6.JPG'
+import award7 from '../../assets/RewardsRecognition/awards/7.JPG'
+import award8 from '../../assets/RewardsRecognition/awards/8.JPG'
+import award9 from '../../assets/RewardsRecognition/awards/9.JPG'
+import award10 from '../../assets/RewardsRecognition/awards/10.JPG'
+import award11 from '../../assets/RewardsRecognition/awards/11.JPG'
+import award12 from '../../assets/RewardsRecognition/awards/12.JPG'
+
+
 const RewardsRecog = () => {
   return (
     <div>
@@ -33,84 +44,9 @@ const RewardsRecog = () => {
             and recognition for outstanding contributions
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {/* Large item */}
-            <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
-              <img
-                src= {one}
-                alt="Nature"
-                className="w-full h-full object-contain"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-2xl font-bold text-white">
-                    TaTa Capital
-                  </h3>
-                  {/* <p className="text-white">
-                    Discover the beauty of the natural world
-                  </p> */}
-                </div>
-              </div>
-            </div>
-            {/* Two small items */}
-            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-              <img
-                src={two}
-                alt="Food"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  {/* <h4 className="text-xl font-bold text-white">
-                    Culinary Delights
-                  </h4> */}
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-              <img
-                src={three}
-                alt="Technology"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  {/* <h4 className="text-xl font-bold text-white">
-                    Tech Innovations
-                  </h4> */}
-                </div>
-              </div>
-            </div>
-            {/* Three medium items */}
-            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-              <img
-                src={four}
-                alt="Travel"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  {/* <h4 className="text-xl font-bold text-white">
-                    Travel Adventures
-                  </h4> */}
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
-              <img
-                src={five}
-                alt="Art"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-xl font-bold text-white">
-                    Awards
-                  </h4>
-                </div>
-              </div>
-            </div>
-            {/* bottom cards */}
-            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+
+ {/* bottom cards */}
+ <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
                 src={award4}
                 alt="Sport"
@@ -158,6 +94,175 @@ const RewardsRecog = () => {
                 </div>
               </div>
             </div>
+
+
+
+
+ {/* bottom cards */}
+ <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award5}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Axis Bank</h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award6}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Standard Chartered</h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award9}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Yes Bank</h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award8}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Yes Bank</h4> */}
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award7}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Axis Bank</h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award10}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Standard Chartered</h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award11}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Yes Bank</h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={award12}
+                alt="Sport"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">Yes Bank</h4> */}
+                </div>
+              </div>
+            </div>
+
+
+
+ 
+            {/* Two small items */}
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={two}
+                alt="Food"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">
+                    Culinary Delights
+                  </h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={three}
+                alt="Technology"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  {/* <h4 className="text-xl font-bold text-white">
+                    Tech Innovations
+                  </h4> */}
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={one}
+                alt="Technology"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-2xl font-bold text-white">
+                    TaTa Capital
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src={five}
+                alt="Technology"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-2xl font-bold text-white">
+                    Awards
+                  </h3>
+                </div>
+              </div>
+            </div>
+            {/* Three medium items */}
+    
+        
+           
           </div>
         </div>
       </div>
