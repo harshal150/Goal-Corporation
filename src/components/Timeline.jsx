@@ -142,8 +142,8 @@ const Timeline = () => {
                           {item.title}
                         </p>
                       </div>
-                      <div className="relative mb-10">
-                        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-10 border-dotted border-green-400 border-l-2"></div>
+                      <div className="relative ">
+                        <div className="absolute  left-1/2 transform -translate-x-1/2 w-0.5 h-10 border-dotted border-green-400 border-l-2"></div>
                       </div>
                     </>
                   )}
@@ -162,10 +162,10 @@ const Timeline = () => {
                     <img
                       src={item.logo}
                       alt={`timeline icon ${index}`}
-                      className="h-32 w-32"
+                      className="h-12 mt-10 w-32"
                     />
                     <div className="absolute flex justify-center items-center">
-                      <p className="text-black font-bold text-sm text-center">{item.year}</p>
+                      <p className="text-black font-bold text-sm mt-12 text-center">{item.year}</p>
                     </div>
                   </div>
 
@@ -174,7 +174,7 @@ const Timeline = () => {
                       <img
                         src={images[index]}
                         alt={`small image ${index}`}
-                        className="w-20 h-20 rounded-full object-cover"
+                        className="w-20 h-20 rounded-full mt-10 object-cover"
                       />
                     </div>
                   )}

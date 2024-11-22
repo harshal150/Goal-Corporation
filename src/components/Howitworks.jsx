@@ -24,13 +24,13 @@ const contents = [
   },
   {
     image: three,
-    title: "Quick Dispersal",
+    title: "Quick Disbursal",
     text: "Experience fast and hassle-free loan disbursements directly into your account, helping you access funds precisely when you need them.",
   },
   {
     image: four,
     title: "One Stop Solution",
-    text: "Whether it's a personal loan, home loan, or business loan, we offer a comprehensive range of financial solutions tailored to meet your diverse needs.",
+    text: "Whether it's a personal loan, home loan, or business loan, we offer a comprehensive range of Financial Solution to meet your diverse needs.",
   },
 ];
 

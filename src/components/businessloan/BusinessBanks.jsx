@@ -152,22 +152,22 @@ const BusinessBanks = () => {
     {
       logo: piramal,
       bankName: 'Piramal',
-      interestRate: '16.49%',
+      interestRate: '16.49% and above ',
       processingFee: 'upto 5% + GST',
       loanAmount: '3 lacs to 20 lacs',
     },
     {
       logo: tatacap,
       bankName: 'Tata Capital',
-      interestRate: '16.00%',
+      interestRate: '16.00% and above ',
       processingFee: 'upto 2% + GST',
       loanAmount: '3 lacs to 20 lacs',
     },
    
     {
         logo: poonawala,
-        bankName: 'PoonaWala',
-        interestRate: '15.00%',
+        bankName: 'Poonawala Fincorp',
+        interestRate: '15.00% and above ',
         processingFee: '3% GST',
         loanAmount: '10 lacs to 50 lacs',
       },

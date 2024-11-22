@@ -20,6 +20,14 @@ import indusland from '../../assets/partner/new/indusind.png'
 import adityabirla from '../../assets/partner/new/aditya.png'
 import { Link } from 'react-router-dom';
 
+
+import yesbank from '../../assets/partner/new/yesbank.png'
+import bandhan from '../../assets/partner/new/bandhan.jpg'
+import iifl from '../../assets/partner/Frame1.png'
+import smfg from '../../assets/partner/new/smfgindia.png'
+import incred from '../../assets/partner/new/incred.jpeg'
+import shreeram from '../../assets/partner/new/shreeramfinance.png'
+
 const LoanCard = ({ logo, bankName, interestRate, processingFee, loanAmount }) => {
     const loanType = "Personal Loan";
 
@@ -94,7 +102,7 @@ const PersonalBanks = () => {
     },
     {
       logo: kotak,
-      bankName: 'Kotak Mahindra ',
+      bankName: 'Kotak Mahindra Bank ',
       interestRate: '10.50% - 14.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
@@ -122,21 +130,21 @@ const PersonalBanks = () => {
     },
     {
       logo: tatacap,
-      bankName: 'Tata Capital Bank ',
+      bankName: 'Tata Capital ',
       interestRate: '10.75% - 20.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
     {
       logo: adityabirla,
-      bankName: 'Tata Capital Bank ',
+      bankName: 'Aditya Birla Bank ',
       interestRate: '10.75% - 20.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
     },
     {
       logo: indusland,
-      bankName: 'Tata Capital Bank ',
+      bankName: 'IndusInd Bank ',
       interestRate: '10.75% - 20.00%',
       processingFee: '1% + GST',
       loanAmount: '1 lacs to 50 lacs',
@@ -177,15 +185,51 @@ const PersonalBanks = () => {
       loanAmount: '3 lacs to 20 lacs',
     },
     {
-      logo: icicihfc,
-      bankName: 'ICICI HFC',
-      interestRate: '09.50% to 12.00%',
-      processingFee: '0.75% to 1% + GST',
-      loanAmount: '10 lakh to 2 crore',
+      logo: yesbank,
+      bankName: 'Yes Bank',
+      interestRate: '10.75% to 16.00% ',
+      processingFee: ' 1% + GST',
+      loanAmount: '1 Lacs to 30 Lacs',
     },
     {
+      logo: bandhan,
+      bankName: 'Bandhan Bank',
+      interestRate: '11.50% to 16.50% ',
+      processingFee: ' 1% + GST',
+      loanAmount: '1 Lacs to 25 Lacs',
+    },
+    {
+      logo: smfg,
+      bankName: 'SMFG India Credit ',
+      interestRate: '12.50% to 18.00% ',
+      processingFee: ' 2% + GST',
+      loanAmount: '1 Lacs to 30 Lacs',
+    },
+    {
+      logo: iifl,
+      bankName: 'SMFG India Credit ',
+      interestRate: '14.00% to 24.00%  ',
+      processingFee: ' 2% + GST',
+      loanAmount: '1 Lacs to 20 Lacs',
+    },
+    {
+      logo: incred,
+      bankName: 'Incred',
+      interestRate: '21.00% to 33.00%   ',
+      processingFee: ' 2% + GST',
+      loanAmount: '1 Lacs to 15 Lacs',
+    },
+    {
+      logo: shreeram,
+      bankName: 'Incred',
+      interestRate: '16.00% to 26.00%   ',
+      processingFee: ' 2% + GST',
+      loanAmount: '1 Lacs to 20 Lacs',
+    },
+   
+    {
         logo: poonawala,
-        bankName: 'PoonaWala',
+        bankName: 'Poonawala',
         interestRate: '15.00%',
         processingFee: '3% GST',
         loanAmount: '10 lacs to 50 lacs',

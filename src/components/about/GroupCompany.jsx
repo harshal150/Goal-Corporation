@@ -14,7 +14,7 @@ import backgroundVideo from '../../assets/ProductVideos/v7.mp4'
 import backgroundImage from '../../assets/testimonial/bg2.avif'
 
 const GroupCompany = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);  
   const elementRef = useRef(null);
 
   useEffect(() => {
@@ -22,18 +22,18 @@ const GroupCompany = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true); // Trigger the animation when the component comes into view
+            setIsVisible(true); 
           }
         });
       },
-      { threshold: 0.1 } // Trigger the animation when 20% of the component is visible
+      { threshold: 0.1 } 
     );
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
 
-    // Clean up the observer on component unmountaa
+    
     return () => {
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
@@ -43,7 +43,7 @@ const GroupCompany = () => {
 
   return (
     <div
-      className="relative mt-12 mb-20 w-full mx-auto text-center p-6 "
+      className="relative mt-12 mb-20 w-full mx-auto text-center p-6"
       style={{
       backgroundImage: `url(${backgroundImage})`, 
       backgroundSize: "cover", 
@@ -52,26 +52,13 @@ const GroupCompany = () => {
       opacity:"50"
     }}
     >
-    {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-        style={{ opacity: 0.9 }}
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-      {/* <h1 className="text-5xl font-bold text-center text-indigo-800 uppercase mb-16">
-        Group Companies
-      </h1> */}
+
       <h1 className="text-xl md:text-3xl font-bold text-center text-orange-500 mb-16">
         Group Companies
       </h1>
 
       <div
-        // ref={elementRef}
+   
         className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 transition-all duration-1000 ease-out`}
       >
         {[
@@ -92,7 +79,7 @@ const GroupCompany = () => {
             link:"https://goalpromoters.com/"
           },
           {
-            name: "Kukkeshwara Education Trust",
+            name: "Kokkeshwara Education Trust",
             description:
               "As a philanthropic initiative we have Goal International Public School at a remote place called Manki, Honnavar, in North Canara district, providing a quality education to the rural folks. Having more than 1000 student base, this ICSE syllabi school is being appreciated for its exemplary standards in that area ",
             img: kukkeshwara,
@@ -105,9 +92,8 @@ const GroupCompany = () => {
               "Goal Bio Medical develops and distributes advanced medical devices and healthcare products, focusing on innovation to enhance patient care. The firm also supports healthcare infrastructure through real estate and construction services, bridging technology with medical needs.",
             img: biomedical,
             alt: "Goal Bio Medical",
-            link:"https://www.goalcorporation.com/scientific-equipments.php"
+            link:"/biomedical"
           },
-
           {
             name: "Goal Fuel Park",
             description:

@@ -1,5 +1,5 @@
 // import reddysir from '../../assets/keyMembers/reddy.jpg';
-import reddysir from '../../assets/employeespeaks/newmem/reddy2.jpg';
+import reddysir from '../../assets/employeespeaks/newmem/reddyinshot2.jpg';
 import backgroundImage from '../../assets/testimonial/bg2.avif';
 import nandakishore from '../../assets/employeespeaks/newmem/NandkishoreJha.jpg';
 import surendra from '../../assets/employeespeaks/newmem/SurendraHegde.jpg';
@@ -32,7 +32,7 @@ const TeamMemberItem = ({ member }) => (
       />
     </div>
     <h3 className="mt-4 text-xl font-semibold text-white">{member.name}</h3>
-    <p className="text-indigo-600 font-medium">{member.designation}</p>
+    <p className="text-blue-200 font-medium">{member.designation}</p>
   </div>
 );
 

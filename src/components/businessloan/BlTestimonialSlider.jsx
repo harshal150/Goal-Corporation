@@ -21,24 +21,24 @@ const testimonials = [
  
   {
     image: adhikeshavn,
-    name: "Adikeshavan S",
+    name: "Munshad Shaikh, Mumbai",
     title: "Customer",
     quote:
-      "Dear sir, I am hereby writing this mail to show my gratitude for the outstanding service and support offered by your team during the loan process. I availed the loan without any hindrance and trouble. It's all because of your timely service. You took good initiative to finish the loan process within the stipulated time. Thank you.",
+      "I would like to thank the GOAL Corporation, Mumbai team for the Business Loan I availed from HDFC Bank. I had a huge stock coming and requirement was very urgent. The team understood and delivered promptly.  ",
   },
   {
     image: vimala,
-    name: "Vimala N",
+    name: "Suraj Gaikwad, Mumbai  ",
     title: "Customer",
     quote:
-      "Hi, I am hereby writing to show my appreciation for the good service and support, quick process, and timely updates from the Goal Corp team during the loan process of my LAP. Thank you for your support.",
+      "I was looking for a loan but due to office work and other commitments, could not go to the bank. Luckily, I got a call from Goal Corp team and they have done everything for me and got the Loan done. I must appreciate the service, the smooth process and professional approach.",
   },
   {
     image: manju,
-    name: "Manjunath TR",
+    name: "Mahendra Gupta, Mumbai",
     title: "Customer",
     quote:
-      "First of all I would like to thank Goal Corp Team for meeting me in person and getting to know my financial requirements for the construction of my home. I was sanctioned 60,00,000/- (Sixty Lakhs) for construction of the home and 10,00,000/- (Ten Lakhs) against property (LAP). In total, I was sanctioned 70,00,000/- (Seventy Lakhs). The team was extremely helpful, and it made my experience so much better. Selection and Recommendations of Banks is also quite great. I would like to thank once again!",
+      "I run a Farsaan business and frequently need money for fulfillment of various orders. Earlier, I had to visit the branch, every time I needed any loan. This time, Goal Team has handled the loan process and I did not have to waste my time away from business. Also, they got me better offer compared to previous loans. Thanks Team Goal Corp.",
   },
   {
     image: adhikeshavn,
