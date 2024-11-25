@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const GoalBioHeading = () => {
     const Navigate = useNavigate();
     const handleClick = () => {
-        Navigate('/contact')
+        Navigate('/biomedicalapply')
     }
   return (
     <div

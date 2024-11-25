@@ -6,9 +6,12 @@ import React, { useState, useRef } from "react";
 
 
 
-import manju from '../../assets/ProductTestimonials/LAP/najunath.jpg'
-import adhikeshavn from '../../assets/ProductTestimonials/LAP/adhikeshvan.jpg'
-import vimala from '../../assets/ProductTestimonials/LAP/vimala.jpg'
+import mahendra from '../../assets/ProductTestimonials/BL/mahendra.jpg'
+import qazi from '../../assets/ProductTestimonials/BL/qazi.jpg'
+import nikjhil from '../../assets/ProductTestimonials/BL/nikhil.jpg'
+import okil from '../../assets/ProductTestimonials/BL/okil.jpg'
+// import mahendra from '../../assets/ProductTestimonials/BL/mahendra.jpg'
+
 
 
 
@@ -20,50 +23,65 @@ const testimonials = [
 
  
   {
-    image: adhikeshavn,
-    name: "Munshad Shaikh, Mumbai",
+    image: mahendra,
+    name: "Mahendra Gupta",
     title: "Customer",
     quote:
-      "I would like to thank the GOAL Corporation, Mumbai team for the Business Loan I availed from HDFC Bank. I had a huge stock coming and requirement was very urgent. The team understood and delivered promptly.  ",
+      "I run a Farsaan business and frequently need money for fulfillment of various orders. Earlier, I had to visit the branch, every time I needed any loan. This time, Goal Team has handled the loan process and I did not have to waste my time away from business. Also, they got me better offer compared to previous loans. Thanks Team Goal Corp. ",
   },
   {
-    image: vimala,
-    name: "Suraj Gaikwad, Mumbai  ",
+    image: qazi,
+    name: "Dr. Qazi Danish  ",
     title: "Customer",
     quote:
-      "I was looking for a loan but due to office work and other commitments, could not go to the bank. Luckily, I got a call from Goal Corp team and they have done everything for me and got the Loan done. I must appreciate the service, the smooth process and professional approach.",
+      "My experience with the Goal Corporation team was very good. Needed funds for renovation of my clinic and I do not have time to run behind banks for the same. Goal team came for the rescue and did an exceptional job helping me.",
   },
   {
-    image: manju,
-    name: "Mahendra Gupta, Mumbai",
+    image: nikjhil,
+    name: "CA Nikhil Kotian",
     title: "Customer",
     quote:
-      "I run a Farsaan business and frequently need money for fulfillment of various orders. Earlier, I had to visit the branch, every time I needed any loan. This time, Goal Team has handled the loan process and I did not have to waste my time away from business. Also, they got me better offer compared to previous loans. Thanks Team Goal Corp.",
+      "Outstanding service and professional approach – these are the 2 things Goal Team has excelled in. Very happy with the way the process was handled. I am going to refer my clients to Goal Team for sure",
   },
   {
-    image: adhikeshavn,
-    name: "Adikeshavan S",
+    image: okil,
+    name: "Okil Mandal",
     title: "Customer",
     quote:
-      "Dear sir, I am hereby writing this mail to show my gratitude for the outstanding service and support offered by your team during the loan process. I availed the loan without any hindrance and trouble. It's all because of your timely service. You took good initiative to finish the loan process within the stipulated time. Thank you.",
+      "I have a small transport business. Goal Corporation team has got me a business loan done in just 5 days and gave me the best rate too. I am definitely referring them to all my friends and family.",
   },
   {
-    image: vimala,
-    name: "Vimala N",
+    image: mahendra,
+    name: "Mahendra Gupta",
     title: "Customer",
     quote:
-      "Hi, I am hereby writing to show my appreciation for the good service and support, quick process, and timely updates from the Goal Corp team during the loan process of my LAP. Thank you for your support.",
+      "I run a Farsaan business and frequently need money for fulfillment of various orders. Earlier, I had to visit the branch, every time I needed any loan. This time, Goal Team has handled the loan process and I did not have to waste my time away from business. Also, they got me better offer compared to previous loans. Thanks Team Goal Corp. ",
   },
   {
-    image: manju,
-    name: "Manjunath TR",
+    image: qazi,
+    name: "Dr. Qazi Danish  ",
     title: "Customer",
     quote:
-      "First of all I would like to thank Goal Corp Team for meeting me in person and getting to know my financial requirements for the construction of my home. I was sanctioned 60,00,000/- (Sixty Lakhs) for construction of the home and 10,00,000/- (Ten Lakhs) against property (LAP). In total, I was sanctioned 70,00,000/- (Seventy Lakhs). The team was extremely helpful, and it made my experience so much better. Selection and Recommendations of Banks is also quite great. I would like to thank once again!",
+      "My experience with the Goal Corporation team was very good. Needed funds for renovation of my clinic and I do not have time to run behind banks for the same. Goal team came for the rescue and did an exceptional job helping me.",
   },
+  {
+    image: nikjhil,
+    name: "CA Nikhil Kotian",
+    title: "Customer",
+    quote:
+      "Outstanding service and professional approach – these are the 2 things Goal Team has excelled in. Very happy with the way the process was handled. I am going to refer my clients to Goal Team for sure",
+  },
+  {
+    image: okil,
+    name: "Okil Mandal",
+    title: "Customer",
+    quote:
+      "I have a small transport business. Goal Corporation team has got me a business loan done in just 5 days and gave me the best rate too. I am definitely referring them to all my friends and family.",
+  },
+ 
 ];
 
-const LapTestimonialSlider = () => {
+const BlTestimonialSlider = () => {
   const [isHovered, setIsHovered] = useState(false);
   const sliderRef = useRef(null);
 
@@ -99,7 +117,7 @@ const LapTestimonialSlider = () => {
                   flex: "0 0 auto",
                   minWidth: "300px",
                   maxWidth: "420px",
-                  height: "400px",
+                  height: "320px",
                 }}
               >
                 <div className="flex items-center mb-6">
@@ -145,4 +163,4 @@ const LapTestimonialSlider = () => {
   );
 };
 
-export default LapTestimonialSlider;
+export default BlTestimonialSlider;

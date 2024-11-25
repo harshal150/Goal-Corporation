@@ -21,6 +21,7 @@ import TermsAndConditions from './components/quicklinks/TermsConditions';
 import CareersPage from './components/quicklinks/Careers';
 import ContactPage from './pages/ContactPage';
 import BioMedicalPage from './pages/BioMedicalPage';
+import BioMedicalApply from './pages/BioMedicalApply';
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -147,6 +148,7 @@ function App() {
         <Route path="/termsconditions" element={<TermsAndConditions />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/biomedical" element={<BioMedicalPage />} />
+        <Route path="/biomedicalapply" element={<BioMedicalApply />} />
       </Routes>
     </BrowserRouter>
   );

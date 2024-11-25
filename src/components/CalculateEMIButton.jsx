@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LoanCalculator from './LoanCalculator';
 import LoLoanCalculator from './NewCalculator'; // Assuming you want to show this component
+import ProductEmiCalculator from './ProductEmiCalculator';
 
 const CalculateEMIButton = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -15,7 +16,7 @@ const CalculateEMIButton = () => {
       <button
         className="cp_rainbow_btn font-semibold px-4 py-2 rounded-lg flex items-center space-x-2 shadow-lg hover:bg-blue-600 transition"
         onClick={toggleDrawer}
-        style={{ position: 'absolute', right: '0', top: '30%' }}
+        style={{ position: 'absolute', right: '0', top: '35%' }}
       >
         <span>Calculate EMI</span>
       </button>
@@ -61,13 +62,14 @@ const CalculateEMIButton = () => {
         >
           {/* Close Button */}
           <button
-            className="absolute top-14 z-50 right-8 bg-red-500 text-white p-1 rounded-lg mb-5"
+            className="absolute top-14 z-50 right-10 bg-red-500 text-white p-1 rounded-lg mb-5"
             onClick={toggleDrawer}
           >
             ✕
           </button>
-          <div className="p-4 ">
-            <LoLoanCalculator />
+          <div className="p-4 mt-8 ml-28 ">
+            {/* <LoLoanCalculator /> */}
+            <ProductEmiCalculator/>
           </div>
         </div>
       )}

@@ -30,7 +30,7 @@ const VisionMission = () => {
       <div className="text-center mb-12 md:mb-16">
   
         <h1 className="text-xl md:text-3xl font-bold text-center text-orange-500 mb-6 md:mb-10">
-        Vission & Mission
+        Vision & Mission
         </h1>
       </div>
 

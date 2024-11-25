@@ -16,9 +16,9 @@ const AboutDebtRestructure = () => {
   return (
     <div className="">
       {/* Hide CalculateEMIButton on mobile view */}
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <CalculateEMIButton />
-      </div>
+      </div> */}
 
       <h1 className="text-[28px] md:text-[35px] font-extrabold text-blue-600 text-center mt-8 md:mt-12">
         Debt Restructuring

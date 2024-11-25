@@ -44,7 +44,7 @@ const LoLoanCalculator = () => {
   };
 
   return (
-    <div className="relative px-2" style={{
+    <div className="relative px-2 " style={{
       backgroundImage: `url(${backgroundImage})`, 
       backgroundSize: "cover", 
       backgroundPosition: "center", 
@@ -54,7 +54,7 @@ const LoLoanCalculator = () => {
     
 
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-[-1]" />
-      <div className="max-w-5xl mx-auto mt-8 py-10 bg-transparent rounded-lg flex flex-row justify-between gap-4">
+      <div className="max-w-5xl mx-auto mt-8 py-10 bg-transparent rounded-lg flex flex-row justify-between gap-4 ">
         
         {/* Left Side: Calculator */}
         <div className="w-full md:w-1/2 p-3 bg-white rounded-lg shadow-lg">

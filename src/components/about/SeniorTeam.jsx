@@ -11,8 +11,11 @@ import Ashok from '../../assets/employeespeaks/AshokMN.jpg'
 import Sushma from '../../assets/employeespeaks/newmem/SushmaT.jpg'
 import Balkrishna from '../../assets/employeespeaks/Balakrishna.jpg'
 import Umesh from '../../assets/employeespeaks/newmem/Umesh.jpg'
-import priti from '../../assets/DirectorImage.jpg'
+import priti from '../../assets/employeespeaks/Preethi.jpg'
 import tejas from '../../assets/DirectorImage.jpg'
+
+import subray from '../../assets/employeespeaks/subrayRoy.jpg'
+import annapa from '../../assets/employeespeaks/AnnapaNaik.jpg'
 
 
 const teamMembers = [
@@ -52,24 +55,30 @@ const teamMembers = [
     designation: "Branch Manager",
   },
   {
+    img: annapa,
+    name: "Annappa Naik",
+    designation: "Branch Manager",
+  },
+  {
     img: Sushma,
     name: "Sushma T",
-    designation: "Business Developer",
+    designation: "Head VRM",
   },
   {
     img: Balkrishna,
     name: "Balakrishna S",
     designation: "Sales/Legal Coordinator",
   },
+ 
   {
-    img: Umesh,
-    name: "Umesh Mhaske",
-    designation: "Sr Sales Manager ",
+    img: priti,
+    name: "Preeti NR",
+    designation: "Finance",
   },
   {
-    img: Sushma,
-    name: "Preeti NR",
-    designation: "Sr Exe – Finance",
+    img: subray,
+    name: "Subray Naik",
+    designation: "Customer Success Manager",
   },
   
 ];

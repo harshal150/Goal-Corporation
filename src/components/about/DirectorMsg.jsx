@@ -35,7 +35,7 @@ const DirectorMsg = () => {
   return (
     <div
       ref={elementRef} // Attach the ref to the outer container
-      className={`bg-gray-50 py-8 px-4 md:py-12 md:px-4 transform transition-all duration-1000 ease-out`}
+      className={`bg-gray-50 py-8 px-4 md:py-12 md:px-1 transform transition-all duration-1000 ease-out`}
     >
       <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-2">
         Directors Message
@@ -45,7 +45,7 @@ const DirectorMsg = () => {
         {/* Image Section */}
         <div className="w-full md:w-1/3 flex justify-center mb-4 md:mb-0">
           <img
-            className="w-36 h-48 md:w-48 md:h-60 rounded-md shadow-md"
+            className="w-36 h-48 md:w-60 md:h-60 rounded-md shadow-md"
             src={logo}
             alt="Person"
           />
