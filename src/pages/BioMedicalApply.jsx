@@ -16,6 +16,7 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 // import contact from "../../assets/contact.avif";
 // import contact from "../../assets/applyloanpage2.jpg";
 import Swal from "sweetalert2";
+import image from '../assets/scientificEquipment.avif'
 
 
 import { Link } from "react-router-dom";
@@ -33,57 +34,15 @@ const validationSchema = Yup.object({
   pincode: Yup.string()
     .matches(/^\d{6}$/, "Invalid pincode")
     .required("Pincode is required"),
-  panCard: Yup.string()
-    .matches(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/, "Invalid PAN card number")
-    .required("PAN card number is required"),
-  dob: Yup.date().required("Date of birth is required"),
+
   terms: Yup.boolean()
     .oneOf([true], "You must accept the terms and conditions.")
     .required("You must accept the terms and conditions."),
-  state: Yup.string().required("State is required"),
+ 
   city: Yup.string().required("City is required"),
-  gender: Yup.string().required("Gender is required"),
-  residenceType: Yup.string().required("Residence type is required"),
+
 });
 
-const indianStates = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-  "Andaman and Nicobar Islands",
-  "Chandigarh",
-  "Dadra and Nagar Haveli and Daman and Diu",
-  "Lakshadweep",
-  "Delhi",
-  "Puducherry",
-  "Ladakh",
-  "Jammu and Kashmir",
-];
 
 
 
@@ -107,13 +66,11 @@ const BioMedicalApply = ({
           email: formValues.email,
           mobileNumber: formValues.mobileNumber,
           loans: formValues.loans,
-          state: formValues.state,
+        
           city: formValues.city,
           pincode: formValues.pincode,
-          gender: formValues.gender,
-          panCard: formValues.panCard,
-          dob: formValues.dob,
-          residenceType: formValues.residenceType,
+     
+     
           terms: formValues.terms ? "Accepted" : "Not Accepted",
         },
         "7z1u5lsyh7jq02DdN"
@@ -293,21 +250,41 @@ const BioMedicalApply = ({
                         <Field
                           name="loans"
                           as="select"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm uppercase "
                           onBlur={handleBlur}
                         >
-                          <option value="">Select Loans</option>
-                          <option value="Home Loan">Home Loan</option>
-                          <option value="Loans Against Property">
-                            Loans Against Property
+                          <option value="">Select Equipment</option>
+                          <option value="MONOCULAR">MONOCULAR MICROSCOPE</option>
+                          <option value="BINOCULAR MICROSCOPE WITH BATTERY BACKUP">
+                          BINOCULAR MICROSCOPE WITH BATTERY BACKUP
                           </option>
-                          <option value="Working Capital Loan">
-                            Working Capital Loan
+                          <option value="BINOCULAR MICROSCOPE">
+                          BINOCULAR MICROSCOPE
                           </option>
-                          <option value="Business Loan">Business Loan</option>
-                          <option value="Personal Loan">Personal Loan</option>
-                          <option value="Debt Restructuring">
-                            Debt Restructuring
+                          <option value="TRINOCULAR RESEARCH MICROSCOPE">TRINOCULAR RESEARCH MICROSCOPE</option>
+                          <option value="PENTA HEAD MICROSCOPE">PENTA HEAD MICROSCOPE</option>
+                          <option value="PH">PH Meter</option>
+                          <option value="Conductivuty">Conductivuty Meter</option>
+                          <option value="Ultrasonic">Ultrasonic Cleaners</option>
+                          <option value="Analytical">Analytical Balance</option>
+                          <option value="Ice Flacker ">Ice Flacker Machine</option>
+                          <option value="Lab ">Lab Oven</option>
+                          <option value="Rotary ">Rotary Shaker</option>
+                          <option value="Incubator ">Incubator</option>
+                          <option value=" EPI FLUORESCENCE MICROSCOPE">
+                          EPI FLUORESCENCE MICROSCOPE
+                          </option>
+                          <option value=" AUTOCLAVE (PORTABLE STERILIZER) ">
+                          AUTOCLAVE (PORTABLE STERILIZER)
+                          </option>
+                          <option value=" OVEN DELUXE WITH TIMER ">
+                          OVEN DELUXE WITH TIMER
+                          </option>
+                          <option value="MUFFLE">
+                          MUFFLE FURNACE RECTANGULAR LABORATORY MODEL 
+                          </option>
+                          <option value=" B.O.D. INCUBATOR">
+                          B.O.D. INCUBATOR WITH ELECTRONIC DIGITAL TEMP. CONTROLLER 
                           </option>
                         </Field>
                       </div>
@@ -417,11 +394,11 @@ const BioMedicalApply = ({
 
             {/* Right Image Section */}
             <div className="hidden md:block md:w-1/3">
-              {/* <img
-                src={homeImage}
+              <img
+                src={image}
                 alt="Contact Illustration"
                 className="h-full w-full object-cover"
-              /> */}
+              />
             </div>
           </div>
         </div>
