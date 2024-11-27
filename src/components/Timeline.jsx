@@ -211,111 +211,111 @@
 
 
 
+import React from "react";
+import { FaRocket, FaHandshake, FaBriefcase, FaChartLine } from "react-icons/fa";
+import backgroundImage from '../assets/testimonial/bg2.avif'
+import one from "../assets/Timeline/one.jpg";
+import two from "../assets/Timeline/two.jpg";
+import three from "../assets/Timeline/three.jpg";
+import four from "../assets/Timeline/4.jpg";
+import five from "../assets/Timeline/5.jpg";
+import six from "../assets/Timeline/6.jpg";
+import ten from '../assets/Timeline/2020.jpg'
+import team from '../assets/about/hero2.jpg'
+const Timeline = () => {
 
-
-
-
-import React from 'react';
-import backgroundImage from '../assets/testimonial/bg2.avif';
-
-const timelineData = [
+  const timelineData = [
   {
     year: "2005",
-    title: "2 individuals meet and decide to change the finance business model. An IDEA called GOAL was born",
-    icon: 'team',
-    color: "bg-red-100",
+    info: "2 individuals meet and decide to change the finance business model. An IDEA called GOAL was born",
+    icon: <FaRocket />,
+    imageUrl: one ,
+
   },
   {
     year: "2009",
-    title: "GOAL becomes a huge success and ventures into diversified business - Real Estate, Construction",
-    icon: 'team',
-    color: "bg-yellow-100",
+    info: "GOAL becomes a huge success and ventures into diversified business - Real Estate, Construction ,",
+    icon: <FaHandshake />,
+    imageUrl: two,
+ 
   },
   {
     year: "2016",
-    title: "Journey of Philanthropy begins with establishing of Goal International school",
-    icon: 'team',
-    color: "bg-teal-100",
+    info: "Journey of Philanthropy begins with establishing of Goal International school",
+    icon: <FaBriefcase />,
+    imageUrl: four,
+ 
   },
   {
     year: "2017",
-    title: "Goal Expands its wings with establishing 3 more companies.",
-    icon: 'team',
-    color: "bg-purple-100",
+    info: "Goal Expands its wings with establishing 3 more companies.",
+    icon: <FaBriefcase />,
+    imageUrl: three,
+
   },
   {
     year: "2020",
-    title: "Goal Expands its wings with co-working space and infrastructure development business",
-    icon: 'team',
-    color: "bg-green-100",
+    info: "Goal Expands its wings with co-working space and infrastructure development business",
+    icon: <FaBriefcase />,
+    imageUrl: ten,
+ 
   },
   {
     year: "2024",
-    title: "Goal becomes core corporate with consolidation and holding company formation",
-    icon: 'team',
-    color: "bg-blue-100",
+    info: "Goal become core corporate with consolidation and holding company formation",
+    icon: <FaChartLine />,
+    imageUrl: team,
+
   },
 ];
-
-const Timeline = () => {
+ 
   return (
-    <section
-      className="relative overflow-hidden bg-gray-50"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "top",
-        backgroundAttachment: "fixed",
-        opacity: "50",
-      }}
-    >
-      <h1 className="font-bold text-[23px] md:text-2xl text-center mt-10 capitalize text-blue-500">
-        We Have The <span className="text-orange-500">Best Team</span> And The Best Process
-      </h1>
-      <div className="mt-2 md:mt-0 py-12 pb-6 sm:py-16 lg:pb-24 overflow-hidden">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative">
-          <div className="relative mt-12 lg:mt-12">
-            <div className="absolute inset-x-0 hidden xl:px-44 top-2 lg:block md:px-20 lg:px-28 ">
-              {/* Hidden on mobile and tablet */}
-              <svg
-                className="w-full"
-                xmlns="http://www.w3.org/2000/svg"
-                width="875"
-                height="48"
-                viewBox="0 0 875 48"
-                fill="none"
-              >
-                <path
-                  d="M2 29C20.2154 33.6961 38.9915 35.1324 57.6111 37.5555C80.2065 40.496 102.791 43.3231 125.556 44.5555C163.184 46.5927 201.26 45 238.944 45C312.75 45 385.368 30.7371 458.278 20.6666C495.231 15.5627 532.399 11.6429 569.278 6.11109C589.515 3.07551 609.767 2.09927 630.222 1.99998C655.606 1.87676 681.208 1.11809 706.556 2.44442C739.552 4.17096 772.539 6.75565 805.222 11.5C828 14.8064 850.34 20.2233 873 24"
-                  stroke="#D4D4D8"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeDasharray="1 12"
-                />
-              </svg>
-            </div>
+ <div className="h-[100vh] " style={{
+  backgroundImage: `url(${backgroundImage})`, 
+  backgroundSize: "cover", 
+  backgroundPosition: "top", 
+  backgroundAttachment: "fixed", 
+  opacity:"50"
+}}>
+     <div className="timeline-container flex flex-col items-center" >
+             <h1 className="font-bold text-[23px] md:text-2xl text-center mt-10 capitalize text-blue-500">
+           We Have The <span className="text-orange-500">Best Team</span> And The Best Process
+         </h1>
+      <div className="timeline flex justify-between w-full max-w-6xl relative lg:mt-24">
+   
+        {timelineData.map((item, index) => (
+          <div key={index} className="timeline-item flex flex-col items-center">
+            {/* Info Above */}
+            {index % 2 === 0 && (
+              <div className="info text-center text-sm text-white mb-4">
+                <h4 className="font-bold">{` ${item.year}`}</h4>
+                <p className="text-[13px]">{item.info}</p>
+              </div>
+            )}
+            {/* Circle with Image */}
             <div
-              className="relative grid grid-cols-1 gap-y-12 sm:grid-cols-3 lg:grid-cols-6 gap-x-12 text-center"
+              className="circle bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center shadow-md overflow-hidden"
+              style={{ minWidth: "64px", minHeight: "64px" }}
             >
-              {timelineData.map((item, index) => (
-                <div key={index}>
-                  <div
-                    className={`flex items-center justify-center w-16 h-16 mx-auto ${item.color} border-2 border-gray-200 rounded-full shadow`}
-                  >
-                    <span className="text-lg font-semibold text-gray-700">
-                      {item.year}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 sm:mt-6 text-sm font-normal text-white md:mt-8">
-                    {item.title}
-                  </h3>
-                </div>
-              ))}
+              <img
+                src={item.imageUrl}
+                alt={`${item.month} ${item.year}`}
+                className="w-full h-full object-cover"
+              />
             </div>
+            
+            {/* Info Below */}
+            {index % 2 !== 0 && (
+              <div className="info text-center text-sm text-white mt-4">
+                <h4 className="font-bold">{`${item.year}`}</h4>
+                <p className="text-[13px]">{item.info}</p>
+              </div>
+            )}
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
+ </div>
   );
 };
 
