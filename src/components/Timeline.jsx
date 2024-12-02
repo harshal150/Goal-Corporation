@@ -216,7 +216,7 @@ const Timeline = () => {
 
   return (
     <div
-      className=" lg:mx-16"
+      className=" lg:mx-24"
      
     >
       <div className="timeline-container flex flex-col items-center">
