@@ -208,114 +208,34 @@
 
 
 
-
-
-
 import React from "react";
-import { FaRocket, FaHandshake, FaBriefcase, FaChartLine } from "react-icons/fa";
-import backgroundImage from '../assets/testimonial/bg2.avif'
-import one from "../assets/Timeline/one.jpg";
-import two from "../assets/Timeline/two.jpg";
-import three from "../assets/Timeline/three.jpg";
-import four from "../assets/Timeline/4.jpg";
-import five from "../assets/Timeline/5.jpg";
-import six from "../assets/Timeline/6.jpg";
-import ten from '../assets/Timeline/2020.jpg'
-import team from '../assets/about/hero2.jpg'
+import timeline from '../assets/Timeline/Timeline.png'
+
 const Timeline = () => {
 
-  const timelineData = [
-  {
-    year: "2005",
-    info: "2 individuals meet and decide to change the finance business model. An IDEA called GOAL was born",
-    icon: <FaRocket />,
-    imageUrl: one ,
 
-  },
-  {
-    year: "2009",
-    info: "GOAL becomes a huge success and ventures into diversified business - Real Estate, Construction ,",
-    icon: <FaHandshake />,
-    imageUrl: two,
- 
-  },
-  {
-    year: "2016",
-    info: "Journey of Philanthropy begins with establishing of Goal International school",
-    icon: <FaBriefcase />,
-    imageUrl: four,
- 
-  },
-  {
-    year: "2017",
-    info: "Goal Expands its wings with establishing 3 more companies.",
-    icon: <FaBriefcase />,
-    imageUrl: three,
-
-  },
-  {
-    year: "2020",
-    info: "Goal Expands its wings with co-working space and infrastructure development business",
-    icon: <FaBriefcase />,
-    imageUrl: ten,
- 
-  },
-  {
-    year: "2024",
-    info: "Goal become core corporate with consolidation and holding company formation",
-    icon: <FaChartLine />,
-    imageUrl: team,
-
-  },
-];
- 
   return (
- <div className="h-[100vh] " style={{
-  backgroundImage: `url(${backgroundImage})`, 
-  backgroundSize: "cover", 
-  backgroundPosition: "top", 
-  backgroundAttachment: "fixed", 
-  opacity:"50"
-}}>
-     <div className="timeline-container flex flex-col items-center" >
-             <h1 className="font-bold text-[23px] md:text-2xl text-center mt-10 capitalize text-blue-500">
-           We Have The <span className="text-orange-500">Best Team</span> And The Best Process
-         </h1>
-      <div className="timeline flex justify-between w-full max-w-6xl relative lg:mt-24">
-   
-        {timelineData.map((item, index) => (
-          <div key={index} className="timeline-item flex flex-col items-center">
-            {/* Info Above */}
-            {index % 2 === 0 && (
-              <div className="info text-center text-sm text-white mb-4">
-                <h4 className="font-bold">{` ${item.year}`}</h4>
-                <p className="text-[13px]">{item.info}</p>
-              </div>
-            )}
-            {/* Circle with Image */}
-            <div
-              className="circle bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center shadow-md overflow-hidden"
-              style={{ minWidth: "64px", minHeight: "64px" }}
-            >
+    <div
+      className=" lg:mx-16"
+     
+    >
+      <div className="timeline-container flex flex-col items-center">
+        <h1 className="font-bold text-[20px] md:text-2xl text-center mt-10 capitalize text-blue-500">
+          We Have The <span className="text-orange-500">Best Team</span> And The Best Process
+        </h1>
+       
+      
+            <div className="">
               <img
-                src={item.imageUrl}
-                alt={`${item.month} ${item.year}`}
-                className="w-full h-full object-cover"
+                src={timeline}
+                alt={`Timeline Image`}
+                className="w-full h-auto object-cover"
               />
             </div>
-            
-            {/* Info Below */}
-            {index % 2 !== 0 && (
-              <div className="info text-center text-sm text-white mt-4">
-                <h4 className="font-bold">{`${item.year}`}</h4>
-                <p className="text-[13px]">{item.info}</p>
-              </div>
-            )}
-          </div>
-        ))}
+    
+      
       </div>
     </div>
- </div>
   );
 };
 

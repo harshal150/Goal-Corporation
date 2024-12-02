@@ -4,6 +4,7 @@ import Payment from '../assets/about/payment_16959732.png';
 import map from '../assets/about/map_10588713.png';
 import exp from '../assets/about/exper.png';
 import { useNavigate } from 'react-router-dom';
+import backgroundImage from '../assets/testimonial/bg2.avif'
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,11 +39,18 @@ const handleClick=()=>{
   }, []);
 
   return (
-    <div
+ <div style={{
+  backgroundImage: `url(${backgroundImage})`, 
+  backgroundSize: "cover", 
+  backgroundPosition: "center", 
+  backgroundAttachment: "fixed", 
+  opacity:"50"
+}}>
+     <div
       ref={elementRef}
-      className={`bg-white px-12 py-8 max-w-7xl mx-auto mt-20 transition-transform duration-1000 ease-out ${
+      className={` px-12 py-8 max-w-7xl mx-auto mt-20 transition-transform duration-1000 ease-out ${
         isVisible ? 'animate-bounceIn' : 'opacity-0'
-      }`}
+      }`  }  
     >
       {/* Flex container to align content in a row */}
       <div className="flex flex-col lg:flex-row items-start justify-between mb-16">
@@ -67,13 +75,13 @@ const handleClick=()=>{
               </span>
             </div>
           </h3>
-          <p className="text-lg font-medium mb-4">
+          <p className="text-lg font-medium mb-4 text-white">
           We help our clients get the best loan offers..
           </p>
-          <p className="text-gray-600 mb-6">
+          <p className="text-white mb-6">
             Goal Corporation, with a PAN India presence in over 100 cities, is a leading credit lending establishment. Founded by financial experts with 20+ years of experience, we have served over 32,000+ clients and successfully disbursed loans exceeding 20K crores+ through partnerships with 70+ banks and NBFCs. We are committed to helping you make smarter financial decisions with personalized solutions.  
           </p>
-          <p className="text-gray-600 mb-8">
+          <p className="text-white mb-8">
           Connect with us to help you make smart financial decisions and secure your financial future!
           </p>
           <button onClick={handleClick} className="flex items-center text-red-500 font-semibold hover:underline">
@@ -94,23 +102,23 @@ const handleClick=()=>{
 <div className="lg:w-1/2 grid grid-cols-2 gap-x-1 gap-y-8">
   <div className="text-center">
     <img src={bank} alt="Partner Banks" className="w-16 h-16 mx-auto mb-4"/>
-    <p className="text-2xl font-bold">70+</p>
-    <p className="text-gray-500">Partner Banks & NBFCs</p>
+    <p className="text-2xl font-bold text-white">70+</p>
+    <p className="text-white">Partner Banks & NBFCs</p>
   </div>
   <div className="text-center">
     <img src={map} alt="Branches" className="w-16 h-16 mx-auto mb-4"/>
-    <p className="text-2xl font-bold">100+</p>
-    <p className="text-gray-500">Branches & Franchisee Locations Across India</p>
+    <p className="text-2xl font-bold text-white">100+</p>
+    <p className="text-white">Branches & Franchisee Locations Across India</p>
   </div>
   <div className="text-center">
     <img src={Payment} alt="Disbursal" className="w-16 h-16 mx-auto mb-4"/>
-    <p className="text-2xl font-bold">₹ 20k CR +</p>
-    <p className="text-gray-500">Successful Disbursal</p>
+    <p className="text-2xl font-bold text-white">₹ 20k CR +</p>
+    <p className="text-white">Successful Disbursal</p>
   </div>
   <div className="text-center">
     <img src={exp} alt="Experience" className="w-16 h-16 mx-auto mb-4"/>
-    <p className="text-2xl font-bold">20+</p>
-    <p className="text-gray-500">Years of Experience</p>
+    <p className="text-2xl font-bold text-white">20+</p>
+    <p className="text-white">Years of Experience</p>
   </div>
 </div>
 
@@ -139,6 +147,7 @@ const handleClick=()=>{
     
       </div>
     </div>
+ </div>
   );
 };
 

@@ -231,8 +231,8 @@ export const Home = () => {
         <Howitworks />
         <Partners />
         <LoLoanCalculator />
-        <About />
         <Timeline />
+        <About />
         <MapComponent />
         <Testimonial />
         <CompanyFAQ />
