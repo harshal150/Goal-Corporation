@@ -20,10 +20,13 @@ const quickLinks = [
 
 const socialMedia = [
   { value: "Careers", href: "/careers" },
-  { value: "FAQ's", href: "#!" },
+ 
   { value: "Privacy Policy", href: "/privacypolicy" },
   { value: "Terms & Conditions", href: "/termsconditions" },
   { value: "Goal Biomedicals", href: "/biomedical" },
+  { value: "Goal Fuel Park", href: "/about" },
+  { value: "Goal Promotors", href: "https://goalpromoters.com/" },
+  { value: "Hubstair Coworking-space", href: "https://hubstairscoworks.com/" },
 ];
 // const socialMedia = [
 //   { value: "Facebook", href: "www.facebook.com" },

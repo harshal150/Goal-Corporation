@@ -72,7 +72,7 @@ const teamMembers = [
  
   {
     img: priti,
-    name: "Preeti NR",
+    name: "Preethi NR",
     designation: "Finance",
   },
   {
