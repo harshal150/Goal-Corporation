@@ -58,50 +58,13 @@ const validationSchema = Yup.object({
   terms: Yup.boolean()
     .oneOf([true], "You must accept the terms and conditions.")
     .required("You must accept the terms and conditions."),
-  state: Yup.string().required("State is required"),
+
   city: Yup.string().required("City is required"),
   gender: Yup.string().required("Gender is required"),
   residenceType: Yup.string().required("Residence type is required"),
 });
 
-const indianStates = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-  "Andaman and Nicobar Islands",
-  "Chandigarh",
-  "Dadra and Nagar Haveli and Daman and Diu",
-  "Lakshadweep",
-  "Delhi",
-  "Puducherry",
-  "Ladakh",
-  "Jammu and Kashmir",
-];
+
 
 const loanDetails = {
   "Home Loan": { component: HomeloanBelowComponent, interestRate: 8.35 },
@@ -153,51 +116,6 @@ const ApplyLoanModal = ({
   const HomeLinkComponent = homeLinkInfo.component || "NA";
   const homeImage = homeLinkInfo.image || balacetransfee;
 
-  const sendEmail = (formValues) => {
-    emailjs
-      .send(
-        "service_m22h58p", // Replace with your EmailJS Service ID
-        "template_vlcnhzv", // Replace with your EmailJS Template ID
-        {
-          fullName: formValues.fullName,
-          email: formValues.email,
-          mobileNumber: formValues.mobileNumber,
-          loans: formValues.loans,
-          state: formValues.state,
-          city: formValues.city,
-          pincode: formValues.pincode,
-          gender: formValues.gender,
-          panCard: formValues.panCard,
-          dob: formValues.dob,
-          residenceType: formValues.residenceType,
-          terms: formValues.terms ? "Accepted" : "Not Accepted",
-        },
-        "7z1u5lsyh7jq02DdN"
-      )
-      .then((response) => {
-        Swal.fire({
-          icon: "success",
-          title: "APPLICATION SUBMISSION SUCCESSFUL !!!",
-          html: `Dear ${formValues.fullName},<br/><br/>
-          Thank you for showing interest in Goal Corporation.<br/>
-          Our Customer Relation Executive shall be in touch with you shortly to take your application forward!!<br/><br/>
-          Have a Great Day!!!!`,
-          showConfirmButton: true,
-          timer: 5000,
-        }).then(() => {
-          window.location.reload();
-        });
-      })
-      .catch((error) => {
-        Swal.fire({
-          icon: "error",
-          title: "Submission Failed",
-          text: "There was an error submitting your application. Please try again.",
-          showConfirmButton: true,
-        });
-      });
-  };
-
   if (isSubmitted) {
     return (
       <div className="text-center mt-10 h-50 w-full">
@@ -211,6 +129,50 @@ const ApplyLoanModal = ({
       </div>
     );
   }
+
+  const handleFormSubmit = async (formValues) => {
+    console.log('Form Submitted Data:', formValues);
+  
+    try {
+      const response = await fetch('https://api.goalcorporation.com/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formValues),
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        setIsSubmitted(true);
+        Swal.fire({
+          icon: 'success',
+          title: 'Application Submitted',
+          text: 'Thank you for your submission. We will contact you shortly.',
+        });
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+        
+      } else {
+        console.error('Failed to send email:', result.error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Submission Failed',
+          text: 'There was an error submitting your application. Please try again later.',
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission Error',
+        text: 'An unexpected error occurred. Please try again later.',
+      });
+    }
+  };
+  
 
   return (
     <>
@@ -239,7 +201,10 @@ const ApplyLoanModal = ({
               <h3 className="text-md font-semibold text-center mb-4">
                 {bankName && (
                   <>
-                    <span className="text-md">Thank you for choosing <span className="text-red-500"> {bankName}!</span> .</span> {" "}
+                    <span className="text-md">
+                      Thank you for choosing{" "}
+                      <span className="text-red-500"> {bankName}!</span> .
+                    </span>{" "}
                   </>
                 )}
                 Submit Your Details &{" "}
@@ -260,7 +225,7 @@ const ApplyLoanModal = ({
                   email: "",
                   mobileNumber: "",
                   loans: loanType || "",
-                  state: "",
+
                   city: "",
                   pincode: "",
                   gender: "",
@@ -271,278 +236,285 @@ const ApplyLoanModal = ({
                 }}
                 validationSchema={validationSchema}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
-                  sendEmail(values);
+                  console.log("Form Submitted Triggered!"); // Debugging statement
+                  handleFormSubmit(values); // Log form data
                   setSubmitting(false);
                   resetForm();
                 }}
               >
-                {({ handleBlur, isSubmitting }) => (
-                  <Form className="space-y-2">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      <div className="relative">
-                        <label
-                          htmlFor="fullName"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Full Name
-                        </label>
-                        <FaUser className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="fullName"
-                          type="text"
-                          placeholder="Full Name"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        />
-                        <ErrorMessage
-                          name="fullName"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
+                {({ handleBlur, isSubmitting, values, errors, touched }) => {
+                  console.log("Formik State:", { values, errors, touched });
+                  return (
+                    <Form className="space-y-2">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div className="relative">
+                          <label
+                            htmlFor="fullName"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Full Name
+                          </label>
+                          <FaUser className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="fullName"
+                            type="text"
+                            placeholder="Full Name"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="fullName"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
+                        <div className="relative">
+                          <label
+                            htmlFor="email"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Email Address
+                          </label>
+                          <FaEnvelope className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="email"
+                            type="email"
+                            placeholder="Email Address"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="email"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
                       </div>
-                      <div className="relative">
-                        <label
-                          htmlFor="email"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Email Address
-                        </label>
-                        <FaEnvelope className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="email"
-                          type="email"
-                          placeholder="Email Address"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      <div className="relative">
-                        <label
-                          htmlFor="mobileNumber"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Mobile Number
-                        </label>
-                        <FaPhone className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="mobileNumber"
-                          type="text"
-                          placeholder="Mobile Number"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        />
-                        <ErrorMessage
-                          name="mobileNumber"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div className="relative">
+                          <label
+                            htmlFor="mobileNumber"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Mobile Number
+                          </label>
+                          <FaPhone className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="mobileNumber"
+                            type="text"
+                            placeholder="Mobile Number"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="mobileNumber"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
+                        <div className="relative">
+                          <label
+                            htmlFor="loans"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Loans
+                          </label>
+                          <TbMoneybag className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="loans"
+                            as="select"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          >
+                            <option value="">Select Loans</option>
+                            <option value="Home Loan">Home Loan</option>
+                            <option value="Loans Against Property">
+                              Loans Against Property
+                            </option>
+                            <option value="Working Capital Loan">
+                              Working Capital Loan
+                            </option>
+                            <option value="Business Loan">Business Loan</option>
+                            <option value="Personal Loan">Personal Loan</option>
+                            <option value="Debt Restructuring">
+                              Debt Restructuring
+                            </option>
+                          </Field>
+                        </div>
                       </div>
-                      <div className="relative">
-                        <label
-                          htmlFor="loans"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Loans
-                        </label>
-                        <TbMoneybag className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="loans"
-                          as="select"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        >
-                          <option value="">Select Loans</option>
-                          <option value="Home Loan">Home Loan</option>
-                          <option value="Loans Against Property">
-                            Loans Against Property
-                          </option>
-                          <option value="Working Capital Loan">
-                            Working Capital Loan
-                          </option>
-                          <option value="Business Loan">Business Loan</option>
-                          <option value="Personal Loan">Personal Loan</option>
-                          <option value="Debt Restructuring">
-                            Debt Restructuring
-                          </option>
-                        </Field>
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      <div className="relative">
-                        <label
-                          htmlFor="residenceType"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Residence Type
-                        </label>
-                        <FaBuilding className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="residenceType"
-                          as="select"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        >
-                          <option value="">Select Residence Type</option>
-                          <option value="owned">Owned</option>
-                          <option value="rented">Rented</option>
-                        </Field>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div className="relative">
+                          <label
+                            htmlFor="residenceType"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Residence Type
+                          </label>
+                          <FaBuilding className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="residenceType"
+                            as="select"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          >
+                            <option value="">Select Residence Type</option>
+                            <option value="owned">Owned</option>
+                            <option value="rented">Rented</option>
+                          </Field>
+                        </div>
+                        <div className="relative">
+                          <label
+                            htmlFor="city"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            City
+                          </label>
+                          <FaCity className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="city"
+                            type="text"
+                            placeholder="City"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="city"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
                       </div>
-                      <div className="relative">
-                        <label
-                          htmlFor="city"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          City
-                        </label>
-                        <FaCity className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="city"
-                          type="text"
-                          placeholder="City"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        />
-                        <ErrorMessage
-                          name="city"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      <div className="relative">
-                        <label
-                          htmlFor="pincode"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Pincode
-                        </label>
-                        <FaBuilding className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="pincode"
-                          type="text"
-                          placeholder="Pincode"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        />
-                        <ErrorMessage
-                          name="pincode"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div className="relative">
+                          <label
+                            htmlFor="pincode"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Pincode
+                          </label>
+                          <FaBuilding className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="pincode"
+                            type="text"
+                            placeholder="Pincode"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="pincode"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
+                        <div className="relative">
+                          <label
+                            htmlFor="gender"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Gender
+                          </label>
+                          <FaUser className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="gender"
+                            as="select"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          >
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                          </Field>
+                        </div>
                       </div>
-                      <div className="relative">
-                        <label
-                          htmlFor="gender"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Gender
-                        </label>
-                        <FaUser className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="gender"
-                          as="select"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        >
-                          <option value="">Select Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                          <option value="other">Other</option>
-                        </Field>
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      <div className="relative">
-                        <label
-                          htmlFor="panCard"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          PAN Card
-                        </label>
-                        <FaCreditCard className="absolute left-2 top-8 text-blue-700" />
-                        <Field
-                          name="panCard"
-                          type="text"
-                          placeholder="PAN Card"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
-                        />
-                        <ErrorMessage
-                          name="panCard"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div className="relative">
+                          <label
+                            htmlFor="panCard"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            PAN Card
+                          </label>
+                          <FaCreditCard className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="panCard"
+                            type="text"
+                            placeholder="PAN Card"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="panCard"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
+                        <div className="relative">
+                          <label
+                            htmlFor="dob"
+                            className="block text-gray-700 text-sm font-medium"
+                          >
+                            Date of Birth
+                          </label>
+                          <FaCalendarAlt className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="dob"
+                            type="date"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="dob"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
                       </div>
-                      <div className="relative">
-                        <label
-                          htmlFor="dob"
-                          className="block text-gray-700 text-sm font-medium"
-                        >
-                          Date of Birth
-                        </label>
-                        <FaCalendarAlt className="absolute left-2 top-8 text-blue-700" />
+
+                      <div className="flex items-start space-x-2 mt-4">
                         <Field
-                          name="dob"
-                          type="date"
-                          className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
-                          onBlur={handleBlur}
+                          type="checkbox"
+                          name="terms"
+                          className="form-checkbox mt-2"
                         />
-                        <ErrorMessage
-                          name="dob"
-                          component="div"
-                          className="text-red-500 text-xs mt-1"
-                        />
+                        <span className="text-gray-700 text-xs mt-2">
+                          I agree to the{" "}
+                          <Link
+                            to="/privacypolicy"
+                            target="_blank"
+                            className="text-blue-500"
+                          >
+                            Privacy Policy
+                          </Link>{" "}
+                          and{" "}
+                          <Link
+                            to="/termsconditions"
+                            target="_blank"
+                            className="text-blue-500"
+                          >
+                            Terms and Conditions
+                          </Link>
+                          .
+                        </span>
                       </div>
-                    </div>
 
-                    <div className="flex items-start space-x-2 mt-4">
-                      <Field
-                        type="checkbox"
-                        name="terms"
-                        className="form-checkbox mt-2"
-                      />
-                      <span className="text-gray-700 text-xs mt-2">
-                        I agree to the{" "}
-                        <Link
-                          to="/privacypolicy"
-                          target="_blank"
-                          className="text-blue-500"
+                      <div className="text-center ">
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          onClick={() => console.log("Submit button clicked!")} // Debugging button click
+                          className="cp_rainbow_btn py-1.5 px-5 rounded-md text-sm lg:mt-6 transition-all duration-300 hover:animate-pulse"
                         >
-                          Privacy Policy
-                        </Link>{" "}
-                        and{" "}
-                        <Link
-                          to="/termsconditions"
-                          target="_blank"
-                          className="text-blue-500"
-                        >
-                          Terms and Conditions
-                        </Link>
-                        .
-                      </span>
-                    </div>
+                          {isSubmitting
+                            ? "Submitting..."
+                            : "Submit Application"}
+                        </button>
 
-                    <div className="text-center ">
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="cp_rainbow_btn py-1.5 px-5 rounded-md text-sm lg:mt-6 transition-all duration-300 hover:animate-pulse"
-                      >
-                        {isSubmitting ? "Submitting..." : "Submit Application"}
-                      </button>
-                      <style>{`
+                        <style>{`
                   .cp_rainbow_btn {
                     background: linear-gradient(-45deg, #FF3D77, #338AFF, #00008B);
                     background-size: 600%;
@@ -554,9 +526,10 @@ const ApplyLoanModal = ({
                   }
                   @keyframes anime { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }}
                 `}</style>
-                    </div>
-                  </Form>
-                )}
+                      </div>
+                    </Form>
+                  );
+                }}
               </Formik>
             </div>
 

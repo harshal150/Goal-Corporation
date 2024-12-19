@@ -39,39 +39,69 @@ const BecomeAPartner = () => {
     agreed: false,
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
+  
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      // Log the form data to the console
-      console.log("Form Data:", formData);
-
-      // Display the SweetAlert2 modal
-      Swal.fire({
-        title: "Thank you for choosing us to be your partner!",
-        text: "We have received your application. Our team will review it and get in touch with you soon to discuss the next steps. Welcome aboard!",
-        icon: "success",
-        confirmButtonText: "OK",
-      });
-
-      // Clear the form fields
-      setFormData({
-        firstName: "",
-        lastName: "",
-        mobileNumber: "",
-        panNumber: "",
-        email: "",
-        profession: "",
-        pincode: "",
-        cityName: "",
-        agreed: false,
-      });
+      try {
+        // Send the form data to the backend
+        const response = await fetch('https://api.goalcorporation.com/becomepartner', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        const result = await response.json();
+  
+        if (result.success) {
+          Swal.fire({
+            title: "Thank you for choosing us to be your partner!",
+            text: "We have received your application. Our team will review it and get in touch with you soon to discuss the next steps. Welcome aboard!",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+  
+          // Clear the form fields
+          setFormData({
+            firstName: "",
+            lastName: "",
+            mobileNumber: "",
+            panNumber: "",
+            email: "",
+            profession: "",
+            pincode: "",
+            cityName: "",
+            agreed: false,
+          });
+        } else {
+          console.error('Failed to send email:', result.error);
+          Swal.fire({
+            title: "Error",
+            text: "Failed to submit your application. Please try again later.",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
+        }
+      } catch (error) {
+        console.error('Error sending email:', error);
+        Swal.fire({
+          title: "Error",
+          text: "An unexpected error occurred. Please try again later.",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+      }
     }
+  
     setValidated(true);
   };
+  
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;

@@ -1,12 +1,10 @@
-
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AddressMap } from "./CompanyMapLocation";
 import { HomeNavbar } from "./HomeNavbar";
 import Footer from "./Footer";
 import ContactUsFAQ from "./ContactUsFAQ";
-import backgroundVideo from '../assets/ProductVideos/v7.mp4';
+import backgroundVideo from "../assets/ProductVideos/v7.mp4";
 
 const indianStates = [
   "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
@@ -20,15 +18,49 @@ const indianStates = [
 const AboutContact = () => {
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
+  
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-    setValidated(true);
+  
+    const inputs = form.querySelectorAll("input, select, textarea");
+    const formData = {};
+    inputs.forEach((input) => {
+      formData[input.name] = input.value;
+    });
+  
+    console.log("Contact Us Data:", formData);
+  
+    try {
+      const response = await fetch('https://api.goalcorporation.com/contactus', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        console.log('Email sent successfully!');
+        alert('Your message has been sent successfully!');
+        setValidated(true);
+        form.reset(); // Reset the form after successful submission
+      } else {
+        console.error('Failed to send email:', result.error);
+        alert('Failed to send your message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('An error occurred. Please try again later.');
+    }
   };
+  
 
   return (
     <div className="relative z-10 overflow-hidden">
@@ -63,52 +95,90 @@ const AboutContact = () => {
             transition={{ type: "spring", stiffness: 100, duration: 0.8 }}
             className="space-y-6 lg:col-span-8 bg-white p-6 rounded-lg shadow-md"
           >
-            {/* Form Fields */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input type="text" className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4" placeholder="Name" />
-              <input type="email" className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4" placeholder="Email Id" />
-              <input type="tel" className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4" placeholder="Mobile Number" />
-              <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md text-gray-500 px-4">
-                <option value="" className="text-gray-500">Select State</option>
-                {indianStates.map((state) => (
-                  <option key={state} value={state} className="text-gray-800">{state}</option>
-                ))}
-              </select>
-              <input type="text" className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4" placeholder="City" />
-              <select className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md text-gray-500 px-4">
-                <option value="" className="text-gray-500">Reason to Connect</option>
-                <option className="text-gray-800">Enquiry</option>
-                <option className="text-gray-800">Support</option>
-                <option className="text-gray-800">Feedback</option>
-                <option className="text-gray-800">Partner with us</option>
-              </select>
-            </div>
-            <input type="text" className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4" placeholder="Subject" />
-            <textarea className="w-full md:w-[80%] border border-gray-300 rounded-md p-4" rows="4" placeholder="Message"></textarea>
-            <button type="submit" className="cp_rainbow_btn w-full h-10 font-bold rounded-md">SEND MESSAGE</button>
-            <style>{`
-              .cp_rainbow_btn {
-                background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
-                background-size: 600%;
-                animation: anime 6s linear infinite;
-                font-weight: 500;
-                font-size: 14px;
-                border-radius: 5px;
-                transition: 0.5s;
-                text-decoration: none;
-                color: white !important;
-              }
-              .cp_rainbow_btn:hover {
-                color: white !important;
-                text-decoration: none;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-              }
-              @keyframes anime {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-              }
-            `}</style>
+            <form noValidate validated={validated.toString()} onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
+                  placeholder="Name"
+                  name="name"
+                />
+                <input
+                  type="email"
+                  className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
+                  placeholder="Email Id"
+                  name="email"
+                />
+                <input
+                  type="tel"
+                  className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
+                  placeholder="Mobile Number"
+                  name="mobile"
+                />
+                <select
+                  className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md text-gray-500 px-4"
+                  name="state"
+                >
+                  <option value="" className="text-gray-500">
+                    Select State
+                  </option>
+                  {indianStates.map((state) => (
+                    <option key={state} value={state} className="text-gray-800">
+                      {state}
+                    </option>
+                  ))}
+                </select>
+                <input
+                  type="text"
+                  className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md p-4"
+                  placeholder="City"
+                  name="city"
+                />
+                <select
+                  className="w-full md:w-[80%] h-10 border border-gray-300 rounded-md text-gray-500 px-4"
+                  name="reason"
+                >
+                  <option value="" className="text-gray-500">
+                    Reason to Connect
+                  </option>
+                  <option className="text-gray-800">Enquiry</option>
+                  <option className="text-gray-800">Support</option>
+                  <option className="text-gray-800">Feedback</option>
+                  <option className="text-gray-800">Partner with us</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                className="w-full md:w-[90%] mt-4 mb-4 h-10 border border-gray-300 rounded-md p-4"
+                placeholder="Subject"
+                name="subject"
+              />
+              <textarea
+                className="w-full md:w-[90%] border border-gray-300 rounded-md p-4"
+                rows="4"
+                placeholder="Message"
+                name="message"
+              ></textarea>
+              <button
+                type="submit"
+                className="contactbtn md:w-[90%] w-full mt-2 h-10 font-bold rounded-md"
+              >
+                SEND MESSAGE
+              </button>
+              
+              <style>{`
+                  .contactbtn {
+                    background: linear-gradient(-45deg, #FF3D77, #338AFF, #00008B);
+                    background-size: 600%;
+                    animation: anime 6s linear infinite;
+                    font-weight: 500;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    color: white;
+                  }
+                  @keyframes anime { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }}
+                `}</style>
+            </form>
 
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -126,11 +196,21 @@ const AboutContact = () => {
               </div>
               <div className="text-center">
                 <p className="font-bold">EMAIL</p>
-                <a href="mailto:info@goalcorporation.com" className="text-blue-500 hover:text-blue-700 font-bold">info@goalcorporation.com</a>
+                <a
+                  href="mailto:info@goalcorporation.com"
+                  className="text-blue-500 hover:text-blue-700 font-bold"
+                >
+                  info@goalcorporation.com
+                </a>
               </div>
               <div className="text-center">
                 <p className="font-bold">PHONE</p>
-                <a href="tel:+91 9606 96 5186" className="text-blue-500 hover:text-blue-700 font-bold">+91 63627 71907</a>
+                <a
+                  href="tel:+91 9606 96 5186"
+                  className="text-blue-500 hover:text-blue-700 font-bold"
+                >
+                  +91 63627 71907
+                </a>
               </div>
             </div>
           </motion.div>
@@ -146,9 +226,6 @@ const AboutContact = () => {
           </motion.div>
         </div>
       </section>
-
-   
-    
     </div>
   );
 };
