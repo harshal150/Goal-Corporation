@@ -38,6 +38,7 @@ import leaserental from "../../assets/new/leaseRental.webp";
 import { Link } from "react-router-dom";
 import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
 import { HomeNavbar } from "../HomeNavbar";
+import { encryptData } from "../../utils/cryptoUtils";
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
@@ -63,8 +64,6 @@ const validationSchema = Yup.object({
   gender: Yup.string().required("Gender is required"),
   residenceType: Yup.string().required("Residence type is required"),
 });
-
-
 
 const loanDetails = {
   "Home Loan": { component: HomeloanBelowComponent, interestRate: 8.35 },
@@ -131,48 +130,78 @@ const ApplyLoanModal = ({
   }
 
   const handleFormSubmit = async (formValues) => {
-    console.log('Form Submitted Data:', formValues);
-  
+    // console.log('Form Submitted Data:', formValues);
+    console.log("Form Submitted Data:", formValues.fullName);
+    const encryptFullName = encryptData(formValues.fullName);
+    const encryptEmail = encryptData(formValues.email);
+
+   
+
+    const paramsValues = {
+      fullName: encryptData(formValues.fullName),
+      email: encryptData(formValues.email),
+      mobile_number: encryptData(formValues.mobileNumber),
+      loans: encryptData(formValues.loans),
+      city: encryptData(formValues.city),
+      // mobile_number: "OTk5MDAyMzAwMQ==",
+      // city:"=TmV3IERlbGhp",
+      // pan_number:"Q0FBUGI1NDY3Tg==",
+      pincode: encryptData(formValues.pincode),
+      gender: encryptData(formValues.gender),
+      pan_number: encryptData(formValues.panCard),
+      dob: encryptData(formValues.dob),
+      residenceType: encryptData(formValues.residenceType),
+      mode:encryptData('1')
+    };
+    // ?pan_number=Q0FBUGI1NDY3Tg==&mobile_number=OTk5MDAyMzAwMQ==&city=TmV3IERlbGhp&pincode=MTEwMDMw&mode=MA==
+
+    console.log(paramsValues);
+    const queryParams = new URLSearchParams(paramsValues).toString();
+    const redirectUrl = `https://www.goalcorporation.com/credit-score/credit-score-live.php?${queryParams}`;
+    // window.location.href = redirectUrl;
+    window.open(redirectUrl, "_blank");
+    return;
     try {
-      const response = await fetch('https://api.goalcorporation.com/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formValues),
-      });
-  
+      const response = await fetch(
+        "https://api.goalcorporation.com/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formValues),
+        }
+      );
+
       const result = await response.json();
-  
+
       if (result.success) {
         setIsSubmitted(true);
         Swal.fire({
-          icon: 'success',
-          title: 'Application Submitted',
-          text: 'Thank you for your submission. We will contact you shortly.',
+          icon: "success",
+          title: "Application Submitted",
+          text: "Thank you for your submission. We will contact you shortly.",
         });
         setTimeout(() => {
           window.location.reload();
         }, 2000);
-        
       } else {
-        console.error('Failed to send email:', result.error);
+        console.error("Failed to send email:", result.error);
         Swal.fire({
-          icon: 'error',
-          title: 'Submission Failed',
-          text: 'There was an error submitting your application. Please try again later.',
+          icon: "error",
+          title: "Submission Failed",
+          text: "There was an error submitting your application. Please try again later.",
         });
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       Swal.fire({
-        icon: 'error',
-        title: 'Submission Error',
-        text: 'An unexpected error occurred. Please try again later.',
+        icon: "error",
+        title: "Submission Error",
+        text: "An unexpected error occurred. Please try again later.",
       });
     }
   };
-  
 
   return (
     <>
