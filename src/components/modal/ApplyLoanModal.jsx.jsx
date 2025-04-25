@@ -155,12 +155,12 @@ const ApplyLoanModal = ({
     };
     // ?pan_number=Q0FBUGI1NDY3Tg==&mobile_number=OTk5MDAyMzAwMQ==&city=TmV3IERlbGhp&pincode=MTEwMDMw&mode=MA==
 
-    // console.log(paramsValues);
-    // const queryParams = new URLSearchParams(paramsValues).toString();
-    // const redirectUrl = `https://www.goalcorporation.com/credit-score/credit-score-live.php?${queryParams}`;
-    // // window.location.href = redirectUrl;
-    // window.open(redirectUrl, "_blank");
-    // return;
+    console.log(paramsValues);
+    const queryParams = new URLSearchParams(paramsValues).toString();
+    const redirectUrl = `https://www.goalcorporation.com/credit-score/credit-score-live.php?${queryParams}`;
+    // window.location.href = redirectUrl;
+    window.open(redirectUrl, "_blank");
+    return;
     try {
       const response = await fetch(
         "https://api.goalcorporation.com/send-email",
