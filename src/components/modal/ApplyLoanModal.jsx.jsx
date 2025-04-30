@@ -500,7 +500,7 @@ const ApplyLoanModal = ({
                             name="panCard"
                             type="text"
                             placeholder="PAN Card"
-                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm uppercase"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm "
                             onBlur={handleBlur}
                           />
                           <ErrorMessage
