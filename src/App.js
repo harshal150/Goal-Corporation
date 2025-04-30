@@ -22,6 +22,7 @@ import CareersPage from './components/quicklinks/Careers';
 import ContactPage from './pages/ContactPage';
 import BioMedicalPage from './pages/BioMedicalPage';
 import BioMedicalApply from './pages/BioMedicalApply';
+import Otp from './components/otp/Otp';
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -149,6 +150,7 @@ function App() {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/biomedical" element={<BioMedicalPage />} />
         <Route path="/biomedicalapply" element={<BioMedicalApply />} />
+        <Route path="/otp" element={<Otp />} />
       </Routes>
     </BrowserRouter>
   );

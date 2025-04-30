@@ -4,6 +4,8 @@ import { HomeNavbar } from "./HomeNavbar";
 
 import backgroundVideo from "../assets/Header/video5.mp4";
 import placeholderImage from "../assets/Header/Screenshot 2024-11-04 144553.png"; // Add your placeholder image
+import dubaiAward from "../assets/awards/dubaiaward.JPG";
+import speechPhoto from "../assets/awards/DSC01617.JPG";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -12,29 +14,40 @@ const Header = () => {
 
   const carouselData = [
     {
-      title: "Empowering MSMEs With Quick Loan",
-      description: "Get fast and flexible financing options tailored specifically for Micro, Small, and Medium Enterprises (MSMEs) to support your business growth and operations.",
+      title: "Check your credit score for free",
+      description:
+        "A CIBIL score is a three-digit number that represents your creditworthiness based on your credit history. Find out your CIBIL score quickly in few clicks and take control of your financial path.",
+      link: "CreditScoreCheck",
+    },
+    {
+      title: "International Iconic Awards 2025 Dubai",
+      description: "",
       link: "EmpoweringMSMEs",
+      images: [speechPhoto, dubaiAward],
     },
     {
       title: "Balance Transfer of Loan",
-      description: "Save on interest costs by transferring your existing loan at lower rates. Enjoy easy repayment options and better financial management with our balance transfer solutions.",
+      description:
+        "Save on interest costs by transferring your existing loan at lower rates. Enjoy easy repayment options and better financial management with our balance transfer solutions.",
       link: "BalanceTransfer",
     },
     {
       title: "Debt Consolidation & Refinance",
-      description: "Combine multiple debts into one manageable loan or refinance existing loans to reduce your financial burden and simplify your payments.",
+      description:
+        "Combine multiple debts into one manageable loan or refinance existing loans to reduce your financial burden and simplify your payments.",
       link: "DebtConsolidationRefinance",
     },
     {
       title: "Lease Rental Discounting",
-      description: "Unlock the potential of your rental income by availing loans against future lease rentals, ensuring steady cash flow and financial stability for your business.",
+      description:
+        "Unlock the potential of your rental income by availing loans against future lease rentals, ensuring steady cash flow and financial stability for your business.",
       link: "LeaseRental",
     },
     {
-      title: "Check your credit score for free",
-      description: "A CIBIL score is a three-digit number that represents your creditworthiness based on your credit history. Find out your CIBIL score quickly in few clicks and take control of your financial path.",
-      link: "CreditScoreCheck",
+      title: "Empowering MSMEs With Quick Loan",
+      description:
+        "Get fast and flexible financing options tailored specifically for Micro, Small, and Medium Enterprises (MSMEs) to support your business growth and operations.",
+      link: "EmpoweringMSMEs",
     },
   ];
 
@@ -104,9 +117,7 @@ const Header = () => {
               {slide.title.split(" ").map((word, idx) => (
                 <span
                   key={idx}
-                  className={
-                    idx === 2 || idx === 3 ? "text-orange-500" : ""
-                  }
+                  className={idx === 2 || idx === 3 ? "text-orange-500" : ""}
                 >
                   {word}{" "}
                 </span>
@@ -115,14 +126,34 @@ const Header = () => {
             <p className="text-sm sm:text-lg md:text-md italic font-semibold mb-6 px-6 md:px-12 lg:px-36">
               {slide.description}
             </p>
-            <button
-              className="cp_rainbow_btn mt-6 bg-red-500 z-50 px-5 py-1.5 sm:px-6 cursor-pointer sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition"
-              onClick={() =>
-                navigate("/applyforloan", { state: { selectedLink: slide.link } })
-              }
-            >
-              Apply Now
-            </button>
+            <div className="flex space-x-3 mb-6">
+              {slide.images && slide.images.length > 0 ? (
+                slide.images.map((image, idx) => (
+                  <img
+                    key={idx}
+                    src={image}
+                    alt={`Award Image ${idx + 1}`}
+                    className="w-[40dvw] h-[50dvh] object-cover rounded-lg shadow-lg m-4"
+                  />
+                ))
+              ) : (
+                <div></div>
+              )}
+            </div>
+            {slide.images && slide.images.length > 0 ? (
+              <button className="hidden">Apply Now</button>
+            ) : (
+              <button
+                className="cp_rainbow_btn mt-6 bg-red-500 z-50 px-5 py-1.5 sm:px-6 cursor-pointer sm:py-2 md:px-5 md:py-2 rounded-lg text-white font-bold hover:bg-red-700 transition"
+                onClick={() =>
+                  navigate("/applyforloan", {
+                    state: { selectedLink: slide.link },
+                  })
+                }
+              >
+                Apply Now
+              </button>
+            )}
           </div>
         ))}
       </div>

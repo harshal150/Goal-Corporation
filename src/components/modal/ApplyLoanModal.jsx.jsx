@@ -35,10 +35,11 @@ import debt from "../../assets/new/debt.webp";
 import msme from "../../assets/new/empow.webp";
 import balacetransfee from "../../assets/new/balancetransfer.webp";
 import leaserental from "../../assets/new/leaseRental.webp";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
 import { HomeNavbar } from "../HomeNavbar";
 import { encryptData } from "../../utils/cryptoUtils";
+import creditImage from '../../assets/applyloan/creditImage.png'
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
@@ -55,25 +56,25 @@ const validationSchema = Yup.object({
   panCard: Yup.string()
     .matches(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/, "Invalid PAN card number")
     .required("PAN card number is required"),
-  dob: Yup.date().required("Date of birth is required"),
+  // dob: Yup.date().required("Date of birth is required"),
   terms: Yup.boolean()
     .oneOf([true], "You must accept the terms and conditions.")
     .required("You must accept the terms and conditions."),
 
   city: Yup.string().required("City is required"),
-  gender: Yup.string().required("Gender is required"),
-  residenceType: Yup.string().required("Residence type is required"),
+  // gender: Yup.string().required("Gender is required"),
+  // residenceType: Yup.string().required("Residence type is required"),
 });
 
 const loanDetails = {
-  "Home Loan": { component: HomeloanBelowComponent, interestRate: 8.35 },
+  "Home Loan": { component: HomeloanBelowComponent, interestRate: 7.85 },
   "Personal Loan": {
     component: PersonalLoanBelowComponent,
     interestRate: 10.5,
   },
   "Loans Against Property": {
     component: LoanAgaintsBelowComponent,
-    interestRate: 9.15,
+    interestRate: 8.65,
   },
   "Working Capital Loan": {
     component: WorkingCapitalLoanBelowComponent,
@@ -130,12 +131,23 @@ const ApplyLoanModal = ({
   }
 
   const handleFormSubmit = async (formValues) => {
-    // console.log('Form Submitted Data:', formValues);
-    console.log("Form Submitted Data:", formValues.fullName);
-    const encryptFullName = encryptData(formValues.fullName);
-    const encryptEmail = encryptData(formValues.email);
+    // Generate OTP
+    const generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+    sessionStorage.setItem("tt", encryptData(generatedOtp));
+    // localStorage.setItem("t",encryptData(generatedOtp));
+    // console.log("Generated OTP:", generatedOtp);
 
-   
+    const updatedFormValues = {
+      ...formValues,
+      otp: generatedOtp,
+    };
+
+    console.log("Form Submitted Data with OTP:", updatedFormValues);
+
+    const encryptFullName = encryptData(updatedFormValues.fullName);
+    const encryptEmail = encryptData(updatedFormValues.email);
+
+    // Continue with your logic to send updatedFormValues to the backend
 
     const paramsValues = {
       fullName: encryptData(formValues.fullName),
@@ -151,15 +163,72 @@ const ApplyLoanModal = ({
       pan_number: encryptData(formValues.panCard),
       dob: encryptData(formValues.dob),
       residenceType: encryptData(formValues.residenceType),
-      mode:encryptData('1')
+      mode: encryptData("1"),
     };
+
     // ?pan_number=Q0FBUGI1NDY3Tg==&mobile_number=OTk5MDAyMzAwMQ==&city=TmV3IERlbGhp&pincode=MTEwMDMw&mode=MA==
 
-    console.log(paramsValues);
+    // console.log(paramsValues);
     const queryParams = new URLSearchParams(paramsValues).toString();
-    const redirectUrl = `https://www.goalcorporation.com/credit-score/credit-score-live.php?${queryParams}`;
-    // window.location.href = redirectUrl;
-    window.open(redirectUrl, "_blank");
+    // const redirectUrl = `https://www.goalcorporation.com/credit-score/credit-score-live.php?${queryParams}`;
+    const redirectUrl = `/otp?${queryParams}`;
+    // // window.location.href = redirectUrl;
+    // window.open(redirectUrl, "_blank");
+
+    try {
+      const response = await fetch(
+        "https://api.goalcorporation.com/otp",
+        // "http://localhost:5001/otp",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          // body: JSON.stringify(formValues),
+          body: JSON.stringify(updatedFormValues),
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.success) {
+        // setIsSubmitted(true);
+        Swal.fire({
+          icon: "success",
+          title: "OTP Sent",
+          text: "The OTP has been sent to your email. Please check your inbox and enter the OTP to verify your account.",
+        });
+
+      
+          // window.open(redirectUrl, "_blank");
+          // window.open(`/otp?${queryParams}`, "_blank");
+          // window.location.href = `/otp?${queryParams}`;
+          const redirectUrl = `/otp?${queryParams}`;
+          const link = document.createElement("a");
+          link.href = redirectUrl;
+          link.target = "_blank"; // Open in new tab
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+     
+      } else {
+        console.error("Failed to send email:", result.error);
+        Swal.fire({
+          icon: "error",
+          title: "Submission Failed",
+          text: "There was an error submitting your application. Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Submission Error",
+        text: "An unexpected error occurred. Please try again later.",
+      });
+    }
     return;
     try {
       const response = await fetch(
@@ -227,6 +296,7 @@ const ApplyLoanModal = ({
           <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden lg:mt-5 mb-5">
             {/* Form Section (Left Aligned) */}
             <div className="w-full md:w-2/3 p-4 lg:p-6">
+                <img src={creditImage} alt="Credit" className="w-[60dvh] h-[25dvh] mx-auto mb-2" />
               <h3 className="text-md font-semibold text-center mb-4">
                 {bankName && (
                   <>
@@ -342,7 +412,7 @@ const ApplyLoanModal = ({
                             className="text-red-500 text-xs mt-1"
                           />
                         </div>
-                        <div className="relative">
+                        {/* <div className="relative">
                           <label
                             htmlFor="loans"
                             className="block text-gray-700 text-sm font-medium"
@@ -371,7 +441,7 @@ const ApplyLoanModal = ({
                             </option>
                           </Field>
                         </div>
-                      </div>
+                      </div> 
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div className="relative">
@@ -393,6 +463,7 @@ const ApplyLoanModal = ({
                             <option value="rented">Rented</option>
                           </Field>
                         </div>
+                        */}
                         <div className="relative">
                           <label
                             htmlFor="city"
@@ -419,6 +490,27 @@ const ApplyLoanModal = ({
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div className="relative">
                           <label
+                            htmlFor="panCard"
+                            className="block text-gray-700 text-sm font-medium "
+                          >
+                            PAN Card
+                          </label>
+                          <FaCreditCard className="absolute left-2 top-8 text-blue-700" />
+                          <Field
+                            name="panCard"
+                            type="text"
+                            placeholder="PAN Card"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm uppercase"
+                            onBlur={handleBlur}
+                          />
+                          <ErrorMessage
+                            name="panCard"
+                            component="div"
+                            className="text-red-500 text-xs mt-1"
+                          />
+                        </div>
+                        <div className="relative">
+                          <label
                             htmlFor="pincode"
                             className="block text-gray-700 text-sm font-medium"
                           >
@@ -429,7 +521,7 @@ const ApplyLoanModal = ({
                             name="pincode"
                             type="text"
                             placeholder="Pincode"
-                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm"
+                            className="form-input w-full md:w-[80%] pl-8 py-1.5 border border-gray-300 rounded-md text-sm "
                             onBlur={handleBlur}
                           />
                           <ErrorMessage
@@ -438,7 +530,7 @@ const ApplyLoanModal = ({
                             className="text-red-500 text-xs mt-1"
                           />
                         </div>
-                        <div className="relative">
+                        {/* <div className="relative">
                           <label
                             htmlFor="gender"
                             className="block text-gray-700 text-sm font-medium"
@@ -457,10 +549,10 @@ const ApplyLoanModal = ({
                             <option value="female">Female</option>
                             <option value="other">Other</option>
                           </Field>
-                        </div>
+                        </div> */}
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div className="relative">
                           <label
                             htmlFor="panCard"
@@ -502,7 +594,7 @@ const ApplyLoanModal = ({
                             className="text-red-500 text-xs mt-1"
                           />
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="flex items-start space-x-2 mt-4">
                         <Field

@@ -1,6 +1,6 @@
 import CryptoJS from "crypto-js";
-const SECRET_KEY = 'goalcorporation';
-console.log('object',SECRET_KEY);
+const SECRET_KEY = "goalcorporation";
+// console.log("object", SECRET_KEY);
 
 // export const encryptData=(plainText) =>{
 //     alert('object',SECRET_KEY)
@@ -13,10 +13,10 @@ console.log('object',SECRET_KEY);
 // }
 
 export const encryptData = (text) => {
-    return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(text));
-  };
-  
-  export const decryptData = (base64) => {
-    return CryptoJS.enc.Base64.parse(base64).toString(CryptoJS.enc.Utf8);
-  };
-  
+  return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(text));
+};
+
+export const decryptData = (base64) => {
+  const bytes = CryptoJS.enc.Base64.parse(base64); // Parse the base64 string
+  return bytes.toString(CryptoJS.enc.Utf8); // Convert the binary data back to string
+};
