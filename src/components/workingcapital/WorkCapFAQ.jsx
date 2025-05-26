@@ -59,7 +59,8 @@ const FaqItem = ({ faq }) => {
   const [isVisible, setIsVisible] = useState(false);
   const faqRef = useRef(null);
 
-  const toggleFaq = () => {
+  const toggleFaq = (event) => {
+    event.preventDefault();
     setIsOpen(!isOpen);
   };
 

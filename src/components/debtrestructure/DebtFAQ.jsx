@@ -24,7 +24,8 @@ const faqList = [
   },
   {
     isActive: false,
-    question: "What is the difference between debt restructuring and debt consolidation?",
+    question:
+      "What is the difference between debt restructuring and debt consolidation?",
     answer:
       "Debt restructuring involves modifying the terms of existing loans to make repayment more manageable. Debt consolidation, on the other hand, involves combining multiple loans into a single loan with a new interest rate and repayment term.",
   },
@@ -48,18 +49,21 @@ const faqList = [
   },
   {
     isActive: false,
-    question: "Can I apply for debt restructuring if my loan is already in default?",
+    question:
+      "Can I apply for debt restructuring if my loan is already in default?",
     answer:
       "Yes, many lenders offer debt restructuring even if your loan is in default. The goal of restructuring is to help you manage your debt more effectively and avoid further financial distress. However, approval depends on the lender’s policies and your financial situation. It is important to communicate with your lender as early as possible to explore restructuring options before the situation worsens.",
   },
 ];
 
 const FaqItem = ({ faq }) => {
+  console.log(faq);
   const [isOpen, setIsOpen] = useState(faq.isActive);
   const [isVisible, setIsVisible] = useState(false);
   const faqRef = useRef(null);
 
-  const toggleFaq = () => {
+  const toggleFaq = (event) => {
+    event.preventDefault();
     setIsOpen(!isOpen);
   };
 
@@ -99,7 +103,9 @@ const FaqItem = ({ faq }) => {
         className="btn p-4 lg:p-6 w-full text-start flex justify-between items-center cursor-pointer"
         onClick={toggleFaq}
       >
-        <span className="text-sm md:text-base lg:text-lg font-bold capitalize">{faq.question}</span>
+        <span className="text-sm md:text-base lg:text-lg font-bold capitalize">
+          {faq.question}
+        </span>
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </a>
       <div className={`${isOpen ? "block" : "hidden"} p-4 lg:p-6 pt-0`}>
@@ -120,7 +126,8 @@ const DebtFAQ = () => {
         <div className="grid grid-cols-12 justify-center md:mb-6">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 text-center">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-blue-600 capitalize mb-4 md:mb-8">
-              FAQ'S about <span className="text-orange-500">Debt Restructuring</span>
+              FAQ'S about{" "}
+              <span className="text-orange-500">Debt Restructuring</span>
             </h2>
             {/* <p className="text-sm md:text-base lg:text-lg">
               Get answers to common questions about debt restructuring and understand how it can help you manage your financial obligations more effectively.

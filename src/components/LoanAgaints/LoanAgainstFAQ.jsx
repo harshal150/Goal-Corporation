@@ -55,11 +55,13 @@ const faqList = [
 ];
 
 const FaqItem = ({ faq }) => {
+  console.log('hii',faq);
   const [isOpen, setIsOpen] = useState(faq.isActive);
   const [isVisible, setIsVisible] = useState(false);
   const faqRef = useRef(null);
 
-  const toggleFaq = () => {
+  const toggleFaq = (event) => {
+    event.preventDefault(); 
     setIsOpen(!isOpen);
   };
 

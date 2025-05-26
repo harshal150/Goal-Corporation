@@ -59,7 +59,8 @@ const FaqItem = ({ faq }) => {
   const [isVisible, setIsVisible] = useState(false);
   const faqRef = useRef(null);
 
-  const toggleFaq = () => {
+  const toggleFaq = (event) => {
+    event.preventDefault();
     setIsOpen(!isOpen);
   };
 
@@ -99,7 +100,9 @@ const FaqItem = ({ faq }) => {
         className="btn p-4 lg:p-6 w-full text-start flex justify-between items-center cursor-pointer"
         onClick={toggleFaq}
       >
-        <span className="text-sm md:text-base lg:text-lg font-bold capitalize">{faq.question}</span>
+        <span className="text-sm md:text-base lg:text-lg font-bold capitalize">
+          {faq.question}
+        </span>
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </a>
       <div className={`${isOpen ? "block" : "hidden"} p-4 lg:p-6 pt-0`}>
