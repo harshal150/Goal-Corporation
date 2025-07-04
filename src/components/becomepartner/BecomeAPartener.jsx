@@ -158,12 +158,12 @@ const BecomeAPartner = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <form
-          className="space-y-6 col-span-1 md:col-span-2"
+          className="space-y-3 col-span-1 md:col-span-2 m-3"
           noValidate
           validated={validated}
           onSubmit={handleSubmit}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <input
               type="text"
               name="firstName"
@@ -292,11 +292,11 @@ const BecomeAPartner = () => {
         </form>
 
         <div className="col-span-1 md:col-span-1 flex justify-center md:justify-end">
-          <img
+          {/* <img
             src={partner}
             alt="Partner Banner"
             className="w-full md:h-96 mb-5 object-cover rounded-lg"
-          />
+          /> */}
         </div>
       </div>
     </section>

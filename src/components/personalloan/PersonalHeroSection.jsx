@@ -32,10 +32,10 @@ const PersonalHeroSection = () => {
       </video>
 
       {/* Content Container */}
-      <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28">
-        
+      {/* <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"> */}
+     <div className="absolute top-0 left-0 w-full h-full flex flex-col lg:flex-row justify-center items-center px-5 sm:px-10 lg:px-28">   
         {/* Text Section */}
-        <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
+        <div className="w-full text-center lg:text-center mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
             Get the Personal Loan You Need to Achieve Your Goals! 
             Apply for a <span className="text-orange-500">Personal Loan</span> Today!
@@ -76,13 +76,13 @@ const PersonalHeroSection = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 mb-8 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
-          <img
+        {/* <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 mb-8 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center"> */}
+          {/* <img
             src={personal}
             alt="Personal Loan"
             className="max-w-full h-auto object-contain rounded-2xl"
-          />
-        </div>
+          /> */}
+        {/* </div> */}
       </div>
     </div>
   );

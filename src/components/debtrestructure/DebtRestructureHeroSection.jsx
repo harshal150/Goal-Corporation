@@ -12,24 +12,19 @@
 //   };
 //   return (
 //     <div className="bg-gradient-to-b from-blue-50 to-blue-100 h-[75vh] lg:h-[80vh] md:h-[75vh] flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"
-    
+
 //     style={{
-//       backgroundImage: `url(${bgimage})`, 
-//       backgroundSize: "cover", 
-//       backgroundPosition: "center", 
-//       backgroundAttachment: "fixed", 
+//       backgroundImage: `url(${bgimage})`,
+//       backgroundSize: "cover",
+//       backgroundPosition: "center",
+//       backgroundAttachment: "fixed",
 
 //     }}>
 
-
-
-
-
 //       <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
 
-
 // <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-// <span className='  text-[#EF4444] '> Debt Restructuring :</span> A Strategic 
+// <span className='  text-[#EF4444] '> Debt Restructuring :</span> A Strategic
 //           Solution for Managing Financial
 //           Obligations and Avoiding Default
 
@@ -53,13 +48,11 @@
 //         color: white !important;
 //     }
 
-
 //     .cp_rainbow_btn:hover {
 //         color: white !important;
 //         text-decoration: none;
 //         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 //     }
-
 
 //     @keyframes anime {
 //         0% {
@@ -76,7 +69,6 @@
 //     }`}</style>
 // </div>
 
-
 //       {/* Image Section */}
 //       <div className="w-full sm:order-2 order-1 mt-6 mb-4 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
 //         <img src={debt} alt="Debt Restructuring" className="max-w-full h-[100%] object-contain  mix-blend-multiply rounded-2xl" />
@@ -87,13 +79,11 @@
 
 // export default DebtRestructureHeroSection;
 
-
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import debt from '../../assets/loansNew/debtnew1.jpg';
-import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
-import { HomeNavbar } from '../HomeNavbar';
+import React from "react";
+import { Link } from "react-router-dom";
+import debt from "../../assets/loansNew/debtnew1.jpg";
+import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
+import { HomeNavbar } from "../HomeNavbar";
 
 const DebtRestructureHeroSection = () => {
   const loanType = "Debt Restructuring";
@@ -117,19 +107,22 @@ const DebtRestructureHeroSection = () => {
       </video>
 
       {/* Content Container */}
-      <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28">
-        
+      {/* <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"> */}
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col lg:flex-row justify-center items-center px-5 sm:px-10 lg:px-28">
         {/* Text Section */}
-        <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
+        {/* <div className="max-w-xl text-center lg:text-center mt-10 lg:mt-0 lg:mr-2"> */}
+        <div className="w-full text-center lg:text-center mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            <span className="text-orange-500">Debt Restructuring:</span> A Strategic 
-            Solution for Managing Financial Obligations and Avoiding Default
+            <span className="text-orange-500">Debt Restructuring:</span> A
+            Strategic Solution for Managing Financial Obligations and Avoiding
+            Default
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
-            A Comprehensive Strategy for Financial Stability, Debt Relief, and Long-Term Sustainability.
+            A Comprehensive Strategy for Financial Stability, Debt Relief, and
+            Long-Term Sustainability.
           </p>
           <Link
-            to='/applyforloan'
+            to="/applyforloan"
             state={{ loanType }}
             className="drl mt-6 p-3 py-3 text-base"
           >
@@ -161,13 +154,13 @@ const DebtRestructureHeroSection = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full sm:order-2 order-1 mt-6 mb-4 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
-          <img
+        {/* <div className="w-full sm:order-2 order-1 mt-6 mb-4 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+         <img
             src={debt}
             alt="Debt Restructuring"
             className="max-w-full h-full object-contain rounded-2xl"
-          />
-        </div>
+          /> 
+        </div>*/}
       </div>
     </div>
   );

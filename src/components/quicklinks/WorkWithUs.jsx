@@ -14,11 +14,11 @@ const WorkWithUs = () => {
         </button> */}
       </div>
       <div className="md:w-1/2 p-6">
-        <img
+        {/* <img
           src={image}
           alt="Team at Goal Corporation"
           className="w-full h-80 object-cover rounded-lg shadow-md"
-        />
+        /> */}
       </div>
     </div>
   );
