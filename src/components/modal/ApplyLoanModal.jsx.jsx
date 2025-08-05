@@ -177,8 +177,8 @@ const ApplyLoanModal = ({
 
     try {
       const response = await fetch(
-        "https://api.goalcorporation.com/otp",
-        // "http://localhost:5001/otp",
+        // "https://api.goalcorporation.com/otp",
+        "http://localhost:5001/otp",
         {
           method: "POST",
           headers: {

@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import "animate.css"; // Import Animate.css
 import Swal from "sweetalert2"; // Import SweetAlert2
-import partner from '../../assets/becomepartnr1.jpg';
-import backgroundImage from '../../assets/aaaaaaa/14.avif';
-import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
-import { HomeNavbar } from '../HomeNavbar';
+// import partner from '../../assets/becomepartnr1.jpg';
+import partner from "../../assets/loanImages/become-partner.jpg";
+import backgroundImage from "../../assets/aaaaaaa/14.avif";
+import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
+import { HomeNavbar } from "../HomeNavbar";
 
 const professions = [
   "Agriculture/Farmer",
@@ -42,23 +43,26 @@ const BecomeAPartner = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-  
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     } else {
       try {
         // Send the form data to the backend
-        const response = await fetch('https://api.goalcorporation.com/becomepartner', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-  
+        const response = await fetch(
+          "https://api.goalcorporation.com/becomepartner",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+
         const result = await response.json();
-  
+
         if (result.success) {
           Swal.fire({
             title: "Thank you for choosing us to be your partner!",
@@ -66,7 +70,7 @@ const BecomeAPartner = () => {
             icon: "success",
             confirmButtonText: "OK",
           });
-  
+
           // Clear the form fields
           setFormData({
             firstName: "",
@@ -80,7 +84,7 @@ const BecomeAPartner = () => {
             agreed: false,
           });
         } else {
-          console.error('Failed to send email:', result.error);
+          console.error("Failed to send email:", result.error);
           Swal.fire({
             title: "Error",
             text: "Failed to submit your application. Please try again later.",
@@ -89,7 +93,7 @@ const BecomeAPartner = () => {
           });
         }
       } catch (error) {
-        console.error('Error sending email:', error);
+        console.error("Error sending email:", error);
         Swal.fire({
           title: "Error",
           text: "An unexpected error occurred. Please try again later.",
@@ -98,10 +102,9 @@ const BecomeAPartner = () => {
         });
       }
     }
-  
+
     setValidated(true);
   };
-  
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -153,12 +156,13 @@ const BecomeAPartner = () => {
       <HomeNavbar />
       <h1 className="text-xl md:text-3xl font-bold md:text-left text-left text-[#2B8AC1] capitalize mb-6 md:mb-5 mt-10 lg:mt-2 lg:p-10">
         We are committed to becoming{" "}
-        <span className=" text-orange-500">India’s Leading</span> Loan Distributor!
+        <span className=" text-orange-500">India’s Leading</span> Loan
+        Distributor!
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 ">
         <form
-          className="space-y-3 col-span-1 md:col-span-2 m-3"
+          className="space-y-3 col-span-1 md:col-span-2 "
           noValidate
           validated={validated}
           onSubmit={handleSubmit}
@@ -252,7 +256,8 @@ const BecomeAPartner = () => {
               and{" "}
               <a href="/privacypolicy" className="text-blue-600 font-bold">
                 privacy policy
-              </a>.
+              </a>
+              .
             </label>
           </div>
 
@@ -291,12 +296,12 @@ const BecomeAPartner = () => {
           }`}</style>
         </form>
 
-        <div className="col-span-1 md:col-span-1 flex justify-center md:justify-end">
-          {/* <img
+        <div className="col-span-1 flex justify-center items-start min-h-[500px] mt-4 lg:mt-0">
+          <img
             src={partner}
             alt="Partner Banner"
             className="w-full md:h-96 mb-5 object-cover rounded-lg"
-          /> */}
+          />
         </div>
       </div>
     </section>

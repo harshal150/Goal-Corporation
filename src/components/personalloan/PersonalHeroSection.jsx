@@ -1,20 +1,20 @@
-
-
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 // import personal from '../../assets/loansNew/personal loan header.avif';
 // import personal from '../../assets/loansNew/plnew.jpg';
-import personal from '../../assets/loansNew/pl6.jpg';
 // import personal from '../../assets/loansNew/pl2.jpg';
-import backgroundVideo from '../../assets/ProductVideos/v7.mp4';
-import { HomeNavbar } from '../HomeNavbar';
+//----------------//
+// import personal from "../../assets/loansNew/pl6.jpg";
+// import personal from "../../assets/loanImages/personal-loan.jpg";
+import personal from "../../assets/loanImages/personal-loan.jpg";
+import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
+import { HomeNavbar } from "../HomeNavbar";
 
 const PersonalHeroSection = () => {
   const loanType = "Personal Loan";
 
   return (
-    <div className="relative h-[90vh] lg:h-[95vh] overflow-hidden">
+    <div className="relative h-[95vh] lg:h-[95vh] overflow-hidden">
       {/* Navbar */}
       <HomeNavbar />
 
@@ -32,21 +32,22 @@ const PersonalHeroSection = () => {
       </video>
 
       {/* Content Container */}
-      {/* <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"> */}
-     <div className="absolute top-0 left-0 w-full h-full flex flex-col lg:flex-row justify-center items-center px-5 sm:px-10 lg:px-28">   
+      <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28">
+      {/* <div className="absolute top-0 left-0 w-full h-full flex flex-col lg:flex-row justify-center items-center px-5 sm:px-10 lg:px-28"> */}
         {/* Text Section */}
-        <div className="w-full text-center lg:text-center mt-10 lg:mt-0 lg:mr-2">
+        <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
-            Get the Personal Loan You Need to Achieve Your Goals! 
-            Apply for a <span className="text-orange-500">Personal Loan</span> Today!
+            Get the Personal Loan You Need to Achieve Your Goals! Apply for a{" "}
+            <span className="text-orange-500">Personal Loan</span> Today!
           </h1>
           <p className="mt-6 mb-8 text-[12px] lg:text-[14px] sm:text-[14px] md:text-[14px] xl:text-[14px] text-white italic capitalize font-semibold">
-            Explore our wide range of Personal Loan options designed to fit your unique requirements.
+            Explore our wide range of Personal Loan options designed to fit your
+            unique requirements.
           </p>
           <Link
-            to='/applyforloan'
+            to="/applyforloan"
             state={{ loanType }}
-            className="mt-6 plh p-3 py-3 text-base"
+            className="mt-6 plh p-3 py-3 text-base mb-2"
           >
             Apply Now
           </Link>
@@ -76,13 +77,15 @@ const PersonalHeroSection = () => {
         </div>
 
         {/* Image Section */}
-        {/* <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 mb-8 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center"> */}
-          {/* <img
+        <div className="w-full sm:order-2 order-1 mt-6 lg:mt-0 mb-8 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+          {" "}
+       
+          <img
             src={personal}
             alt="Personal Loan"
             className="max-w-full h-auto object-contain rounded-2xl"
-          /> */}
-        {/* </div> */}
+          />
+        </div>
       </div>
     </div>
   );

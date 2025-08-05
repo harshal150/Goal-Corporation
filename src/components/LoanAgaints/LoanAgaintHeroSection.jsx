@@ -6,7 +6,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import loanAgain from "../../assets/loansNew/lap1.jpg";
-import loanAgain from "../../assets/loansNew/lap2.jpg";
+// import loanAgain from "../../assets/loansNew/lap2.jpg";
+import loanAgain from "../../assets/loanImages/lap-4.avif";
 import backgroundVideo from "../../assets/ProductVideos/v7.mp4";
 import { HomeNavbar } from "../HomeNavbar";
 
@@ -42,12 +43,12 @@ const LoanAgaintHeroSection = () => {
       </video>
 
       {/* Content Container */}
-      {/* <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28"> */}
-         <div className="absolute top-0 left-0 w-full h-full flex flex-col lg:flex-row justify-center items-center px-5 sm:px-10 lg:px-28">
+      <div className="flex flex-col justify-between lg:flex-row items-center px-5 sm:px-10 lg:px-28">
+         {/* <div className="absolute top-0 left-0 w-full h-full flex flex-col lg:flex-row justify-center items-center px-5 sm:px-10 lg:px-28"> */}
         
         {/* Text Section */}
-        {/* <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2"> */}
-        <div className="w-full text-center lg:text-center mt-10 lg:mt-0 lg:mr-2">
+        <div className="max-w-xl text-center lg:text-left mt-10 lg:mt-0 lg:mr-2">
+        {/* <div className="w-full text-center lg:text-center mt-10 lg:mt-0 lg:mr-2"> */}
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-blue-500">
           Unlock the Potential of Converting Your Property into Capital with Our {" "}
             <span className="text-orange-500">Loan Against Property Option !</span>
@@ -88,13 +89,13 @@ const LoanAgaintHeroSection = () => {
         </div>
 
         {/* Image Section */}
-        {/* <div className="w-full sm:order-2 order-1 mb-8 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
+        <div className="w-full sm:order-2 order-1 mb-8 mt-6 lg:mt-0 lg:w-1/2 h-48 sm:h-60 md:h-[30vh] lg:h-[40vh] xl:h-[70vh] 2xl:h-[80vh] flex justify-center items-center">
         <img
             src={loanAgain}
             alt="Loan Against Property"
             className="max-w-full h-auto rounded-2xl object-contain"
           /> 
-        </div> */}
+        </div>
       </div>
     </div>
   );
