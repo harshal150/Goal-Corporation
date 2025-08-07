@@ -67,14 +67,14 @@ const validationSchema = Yup.object({
 });
 
 const loanDetails = {
-  "Home Loan": { component: HomeloanBelowComponent, interestRate: 7.85 },
+  "Home Loan": { component: HomeloanBelowComponent, interestRate: 7.4 },
   "Personal Loan": {
     component: PersonalLoanBelowComponent,
-    interestRate: 10.5,
+    interestRate: 10.25,
   },
   "Loans Against Property": {
     component: LoanAgaintsBelowComponent,
-    interestRate: 8.65,
+    interestRate: 7.8,
   },
   "Working Capital Loan": {
     component: WorkingCapitalLoanBelowComponent,
