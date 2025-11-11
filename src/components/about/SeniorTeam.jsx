@@ -13,6 +13,8 @@ import Balkrishna from '../../assets/employeespeaks/Balakrishna.jpg'
 import Umesh from '../../assets/employeespeaks/newmem/Umesh.jpg'
 import priti from '../../assets/employeespeaks/Preethi.jpg'
 import tejas from '../../assets/DirectorImage.jpg'
+import backgroundImage from '../../assets/testimonial/bg2.avif';
+
 
 import subray from '../../assets/employeespeaks/subrayRoy.jpg'
 import annapa from '../../assets/employeespeaks/AnnapaNaik.jpg'
@@ -92,16 +94,23 @@ const TeamMemberItem = ({ member }) => (
         className="w-full h-64 object-cover object-top"
       />
     </div>
-    <h3 className="mt-4 text-xl font-semibold text-gray-800">{member.name}</h3>
-    <p className="text-indigo-600 font-medium">{member.designation}</p>
+    <h3 className="mt-4 text-xl font-semibold text-white">{member.name}</h3>
+    <p className="text-blue-200 font-medium">{member.designation}</p>
   </div>
 );
 
 const SeniorTeam = () => {
   return (
-    <section className="py-16 ">
+    <section className="py-16 "
+     style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        opacity: "50",
+      }}>
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-indigo-700 mb-12">Our Driving Force...</h2>
+        <h2 className="text-3xl font-bold text-orange-500 mb-12">Our Driving Force...</h2>
         {/* <p className="text-gray-600 mb-12 max-w-xl mx-auto">
           Meet the talented individuals who drive our mission forward with passion and dedication.
         </p> */}

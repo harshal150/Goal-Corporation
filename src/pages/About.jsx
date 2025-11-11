@@ -15,6 +15,7 @@ import AboutUsFAQ from '../components/about/AboutFAQ';
 import StrategicTeam from '../components/about/StrategicTeam';
 import SeniorTeam from '../components/about/SeniorTeam';
 import OurValues from '../components/about/Values';
+import GroupLeads from '../components/about/GroupLeads';
 
 const About = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -52,6 +53,7 @@ const About = () => {
       <DirectorMsg />
       <VisionMission />
       <Ourteam />
+      <GroupLeads />
       <StrategicTeam />
       <SeniorTeam />
       <GroupCompany />

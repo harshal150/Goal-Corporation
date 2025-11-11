@@ -44,22 +44,22 @@ const GroupCompany = () => {
   return (
     <div
       className="relative mt-12 mb-20 w-full mx-auto text-center p-6"
-      style={{
-      backgroundImage: `url(${backgroundImage})`, 
-      backgroundSize: "cover", 
-      backgroundPosition: "center", 
-      backgroundAttachment: "fixed", 
-      opacity:"50"
-    }}
+    //   style={{
+    //   backgroundImage: `url(${backgroundImage})`, 
+    //   backgroundSize: "cover", 
+    //   backgroundPosition: "center", 
+    //   backgroundAttachment: "fixed", 
+    //   opacity:"50"
+    // }}
     >
 
-      <h1 className="text-xl md:text-3xl font-bold text-center text-orange-500 mb-16">
+      <h1 className="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-16">
         Group Companies
       </h1>
 
       <div
    
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 transition-all duration-1000 ease-out`}
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 transition-all duration-1000 ease-out lg:pl-28`}
       >
         {[
           {
@@ -68,7 +68,7 @@ const GroupCompany = () => {
               "This flagship company of Goal group is engaged purely in Financial Consulting, bridging between the customers and bankers for their lending needs and financial restructuring. The different products offered are Home Loans, Mortgage Loans, Balance Transfer, Personal Loan, Construction Loan and so on.  The company handles most difficult cases in terms of disbursal and handholding the customers.",
             img: goalMain,
             alt: "Framework7",
-            link:"https://goal-corporation-gamma.vercel.app/"
+            link:"https://www.goalcorporation.com/"
           },
           {
             name: "Goal promoters Pvt Ltd",
@@ -100,7 +100,7 @@ const GroupCompany = () => {
               "Goal Fuel Park specializes in the sales and distribution of fuel and petrochemical products, providing reliable energy solutions for industrial, commercial, and consumer needs. The firm is dedicated to quality and efficiency in fuel management and supply chain operations.",
             img: "https://swiperjs.com/images/projects/atropos.svg",
             alt: "Goal Fuel Park",
-            link:""
+            link:"https://share.google/W1gHWQNQjsWCCjtCr"
           },
           {
             name: "Hubstairs-Coworking Space",
