@@ -2,7 +2,7 @@
 
 
 import mahableshwar from '../../assets/employeespeaks/MahabaleshwarNaik.jpg'
-import RaviNaik from '../../assets/employeespeaks/ravinaik.jpg'
+import RaviNaik from '../../assets/employeespeaks/Ravi Naik.jpg'
 import SantoshNaik from '../../assets/employeespeaks/santosh.jpg'
 import Anil from '../../assets/employeespeaks/newmem/AnilKumar.jpg'
 import Nilim from '../../assets/employeespeaks/newmem/Nilim.jpg'
@@ -10,6 +10,18 @@ import Siddjart from '../../assets/employeespeaks/Siddhart.jpg'
 import Ashok from '../../assets/employeespeaks/AshokMN.jpg'
 import Sushma from '../../assets/employeespeaks/newmem/SushmaT.jpg'
 import Balkrishna from '../../assets/employeespeaks/Balakrishna.jpg'
+import RohitSagar from '../../assets/employeespeaks/Rohit Sagar.jpg'
+import Rohit from '../../assets/employeespeaks/Rohit Sagar.jpg'
+import Tejesh from '../../assets/employeespeaks/Tejeesh N.jpeg'
+import SiddharthGiri from '../../assets/employeespeaks/Siddharth Giri.jpg'
+import Kathiravan from '../../assets/employeespeaks/Kathiravan K.jpg'
+import YogendraSingh from '../../assets/employeespeaks/Yogendra Singh.jpg'
+import ShivrajBhosale from '../../assets/employeespeaks/Shivraj Bhosale.jpg'
+import AnilKChinnappa from '../../assets/employeespeaks/Anil K Chinnappa.jpg'
+import Maunank from '../../assets/employeespeaks/Maunank Shah.jpg'
+import RohitThakur from '../../assets/employeespeaks/Rohit Kumar Thaku.jpg'
+import Manjunath from '../../assets/employeespeaks/Manjunath Bhat.jpg'
+import Shivakumar from '../../assets/employeespeaks/Shivakumar B.jpg'
 import Umesh from '../../assets/employeespeaks/newmem/Umesh.jpg'
 import priti from '../../assets/employeespeaks/Preethi.jpg'
 import tejas from '../../assets/DirectorImage.jpg'
@@ -26,11 +38,8 @@ const teamMembers = [
     name: "Mahabaleshwar Naik",
     designation: "Branch Manager",
   },
-  {
-    img: RaviNaik,
-    name: "Ravi Naik",
-    designation: "Branch Manager",
-  },
+
+ 
   {
     img: SantoshNaik,
     name: "Santosh Naik",
@@ -41,19 +50,10 @@ const teamMembers = [
     name: "Anil Kumar",
     designation: "Branch Manager",
   },
-  {
-    img: Nilim,
-    name: "Nilim Bora",
-    designation: "Branch Manager",
-  },
-  {
-    img: Siddjart,
-    name: "Siddharth Giri",
-    designation: "Branch Manager",
-  },
-  {
-    img: Ashok,
-    name: "Ashok MN",
+
+    {
+    img: RohitSagar,
+    name: "Rohit Sagar",
     designation: "Branch Manager",
   },
   {
@@ -61,6 +61,67 @@ const teamMembers = [
     name: "Annappa Naik",
     designation: "Branch Manager",
   },
+  {
+    img: AnilKChinnappa,
+    name: "Anil K Chinnappa",
+    designation: "Branch Manager",
+  },
+  {
+    img: Maunank,
+    name: "Maunank Shah",
+    designation: "Branch Manager",
+  },
+  {
+    img: ShivrajBhosale,
+    name: "Shivraj Bhosale",
+    designation: "Cluster Manager ",
+  },
+  {
+    img: Kathiravan,
+    name: "Kthiravan K",
+    designation: "Cluster Manager ",
+  },
+  {
+    img: RohitThakur,
+    name: "Rohit Thakur",
+    designation: "Cluster Manager ",
+  },
+   
+    {
+      img: Tejesh,
+      name: "Tejesh N",
+     designation: "Cluster Manager ",
+    },
+   {
+    img: RaviNaik,
+    name: "Ravi Naik",
+    designation: "Regional Director",
+  },
+  {
+    img: SiddharthGiri,
+    name: "Siddharth Giri",
+    designation: "Regional Director",
+  },
+  {
+    img: Shivakumar,
+    name: "Shivakumar B",
+    designation: "Regional Director",
+  },
+  {
+    img: YogendraSingh,
+    name: "Yogendra Singh",
+    designation: "Regional Director",
+  },
+  {
+    img: Nilim,
+    name: "Nilim Bora",
+    designation: "AVP - Digital ",
+  },
+   {
+      img: Ashok,
+      name: "Ashok MN",
+     designation: "Lead Builder Business",
+    },
   {
     img: Sushma,
     name: "Sushma T",
@@ -71,12 +132,17 @@ const teamMembers = [
     name: "Balakrishna S",
     designation: "Sales/Legal Coordinator",
   },
- 
   {
-    img: priti,
-    name: "Preethi NR",
-    designation: "Finance",
+    img: Manjunath,
+    name: "Manjunath Bhat",
+    designation: "Chief Fianance Officer",
   },
+ 
+  // {
+  //   img: priti,
+  //   name: "Preethi NR",
+  //   designation: "Finance",
+  // },
   {
     img: subray,
     name: "Subray Naik",
