@@ -5,13 +5,14 @@ import mahableshwar from '../../assets/employeespeaks/MahabaleshwarNaik.jpg'
 import RaviNaik from '../../assets/employeespeaks/Ravi Naik.jpg'
 import SantoshNaik from '../../assets/employeespeaks/santosh.jpg'
 import Anil from '../../assets/employeespeaks/newmem/AnilKumar.jpg'
-import Nilim from '../../assets/employeespeaks/newmem/Nilim.jpg'
+import Nilim from '../../assets/employeespeaks/Nilim Bora.jpg'
 import Siddjart from '../../assets/employeespeaks/Siddhart.jpg'
-import Ashok from '../../assets/employeespeaks/AshokMN.jpg'
+import Ashok from '../../assets/employeespeaks/Ashokmn.jpeg'
 import Sushma from '../../assets/employeespeaks/newmem/SushmaT.jpg'
 import Balkrishna from '../../assets/employeespeaks/Balakrishna.jpg'
 import RohitSagar from '../../assets/employeespeaks/Rohit Sagar.jpg'
 import Rohit from '../../assets/employeespeaks/Rohit Sagar.jpg'
+import RahulChavan from '../../assets/employeespeaks/Rahul Chavan.jpg'
 import Tejesh from '../../assets/employeespeaks/Tejeesh N.jpeg'
 import SiddharthGiri from '../../assets/employeespeaks/Siddharth Giri.jpg'
 import Kathiravan from '../../assets/employeespeaks/Kathiravan K.jpg'
@@ -19,7 +20,8 @@ import YogendraSingh from '../../assets/employeespeaks/Yogendra Singh.jpg'
 import ShivrajBhosale from '../../assets/employeespeaks/Shivraj Bhosale.jpg'
 import AnilKChinnappa from '../../assets/employeespeaks/Anil K Chinnappa.jpg'
 import Maunank from '../../assets/employeespeaks/Maunank Shah.jpg'
-import RohitThakur from '../../assets/employeespeaks/Rohit Kumar Thaku.jpg'
+import RohitThakur from '../../assets/employeespeaks/Rohit Kumar Thakur jpg.jpg'
+import SantoshJaynagar from '../../assets/employeespeaks/Santosh Naik jaynagar.jpg'
 import Manjunath from '../../assets/employeespeaks/Manjunath Bhat.jpg'
 import Shivakumar from '../../assets/employeespeaks/Shivakumar B.jpg'
 import Umesh from '../../assets/employeespeaks/newmem/Umesh.jpg'
@@ -33,111 +35,155 @@ import annapa from '../../assets/employeespeaks/AnnapaNaik.jpg'
 
 
 const teamMembers = [
-  {
-    img: mahableshwar,
-    name: "Mahabaleshwar Naik",
-    designation: "Branch Manager",
-  },
 
- 
-  {
-    img: SantoshNaik,
-    name: "Santosh Naik",
-    designation: "Branch Manager",
-  },
-  {
-    img: Anil,
-    name: "Anil Kumar",
-    designation: "Branch Manager",
-  },
-
-    {
-    img: RohitSagar,
-    name: "Rohit Sagar",
-    designation: "Branch Manager",
-  },
-  {
-    img: annapa,
-    name: "Annappa Naik",
-    designation: "Branch Manager",
-  },
-  {
-    img: AnilKChinnappa,
-    name: "Anil K Chinnappa",
-    designation: "Branch Manager",
-  },
-  {
-    img: Maunank,
-    name: "Maunank Shah",
-    designation: "Branch Manager",
-  },
-  {
-    img: ShivrajBhosale,
-    name: "Shivraj Bhosale",
-    designation: "Cluster Manager ",
-  },
-  {
-    img: Kathiravan,
-    name: "Kthiravan K",
-    designation: "Cluster Manager ",
-  },
-  {
-    img: RohitThakur,
-    name: "Rohit Thakur",
-    designation: "Cluster Manager ",
-  },
-   
-    {
-      img: Tejesh,
-      name: "Tejesh N",
-     designation: "Cluster Manager ",
-    },
    {
-    img: RaviNaik,
-    name: "Ravi Naik",
+    img: YogendraSingh,
+    name: "Yogendra Singh",
     designation: "Regional Director",
   },
-  {
-    img: SiddharthGiri,
-    name: "Siddharth Giri",
-    designation: "Regional Director",
-  },
+
   {
     img: Shivakumar,
     name: "Shivakumar B",
     designation: "Regional Director",
   },
-  {
-    img: YogendraSingh,
-    name: "Yogendra Singh",
+
+    {
+    img: SiddharthGiri,
+    name: "Siddharth Giri",
     designation: "Regional Director",
   },
+
   {
-    img: Nilim,
-    name: "Nilim Bora",
-    designation: "AVP - Digital ",
+    img: RaviNaik,
+    name: "Ravi Naik",
+    designation: "Regional Director",
   },
+
    {
-      img: Ashok,
-      name: "Ashok MN",
-     designation: "Lead Builder Business",
-    },
+    img: Ashok,
+    name: "Ashok MN",
+    designation: "Cluster Manager",
+  },
+ 
+  //Manoj Naik
+
+
+  {
+    img: RohitThakur,
+    name: "Rohit Thakur",
+    designation: "Cluster Manager",
+  },
+
+    {
+    img: Kathiravan,
+    name: "Kathiravan K",
+    designation: "Cluster Manager ",
+  },
+
+    {
+    img: ShivrajBhosale,
+    name: "Shivraj Bhosale",
+    designation: "Cluster Manager ",
+  },
+
+  {
+    img: mahableshwar,
+    name: "Mahabaleshwar Naik",
+    designation: "Cluster Manager",
+  },
+
+
+ 
   {
     img: Sushma,
     name: "Sushma T",
     designation: "Head VRM",
   },
-  {
-    img: Balkrishna,
-    name: "Balakrishna S",
-    designation: "Sales/Legal Coordinator",
+
+    {
+    img: Tejesh,
+    name: "Tejesh N",
+    designation: "Head - Builder business",
   },
+
+   {
+    img: Nilim,
+    name: "Nilim Bora",
+    designation: "AVP - Digital ",
+  },
+ 
+
+
+  {
+    img: SantoshJaynagar,
+    name: "Jayanagar - Santhosh Naik",
+    designation: "Branch Manager",
+  },
+
+  {
+    img: RohitSagar,
+    name: "HSR Layout - Rohit Sagar",
+    designation: "Branch Manager",
+  },
+    {
+    img: SantoshNaik,
+    name: "Nagarbhavi - Santhosh Naik",
+    designation: "Branch Manager",
+  },
+
+  
+
+// Anil Gowda
+{
+    img: Anil,
+    name: "Sanjaynagar - Anil Kumar",
+    designation: "Branch Manager",
+  },
+
+
+ {
+    img: AnilKChinnappa,
+    name: "Whitefield - Anil K Chinnappa",
+    designation: "Branch Manager",
+  },
+
+  {
+    img: annapa,
+    name: "3. ⁠Kanakapura Road - Annappa Naik",
+    designation: "Branch Manager",
+  },
+
+  
+  
+   {
+    img: RahulChavan,
+    name: "⁠Mumbai - Rahul Chavan",
+    designation: "Branch Manager",
+  },
+
+ 
+  {
+    img: Maunank,
+    name: "Ahmedabad - Maunank Shah",
+    designation: "Branch Manager",
+  },
+ 
   {
     img: Manjunath,
     name: "Manjunath Bhat",
     designation: "Chief Fianance Officer",
   },
+
  
+ 
+  {
+    img: Balkrishna,
+    name: "Balakrishna S",
+    designation: "Sales/Legal Coordinator",
+  },
+
+
   // {
   //   img: priti,
   //   name: "Preethi NR",
@@ -148,7 +194,7 @@ const teamMembers = [
     name: "Subray Naik",
     designation: "Customer Success Manager",
   },
-  
+
 ];
 
 const TeamMemberItem = ({ member }) => (
@@ -168,7 +214,7 @@ const TeamMemberItem = ({ member }) => (
 const SeniorTeam = () => {
   return (
     <section className="py-16 "
-     style={{
+      style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
