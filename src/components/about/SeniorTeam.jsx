@@ -104,7 +104,7 @@ const teamMembers = [
     {
     img: Tejesh,
     name: "Tejesh N",
-    designation: "Head - Builder business",
+    designation: "Lead - Builder business",
   },
 
    {
@@ -150,7 +150,7 @@ const teamMembers = [
 
   {
     img: annapa,
-    name: "3. ⁠Kanakapura Road - Annappa Naik",
+    name: "⁠Kanakapura Road - Annappa Naik",
     designation: "Branch Manager",
   },
 
@@ -172,7 +172,7 @@ const teamMembers = [
   {
     img: Manjunath,
     name: "Manjunath Bhat",
-    designation: "Chief Fianance Officer",
+    designation: "Chief Finance Officer",
   },
 
  
