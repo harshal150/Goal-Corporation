@@ -104,7 +104,7 @@ const teamMembers = [
     {
     img: Tejesh,
     name: "Tejesh N",
-    designation: "Lead - Builder business",
+    designation: "Lead - Builder Business (Initial capital)",
   },
 
    {
