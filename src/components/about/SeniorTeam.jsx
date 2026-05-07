@@ -28,6 +28,7 @@ import Umesh from '../../assets/employeespeaks/newmem/Umesh.jpg'
 import priti from '../../assets/employeespeaks/Preethi.jpg'
 import tejas from '../../assets/DirectorImage.jpg'
 import backgroundImage from '../../assets/testimonial/bg2.avif';
+import BasavarajPawar from '../../assets/employeespeaks/Basavaraj Pawar.jpg';
 
 
 import subray from '../../assets/employeespeaks/subrayRoy.jpg'
@@ -36,7 +37,7 @@ import annapa from '../../assets/employeespeaks/AnnapaNaik.jpg'
 
 const teamMembers = [
 
-   {
+  {
     img: YogendraSingh,
     name: "Yogendra Singh",
     designation: "Regional Director",
@@ -48,7 +49,7 @@ const teamMembers = [
     designation: "Regional Director",
   },
 
-    {
+  {
     img: SiddharthGiri,
     name: "Siddharth Giri",
     designation: "Regional Director",
@@ -60,12 +61,12 @@ const teamMembers = [
     designation: "Regional Director",
   },
 
-   {
+  {
     img: Ashok,
     name: "Ashok MN",
     designation: "Cluster Manager",
   },
- 
+
   //Manoj Naik
 
 
@@ -75,13 +76,13 @@ const teamMembers = [
     designation: "Cluster Manager",
   },
 
-    {
+  {
     img: Kathiravan,
     name: "Kathiravan K",
     designation: "Cluster Manager ",
   },
 
-    {
+  {
     img: ShivrajBhosale,
     name: "Shivraj Bhosale",
     designation: "Cluster Manager ",
@@ -94,25 +95,25 @@ const teamMembers = [
   },
 
 
- 
+
   {
     img: Sushma,
     name: "Sushma T",
     designation: "Head VRM",
   },
 
-    {
+  {
     img: Tejesh,
     name: "Tejesh N",
-    designation: "Lead - Builder Business (Initial capital)",
+    designation: "Lead - Builder Business",
   },
 
-   {
+  {
     img: Nilim,
     name: "Nilim Bora",
     designation: "AVP - Digital ",
   },
- 
+
 
 
   {
@@ -126,23 +127,23 @@ const teamMembers = [
     name: "HSR Layout - Rohit Sagar",
     designation: "Branch Manager",
   },
-    {
+  {
     img: SantoshNaik,
     name: "Nagarbhavi - Santhosh Naik",
     designation: "Branch Manager",
   },
 
-  
 
-// Anil Gowda
-{
+
+  // Anil Gowda
+  {
     img: Anil,
     name: "Sanjaynagar - Anil Kumar",
     designation: "Branch Manager",
   },
 
 
- {
+  {
     img: AnilKChinnappa,
     name: "Whitefield - Anil K Chinnappa",
     designation: "Branch Manager",
@@ -154,29 +155,35 @@ const teamMembers = [
     designation: "Branch Manager",
   },
 
-  
-  
-   {
+
+
+  {
     img: RahulChavan,
     name: "⁠Mumbai - Rahul Chavan",
     designation: "Branch Manager",
   },
 
- 
+
   {
     img: Maunank,
     name: "Ahmedabad - Maunank Shah",
     designation: "Branch Manager",
   },
- 
+
+  {
+    img: BasavarajPawar,
+    name: "Basavaraj Pawar",
+    designation: "Chief Risk Officer",
+  },
+
   {
     img: Manjunath,
     name: "Manjunath Bhat",
     designation: "Chief Finance Officer",
   },
 
- 
- 
+
+
   {
     img: Balkrishna,
     name: "Balakrishna S",
