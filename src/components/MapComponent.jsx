@@ -12,7 +12,7 @@ const cities = [
   { name: "Pune", top: "58%", left: "44%", address: "No.109, first floor, Bharat bhavan A wing Co- op premises Limited, 1369 shukrwar peth pune - 411002" },
   { name: "Delhi", top: "31%", left: "49%", address: "Xenon Building Plot No - 25, H Block Shop No - 4, 2nd Floor Sector-63, Noida - 201301" },
   { name: "Chennai", top: "75%", left: "53%", address: "No:37, 4D, 4th Floor, PM TOWER, GREAMS ROAD, CHENNAI-600006." },
-  { name: "Kolkata", top: "50%", left: "70%", address: "41, B.B.Ganguly Street Central Plaza Room no. 6A, 6th FloorKolkata - 700012." },
+  { name: "Kolkata", top: "50%", left: "70%", address: "41, B.B.Ganguly Street Central Plaza Room no. 6A, 6th Floor Kolkata - 700012." },
   { name: "Ahmedabad", top: "53%", left: "42%", address: "A 707, 7th Floor,SunWest Bank, Near Vallabh sadan River Fort, opp to city Gold Cinema, Ashram Road, Ahmedabad - 380015" },
   { name: "Jaipur", top: "40%", left: "45%", address: " Jaipur" },
   { name: "Lucknow", top: "40%", left: "56%", address: "Lucknow" },
