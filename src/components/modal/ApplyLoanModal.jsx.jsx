@@ -172,8 +172,7 @@ const ApplyLoanModal = ({
     const queryParams = new URLSearchParams(paramsValues).toString();
     // const redirectUrl = `https://www.goalcorporation.com/credit-score/credit-score-live.php?${queryParams}`;
     const redirectUrl = `/otp?${queryParams}`;
-    // // window.location.href = redirectUrl;
-    // window.open(redirectUrl, "_blank");
+    const otpTab = window.open(redirectUrl, "_blank");
 
     try {
       const response = await fetch(
@@ -193,27 +192,13 @@ const ApplyLoanModal = ({
       const result = await response.json();
 
       if (result.success) {
-        // setIsSubmitted(true);
-        Swal.fire({
-          icon: "success",
-          title: "OTP Sent",
-          text: "The OTP has been sent to your email. Please check your inbox and enter the OTP to verify your account.",
-        });
-
-      
-          // window.open(redirectUrl, "_blank");
-          // window.open(`/otp?${queryParams}`, "_blank");
-          // window.location.href = `/otp?${queryParams}`;
-          const redirectUrl = `/otp?${queryParams}`;
-          const link = document.createElement("a");
-          link.href = redirectUrl;
-          link.target = "_blank"; // Open in new tab
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-     
+        if (!otpTab) {
+          window.location.href = redirectUrl;
+        }
       } else {
+        if (otpTab) {
+          otpTab.close();
+        }
         console.error("Failed to send email:", result.error);
         Swal.fire({
           icon: "error",
@@ -222,6 +207,9 @@ const ApplyLoanModal = ({
         });
       }
     } catch (error) {
+      if (otpTab) {
+        otpTab.close();
+      }
       console.error("Error:", error);
       Swal.fire({
         icon: "error",
@@ -334,9 +322,9 @@ const ApplyLoanModal = ({
                   terms: false,
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(values, { setSubmitting, resetForm }) => {
+                onSubmit={async (values, { setSubmitting, resetForm }) => {
                   console.log("Form Submitted Triggered!"); // Debugging statement
-                  handleFormSubmit(values); // Log form data
+                  await handleFormSubmit(values);
                   setSubmitting(false);
                   resetForm();
                 }}
